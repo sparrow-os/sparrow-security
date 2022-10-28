@@ -5,18 +5,18 @@ import java.util.Date;
 
 public class UserRole implements POJO {
 
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-  private Long id;
+    private Long id;
 
-  private Long appId;
+    private Long appId;
 
-  private Long uid;
+    private Long uid;
 
-  private Long roleId;
+    private Long roleId;
 
-  private Date createdAt;
+    private Date createdAt;
 
-  private Long createdBy;
+    private Long createdBy;
 
 }

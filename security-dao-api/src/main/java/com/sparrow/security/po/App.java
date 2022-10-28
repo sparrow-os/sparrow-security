@@ -1,24 +1,14 @@
 package com.sparrow.security.po;
 
-import com.sparrow.protocol.POJO;
+import com.sparrow.protocol.dao.PO;
 
-public class App implements POJO {
-
+/**
+ * 应用表
+ */
+public class App extends PO {
     private static final long serialVersionUID = 1L;
-
     private Long id;
-
     private String code;
-
     private String name;
-
     private Integer sort;
-
-    private String createdAt;
-
-    private Long createdBy;
-
-    private Integer deleted;
-
-    private String remark;
 }

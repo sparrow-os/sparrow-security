@@ -9,6 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 暂时放在这，先不用
+ * RBAC
+ */
 @Table(name = "user")
 public class User implements POJO, Cloneable {
     /*-------基本信息-------------*/

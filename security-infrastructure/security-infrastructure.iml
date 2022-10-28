@@ -9,19 +9,19 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.sparrow.security:security-dao-api:unknown" level="project" />
-    <orderEntry type="library" name="Maven: com.sparrow.security:security-domain:unknown" level="project" />
+    <orderEntry type="library" name="Maven: com.sparrow.security:security-dao-api:${sparrow_security_version}" level="project" />
+    <orderEntry type="library" name="Maven: com.sparrow.security:security-domain:${sparrow_security_version}" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-json:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.83" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
-    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol-dao:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol-redis:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.83" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
   </component>
 </module>

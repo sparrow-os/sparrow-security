@@ -38,6 +38,9 @@ public class Resource extends PO {
     private String code;
     private String name;
     private Long parentId;
+    /**
+     * 目录、菜单、按钮（事件）
+     */
     private Integer resourceType;
     private String openType;
     /**
@@ -62,9 +65,9 @@ public class Resource extends PO {
     private String accessUrl;
     private String uploadKey;
     private Integer maxRecordCount;
+    private String manager;
     private Integer sort;
     private String icoUrl;
-    private String manager;
     private String cover;
 
     @Column(name = "name", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'name'", nullable = false, unique = true)
@@ -238,5 +241,4 @@ public class Resource extends PO {
     public void setCover(String cover) {
         this.cover = cover;
     }
-
 }

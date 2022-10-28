@@ -6,24 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="security-domain" />
-        <module name="security-api" />
-        <module name="passport-api" />
-        <module name="passport-domain" />
-        <module name="passport-main-spring-boot" />
-        <module name="security-adapter" />
-        <module name="passport-sparrow-dao" />
-        <module name="security-dao-api" />
-        <module name="passport-mybatis" />
-        <module name="security-infrastructure" />
         <module name="passport-protocol" />
-        <module name="security-mybatis" />
-        <module name="security-main-spring-boot" />
-        <module name="passport-infrastructure" />
-        <module name="passport-adapter" />
-        <module name="security-protocol" />
-        <module name="security-sparrow-dao" />
         <module name="passport-dao-api" />
+        <module name="passport-infrastructure" />
+        <module name="security-adapter" />
+        <module name="passport-api" />
+        <module name="passport-mybatis" />
+        <module name="security-main-spring-boot" />
+        <module name="security-domain" />
+        <module name="passport-main-spring-boot" />
+        <module name="security-dao-api" />
+        <module name="security-protocol" />
+        <module name="security-mybatis" />
+        <module name="security-api" />
+        <module name="passport-domain" />
+        <module name="passport-sparrow-dao" />
+        <module name="security-sparrow-dao" />
+        <module name="security-infrastructure" />
+        <module name="passport-adapter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

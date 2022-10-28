@@ -1,31 +1,18 @@
 package com.sparrow.security.po;
 
-import com.sparrow.protocol.POJO;
-import java.util.Date;
+import com.sparrow.protocol.dao.PO;
 
-public class Role implements POJO {
+public class Role extends PO {
 
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-  private Long id;
+    private Long id;
 
-  private Long appId;
+    private Long appId;
 
-  private String code;
+    private String code;
 
-  private String name;
+    private String name;
 
-  private Integer sort;
-
-  private String remark;
-
-  private Long createdBy;
-
-  private Date createdAt;
-
-  private Date modifiedAt;
-
-  private Integer deleted;
-
-  private String appName;
+    private Integer sort;
 }
