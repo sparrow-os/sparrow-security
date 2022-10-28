@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b1334c17-3263-4a52-ac28-916bd8cddf0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/src/main/java/com/sparrow/passport/mybatis/SampleMybatisPlusApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/src/main/java/com/sparrow/passport/mybatis/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-mybatis-plus/tree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparrow/passport/mybatis/SampleMybatisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2GcHP73Cn9OdSus272ScwyfsDd2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.SampleMybatisApplication">
+    <configuration name="SampleMybatisApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sparrow.passport.mybatis.SampleMybatisApplication" />
+      <module name="passport-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparrow.passport.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleMybatisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="passport-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparrow.passport.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparrow.passport.mybatis.SampleMybatisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SampleMybatisApplication" />
+        <item itemvalue="Spring Boot.SampleMybatisApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1334c17-3263-4a52-ac28-916bd8cddf0c" name="Default Changelist" comment="" />
+      <created>1666680924519</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666680924519</updated>
+      <workItem from="1666680926752" duration="4429000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="351" key="GridCell.Tab.0.bottom" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.0.center" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.0.left" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.0.right" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.1.bottom" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.1.center" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.1.left" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="351" key="GridCell.Tab.1.right" timestamp="1666687417391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="351" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1666687417391" />
+    <state width="1237" height="137" key="GridCell.Tab.2.bottom" timestamp="1666682864978">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="137" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1666682864978" />
+    <state width="1237" height="137" key="GridCell.Tab.2.center" timestamp="1666682864978">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="137" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1666682864978" />
+    <state width="1237" height="137" key="GridCell.Tab.2.left" timestamp="1666682864978">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="137" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1666682864978" />
+    <state width="1237" height="137" key="GridCell.Tab.2.right" timestamp="1666682864978">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="137" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1666682864978" />
+    <state x="297" y="-6" width="672" height="676" key="search.everywhere.popup" timestamp="1666682891695">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="-6" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1666682891695" />
+  </component>
+</project>

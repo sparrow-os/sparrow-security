@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="security-domain" />
+        <module name="security-api" />
+        <module name="passport-api" />
+        <module name="passport-domain" />
+        <module name="passport-main-spring-boot" />
+        <module name="security-adapter" />
+        <module name="passport-sparrow-dao" />
+        <module name="security-dao-api" />
+        <module name="passport-mybatis" />
+        <module name="security-infrastructure" />
+        <module name="passport-protocol" />
+        <module name="security-mybatis" />
+        <module name="security-main-spring-boot" />
+        <module name="passport-infrastructure" />
+        <module name="passport-adapter" />
+        <module name="security-protocol" />
+        <module name="security-sparrow-dao" />
+        <module name="passport-dao-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="passport-adapter" target="1.8" />
+      <module name="passport-api" target="1.8" />
+      <module name="passport-application" target="1.8" />
+      <module name="passport-dao-api" target="1.8" />
+      <module name="passport-domain" target="1.8" />
+      <module name="passport-infrastructure" target="1.8" />
+      <module name="passport-main-sparrow" target="1.8" />
+      <module name="passport-main-spring-boot" target="1.8" />
+      <module name="passport-mybatis" target="1.8" />
+      <module name="passport-mybatis-plus" target="1.8" />
+      <module name="passport-protocol" target="1.8" />
+      <module name="passport-sparrow-dao" target="1.8" />
+      <module name="security-adapter" target="1.8" />
+      <module name="security-api" target="1.8" />
+      <module name="security-dao-api" target="1.8" />
+      <module name="security-domain" target="1.8" />
+      <module name="security-infrastructure" target="1.8" />
+      <module name="security-main-spring-boot" target="1.8" />
+      <module name="security-mybatis" target="1.8" />
+      <module name="security-protocol" target="1.8" />
+      <module name="security-sparrow-dao" target="1.8" />
+      <module name="sparrow-passport-ddd" target="1.5" />
+      <module name="sparrow-security" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

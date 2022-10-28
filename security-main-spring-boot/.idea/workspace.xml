@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5481c9d3-9034-488f-b1e5-fe022629a39a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparrow/passport/SpringServletContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparrow/passport/config/AutoConfigurations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparrow/passport/config/SparrowConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparrow/spring/TestDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../passport-sparrow-dao/src/main/resources/sparrow_default.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passport-adapter/src/main/java/com/sparrow/passport/controller/impl/UserLoginControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../passport-adapter/src/main/java/com/sparrow/passport/controller/impl/UserLoginControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passport-adapter/src/main/java/com/sparrow/passport/controller/impl/UserRegisterControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../passport-adapter/src/main/java/com/sparrow/passport/controller/impl/UserRegisterControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passport-infrastructure/src/main/java/com/sparrow/passport/infrastructure/persistence/SparrowRegisteringUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../passport-infrastructure/src/main/java/com/sparrow/passport/infrastructure/persistence/SparrowRegisteringUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparrow/passport/boot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparrow/passport/boot/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passport-sparrow-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../passport-sparrow-dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../passport-sparrow-dao/src/main/java/com/sparrow/passport/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../passport-sparrow-dao/src/main/java/com/sparrow/passport/dao/UserDAOImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2F1d3ZY3zJrdb3QnZbbEYYvbT6L" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="passport-main-spring-boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparrow.passport.boot.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5481c9d3-9034-488f-b1e5-fe022629a39a" name="Default Changelist" comment="" />
+      <created>1663663325327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663663325327</updated>
+      <workItem from="1663663327972" duration="276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="17" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1663663584030">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="17" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1663663584030" />
+  </component>
+</project>

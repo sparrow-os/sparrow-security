@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <parent>
+        <groupId>com.sparrow</groupId>
+        <artifactId>sparrow-zoo-bom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>sparrow-security</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>security-api</module>
+        <module>security-protocol</module>
+        <module>security-dao-api</module>
+        <module>security-domain</module>
+        <module>security-infrastructure</module>
+        <module>security-sparrow-dao</module>
+        <module>security-main-spring-boot</module>
+        <module>security-adapter</module>
+        <module>security-mybatis</module>
+    </modules>
+</project>
