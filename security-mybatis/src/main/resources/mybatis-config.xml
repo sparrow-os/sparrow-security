@@ -46,6 +46,6 @@
         <setting name="useActualParamName" value="true"/>
     </settings>
     <typeAliases>
-        <package name="com.sparrow.passport.po"/>
+        <package name="com.sparrow.security.po"/>
     </typeAliases>
 </configuration>

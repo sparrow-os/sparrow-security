@@ -35,7 +35,7 @@ public class Group extends PO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "groupId", columnDefinition = "int(11) UNSIGNED AUTO_INCREMENT")
+    @Column(name = "group_id", columnDefinition = "int(11) UNSIGNED AUTO_INCREMENT")
     @MethodOrder(order = 1)
     public Long getGroupId() {
         return groupId;

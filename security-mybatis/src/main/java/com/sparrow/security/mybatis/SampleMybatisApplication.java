@@ -6,8 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.sparrow.passport.dao"})
+@MapperScan(basePackages = {"com.sparrow.security.dao"})
 public class SampleMybatisApplication implements CommandLineRunner {
+
+//    private RoleD
 
     public static void main(String[] args) {
         SpringApplication.run(SampleMybatisApplication.class, args);
