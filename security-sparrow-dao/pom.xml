@@ -40,12 +40,8 @@
             <artifactId>sparrow-json</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sparrow.passport</groupId>
-            <artifactId>passport-protocol</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.sparrow.passport</groupId>
-            <artifactId>passport-dao-api</artifactId>
+            <groupId>com.sparrow.security</groupId>
+            <artifactId>security-dao-api</artifactId>
         </dependency>
 
 

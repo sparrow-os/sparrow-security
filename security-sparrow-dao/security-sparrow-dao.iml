@@ -17,16 +17,16 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol-redis:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-orm:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol-dao:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-loader:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-json:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.83" level="project" />
-    <orderEntry type="library" name="Maven: com.sparrow.passport:passport-protocol:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.sparrow.passport:passport-dao-api:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
+    <orderEntry type="module" module-name="security-dao-api" />
+    <orderEntry type="module" module-name="security-protocol" />
   </component>
 </module>

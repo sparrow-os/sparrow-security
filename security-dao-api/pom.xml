@@ -18,8 +18,8 @@
             <artifactId>sparrow-protocol-dao</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sparrow.passport</groupId>
-            <artifactId>passport-protocol</artifactId>
+            <groupId>com.sparrow.security.admin</groupId>
+            <artifactId>security-protocol</artifactId>
         </dependency>
     </dependencies>
 </project>

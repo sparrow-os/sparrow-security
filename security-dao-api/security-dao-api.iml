@@ -12,6 +12,6 @@
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol-dao:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sparrow.passport:passport-protocol:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="security-protocol" />
   </component>
 </module>

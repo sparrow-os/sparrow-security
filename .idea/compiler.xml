@@ -13,8 +13,8 @@
         <module name="passport-api" />
         <module name="passport-mybatis" />
         <module name="security-main-spring-boot" />
-        <module name="security-domain" />
         <module name="passport-main-spring-boot" />
+        <module name="security-domain" />
         <module name="security-dao-api" />
         <module name="security-protocol" />
         <module name="security-mybatis" />
@@ -27,6 +27,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin" target="8" />
       <module name="passport-adapter" target="1.8" />
       <module name="passport-api" target="1.8" />
       <module name="passport-application" target="1.8" />
@@ -48,6 +49,7 @@
       <module name="security-mybatis" target="1.8" />
       <module name="security-protocol" target="1.8" />
       <module name="security-sparrow-dao" target="1.8" />
+      <module name="server" target="8" />
       <module name="sparrow-passport-ddd" target="1.5" />
       <module name="sparrow-security" target="1.5" />
     </bytecodeTargetLevel>

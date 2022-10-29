@@ -1,0 +1,3 @@
+com/sparrow/security/protocol/vo/GroupVO.class
+com/sparrow/security/protocol/param/GroupParam.class
+com/sparrow/security/protocol/query/GroupQuery.class
