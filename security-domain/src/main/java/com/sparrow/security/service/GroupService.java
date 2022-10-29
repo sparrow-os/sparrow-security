@@ -1,6 +1,6 @@
 package com.sparrow.security.service;
 
-import com.sparrow.security.protocol.dto.GroupDTO;
+import com.sparrow.security.protocol.vo.GroupVO;
 import com.sparrow.security.protocol.param.GroupParam;
 import com.sparrow.security.protocol.query.GroupQuery;
 import com.sparrow.security.repository.GroupRepository;
@@ -20,11 +20,11 @@ public class GroupService {
 
     }
 
-    public List<GroupDTO> queryGroup(GroupQuery groupQuery) {
+    public List<GroupVO> queryGroup(GroupQuery groupQuery) {
         return null;
     }
 
-    public GroupDTO getGroup(Long groupId) {
-        return null;
+    public GroupVO getGroup(Long groupId) {
+        return this.groupRepository.getGroup(groupId);
     }
 }

@@ -3,6 +3,7 @@ package com.sparrow.security.infrastructure.persistence;
 import com.sparrow.security.dao.GroupDAO;
 import com.sparrow.security.infrastructure.persistence.data.mapper.GroupDataMapper;
 import com.sparrow.security.po.Group;
+import com.sparrow.security.protocol.vo.GroupVO;
 import com.sparrow.security.protocol.param.GroupParam;
 import com.sparrow.security.repository.GroupRepository;
 import javax.inject.Inject;
@@ -19,5 +20,10 @@ public class GroupRepositoryImpl implements GroupRepository {
     @Override public Long save(GroupParam groupParam) {
         Group group = this.groupDataMapper.toPo(groupParam);
         return this.groupDao.insert(group);
+    }
+
+    @Override public GroupVO getGroup(Long groupId) {
+        Group group = this.groupDao.getEntity(groupId);
+        return this.groupDataMapper.toVo(group);
     }
 }

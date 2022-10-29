@@ -1,6 +1,6 @@
-package com.sparrow.security.protocol.dto;
+package com.sparrow.security.protocol.vo;
 
-public class GroupDTO {
+public class GroupVO {
     private Long groupId;
     private Long parentGroupId;
     private String groupName;
