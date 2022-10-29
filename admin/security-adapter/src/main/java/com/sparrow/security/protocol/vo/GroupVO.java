@@ -1,4 +1,4 @@
-package com.sparrow.security.controller.protocol.vo;
+package com.sparrow.security.protocol.vo;
 
 public class GroupVO {
     private Long groupId;

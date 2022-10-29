@@ -1,11 +1,11 @@
-package com.sparrow.security.controller.assemble;
+package com.sparrow.security.assemble;
 
-import com.sparrow.security.controller.protocol.vo.GroupVO;
+import com.sparrow.security.protocol.vo.GroupVO;
 import com.sparrow.security.protocol.bo.GroupBO;
 import javax.inject.Named;
 
 @Named
-public class GroupControllerAssemble {
+public class GroupAssemble {
     public GroupVO bo2Vo(GroupBO groupBo){
         return new GroupVO();
     }

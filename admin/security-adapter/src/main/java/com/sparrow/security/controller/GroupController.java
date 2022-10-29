@@ -1,8 +1,8 @@
 package com.sparrow.security.controller;
 
 import com.sparrow.protocol.Result;
-import com.sparrow.security.controller.assemble.GroupControllerAssemble;
-import com.sparrow.security.controller.protocol.vo.GroupVO;
+import com.sparrow.security.assemble.GroupAssemble;
+import com.sparrow.security.protocol.vo.GroupVO;
 import com.sparrow.security.protocol.bo.GroupBO;
 import com.sparrow.security.protocol.param.GroupParam;
 import com.sparrow.security.service.GroupService;
@@ -17,7 +17,7 @@ public class GroupController {
     private GroupService groupService;
 
     @Inject
-    private GroupControllerAssemble groupControllerAssemble;
+    private GroupAssemble groupControllerAssemble;
 
     public Result<Long> saveGroup(GroupParam groupParam) {
         Long groupId = groupService.saveGroup(groupParam);
