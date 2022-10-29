@@ -1,7 +1,9 @@
 package com.sparrow.security.controller;
 
 import com.sparrow.protocol.Result;
-import com.sparrow.security.protocol.vo.GroupVO;
+import com.sparrow.security.controller.assemble.GroupControllerAssemble;
+import com.sparrow.security.controller.protocol.vo.GroupVO;
+import com.sparrow.security.protocol.bo.GroupBO;
 import com.sparrow.security.protocol.param.GroupParam;
 import com.sparrow.security.service.GroupService;
 import javax.inject.Inject;
@@ -14,14 +16,17 @@ public class GroupController {
     @Inject
     private GroupService groupService;
 
+    @Inject
+    private GroupControllerAssemble groupControllerAssemble;
+
     public Result<Long> saveGroup(GroupParam groupParam) {
         Long groupId = groupService.saveGroup(groupParam);
         return new Result<>(groupId);
     }
 
     public GroupVO getGroup(Long groupId) {
-        GroupVO groupVo = groupService.getGroup(groupId);
-        return groupVo;
+        GroupBO groupBo = groupService.getGroup(groupId);
+        return this.groupControllerAssemble.bo2Vo(groupBo);
     }
 
     public ModelAndView saveGroupView(GroupParam groupParam) {

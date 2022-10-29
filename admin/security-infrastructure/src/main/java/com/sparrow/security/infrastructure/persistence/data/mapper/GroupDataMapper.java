@@ -1,7 +1,7 @@
 package com.sparrow.security.infrastructure.persistence.data.mapper;
 
 import com.sparrow.security.po.Group;
-import com.sparrow.security.protocol.vo.GroupVO;
+import com.sparrow.security.protocol.bo.GroupBO;
 import com.sparrow.security.protocol.param.GroupParam;
 import javax.inject.Named;
 
@@ -13,9 +13,9 @@ public class GroupDataMapper {
         return group;
     }
 
-    public GroupVO toVo(Group group){
+    public GroupBO toBo(Group group){
         //todo data mapper assemble
-        GroupVO groupDto=null;
-        return groupDto;
+        GroupBO groupBo=null;
+        return groupBo;
     }
 }

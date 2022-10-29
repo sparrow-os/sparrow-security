@@ -1,6 +1,6 @@
-package com.sparrow.security.protocol.vo;
+package com.sparrow.security.protocol.bo;
 
-public class GroupVO {
+public class GroupBO {
     private Long groupId;
     private Long parentGroupId;
     private String groupName;
