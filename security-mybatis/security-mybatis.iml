@@ -40,7 +40,11 @@
     <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.9" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.6" level="project" />
-    <orderEntry type="library" name="Maven: com.sparrow.security:security-dao-api:${sparrow_security_version}" level="project" />
+    <orderEntry type="module" module-name="security-dao-api" />
+    <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol-dao:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.sparrow:sparrow-protocol:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.sparrow.passport:passport-protocol:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.29" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.19.4" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.9" level="project" />
