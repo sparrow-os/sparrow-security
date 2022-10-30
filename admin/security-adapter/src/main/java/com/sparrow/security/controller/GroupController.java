@@ -1,5 +1,6 @@
 package com.sparrow.security.controller;
 
+import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.Result;
 import com.sparrow.security.assemble.GroupAssemble;
 import com.sparrow.security.protocol.vo.GroupVO;
@@ -19,7 +20,7 @@ public class GroupController {
     @Inject
     private GroupAssemble groupControllerAssemble;
 
-    public Result<Long> saveGroup(GroupParam groupParam) {
+    public Result<Long> saveGroup(GroupParam groupParam) throws BusinessException {
         Long groupId = groupService.saveGroup(groupParam);
         return new Result<>(groupId);
     }
@@ -29,7 +30,7 @@ public class GroupController {
         return this.groupControllerAssemble.bo2Vo(groupBo);
     }
 
-    public ModelAndView saveGroupView(GroupParam groupParam) {
+    public ModelAndView saveGroupView(GroupParam groupParam) throws BusinessException {
         Long groupId = groupService.saveGroup(groupParam);
         ModelAndView mv = new ModelAndView("redirect:/group");
         return mv;

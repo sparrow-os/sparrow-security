@@ -17,5 +17,6 @@
         <module>security-sparrow-dao</module>
         <module>admin</module>
         <module>server</module>
+        <module>security-commons</module>
     </modules>
 </project>
