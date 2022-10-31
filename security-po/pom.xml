@@ -10,16 +10,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sparrow.security</groupId>
-    <artifactId>security-dao-api</artifactId>
+    <artifactId>security-po</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
             <groupId>com.sparrow</groupId>
             <artifactId>sparrow-protocol-dao</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.sparrow.security.admin</groupId>
-            <artifactId>security-protocol</artifactId>
         </dependency>
     </dependencies>
 </project>

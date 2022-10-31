@@ -40,11 +40,9 @@
             <artifactId>sparrow-json</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sparrow.security</groupId>
+            <groupId>com.sparrow.security.admin</groupId>
             <artifactId>security-dao-api</artifactId>
         </dependency>
-
-
     </dependencies>
 
 </project>

@@ -27,6 +27,7 @@
     <orderEntry type="library" name="Maven: com.sparrow:sparrow-json:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.83" level="project" />
     <orderEntry type="module" module-name="security-dao-api" />
+    <orderEntry type="module" module-name="security-po" />
     <orderEntry type="module" module-name="security-protocol" />
   </component>
 </module>

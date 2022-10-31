@@ -47,7 +47,7 @@
             <artifactId>security-adapter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sparrow.security</groupId>
+            <groupId>com.sparrow.security.admin</groupId>
             <artifactId>security-sparrow-dao</artifactId>
         </dependency>
         <dependency>

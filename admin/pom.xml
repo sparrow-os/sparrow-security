@@ -14,11 +14,13 @@
 
     <modules>
         <module>security-adapter</module>
+        <module>security-dao-api</module>
         <module>security-domain</module>
         <module>security-infrastructure</module>
         <module>security-main-spring-boot</module>
         <module>security-mybatis</module>
         <module>security-protocol</module>
+        <module>security-sparrow-dao</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
