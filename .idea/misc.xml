@@ -6,9 +6,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/server/security-main-spring-boot/security-main-spring-boot (1) (com.sparrow.security).iml" />
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/admin/security-admin-sparrow-dao/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
