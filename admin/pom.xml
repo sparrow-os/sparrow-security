@@ -13,14 +13,14 @@
     <artifactId>admin</artifactId>
 
     <modules>
-        <module>security-adapter</module>
-        <module>security-dao-api</module>
-        <module>security-domain</module>
-        <module>security-infrastructure</module>
-        <module>security-main-spring-boot</module>
-        <module>security-mybatis</module>
-        <module>security-protocol</module>
-        <module>security-sparrow-dao</module>
+        <module>security-admin-adapter</module>
+        <module>security-admin-dao-api</module>
+        <module>security-admin-domain</module>
+        <module>security-admin-infrastructure</module>
+        <module>security-admin-main-spring-boot</module>
+        <module>security-admin-mybatis</module>
+        <module>security-admin-protocol</module>
+        <module>security-admin-sparrow-dao</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

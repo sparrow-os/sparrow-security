@@ -17,5 +17,13 @@
     </properties>
     <modules>
         <module>security-api</module>
+        <module>security-dao-api</module>
+        <module>security-sparrow-dao</module>
+        <module>security-mybatis</module>
+        <module>security-infrastructure</module>
+        <module>security-main-spring-boot</module>
+        <module>security-protocol</module>
+        <module>security-adapter</module>
+        <module>security-domain</module>
     </modules>
 </project>

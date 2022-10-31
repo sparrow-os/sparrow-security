@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/admin/security-adapter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-dao-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-domain/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-infrastructure/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-main-spring-boot/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-main-spring-boot/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-mybatis/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-mybatis/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-protocol/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-sparrow-dao/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/admin/security-sparrow-dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-adapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-dao-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-infrastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-main-spring-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-main-spring-boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-protocol/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-sparrow-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-sparrow-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-po/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-adapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-dao-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-infrastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-main-spring-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-main-spring-boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-protocol/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-sparrow-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/security-sparrow-dao/src/main/resources" charset="UTF-8" />
   </component>
 </project>

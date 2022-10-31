@@ -6,26 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="passport-protocol" />
-        <module name="passport-dao-api" />
+        <module name="security-admin-adapter" />
         <module name="passport-infrastructure" />
         <module name="security-adapter" />
-        <module name="passport-api" />
-        <module name="passport-mybatis" />
-        <module name="security-main-spring-boot" />
         <module name="security-po" />
-        <module name="passport-main-spring-boot" />
-        <module name="security-domain" />
         <module name="security-dao-api" />
-        <module name="security-protocol" />
-        <module name="security-mybatis" />
         <module name="security-api" />
         <module name="security-commons" />
         <module name="passport-domain" />
+        <module name="passport-adapter" />
+        <module name="security-admin-protocol" />
+        <module name="passport-protocol" />
+        <module name="security-admin-sparrow-dao" />
+        <module name="passport-dao-api" />
+        <module name="security-admin-domain" />
+        <module name="passport-api" />
+        <module name="passport-mybatis" />
+        <module name="security-main-spring-boot" />
+        <module name="security-admin-dao-api" />
+        <module name="security-admin-mybatis" />
+        <module name="passport-main-spring-boot" />
+        <module name="security-domain" />
+        <module name="security-admin-infrastructure" />
+        <module name="security-protocol" />
+        <module name="security-admin-main-spring-boot" />
+        <module name="security-mybatis" />
         <module name="passport-sparrow-dao" />
         <module name="security-sparrow-dao" />
         <module name="security-infrastructure" />
-        <module name="passport-adapter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -43,16 +51,35 @@
       <module name="passport-protocol" target="1.8" />
       <module name="passport-sparrow-dao" target="1.8" />
       <module name="security-adapter" target="1.8" />
+      <module name="security-adapter (1) (com.sparrow.security)" target="1.8" />
+      <module name="security-admin-adapter" target="1.8" />
+      <module name="security-admin-dao-api" target="1.8" />
+      <module name="security-admin-domain" target="1.8" />
+      <module name="security-admin-infrastructure" target="1.8" />
+      <module name="security-admin-main-spring-boot" target="1.8" />
+      <module name="security-admin-mybatis" target="1.8" />
+      <module name="security-admin-protocol" target="1.8" />
+      <module name="security-admin-sparrow-dao" target="1.8" />
       <module name="security-api" target="1.8" />
       <module name="security-commons" target="1.8" />
       <module name="security-dao-api" target="1.8" />
+      <module name="security-dao-api (1) (com.sparrow.security)" target="1.8" />
       <module name="security-domain" target="1.8" />
+      <module name="security-domain (1) (com.sparrow.security)" target="1.8" />
       <module name="security-infrastructure" target="1.8" />
+      <module name="security-infrastructure (1) (com.sparrow.security)" target="1.8" />
       <module name="security-main-spring-boot" target="1.8" />
+      <module name="security-main-spring-boot (1)" target="1.8" />
+      <module name="security-main-spring-boot (1) (com.sparrow.security)" target="1.8" />
+      <module name="security-main-spring-boot (1) (com.sparrow.security.admin)" target="1.8" />
+      <module name="security-main-spring-boot (2) (com.sparrow.security)" target="1.8" />
       <module name="security-mybatis" target="1.8" />
+      <module name="security-mybatis (1) (com.sparrow.security)" target="1.8" />
       <module name="security-po" target="1.8" />
       <module name="security-protocol" target="1.8" />
+      <module name="security-protocol (1) (com.sparrow.security)" target="1.8" />
       <module name="security-sparrow-dao" target="1.8" />
+      <module name="security-sparrow-dao (1) (com.sparrow.security)" target="1.8" />
       <module name="server" target="8" />
       <module name="sparrow-passport-ddd" target="1.5" />
       <module name="sparrow-security" target="1.5" />
