@@ -13,12 +13,14 @@
         <module name="passport-api" />
         <module name="passport-mybatis" />
         <module name="security-main-spring-boot" />
+        <module name="security-po" />
         <module name="passport-main-spring-boot" />
         <module name="security-domain" />
         <module name="security-dao-api" />
         <module name="security-protocol" />
         <module name="security-mybatis" />
         <module name="security-api" />
+        <module name="security-commons" />
         <module name="passport-domain" />
         <module name="passport-sparrow-dao" />
         <module name="security-sparrow-dao" />
@@ -42,11 +44,13 @@
       <module name="passport-sparrow-dao" target="1.8" />
       <module name="security-adapter" target="1.8" />
       <module name="security-api" target="1.8" />
+      <module name="security-commons" target="1.8" />
       <module name="security-dao-api" target="1.8" />
       <module name="security-domain" target="1.8" />
       <module name="security-infrastructure" target="1.8" />
       <module name="security-main-spring-boot" target="1.8" />
       <module name="security-mybatis" target="1.8" />
+      <module name="security-po" target="1.8" />
       <module name="security-protocol" target="1.8" />
       <module name="security-sparrow-dao" target="1.8" />
       <module name="server" target="8" />
