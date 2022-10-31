@@ -1,7 +1,6 @@
 package com.sparrow.security.po;
 
 import com.sparrow.protocol.MethodOrder;
-import com.sparrow.protocol.POJO;
 import com.sparrow.protocol.dao.PO;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
