@@ -1,9 +1,8 @@
 package com.sparrow.security.po;
 
-import com.sparrow.protocol.POJO;
-import java.util.Date;
+import com.sparrow.protocol.dao.PO;
 
-public class UserRole implements POJO {
+public class UserRole extends PO {
 
     private static final long serialVersionUID = 1L;
 
@@ -15,8 +14,35 @@ public class UserRole implements POJO {
 
     private Long roleId;
 
-    private Date createdAt;
+    public Long getId() {
+        return id;
+    }
 
-    private Long createdBy;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public Long getAppId() {
+        return appId;
+    }
+
+    public void setAppId(Long appId) {
+        this.appId = appId;
+    }
+
+    public Long getUid() {
+        return uid;
+    }
+
+    public void setUid(Long uid) {
+        this.uid = uid;
+    }
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
 }
