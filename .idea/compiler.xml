@@ -17,7 +17,6 @@
         <module name="passport-adapter" />
         <module name="security-admin-protocol" />
         <module name="passport-protocol" />
-        <module name="security-admin-sparrow-dao" />
         <module name="passport-dao-api" />
         <module name="security-admin-domain" />
         <module name="passport-api" />

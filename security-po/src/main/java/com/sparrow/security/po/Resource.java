@@ -91,6 +91,16 @@ public class Resource extends PO {
         this.id = id;
     }
 
+    @MethodOrder(order = 2)
+    @Column(name = "appId", columnDefinition = "bigint(20)  DEFAULT 0 COMMENT 'app id'", nullable = false)
+    public Long getAppId() {
+        return appId;
+    }
+
+    public void setAppId(Long appId) {
+        this.appId = appId;
+    }
+
     @MethodOrder(order = 3)
     @Column(name = "code", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'code'", nullable = false, unique = true)
     public String getCode() {
