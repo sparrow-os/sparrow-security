@@ -1,11 +1,11 @@
-package com.sparrow.security.infrastructure.persistence;
+package com.sparrow.security.infrastructure.persistence.admin;
 
 import com.sparrow.security.dao.admin.GroupDAO;
-import com.sparrow.security.infrastructure.persistence.data.mapper.GroupDataMapper;
+import com.sparrow.security.infrastructure.persistence.admin.data.mapper.GroupDataMapper;
 import com.sparrow.security.po.Group;
-import com.sparrow.security.protocol.bo.GroupBO;
-import com.sparrow.security.protocol.param.GroupParam;
-import com.sparrow.security.repository.GroupRepository;
+import com.sparrow.security.protocol.admin.bo.GroupBO;
+import com.sparrow.security.protocol.admin.param.GroupParam;
+import com.sparrow.security.admin.repository.GroupRepository;
 import javax.inject.Inject;
 import javax.inject.Named;
 
