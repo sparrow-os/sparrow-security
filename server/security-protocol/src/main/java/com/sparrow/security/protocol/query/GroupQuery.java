@@ -1,4 +1,4 @@
-package com.sparrow.security.protocol.admin.query;
+package com.sparrow.security.protocol.query;
 
 import java.util.Date;
 

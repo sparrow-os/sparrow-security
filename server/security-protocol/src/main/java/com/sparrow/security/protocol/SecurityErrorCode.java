@@ -1,4 +1,4 @@
-package com.sparrow.security.protocol.admin;
+package com.sparrow.security.protocol;
 
 import com.sparrow.protocol.ErrorSupport;
 import com.sparrow.protocol.ModuleSupport;

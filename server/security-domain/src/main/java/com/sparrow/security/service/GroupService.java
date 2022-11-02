@@ -2,10 +2,10 @@ package com.sparrow.security.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.BusinessException;
-import com.sparrow.security.protocol.admin.SecurityErrorCode;
+import com.sparrow.security.protocol.SecurityErrorCode;
 import com.sparrow.security.protocol.bo.GroupBO;
 import com.sparrow.security.protocol.param.GroupParam;
-import com.sparrow.security.protocol.admin.query.GroupQuery;
+import com.sparrow.security.protocol.query.GroupQuery;
 import com.sparrow.security.repository.GroupRepository;
 import java.util.List;
 import javax.inject.Inject;

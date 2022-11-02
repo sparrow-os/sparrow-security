@@ -1,6 +1,6 @@
 package com.sparrow.security.infrastructure.persistence;
 
-import com.sparrow.security.dao.admin.GroupDAO;
+import com.sparrow.security.dao.GroupDAO;
 import com.sparrow.security.infrastructure.persistence.data.mapper.GroupDataMapper;
 import com.sparrow.security.po.Group;
 import com.sparrow.security.protocol.bo.GroupBO;

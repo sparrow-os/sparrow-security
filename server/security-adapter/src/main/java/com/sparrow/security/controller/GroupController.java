@@ -3,7 +3,7 @@ package com.sparrow.security.controller;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.Result;
 import com.sparrow.security.assemble.GroupAssemble;
-import com.sparrow.security.protocol.admin.vo.GroupVO;
+import com.sparrow.security.protocol.vo.GroupVO;
 import com.sparrow.security.protocol.bo.GroupBO;
 import com.sparrow.security.protocol.param.GroupParam;
 import com.sparrow.security.service.GroupService;
