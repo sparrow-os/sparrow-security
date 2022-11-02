@@ -1,14 +1,22 @@
-package com.sparrow.security.protocol.query;
+package com.sparrow.security.protocol.param;
 
-import java.util.Date;
-
-public class GroupQuery {
+public class GroupParam {
+    private Long groupId;
     private Long parentGroupId;
     private String groupName;
+    private Long maxAllowCount;
     private String groupType;
     private Integer groupLevel;
-    private Date beginDate;
-    private Date endDate;
+    private String groupIco;
+    private String remark;
+
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
+    }
 
     public Long getParentGroupId() {
         return parentGroupId;
@@ -24,6 +32,14 @@ public class GroupQuery {
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
+    }
+
+    public Long getMaxAllowCount() {
+        return maxAllowCount;
+    }
+
+    public void setMaxAllowCount(Long maxAllowCount) {
+        this.maxAllowCount = maxAllowCount;
     }
 
     public String getGroupType() {
@@ -42,19 +58,19 @@ public class GroupQuery {
         this.groupLevel = groupLevel;
     }
 
-    public Date getBeginDate() {
-        return beginDate;
+    public String getGroupIco() {
+        return groupIco;
     }
 
-    public void setBeginDate(Date beginDate) {
-        this.beginDate = beginDate;
+    public void setGroupIco(String groupIco) {
+        this.groupIco = groupIco;
     }
 
-    public Date getEndDate() {
-        return endDate;
+    public String getRemark() {
+        return remark;
     }
 
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

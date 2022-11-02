@@ -8,14 +8,6 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/admin/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-adapter/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-dao-api/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-domain/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-infrastructure/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-main-spring-boot/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/security-admin-protocol/pom.xml" />
         <option value="$PROJECT_DIR$/admin/security-admin-sparrow-dao/pom.xml" />
       </set>
     </option>

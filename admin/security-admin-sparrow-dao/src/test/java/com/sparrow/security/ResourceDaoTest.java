@@ -3,8 +3,9 @@ package com.sparrow.security;
 import com.sparrow.container.Container;
 import com.sparrow.container.ContainerBuilder;
 import com.sparrow.core.spi.ApplicationContext;
+import com.sparrow.datasource.ConnectionContextHolderImpl;
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.security.dao.admin.ResourceDAO;
+import com.sparrow.security.dao.ResourceDAO;
 import com.sparrow.security.po.Resource;
 import org.junit.Test;
 
