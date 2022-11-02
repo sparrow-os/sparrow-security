@@ -1,12 +1,12 @@
-package com.sparrow.security.controller;
+package com.sparrow.admin.controller;
 
+import com.sparrow.admin.assemble.GroupAssemble;
+import com.sparrow.admin.protocol.admin.vo.GroupVO;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.Result;
-import com.sparrow.security.assemble.GroupAssemble;
-import com.sparrow.security.protocol.admin.vo.GroupVO;
-import com.sparrow.security.protocol.bo.GroupBO;
-import com.sparrow.security.protocol.param.GroupParam;
-import com.sparrow.security.service.GroupService;
+import com.sparrow.security.protocol.admin.bo.GroupBO;
+import com.sparrow.security.protocol.admin.param.GroupParam;
+import com.sparrow.security.admin.service.GroupService;
 import javax.inject.Inject;
 import javax.inject.Named;
 import org.springframework.web.servlet.ModelAndView;
