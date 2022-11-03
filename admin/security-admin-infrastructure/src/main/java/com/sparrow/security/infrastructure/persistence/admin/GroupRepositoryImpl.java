@@ -18,7 +18,7 @@ public class GroupRepositoryImpl implements GroupRepository {
     private GroupDAO groupDao;
 
     @Override public Long save(GroupParam groupParam) {
-        Group group = this.groupDataMapper.toPo(groupParam);
+        Group group = this.groupDataMapper.param2po(groupParam);
         return this.groupDao.insert(group);
     }
 

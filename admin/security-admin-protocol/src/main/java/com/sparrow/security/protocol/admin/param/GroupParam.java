@@ -1,6 +1,8 @@
 package com.sparrow.security.protocol.admin.param;
 
-public class GroupParam {
+import com.sparrow.protocol.Param;
+
+public class GroupParam implements Param {
     private Long groupId;
     private Long parentGroupId;
     private String groupName;

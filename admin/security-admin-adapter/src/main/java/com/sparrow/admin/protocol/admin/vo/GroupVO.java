@@ -1,6 +1,8 @@
 package com.sparrow.admin.protocol.admin.vo;
 
-public class GroupVO {
+import com.sparrow.protocol.VO;
+
+public class GroupVO implements VO {
     private Long groupId;
     private Long parentGroupId;
     private String groupName;

@@ -9,8 +9,15 @@ import com.sparrow.security.protocol.admin.param.GroupParam;
 import com.sparrow.security.admin.service.GroupService;
 import javax.inject.Inject;
 import javax.inject.Named;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+@RestController
+@RequestMapping("group")
 @Named
 public class GroupController {
 
@@ -20,11 +27,12 @@ public class GroupController {
     @Inject
     private GroupAssemble groupControllerAssemble;
 
-    public Result<Long> saveGroup(GroupParam groupParam) throws BusinessException {
+    @PostMapping("save-group")
+    public Result<Long> saveGroup(@RequestBody  GroupParam groupParam) throws BusinessException {
         Long groupId = groupService.saveGroup(groupParam);
         return new Result<>(groupId);
     }
-
+    @GetMapping("get-group")
     public GroupVO getGroup(Long groupId) {
         GroupBO groupBo = groupService.getGroup(groupId);
         return this.groupControllerAssemble.bo2Vo(groupBo);

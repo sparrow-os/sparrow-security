@@ -1,6 +1,8 @@
 package com.sparrow.security.protocol.admin.bo;
 
-public class GroupBO {
+import com.sparrow.protocol.BO;
+
+public class GroupBO implements BO {
     private Long groupId;
     private Long parentGroupId;
     private String groupName;
