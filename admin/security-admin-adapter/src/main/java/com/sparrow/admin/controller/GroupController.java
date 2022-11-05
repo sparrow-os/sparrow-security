@@ -32,6 +32,7 @@ public class GroupController {
         Long groupId = groupService.saveGroup(groupParam);
         return new Result<>(groupId);
     }
+
     @GetMapping("get-group")
     public GroupVO getGroup(Long groupId) {
         GroupBO groupBo = groupService.getGroup(groupId);
