@@ -15,13 +15,15 @@ import javax.inject.Named;
 @Named
 public class GroupDataMapper implements Param2POConverter<GroupParam, Group>, PO2BOConverter<GroupBO, Group> {
     public GroupBO toBo(Group group) {
-        return null;
+        GroupBO groupBo = new GroupBO();
+        BeanUtility.copyProperties(group, groupBo);
+        return groupBo;
     }
 
     @Override public Group param2po(GroupParam param) {
         Group group = new Group();
         BeanUtility.copyProperties(param, group);
-        LoginToken loginToken =new LoginToken();
+        LoginToken loginToken = new LoginToken();
         loginToken.setUserId(1L);
         // ThreadContext.getLoginToken();
         group.setCreateUserId(loginToken.getUserId());

@@ -35,7 +35,7 @@ public class GroupController {
     @GetMapping("get-group")
     public GroupVO getGroup(Long groupId) {
         GroupBO groupBo = groupService.getGroup(groupId);
-        return this.groupControllerAssemble.bo2Vo(groupBo);
+        return this.groupControllerAssemble.boAssembleVO(groupBo);
     }
 
     public ModelAndView saveGroupView(GroupParam groupParam) throws BusinessException {
