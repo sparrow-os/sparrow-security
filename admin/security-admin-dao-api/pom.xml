@@ -17,9 +17,5 @@
             <groupId>com.sparrow.security</groupId>
             <artifactId>security-po</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.sparrow.security.admin</groupId>
-            <artifactId>security-admin-protocol</artifactId>
-        </dependency>
     </dependencies>
 </project>

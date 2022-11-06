@@ -1,7 +1,7 @@
 package com.sparrow.admin.assemble;
 
 import com.sparrow.admin.protocol.admin.vo.GroupVO;
-import com.sparrow.security.protocol.admin.bo.GroupBO;
+import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.support.assemble.BO2VOAssemble;
 import com.sparrow.utility.BeanUtility;
 import java.util.List;
