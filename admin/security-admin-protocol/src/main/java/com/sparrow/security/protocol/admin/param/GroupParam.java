@@ -8,7 +8,6 @@ public class GroupParam implements Param {
     private String groupName;
     private Long maxAllowCount;
     private String groupType;
-    private Integer groupLevel;
     private String groupIco;
     private String remark;
 
@@ -50,14 +49,6 @@ public class GroupParam implements Param {
 
     public void setGroupType(String groupType) {
         this.groupType = groupType;
-    }
-
-    public Integer getGroupLevel() {
-        return groupLevel;
-    }
-
-    public void setGroupLevel(Integer groupLevel) {
-        this.groupLevel = groupLevel;
     }
 
     public String getGroupIco() {

@@ -8,7 +8,6 @@ public class GroupBO implements BO {
     private String groupName;
     private Long maxAllowCount;
     private String groupType;
-    private Integer groupLevel;
     private String groupIco;
 
     public Long getGroupId() {
@@ -49,14 +48,6 @@ public class GroupBO implements BO {
 
     public void setGroupType(String groupType) {
         this.groupType = groupType;
-    }
-
-    public Integer getGroupLevel() {
-        return groupLevel;
-    }
-
-    public void setGroupLevel(Integer groupLevel) {
-        this.groupLevel = groupLevel;
     }
 
     public String getGroupIco() {

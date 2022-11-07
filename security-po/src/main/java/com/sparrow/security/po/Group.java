@@ -11,7 +11,9 @@ import javax.persistence.Table;
 @Table(name = "group")
 public class Group extends PO {
     private Long groupId;
+
     private Long parentGroupId;
+
     private String groupName;
     /**
      * 组内最大允许人数
@@ -21,10 +23,6 @@ public class Group extends PO {
      * 组类型
      */
     private String groupType;
-    /**
-     * 组的级别 通过级别拿对应的积分限制
-     */
-    private Integer groupLevel;
     /**
      * 组的icon
      */
@@ -55,16 +53,6 @@ public class Group extends PO {
         this.groupType = groupType;
     }
 
-    @MethodOrder(order = 3)
-    @Column(name = "group_level", columnDefinition = "int(11) unsigned default 0 comment '组级别'", nullable = false)
-    public Integer getGroupLevel() {
-        return groupLevel;
-    }
-
-    public void setGroupLevel(Integer groupLevel) {
-        this.groupLevel = groupLevel;
-    }
-
     @MethodOrder(order = 4)
     @Column(name = "group_name", columnDefinition = "varchar(64) DEFAULT '' COMMENT '组名'", nullable = false)
     public String getGroupName() {
@@ -93,5 +81,15 @@ public class Group extends PO {
 
     public void setGroupIco(String groupIco) {
         this.groupIco = groupIco;
+    }
+
+    @MethodOrder(order = 9)
+    @Column(name = "parent_group_id", columnDefinition = "int(11) default '' comment ' parent group id'", nullable = false)
+    public Long getParentGroupId() {
+        return parentGroupId;
+    }
+
+    public void setParentGroupId(Long parentGroupId) {
+        this.parentGroupId = parentGroupId;
     }
 }

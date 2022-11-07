@@ -27,7 +27,7 @@ public class GroupController {
     @Inject
     private GroupAssemble groupControllerAssemble;
 
-    @PostMapping("save-group")
+    @PostMapping("save.json")
     public Result<Long> saveGroup(@RequestBody GroupParam groupParam) throws BusinessException {
         Long groupId = groupService.saveGroup(groupParam);
         return new Result<>(groupId);
@@ -45,8 +45,10 @@ public class GroupController {
         return Result.success();
     }
 
+    @PostMapping("save")
     public ModelAndView saveGroupView(GroupParam groupParam) throws BusinessException {
         Long groupId = groupService.saveGroup(groupParam);
-        return new ModelAndView("redirect:/group");
+        ModelAndView mv = new ModelAndView("redirect:/transit?/manage");
+        return mv;
     }
 }

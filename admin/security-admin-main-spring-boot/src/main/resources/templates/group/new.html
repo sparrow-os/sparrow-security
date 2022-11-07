@@ -1,0 +1,129 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/sparrow.css?v=1.0.1"/>
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/sparrow-tree.css?v=1.0.1"/>
+    <script language="javascript" type="text/javascript"
+            src="http://r.sparrowzoo.net/scripts/require.js?v=1.0.1"></script>
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/pure-css/pure.css?v=1.0.1"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/layouts-old-ie.css?v=1.0.1"/>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/layouts-backend.css?v=1.0.1"/>
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/modal.css?v=1.0.1"/>
+
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/sparrow.css?v=1.0.1"/>
+    <link rel="stylesheet" type="text/css" href="http://r.sparrowzoo.net/styles/modal.css?v=1.0.1"/>
+    <script language="javascript" type="text/javascript"
+            src="http://r.sparrowzoo.net/ext/scripts/system/language/zh_cn/group.js?v=1.0.1"></script>
+
+    <script language="JavaScript" type="text/javascript">
+        requirejs.config({
+            baseUrl: "http://r.sparrowzoo.net/scripts",
+            paths: {
+                group: 'http://r.sparrowzoo.net/ext/scripts/system/group/new'
+            }
+        });
+        require(['sparrow', 'domReady!', 'group'], function ($, dom, groupController) {
+            $.file.isShowProgress = true;
+            $.url.upload = 'http://upload.sparrowzoo.com';
+            groupController.load();
+        });
+
+    </script>
+
+    <style type="text/css">
+        .inline-block label {
+            width: 7em !important;
+        }
+
+        .status label {
+            width: 3em !important;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <form method="post" action="/group/save-group" class="pure-form pure-form-aligned">
+        <fieldset>
+            <legend>注: <span class="highlight">*</span>为必添项</legend>
+            <div class="pure-control-group">
+                <label>组图标</label>
+                <iframe id="null.group" class="file-frame" frameborder="0"></iframe>
+                <input type="hidden" id="hdnGroupId" name="groupId" class=""/>
+                <input type="hidden" id="hdnGroupIco" name="groupIco" class=""/>
+                <span class="prompt" id="errorImgGroupIco"></span>
+            </div>
+
+            <div id="divGroupIco" class="pure-controls">
+
+            </div>
+
+            <div class="pure-control-group">
+                <label>组类型</label>
+                <select name="groupType">
+                    <option value="department">部门</option>
+                    <option value="business">业务线</option>
+                </select>
+            </div>
+
+            <div class="pure-control-group">
+                <label>所属组</label>
+                <input type="text" id="txtParentGroupId" name="parentGroupId" class=""
+                       onfocus='$.v.showMessage(groupInfo,this);' onblur='$.v.isNull(groupInfo,this);'/>
+                <span class="prompt" id="errorParentGroupId"></span>
+            </div>
+            <div class="pure-control-group">
+                <label>组名称</label>
+                <input type="text" id="txtGroupName" name="groupName" class=""
+                       onfocus='$.v.showMessage(groupInfo,this);' onblur='$.v.isNull(groupInfo,this);'/>
+                <span class="prompt" id="errorGroupName"></span>
+            </div>
+            <div id="divDepartmentMaxUser" class="pure-control-group">
+                <label>单位内最大允许用户数</label>
+
+                <input type="text" id="txtMaxAllowCount" name="maxAllowCount" class=""
+                       onfocus='$.v.showMessage(groupInfo,this);' onblur='$.v.isDigital(groupInfo,this);' value="0"/>
+                <span class="prompt"
+                      id="errorMaxAllowCount"></span>
+            </div>
+            <div class="pure-control-group">
+                <label>状态</label>
+
+                <div class="inline-block status">
+                    <input id="rdbGroupStatus00" type="radio" name="status" value="DISABLE" checked=true/><label
+                        for="rdbGroupStatus00">禁用</label> <input id="rdbGroupStatus01" type="radio" name="status"
+                                                                 value="ENABLE"/><label
+                        for="rdbGroupStatus01">正常</label>
+
+                </div>
+                <span class="prompt" id="errorState"></span>
+            </div>
+
+
+            <div class="pure-control-group">
+                <label>备注</label>
+                <textarea id="txtRemark" cols='20' rows='5' name="remark" class=""
+                          onfocus="$.v.showMessage(groupInfo,this);" onblur="$.v.ok(groupInfo,this);"
+                          onkeyup="$.v.updateTxtCount(this,groupInfo.txtRemark.spanTxtCount,500);"></textarea>
+                <span class="prompt" id="errorRemark"></span>
+            </div>
+            <div class="pure-controls">
+                您还可以输入：<span id="spanTxtCount" name="remarkLength" class=""></span>
+                个字符/
+            </div>
+            <div class="pure-controls">
+                <input id="btnSave" type="button" class="pure-button pure-button-primary"
+                       value="提交"/>
+                <input id="btnReturn" type="button" class="pure-button"
+                       value="返回"/>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
