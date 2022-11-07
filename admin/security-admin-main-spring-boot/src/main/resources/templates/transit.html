@@ -26,9 +26,12 @@
         </h2>
     </div>
     <div class="content">
+
+
         <input type="hidden" th:value="${#httpServletRequest.getQueryString()}"/>
+
         <span id="timer">50000</span>秒以后将自动跳转,或者
-        <a th:href="@{${#httpServletRequest.getQueryString()}}" href="${pageContext.request.queryString}" target="_self">直接点击这里跳转</a>
+        <a th:href="@{${#httpServletRequest.getQueryString()}}" target="_self">直接点击这里跳转</a>
         <script type="text/javascript">
             $.waitRedirect("timer");
         </script>
