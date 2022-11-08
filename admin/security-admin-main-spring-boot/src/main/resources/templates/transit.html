@@ -28,10 +28,17 @@
     <div class="content">
 
 
-        <input type="hidden" th:value="${#httpServletRequest.getQueryString()}"/>
+        [[${#httpServletRequest.getQueryString()}]]
 
-        <span id="timer">50000</span>秒以后将自动跳转,或者
-        <a th:href="@{${#httpServletRequest.getQueryString()}}" target="_self">直接点击这里跳转</a>
+
+<!--        <a th:href="@{__${#httpServletRequest.getQueryString()}__}">Click to More</a>-->
+、
+
+        <input type="hidden" th:value="${#httpServletRequest.getQueryString()}"/>
+        <a target="_self">取不到值</a>
+
+        <span url=\"[[${#httpServletRequest.getQueryString()}]]\" id="timer">50000</span>秒以后将自动跳转,或者
+        <!--        <a th:href="@{httpServletRequest.getQueryString()}" target="_self">直接点击这里跳转</a>-->
         <script type="text/javascript">
             $.waitRedirect("timer");
         </script>
