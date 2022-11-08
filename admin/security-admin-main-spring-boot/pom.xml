@@ -23,10 +23,6 @@
         <druid.version>1.1.10</druid.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.sparrow</groupId>
-            <artifactId>sparrow-starter</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

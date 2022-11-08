@@ -7,6 +7,7 @@ import com.sparrow.protocol.Result;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.service.GroupService;
 import com.sparrow.security.protocol.admin.param.GroupParam;
+import com.sparrow.spring.starter.ModelAndViewUtils;
 import javax.inject.Inject;
 import javax.inject.Named;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,7 +49,6 @@ public class GroupController {
     @PostMapping("save")
     public ModelAndView saveGroupView(GroupParam groupParam) throws BusinessException {
         Long groupId = groupService.saveGroup(groupParam);
-        ModelAndView mv = new ModelAndView("redirect:/transit?/manage");
-        return mv;
+        return ModelAndViewUtils.redirect("manage");
     }
 }
