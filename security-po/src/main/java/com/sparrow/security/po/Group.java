@@ -19,9 +19,6 @@ public class Group extends PO {
      * 组内最大允许人数
      */
     private Long maxAllowCount;
-
-
-
     /**
      * 组类型 goup type
      */
