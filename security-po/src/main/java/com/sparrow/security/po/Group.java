@@ -20,8 +20,10 @@ public class Group extends PO {
      */
     private Long maxAllowCount;
 
+
+
     /**
-     * 组类型
+     * 组类型 goup type
      */
     private String groupType;
     /**
