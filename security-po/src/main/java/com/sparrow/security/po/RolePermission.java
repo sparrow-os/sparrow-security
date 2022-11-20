@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class RolePermission implements POJO {
     private Long id;
     private Long roleId;
-    private String resource;
+    private Long resourceId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class RolePermission implements POJO {
         this.id = id;
     }
 
-    @Column(name = "group_id", columnDefinition = "int(11) unsigned default 0 comment 'Group id'", nullable = false)
+    @Column(name = "role_id", columnDefinition = "int(11) unsigned default 0 comment 'role id'", nullable = false)
     @MethodOrder(order = 2)
     public Long getRoleId() {
         return roleId;
@@ -37,12 +37,12 @@ public class RolePermission implements POJO {
     }
 
     @MethodOrder(order = 3)
-    @Column(name = "resource", columnDefinition = "varchar(128)  DEFAULT '' COMMENT '资源配置'", nullable = false)
-    public String getResource() {
-        return resource;
+    @Column(name = "resource_id", columnDefinition = "varchar(128)  DEFAULT '' COMMENT 'resource id'", nullable = false)
+    public Long getResourceId() {
+        return resourceId;
     }
 
-    public void setResource(String resource) {
-        this.resource = resource;
+    public void setResourceId(Long resource) {
+        this.resourceId = resourceId;
     }
 }

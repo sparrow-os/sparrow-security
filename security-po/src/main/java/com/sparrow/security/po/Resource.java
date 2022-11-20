@@ -13,23 +13,7 @@ import javax.persistence.Table;
  */
 @Table(name = "resource")
 public class Resource extends PO {
-    /**
-     * 默认的构造函数，否则无法通过
-     * <p/>
-     * this.clazz.getConstructor().newInstance()进行构照
-     */
     public Resource() {
-    }
-
-    public Resource(String name, String accessUrl) {
-        this.name = name;
-        this.accessUrl = accessUrl;
-    }
-
-    public Resource(String code, String name, String accessUrl) {
-        this.code = code;
-        this.name = name;
-        this.accessUrl = accessUrl;
     }
 
     private Long id;
@@ -41,43 +25,32 @@ public class Resource extends PO {
      * 目录、菜单、按钮（事件）
      */
     private Integer resourceType;
+    /**
+     * _blank _self _manage
+     */
     private String openType;
     /**
-     * 后台管理url  权限会默认该url
+     * 权限url 对应用户访问的直接URL
+     * <p>
+     * cms/manage-{001}.do
+     * <p>
+     * cms/manage-{002}.do
      */
-    private String manageUrl;
+    private String url;
     /**
-     * 前台角色（等级）对应的url
+     * 请求的method GET/POST
      */
-    private String listUrl;
+    private String method;
+
     /**
-     * 创建按钮 与权限无关
+     * ico 图标
      */
-    private String newUrl;
-    /**
-     * 查看详情url 与权限无关
-     */
-    private String detailUrl;
-    /**
-     * 访问的url 对应$access  placeholder
-     */
-    private String accessUrl;
-    private String uploadKey;
-    private Integer maxRecordCount;
-    private String manager;
-    private Integer sort;
     private String icoUrl;
-    private String cover;
 
-    @Column(name = "name", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'name'", nullable = false, unique = true)
-    @MethodOrder(order = 2)
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * 序号
+     */
+    private Integer sort;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -91,8 +64,18 @@ public class Resource extends PO {
         this.id = id;
     }
 
+    @Column(name = "name", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'name'", nullable = false, unique = true)
     @MethodOrder(order = 2)
-    @Column(name = "appId", columnDefinition = "bigint(20)  DEFAULT 0 COMMENT 'app id'", nullable = false)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @MethodOrder(order = 3)
+    @Column(name = "app_id", columnDefinition = "bigint(20)  DEFAULT 0 COMMENT 'app id'", nullable = false)
     public Long getAppId() {
         return appId;
     }
@@ -101,7 +84,7 @@ public class Resource extends PO {
         this.appId = appId;
     }
 
-    @MethodOrder(order = 3)
+    @MethodOrder(order = 4)
     @Column(name = "code", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'code'", nullable = false, unique = true)
     public String getCode() {
         return code;
@@ -111,8 +94,8 @@ public class Resource extends PO {
         this.code = code;
     }
 
-    @MethodOrder(order = 4)
-    @Column(name = "parent_id", columnDefinition = "int(11)unsigned  DEFAULT 0 COMMENT 'parent id'", nullable = false)
+    @MethodOrder(order = 5)
+    @Column(name = "parent_id", columnDefinition = "int(11) unsigned  DEFAULT 0 COMMENT 'parent id'", nullable = false)
     public Long getParentId() {
         return parentId;
     }
@@ -121,7 +104,7 @@ public class Resource extends PO {
         this.parentId = parentId;
     }
 
-    @MethodOrder(order = 5)
+    @MethodOrder(order = 6)
     @Column(name = "resource_type", columnDefinition = "tinyint(2)  DEFAULT 0 COMMENT 'resource type'", nullable = false)
     public Integer getResourceType() {
         return resourceType;
@@ -131,7 +114,7 @@ public class Resource extends PO {
         this.resourceType = resourceType;
     }
 
-    @MethodOrder(order = 6)
+    @MethodOrder(order = 7)
     @Column(name = "open_type", columnDefinition = "varchar(16)  DEFAULT '' COMMENT 'open type'", nullable = false)
     public String getOpenType() {
         return openType;
@@ -141,67 +124,7 @@ public class Resource extends PO {
         this.openType = openType;
     }
 
-    @MethodOrder(order = 7)
-    @Column(name = "manage_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'manager url'", nullable = false)
-    public String getManageUrl() {
-        return manageUrl;
-    }
-
-    public void setManageUrl(String manageUrl) {
-        this.manageUrl = manageUrl;
-    }
-
-    @MethodOrder(order = 8)
-    @Column(name = "list_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'list url'", nullable = false)
-    public String getListUrl() {
-        return listUrl;
-    }
-
-    public void setListUrl(String listUrl) {
-        this.listUrl = listUrl;
-    }
-
     @MethodOrder(order = 9)
-    @Column(name = "detail_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'detail url'", nullable = false)
-    public String getDetailUrl() {
-        return detailUrl;
-    }
-
-    public void setDetailUrl(String detailUrl) {
-        this.detailUrl = detailUrl;
-    }
-
-    @MethodOrder(order = 9.1F)
-    @Column(name = "access_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'access ico url'", nullable = false, unique = true)
-    public String getAccessUrl() {
-        return this.accessUrl;
-    }
-
-    public void setAccessUrl(String accessUrl) {
-        this.accessUrl = accessUrl;
-    }
-
-    @MethodOrder(order = 9.2F)
-    @Column(name = "new_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'new url'", nullable = false)
-    public String getNewUrl() {
-        return newUrl;
-    }
-
-    public void setNewUrl(String newUrl) {
-        this.newUrl = newUrl;
-    }
-
-    @MethodOrder(order = 10)
-    @Column(name = "max_record_count", columnDefinition = "int(11)  DEFAULT 0 COMMENT 'max record count'", nullable = false)
-    public Integer getMaxRecordCount() {
-        return maxRecordCount;
-    }
-
-    public void setMaxRecordCount(Integer maxRecordCount) {
-        this.maxRecordCount = maxRecordCount;
-    }
-
-    @MethodOrder(order = 11)
     @Column(name = "sort", columnDefinition = "int(11)  DEFAULT 0 COMMENT 'sort'", nullable = false, updatable = false)
     public Integer getSort() {
         return sort;
@@ -211,8 +134,8 @@ public class Resource extends PO {
         this.sort = sort;
     }
 
-    @MethodOrder(order = 12)
-    @Column(name = "ico_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'forum ico url'", nullable = false)
+    @MethodOrder(order = 10)
+    @Column(name = "ico_url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT ' ico url'", nullable = false)
     public String getIcoUrl() {
         return icoUrl;
     }
@@ -221,33 +144,23 @@ public class Resource extends PO {
         this.icoUrl = icoUrl;
     }
 
-    @MethodOrder(order = 13)
-    @Column(name = "manager", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'manager url'", nullable = false)
-    public String getManager() {
-        return manager;
+    @MethodOrder(order = 11)
+    @Column(name = "url", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'url'", nullable = false)
+    public String getUrl() {
+        return url;
     }
 
-    public void setManager(String manager) {
-        this.manager = manager;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    @MethodOrder(order = 16)
-    @Column(name = "upload_key", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'upload key'", nullable = false)
-    public String getUploadKey() {
-        return uploadKey;
+    @MethodOrder(order = 12)
+    @Column(name = "method", columnDefinition = "varchar(4)  DEFAULT '' COMMENT ' method'", nullable = false)
+    public String getMethod() {
+        return method;
     }
 
-    public void setUploadKey(String uploadKey) {
-        this.uploadKey = uploadKey;
-    }
-
-    @Column(name = "cover", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'cover'", nullable = false)
-    @MethodOrder(order = 16.1F)
-    public String getCover() {
-        return cover;
-    }
-
-    public void setCover(String cover) {
-        this.cover = cover;
+    public void setMethod(String method) {
+        this.method = method;
     }
 }
