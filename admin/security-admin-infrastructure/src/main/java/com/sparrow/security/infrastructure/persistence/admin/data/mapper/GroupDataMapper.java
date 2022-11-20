@@ -2,8 +2,8 @@ package com.sparrow.security.infrastructure.persistence.admin.data.mapper;
 
 import com.sparrow.protocol.LoginToken;
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.security.po.Group;
 import com.sparrow.security.admin.bo.GroupBO;
+import com.sparrow.security.po.Group;
 import com.sparrow.security.protocol.admin.param.GroupParam;
 import com.sparrow.support.converter.PO2BOConverter;
 import com.sparrow.support.converter.Param2POConverter;
@@ -30,7 +30,6 @@ public class GroupDataMapper implements Param2POConverter<GroupParam, Group>, PO
         group.setCreateTime(System.currentTimeMillis());
         group.setUpdateTime(group.getCreateTime());
         group.setStatus(StatusRecord.ENABLE);
-        group.setGroupLevel(0);
         return group;
     }
 
