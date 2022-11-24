@@ -1,4 +1,4 @@
-package com.sparrow.security.infrastructure.persistence.admin.data.mapper;
+package com.sparrow.security.infrastructure.persistence.admin.data.converter;
 
 import com.sparrow.protocol.LoginToken;
 import com.sparrow.protocol.enums.StatusRecord;
@@ -12,7 +12,7 @@ import java.util.List;
 import javax.inject.Named;
 
 @Named
-public class GroupDataMapper implements Param2POConverter<GroupParam, Group>, PO2BOConverter<GroupBO, Group> {
+public class GroupConverter implements Param2POConverter<GroupParam, Group>, PO2BOConverter<GroupBO, Group> {
     public GroupBO toBo(Group group) {
         GroupBO groupBo = new GroupBO();
         BeanUtility.copyProperties(group, groupBo);

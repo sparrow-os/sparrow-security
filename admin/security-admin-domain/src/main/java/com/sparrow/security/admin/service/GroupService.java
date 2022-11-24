@@ -24,19 +24,19 @@ public class GroupService {
         return this.groupRepository.save(groupParam);
     }
 
-    public void deleteGroup(String groupIds) throws BusinessException {
+    public Integer deleteGroup(String groupIds) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupIds), SecurityAdminError.GROUP_ID_IS_EMPTY);
-        this.groupRepository.delete(groupIds);
+        return this.groupRepository.delete(groupIds);
     }
 
-    public void enableGroup(String groupIds) throws BusinessException {
+    public Integer enableGroup(String groupIds) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupIds), SecurityAdminError.GROUP_ID_IS_EMPTY);
-        this.groupRepository.enable(groupIds);
+        return this.groupRepository.enable(groupIds);
     }
 
-    public void disableGroup(String groupIds) throws BusinessException {
+    public Integer disableGroup(String groupIds) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupIds), SecurityAdminError.GROUP_ID_IS_EMPTY);
-        this.groupRepository.disable(groupIds);
+        return this.groupRepository.disable(groupIds);
     }
 
     public List<GroupBO> queryGroup(GroupQuery groupQuery) {

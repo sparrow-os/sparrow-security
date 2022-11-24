@@ -7,7 +7,7 @@ import com.sparrow.utility.BeanUtility;
 import java.util.List;
 import javax.inject.Named;
 
-@Named
+@Named("groupControllerAssemble")
 public class GroupAssemble implements BO2VOAssemble<GroupVO, GroupBO> {
 
     @Override public GroupVO boAssembleVO(GroupBO bo) {

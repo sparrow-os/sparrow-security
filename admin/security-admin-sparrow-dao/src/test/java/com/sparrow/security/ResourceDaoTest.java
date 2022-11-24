@@ -9,9 +9,9 @@ public class ResourceDaoTest extends BaseTest {
     @Test
     public void getResource() {
         ResourceDAO resourceDao = container.getBean("resourceDao");
-        Resource resource = resourceDao.getEntity(1L);
-        resourceDao.delete(1L);
-        resource = resourceDao.getEntity(1L);
+        Resource resource = resourceDao.getEntity(2L);
+        resourceDao.delete(2L);
+        resource = resourceDao.getEntity(2L);
     }
 
     @Test

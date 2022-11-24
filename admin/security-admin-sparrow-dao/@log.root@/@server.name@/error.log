@@ -13,3 +13,28 @@
 2022-11-24 18:18:59.448 TRACE_ID ERROR main FileUtility [monitor_section_config.properties] file not found
 2022-11-24 18:18:59.751 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
 2022-11-24 18:19:00.152 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 20:15:55.693 TRACE_ID ERROR main ConfigUtility /system_config.properties file not found
+2022-11-24 20:15:55.696 TRACE_ID ERROR main ConfigUtility [/messages_zh_cn.properties] file not found 
+2022-11-24 20:15:55.883 TRACE_ID ERROR main FileUtility [monitor_section_config.properties] file not found
+2022-11-24 20:15:56.781 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 20:15:57.486 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 20:16:29.953 TRACE_ID ERROR main ConfigUtility /system_config.properties file not found
+2022-11-24 20:16:29.957 TRACE_ID ERROR main ConfigUtility [/messages_zh_cn.properties] file not found 
+2022-11-24 20:16:30.171 TRACE_ID ERROR main FileUtility [monitor_section_config.properties] file not found
+2022-11-24 20:16:30.578 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 20:16:31.147 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 22:03:47.430 TRACE_ID ERROR main ConfigUtility /system_config.properties file not found
+2022-11-24 22:03:47.433 TRACE_ID ERROR main ConfigUtility [/messages_zh_cn.properties] file not found 
+2022-11-24 22:03:47.570 TRACE_ID ERROR main FileUtility [monitor_section_config.properties] file not found
+2022-11-24 22:03:48.023 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 22:03:48.635 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 22:08:38.175 TRACE_ID ERROR main ConfigUtility /system_config.properties file not found
+2022-11-24 22:08:38.191 TRACE_ID ERROR main ConfigUtility [/messages_zh_cn.properties] file not found 
+2022-11-24 22:08:38.496 TRACE_ID ERROR main FileUtility [monitor_section_config.properties] file not found
+2022-11-24 22:08:39.430 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 22:08:40.083 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 22:09:27.812 TRACE_ID ERROR main ConfigUtility /system_config.properties file not found
+2022-11-24 22:09:27.816 TRACE_ID ERROR main ConfigUtility [/messages_zh_cn.properties] file not found 
+2022-11-24 22:09:27.932 TRACE_ID ERROR main FileUtility [monitor_section_config.properties] file not found
+2022-11-24 22:09:28.348 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl
+2022-11-24 22:09:28.885 TRACE_ID ERROR main AbstractContainer instance error java.lang.NullPointerException,class name com.sparrow.security.dao.admin.GroupRoleDaoImpl

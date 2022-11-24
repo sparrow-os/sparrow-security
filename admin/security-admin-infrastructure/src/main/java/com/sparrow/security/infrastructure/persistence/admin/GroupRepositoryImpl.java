@@ -3,7 +3,7 @@ package com.sparrow.security.infrastructure.persistence.admin;
 import com.sparrow.protocol.dao.StatusCriteria;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.dao.admin.GroupDAO;
-import com.sparrow.security.infrastructure.persistence.admin.data.mapper.GroupDataMapper;
+import com.sparrow.security.infrastructure.persistence.admin.data.converter.GroupConverter;
 import com.sparrow.security.po.Group;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.protocol.admin.param.GroupParam;
@@ -14,7 +14,7 @@ import javax.inject.Named;
 @Named
 public class GroupRepositoryImpl implements GroupRepository {
     @Inject
-    private GroupDataMapper groupDataMapper;
+    private GroupConverter groupDataMapper;
 
     @Inject
     private GroupDAO groupDao;

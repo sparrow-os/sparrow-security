@@ -12,42 +12,23 @@ import javax.persistence.Table;
 
 @Table(name = "department")
 public class Department extends PO {
-    /**
-     * 部门组织架构ID
-     */
+
     private Long id;
-    /**
-     * 部门组织拼音
-     */
+
     private String pinyin;
-    /**
-     * 部门编码 每级增加编码3位依次类推
-     */
+
     private String code;
-    /**
-     * 部门名称
-     */
+
     private String name;
-    /**
-     * 上级部门ID
-     */
+
     private String parentId;
 
-    /**
-     * 部门负责人
-     */
     private String manager;
-    /**
-     * 部门联系电话
-     */
+
     private String telephone;
-    /**
-     * 部门类别
-     */
+
     private String type;
-    /**
-     * 部门排列序号
-     */
+   
     private Integer sort;
 
     @Id

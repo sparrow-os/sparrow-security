@@ -8,9 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * 应用表
- */
 @Table(name = "app")
 public class App extends PO {
     private static final long serialVersionUID = 1L;
@@ -53,7 +50,7 @@ public class App extends PO {
     }
 
     @MethodOrder(order = 4)
-    @Column(name = "sort", columnDefinition = "int(10)  DEFAULT '' COMMENT 'sort'", nullable = false)
+    @Column(name = "sort", columnDefinition = "int(10)  DEFAULT 0 COMMENT 'sort'", nullable = false)
     public Integer getSort() {
         return sort;
     }
@@ -63,7 +60,7 @@ public class App extends PO {
     }
 
     @MethodOrder(order = 5)
-    @Column(name = "logo", columnDefinition = "int(10)  DEFAULT '' COMMENT 'sort'", nullable = false)
+    @Column(name = "logo", columnDefinition = "varchar(256)  DEFAULT '' COMMENT 'sort'", nullable = false)
     public String getLogo() {
         return logo;
     }
