@@ -2,11 +2,9 @@ package com.sparrow.security.po;
 
 import com.sparrow.protocol.dao.PO;
 
-@Deprecated
 public class GroupRole extends PO {
     private static final long serialVersionUID = 1L;
     private Long id;
-    private Long appId;
     private Long groupId;
     private Long roleId;
     
@@ -16,14 +14,6 @@ public class GroupRole extends PO {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getAppId() {
-        return appId;
-    }
-
-    public void setAppId(Long appId) {
-        this.appId = appId;
     }
 
     public Long getGroupId() {

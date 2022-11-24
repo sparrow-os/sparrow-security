@@ -14,6 +14,7 @@ import javax.persistence.Table;
 public class User extends PO {
     /*-------基本信息-------------*/
     private Long userId;
+    private Long departmentId;
     private String userName;
     private String nickName;
     private String avatar;
@@ -32,6 +33,16 @@ public class User extends PO {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    @MethodOrder(order = 1.5F)
+    @Column(name = "department_id", columnDefinition = " bigint(11) DEFAULT 0 COMMENT '部门ID'", updatable = false)
+    public Long getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
     }
 
     @MethodOrder(order = 2)

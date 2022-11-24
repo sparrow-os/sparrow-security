@@ -17,6 +17,7 @@ public class App extends PO {
     private Long id;
     private String code;
     private String name;
+    private String logo;
     private Integer sort;
 
     @Id
@@ -59,5 +60,15 @@ public class App extends PO {
 
     public void setSort(Integer sort) {
         this.sort = sort;
+    }
+
+    @MethodOrder(order = 5)
+    @Column(name = "logo", columnDefinition = "int(10)  DEFAULT '' COMMENT 'sort'", nullable = false)
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 }

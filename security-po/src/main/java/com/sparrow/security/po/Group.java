@@ -10,9 +10,8 @@ import javax.persistence.Table;
 
 @Table(name = "group")
 public class Group extends PO {
-    private Long groupId;
 
-    private Long parentGroupId;
+    private Long groupId;
 
     private String groupName;
     /**
@@ -20,7 +19,7 @@ public class Group extends PO {
      */
     private Long maxAllowCount;
     /**
-     * 组类型 goup type
+     * 组类型 group type
      */
     private String groupType;
     /**
@@ -83,13 +82,4 @@ public class Group extends PO {
         this.groupIco = groupIco;
     }
 
-    @MethodOrder(order = 9)
-    @Column(name = "parent_group_id", columnDefinition = "int(11) default '' comment ' parent group id'", nullable = false)
-    public Long getParentGroupId() {
-        return parentGroupId;
-    }
-
-    public void setParentGroupId(Long parentGroupId) {
-        this.parentGroupId = parentGroupId;
-    }
 }
