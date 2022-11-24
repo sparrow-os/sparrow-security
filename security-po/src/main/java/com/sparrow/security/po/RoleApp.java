@@ -1,18 +1,17 @@
 package com.sparrow.security.po;
 
 import com.sparrow.protocol.MethodOrder;
-import com.sparrow.protocol.POJO;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "privilege")
-public class RolePermission implements POJO {
+@Table(name = "role_app")
+public class RoleApp {
     private Long id;
+    private Long appId;
     private Long roleId;
-    private Long resourceId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +25,8 @@ public class RolePermission implements POJO {
         this.id = id;
     }
 
-    @Column(name = "role_id", columnDefinition = "int(11) unsigned default 0 comment 'role id'", nullable = false)
     @MethodOrder(order = 2)
+    @Column(name = "role_id", columnDefinition = "int(11)  DEFAULT 0 COMMENT 'role id'", nullable = false)
     public Long getRoleId() {
         return roleId;
     }
@@ -36,13 +35,13 @@ public class RolePermission implements POJO {
         this.roleId = roleId;
     }
 
-    @MethodOrder(order = 3)
-    @Column(name = "resource_id", columnDefinition = "varchar(128)  DEFAULT '' COMMENT 'resource id'", nullable = false)
-    public Long getResourceId() {
-        return resourceId;
+    @MethodOrder(order = 2)
+    @Column(name = "app_id", columnDefinition = "int(11)  DEFAULT 0 COMMENT 'app id'", nullable = false)
+    public Long getAppId() {
+        return appId;
     }
 
-    public void setResourceId(Long resource) {
-        this.resourceId = resourceId;
+    public void setAppId(Long appId) {
+        this.appId = appId;
     }
 }

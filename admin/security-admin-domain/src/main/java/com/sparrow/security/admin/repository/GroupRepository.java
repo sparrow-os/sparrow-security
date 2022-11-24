@@ -6,7 +6,11 @@ import com.sparrow.security.protocol.admin.param.GroupParam;
 public interface GroupRepository {
     Long save(GroupParam groupParam);
 
-    Integer delete(Long groupId);
+    int delete(String groupIds);
+
+    int disable(String groupIds);
+
+    int enable(String groupIds);
 
     GroupBO getGroup(Long groupId);
 }

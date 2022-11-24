@@ -1,14 +1,11 @@
 package com.sparrow.security;
 
-import com.sparrow.container.Container;
-import com.sparrow.container.ContainerBuilder;
-import com.sparrow.core.spi.ApplicationContext;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.dao.admin.ResourceDAO;
 import com.sparrow.security.po.Resource;
 import org.junit.Test;
 
-public class ResourceDaoTest extends BaseTest{
+public class ResourceDaoTest extends BaseTest {
     @Test
     public void getResource() {
         ResourceDAO resourceDao = container.getBean("resourceDao");
@@ -23,7 +20,7 @@ public class ResourceDaoTest extends BaseTest{
         Resource resource = new Resource();
         resource.setAppId(1L);
         resource.setResourceType(1);
-        resource.setCode("code");
+        resource.setPermission("/cms-manage");
         resource.setUrl("/cms-manage/friends-link");
         resource.setMethod("GET");
         resource.setIcoUrl("ico url");

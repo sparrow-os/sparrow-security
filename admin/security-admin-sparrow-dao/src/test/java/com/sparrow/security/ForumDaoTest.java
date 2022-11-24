@@ -31,7 +31,7 @@ public class ForumDaoTest extends BaseTest {
         forum.setMaxRecordCount(0);
         forum.setCreateUserId(0L);
         forum.setUpdateUserId(0L);
-        forum.setCreateTime(0L);
+        forum.setCreateTime(System.currentTimeMillis());
         forum.setUpdateTime(0L);
         forum.setRemark("remarks");
         forum.setStatus(StatusRecord.DISABLE);

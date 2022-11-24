@@ -20,14 +20,23 @@ public class GroupService {
     public Long saveGroup(GroupParam groupParam) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupType()), SecurityAdminError.GROUP_TYPE_IS_EMPTY);
-        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getParentGroupId()), SecurityAdminError.GROUP_PARENT_ID_IS_EMPTY);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_NAME_ICON_EMPTY);
         return this.groupRepository.save(groupParam);
     }
 
-    public void deleteGroup(Long groupId) throws BusinessException {
-        Asserts.isTrue(groupId == null, SecurityAdminError.GROUP_ID_IS_EMPTY);
-        this.groupRepository.delete(groupId);
+    public void deleteGroup(String groupIds) throws BusinessException {
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupIds), SecurityAdminError.GROUP_ID_IS_EMPTY);
+        this.groupRepository.delete(groupIds);
+    }
+
+    public void enableGroup(String groupIds) throws BusinessException {
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupIds), SecurityAdminError.GROUP_ID_IS_EMPTY);
+        this.groupRepository.enable(groupIds);
+    }
+
+    public void disableGroup(String groupIds) throws BusinessException {
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupIds), SecurityAdminError.GROUP_ID_IS_EMPTY);
+        this.groupRepository.disable(groupIds);
     }
 
     public List<GroupBO> queryGroup(GroupQuery groupQuery) {

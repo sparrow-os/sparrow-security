@@ -18,7 +18,7 @@ public class Resource extends PO {
 
     private Long id;
     private Long appId;
-    private String code;
+    private String permission;
     private String name;
     private Long parentId;
     /**
@@ -85,13 +85,13 @@ public class Resource extends PO {
     }
 
     @MethodOrder(order = 4)
-    @Column(name = "code", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'code'", nullable = false, unique = true)
-    public String getCode() {
-        return code;
+    @Column(name = "permission", columnDefinition = "varchar(64)  DEFAULT '' COMMENT 'permission'", nullable = false, unique = true)
+    public String getPermission() {
+        return permission;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setPermission(String permission) {
+        this.permission = permission;
     }
 
     @MethodOrder(order = 5)

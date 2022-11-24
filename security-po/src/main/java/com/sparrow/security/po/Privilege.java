@@ -8,12 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "strategy")
-public class RoleStrategy implements POJO {
+@Table(name = "privilege")
+public class Privilege implements POJO {
     private Long id;
     private Long roleId;
-    private String strategy;
-    private String value;
+    private Long resourceId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,22 +37,12 @@ public class RoleStrategy implements POJO {
     }
 
     @MethodOrder(order = 3)
-    @Column(name = "strategy", columnDefinition = "varchar(16)  DEFAULT '' COMMENT 'strategy'", nullable = false)
-    public String getStrategy() {
-        return strategy;
+    @Column(name = "resource_id", columnDefinition = "varchar(128)  DEFAULT '' COMMENT 'resource id'", nullable = false)
+    public Long getResourceId() {
+        return resourceId;
     }
 
-    public void setStrategy(String strategy) {
-        this.strategy = strategy;
-    }
-
-    @MethodOrder(order = 4)
-    @Column(name = "value", columnDefinition = "varchar(16)  DEFAULT '' COMMENT 'config value'", nullable = false)
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
+    public void setResourceId(Long resource) {
+        this.resourceId = resourceId;
     }
 }

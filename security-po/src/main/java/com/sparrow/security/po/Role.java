@@ -15,8 +15,6 @@ public class Role extends PO {
 
     private Long id;
 
-    private Long appId;
-
     private String code;
 
     private String name;
@@ -35,15 +33,6 @@ public class Role extends PO {
         this.id = id;
     }
 
-    @MethodOrder(order = 2)
-    @Column(name = "app_id", columnDefinition = "int(11)  DEFAULT 0 COMMENT 'app id'", nullable = false)
-    public Long getAppId() {
-        return appId;
-    }
-
-    public void setAppId(Long appId) {
-        this.appId = appId;
-    }
 
     @MethodOrder(order = 3)
     @Column(name = "code", columnDefinition = "varchar(32)  DEFAULT '' COMMENT 'code'", nullable = false)

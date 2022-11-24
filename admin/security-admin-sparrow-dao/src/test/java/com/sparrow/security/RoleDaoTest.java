@@ -21,7 +21,6 @@ public class RoleDaoTest extends BaseTest {
         RoleDAO roleDao = container.getBean("roleDao");
         Role role = new Role();
         role.setId(0L);
-        role.setAppId(0L);
         role.setCode("role code");
         role.setName("role name");
         role.setSort(0);

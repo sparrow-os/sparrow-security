@@ -4,7 +4,6 @@ import com.sparrow.protocol.BO;
 
 public class GroupBO implements BO {
     private Long groupId;
-    private Long parentGroupId;
     private String groupName;
     private Long maxAllowCount;
     private String groupType;
@@ -16,14 +15,6 @@ public class GroupBO implements BO {
 
     public void setGroupId(Long groupId) {
         this.groupId = groupId;
-    }
-
-    public Long getParentGroupId() {
-        return parentGroupId;
-    }
-
-    public void setParentGroupId(Long parentGroupId) {
-        this.parentGroupId = parentGroupId;
     }
 
     public String getGroupName() {

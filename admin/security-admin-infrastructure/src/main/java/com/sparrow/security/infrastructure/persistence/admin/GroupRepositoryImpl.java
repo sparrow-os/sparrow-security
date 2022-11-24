@@ -1,5 +1,7 @@
 package com.sparrow.security.infrastructure.persistence.admin;
 
+import com.sparrow.protocol.dao.StatusCriteria;
+import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.dao.admin.GroupDAO;
 import com.sparrow.security.infrastructure.persistence.admin.data.mapper.GroupDataMapper;
 import com.sparrow.security.po.Group;
@@ -26,8 +28,19 @@ public class GroupRepositoryImpl implements GroupRepository {
         return this.groupDao.insert(group);
     }
 
-    @Override public Integer delete(Long groupId) {
-        return this.groupDao.delete(groupId);
+    @Override public int delete(String groupIds) {
+        StatusCriteria statusCriteria = new StatusCriteria(groupIds, StatusRecord.DESTROYED);
+        return this.groupDao.changeStatus(statusCriteria);
+    }
+
+    @Override public int disable(String groupIds) {
+        StatusCriteria statusCriteria = new StatusCriteria(groupIds, StatusRecord.DISABLE);
+        return this.groupDao.changeStatus(statusCriteria);
+    }
+
+    @Override public int enable(String groupIds) {
+        StatusCriteria statusCriteria = new StatusCriteria(groupIds, StatusRecord.ENABLE);
+        return this.groupDao.changeStatus(statusCriteria);
     }
 
     @Override public GroupBO getGroup(Long groupId) {
