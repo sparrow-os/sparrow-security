@@ -3,6 +3,7 @@ package com.sparrow.security;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.dao.admin.ForumDAO;
 import com.sparrow.security.po.Forum;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ForumDaoTest extends BaseTest {

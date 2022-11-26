@@ -13,6 +13,13 @@ public class GroupAssemble implements BO2VOAssemble<GroupVO, GroupBO> {
     @Override public GroupVO boAssembleVO(GroupBO bo) {
         GroupVO group = new GroupVO();
         BeanUtility.copyProperties(bo, group);
+        group.setStatus(bo.getStatus().name());
+        int maxAllowLength = 500;
+        int remarkLength = group.getRemark().getBytes().length;
+        if (remarkLength > 0) {
+            maxAllowLength = maxAllowLength-remarkLength;
+        }
+        group.setMaxRemarkLength(maxAllowLength);
         return group;
     }
 

@@ -1,6 +1,7 @@
 package com.sparrow.security.admin.bo;
 
 import com.sparrow.protocol.BO;
+import com.sparrow.protocol.enums.StatusRecord;
 
 public class GroupBO implements BO {
     private Long groupId;
@@ -8,6 +9,8 @@ public class GroupBO implements BO {
     private Long maxAllowCount;
     private String groupType;
     private String groupIco;
+    private String remark;
+    private StatusRecord status;
 
     public Long getGroupId() {
         return groupId;
@@ -47,5 +50,21 @@ public class GroupBO implements BO {
 
     public void setGroupIco(String groupIco) {
         this.groupIco = groupIco;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark= remark;
+    }
+
+    public StatusRecord getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusRecord status) {
+        this.status = status;
     }
 }

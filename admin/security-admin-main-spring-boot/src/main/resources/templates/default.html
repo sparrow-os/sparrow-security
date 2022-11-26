@@ -1,0 +1,72 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台系统管理-管理系统</title>
+
+
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/sparrow.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/sparrow-tree.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/pure-css/pure.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css"
+          th:href="@{${resource}+'/styles/layouts-backend.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/modal.css?v='+${resource_version}}"/>
+    <script language="javascript" type="text/javascript"
+            th:src="@{${resource}+'/scripts/require.js?v='+${resource_version}}"></script>
+
+</head>
+<body>
+
+<div class="system">
+    <div class="left">
+        <a>管理系统</a>
+    </div>
+
+    <div class="right">
+        <a href="#" class="user">&nbsp;</a>
+        <a href="#" class="exit"
+           onclick="$.browser.logout($.browser.cookie.domain,'/administrator/logout.json');">安全退出</a>
+    </div>
+</div>
+<div id="layout">
+
+
+    <!--<![endif]-->
+    <script type="text/javascript">
+        requirejs.config({
+            baseUrl: "[[${resource}]]/scripts",
+            paths: {
+                menu: '[[${resource}]]/ext/scripts/system/menu'
+            }
+        });
+        var menuTree = null;
+        require(['sparrow', 'menu', 'domReady!'], function ($, menu, dom) {
+            menu.load();
+            menuTree = menu.menuTree;
+        });
+    </script>
+    <a href="#menu" id="menuLink" class="menu-link">
+        <span></span>
+    </a>
+    <div class="menu_container">
+        <a target="_blank">
+            <img class="logo" th:src="@{${resource}+'/images/logo.png'}"/>
+        </a>
+        <div id="divVerticalMenu">
+
+            <div>
+                <input style="width: 100%; height: 30px;" type="button" class="button" id="btnOpen"/>
+            </div>
+
+            <div id="divMenuTree">
+
+            </div>
+        </div>
+    </div>
+    <iframe name="manage" id="iframe-page-content" width="100%" frameborder="no" border="0" marginwidth="0"
+            marginheight=" 0"
+            scrolling="yes" src="group/new" allowtransparency="yes"></iframe>
+</div>
+</body>
+</html>

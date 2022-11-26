@@ -2,6 +2,7 @@ package com.sparrow.security.admin.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.BusinessException;
+import com.sparrow.protocol.constant.SparrowError;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.repository.GroupRepository;
 import com.sparrow.security.protocol.admin.enums.SecurityAdminError;
@@ -17,10 +18,14 @@ public class GroupService {
     @Inject
     private GroupRepository groupRepository;
 
-    public Long saveGroup(GroupParam groupParam) throws BusinessException {
+    private void validateSaveGroup(GroupParam groupParam) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupType()), SecurityAdminError.GROUP_TYPE_IS_EMPTY);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_NAME_ICON_EMPTY);
+    }
+
+    public Long saveGroup(GroupParam groupParam) throws BusinessException {
+        this.validateSaveGroup(groupParam);
         return this.groupRepository.save(groupParam);
     }
 

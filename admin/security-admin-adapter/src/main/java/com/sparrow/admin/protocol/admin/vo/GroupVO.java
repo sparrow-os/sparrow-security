@@ -4,11 +4,13 @@ import com.sparrow.protocol.VO;
 
 public class GroupVO implements VO {
     private Long groupId;
-    private Long parentGroupId;
     private String groupName;
     private Long maxAllowCount;
     private String groupType;
     private String groupIco;
+    private String status;
+    private String remark;
+    private Integer maxRemarkLength;
 
     public Long getGroupId() {
         return groupId;
@@ -16,14 +18,6 @@ public class GroupVO implements VO {
 
     public void setGroupId(Long groupId) {
         this.groupId = groupId;
-    }
-
-    public Long getParentGroupId() {
-        return parentGroupId;
-    }
-
-    public void setParentGroupId(Long parentGroupId) {
-        this.parentGroupId = parentGroupId;
     }
 
     public String getGroupName() {
@@ -56,5 +50,29 @@ public class GroupVO implements VO {
 
     public void setGroupIco(String groupIco) {
         this.groupIco = groupIco;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public Integer getMaxRemarkLength() {
+        return maxRemarkLength;
+    }
+
+    public void setMaxRemarkLength(Integer maxRemarkLength) {
+        this.maxRemarkLength = maxRemarkLength;
     }
 }

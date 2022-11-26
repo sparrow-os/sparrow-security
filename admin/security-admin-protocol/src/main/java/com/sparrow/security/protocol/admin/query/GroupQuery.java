@@ -1,22 +1,12 @@
 package com.sparrow.security.protocol.admin.query;
 
+import com.sparrow.protocol.pager.PagerQuery;
 import java.util.Date;
 
-public class GroupQuery {
-    private Long parentGroupId;
+public class GroupQuery extends PagerQuery {
     private String groupName;
-    private String groupType;
-    private Integer groupLevel;
     private Date beginDate;
     private Date endDate;
-
-    public Long getParentGroupId() {
-        return parentGroupId;
-    }
-
-    public void setParentGroupId(Long parentGroupId) {
-        this.parentGroupId = parentGroupId;
-    }
 
     public String getGroupName() {
         return groupName;
@@ -24,22 +14,6 @@ public class GroupQuery {
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
-    }
-
-    public String getGroupType() {
-        return groupType;
-    }
-
-    public void setGroupType(String groupType) {
-        this.groupType = groupType;
-    }
-
-    public Integer getGroupLevel() {
-        return groupLevel;
-    }
-
-    public void setGroupLevel(Integer groupLevel) {
-        this.groupLevel = groupLevel;
     }
 
     public Date getBeginDate() {

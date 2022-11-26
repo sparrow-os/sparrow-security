@@ -3,23 +3,21 @@ package com.sparrow.admin.controller;
 import com.sparrow.admin.assemble.GroupAssemble;
 import com.sparrow.admin.protocol.admin.vo.GroupVO;
 import com.sparrow.protocol.BusinessException;
-import com.sparrow.protocol.Result;
+import com.sparrow.protocol.pager.PagerResult;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.service.GroupService;
 import com.sparrow.security.protocol.admin.param.GroupParam;
-import javax.annotation.Resource;
+import com.sparrow.security.protocol.admin.query.GroupQuery;
+import com.sparrow.spring.starter.ModelAndViewUtils;
+import com.sparrow.support.pager.SparrowPagerResult;
+import java.util.ArrayList;
+import java.util.List;
 import javax.inject.Inject;
-import javax.inject.Named;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("group")
@@ -29,15 +27,73 @@ public class GroupController {
     @Inject
     private GroupAssemble groupControllerAssemble;
 
-    @PostMapping("save.json")
-    public Long saveGroup(@RequestBody GroupParam groupParam) throws BusinessException {
-        return groupService.saveGroup(groupParam);
+    @GetMapping("manage")
+    public ModelAndView loadGroupList() throws BusinessException {
+        List<GroupVO> groupList = new ArrayList<>(10);
+        for (int i = 0; i < 10; i++) {
+            GroupVO group = new GroupVO();
+            group.setGroupId((long) i);
+            group.setGroupName("group name " + i);
+            group.setMaxAllowCount(100L);
+            group.setGroupType("");
+            group.setGroupIco("http://r.sparrowzoo.net/images/logo.png");
+            group.setStatus("正常");
+            groupList.add(group);
+        }
+
+        ModelAndView mv = new ModelAndView("/group/manage");
+        PagerResult<GroupVO, Void> pagerResult = new PagerResult<>();
+        pagerResult.setList(groupList);
+        pagerResult.setRecordCount(100000L);
+        pagerResult.setCurrentPageIndex(1);
+        pagerResult.setPageSize(10);
+        SparrowPagerResult<GroupVO, Void> pager = new SparrowPagerResult<>(pagerResult);
+        mv.addObject("pager", pager);
+        return mv;
     }
 
-    @GetMapping("get")
-    public GroupVO getGroup(Long groupId) throws BusinessException {
+    @PostMapping("search.do")
+    public ModelAndView queryGroup(GroupQuery groupQuery) throws BusinessException {
+        List<GroupVO> groupList = new ArrayList<>(10);
+        for (int i = 0; i < 10; i++) {
+            GroupVO group = new GroupVO();
+            group.setGroupId((long) i);
+            group.setGroupName("group name " + i);
+            group.setMaxAllowCount(100L);
+            group.setGroupType("");
+            group.setGroupIco("http://r.sparrowzoo.net/images/logo.png");
+            group.setStatus("正常");
+            groupList.add(group);
+        }
+
+        ModelAndView mv = new ModelAndView("/group/manage");
+        PagerResult<GroupVO, Void> pagerResult = new PagerResult<>();
+        pagerResult.setList(groupList);
+        pagerResult.setRecordCount(100000L);
+        pagerResult.setCurrentPageIndex(groupQuery.getCurrentPageIndex());
+        pagerResult.setPageSize(10);
+        SparrowPagerResult<GroupVO, Void> pager = new SparrowPagerResult<>(pagerResult);
+        mv.addObject("pager", pager);
+        return mv;
+    }
+
+    @PostMapping("save")
+    public ModelAndView saveGroup(GroupParam groupParam) throws BusinessException {
+        groupParam.setGroupType("default");//预留后续使用
+        groupService.saveGroup(groupParam);
+        return ModelAndViewUtils.redirect("/group/manage");
+    }
+
+    @GetMapping("new")
+    public ModelAndView getGroup(Long groupId) throws BusinessException {
+        ModelAndView mv = new ModelAndView("/group/new");
+        if(groupId==null){
+            return mv;
+        }
         GroupBO groupBo = groupService.getGroup(groupId);
-        return this.groupControllerAssemble.boAssembleVO(groupBo);
+        GroupVO groupVo = this.groupControllerAssemble.boAssembleVO(groupBo);
+        mv.addObject("group", groupVo);
+        return mv;
     }
 
     @PostMapping("del")
