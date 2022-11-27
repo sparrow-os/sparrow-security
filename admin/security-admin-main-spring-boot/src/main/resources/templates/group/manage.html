@@ -4,14 +4,11 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
-
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/pure-css/pure.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/sparrow.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css"
           th:href="@{${resource}+'/styles/layouts-backend.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/modal.css?v='+${resource_version}}"/>
-
-
     <script language="javascript" type="text/javascript"
             th:src="@{${resource}+'/scripts/require.js?v='+${resource_version}}"></script>
     <script language="javascript" type="text/javascript"
@@ -32,11 +29,10 @@
 <div id="main">
     <form method="post" class="pure-form">
         <fieldset>
-            <input type="hidden" id="currentPageIndex" name="currentPageIndex"/>
+            <input type="hidden" id="currentPageIndex" th:value="${query?.currentPageIndex}" name="currentPageIndex"/>
             <input type="hidden" id="hdnGridResult" name="groupIds" gridViewId="grvGroupList"
                    keyType="int"/>
-            <input type="text" id="txtGroupName" name="groupName" value="" placeholder="组名"/>
-            <input type="text" id="txtGroupType" name="groupType" class="" value="" placeholder="组类别"/>
+            <input type="text" id="txtGroupName" th:value="${query?.groupName}" name="groupName" value="" placeholder="组名"/>
             <input type="button" class="pure-button pure-button-primary" id="btnSearch"
                    value="查询"/>
         </fieldset>
@@ -83,13 +79,14 @@
                     <td width="60px" align="left">
                         <img th:src="@{${group.groupIco}}" style="width:30px;height:30px" title="图标"/>
                     </td>
-                    <td width="80px" align="center">[[${group.maxAllowCount}]]</td>
-                    <td width="30px" align="center">[[${group.status}]]</td>
+                    <td width="80px" align="center" th:text="${group.maxAllowCount}"></td>
+                    <td width="30px" align="center" th:utext="${group.status}"></td>
                     <td width="80px" align="center">
                         <input type="button" onclick="window.location.href='../privilege/manage?groupId=23';"
                                title="设置" value="设置" class="pure-button"/></td>
                     <td width="80px" align="center">
-                        <input type="button" onclick="window.location.href='new?groupId=23';" title="编辑"
+                        <input type="button" th:onclick="window.location.href='new?groupId=[[${group.groupId}]]';"
+                               title="编辑"
                                value="编辑" class="pure-button"/></td>
                 </tr>
                 </tbody>

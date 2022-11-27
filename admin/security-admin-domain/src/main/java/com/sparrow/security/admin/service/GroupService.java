@@ -2,9 +2,10 @@ package com.sparrow.security.admin.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.BusinessException;
-import com.sparrow.protocol.constant.SparrowError;
 import com.sparrow.security.admin.bo.GroupBO;
+import com.sparrow.security.admin.bo.GroupListTotalRecordBO;
 import com.sparrow.security.admin.repository.GroupRepository;
+import com.sparrow.security.admin.support.suffix.GroupSuffix;
 import com.sparrow.security.protocol.admin.enums.SecurityAdminError;
 import com.sparrow.security.protocol.admin.param.GroupParam;
 import com.sparrow.security.protocol.admin.query.GroupQuery;
@@ -19,9 +20,9 @@ public class GroupService {
     private GroupRepository groupRepository;
 
     private void validateSaveGroup(GroupParam groupParam) throws BusinessException {
-        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY);
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY, GroupSuffix.GROUP_NAME);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupType()), SecurityAdminError.GROUP_TYPE_IS_EMPTY);
-        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_NAME_ICON_EMPTY);
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_NAME_ICON_EMPTY, GroupSuffix.GROUP_ICON);
     }
 
     public Long saveGroup(GroupParam groupParam) throws BusinessException {
@@ -44,8 +45,17 @@ public class GroupService {
         return this.groupRepository.disable(groupIds);
     }
 
-    public List<GroupBO> queryGroup(GroupQuery groupQuery) {
-        return null;
+    public GroupListTotalRecordBO queryAllGroup() {
+        return queryGroup(null);
+    }
+
+    public GroupListTotalRecordBO queryGroup(GroupQuery groupQuery) {
+        Long totalRecord = this.groupRepository.getGroupCount(groupQuery);
+        List<GroupBO> groupBoList = null;
+        if (totalRecord > 0) {
+            groupBoList = this.groupRepository.queryGroups(groupQuery);
+        }
+        return new GroupListTotalRecordBO(groupBoList, totalRecord);
     }
 
     public GroupBO getGroup(Long groupId) throws BusinessException {

@@ -8,19 +8,21 @@ import com.sparrow.security.po.Group;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.protocol.admin.param.GroupParam;
 import com.sparrow.security.admin.repository.GroupRepository;
+import com.sparrow.security.protocol.admin.query.GroupQuery;
+import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
 public class GroupRepositoryImpl implements GroupRepository {
     @Inject
-    private GroupConverter groupDataMapper;
+    private GroupConverter groupConverter;
 
     @Inject
     private GroupDAO groupDao;
 
     @Override public Long save(GroupParam groupParam) {
-        Group group = this.groupDataMapper.param2po(groupParam);
+        Group group = this.groupConverter.param2po(groupParam);
         if (group.getGroupId() != null) {
             this.groupDao.update(group);
             return group.getGroupId();
@@ -45,6 +47,15 @@ public class GroupRepositoryImpl implements GroupRepository {
 
     @Override public GroupBO getGroup(Long groupId) {
         Group group = this.groupDao.getEntity(groupId);
-        return this.groupDataMapper.toBo(group);
+        return this.groupConverter.po2bo(group);
+    }
+
+    @Override public List<GroupBO> queryGroups(GroupQuery groupQuery) {
+        List<Group> groupList = this.groupDao.queryGroups(this.groupConverter.toDbPagerQuery(groupQuery));
+        return this.groupConverter.poList2BoList(groupList);
+    }
+
+    @Override public Long getGroupCount(GroupQuery groupQuery) {
+        return this.groupDao.countGroup(this.groupConverter.toDbCountQuery(groupQuery));
     }
 }

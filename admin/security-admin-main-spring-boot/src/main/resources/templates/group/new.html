@@ -4,6 +4,7 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
+    <link rel="shortcut icon" th:href="@{/static/favicon.ico}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/sparrow.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/pure-css/pure.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css"
@@ -47,7 +48,7 @@
                 <iframe id="null.group" class="file-frame" frameborder="0"></iframe>
                 <input type="hidden" id="hdnGroupId" name="groupId" th:value="${group?.groupId}"/>
                 <input type="hidden" id="hdnGroupIco" name="groupIco" th:value="${group?.groupIco}"/>
-                <span class="prompt" id="errorImgGroupIco"></span>
+                <span class="prompt" th:text="${group_icon}" id="errorImgGroupIco"></span>
             </div>
 
             <div id="divGroupIco" class="pure-controls">

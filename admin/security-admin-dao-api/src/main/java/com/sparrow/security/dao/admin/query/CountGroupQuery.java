@@ -1,9 +1,17 @@
-package com.sparrow.security.protocol.admin.query;
+package com.sparrow.security.dao.admin.query;
 
-import com.sparrow.protocol.pager.SimplePager;
 import java.util.Date;
 
-public class GroupQuery extends SimplePager {
+public class CountGroupQuery {
+    public CountGroupQuery() {
+    }
+
+    public CountGroupQuery(CountGroupQuery countGroupQuery) {
+        this.groupName = countGroupQuery.groupName;
+        this.beginDate = countGroupQuery.beginDate;
+        this.endDate = countGroupQuery.endDate;
+    }
+
     private String groupName;
     private Date beginDate;
     private Date endDate;

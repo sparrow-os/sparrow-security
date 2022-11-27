@@ -9,6 +9,7 @@ public class GroupParam implements Param {
     private String groupType;
     private String groupIco;
     private String remark;
+    private String status;
 
     public Long getGroupId() {
         return groupId;
@@ -56,5 +57,13 @@ public class GroupParam implements Param {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
