@@ -1,5 +1,6 @@
 package com.sparrow.security;
 
+import com.alibaba.fastjson.JSON;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.dao.admin.ResourceDAO;
 import com.sparrow.security.po.Resource;
@@ -34,6 +35,7 @@ public class ResourceDaoTest extends BaseTest {
         resource.setName("name");
         resource.setStatus(StatusRecord.ENABLE);
         resource.setSort(1);
+        System.out.println(JSON.toJSONString(resource));
         resourceDao.insert(resource);
     }
 }

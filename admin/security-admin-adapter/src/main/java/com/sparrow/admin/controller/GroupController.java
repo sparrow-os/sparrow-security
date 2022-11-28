@@ -92,13 +92,15 @@ public class GroupController {
 
     @PostMapping("enable")
     public ModelAndView enableGroup(GroupBatchOperationQuery batchOperationQuery) throws BusinessException {
+        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
         groupService.enableGroup(batchOperationQuery.getGroupIds());
         return ModelAndViewUtils.redirect("/group/manage");
     }
 
     @PostMapping("disable")
-    public ModelAndView disableGroup(String groupIds) throws BusinessException {
-        groupService.disableGroup(groupIds);
+    public ModelAndView disableGroup(GroupBatchOperationQuery batchOperationQuery) throws BusinessException {
+        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
+        groupService.disableGroup(batchOperationQuery.getGroupIds());
         return ModelAndViewUtils.redirect("/group/manage");
     }
 }

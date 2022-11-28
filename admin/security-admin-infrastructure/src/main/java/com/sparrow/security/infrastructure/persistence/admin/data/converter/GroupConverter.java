@@ -1,6 +1,6 @@
 package com.sparrow.security.infrastructure.persistence.admin.data.converter;
 
-import com.sparrow.protocol.LoginToken;
+import com.sparrow.protocol.LoginUser;
 import com.sparrow.protocol.dao.PagerQuery;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.GroupBO;
@@ -25,9 +25,19 @@ public class GroupConverter implements Param2POConverter<GroupParam, Group>, PO2
             return pagerGroupQuery;
         }
         PagerQuery pagerQuery = new PagerQuery(groupQuery.getPageSize(), groupQuery.getCurrentPageIndex());
-        PagerGroupQuery pagerGroupQuery = new PagerGroupQuery(this.toDbCountQuery(groupQuery));
+        PagerGroupQuery pagerGroupQuery = new PagerGroupQuery();
+        this.fullProperties(groupQuery, pagerGroupQuery);
         pagerGroupQuery.setPager(pagerQuery);
         return pagerGroupQuery;
+    }
+
+    private void fullProperties(GroupQuery groupQuery, CountGroupQuery countGroupQuery) {
+        if (groupQuery == null) {
+            return;
+        }
+        countGroupQuery.setGroupName(groupQuery.getGroupName());
+        countGroupQuery.setBeginDate(groupQuery.getBeginDate());
+        countGroupQuery.setEndDate(groupQuery.getEndDate());
     }
 
     public CountGroupQuery toDbCountQuery(GroupQuery groupQuery) {
@@ -35,16 +45,14 @@ public class GroupConverter implements Param2POConverter<GroupParam, Group>, PO2
         if (groupQuery == null) {
             return countGroupQuery;
         }
-        countGroupQuery.setGroupName(groupQuery.getGroupName());
-        countGroupQuery.setBeginDate(groupQuery.getBeginDate());
-        countGroupQuery.setEndDate(groupQuery.getEndDate());
+        this.fullProperties(groupQuery, countGroupQuery);
         return countGroupQuery;
     }
 
     @Override public Group param2po(GroupParam param) {
         Group group = new Group();
         BeanUtility.copyProperties(param, group);
-        LoginToken loginToken = new LoginToken();
+        LoginUser loginToken = new LoginUser();
         loginToken.setUserId(1L);
         // ThreadContext.getLoginToken();
         group.setCreateUserId(loginToken.getUserId());

@@ -23,8 +23,8 @@ public class AppController {
     @Inject
     private AppAssemble appControllerAssemble;
 
-    @PostMapping("save.json")
-    public Long saveApp(@RequestBody AppParam appParam) throws BusinessException {
+    @PostMapping("save")
+    public Long saveApp(AppParam appParam) throws BusinessException {
         return this.appService.saveApp(appParam);
     }
 

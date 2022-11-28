@@ -14,4 +14,16 @@ public class SecurityModule {
             return "Group";
         }
     };
+
+    public static final ModuleSupport Resource = new ModuleSupport() {
+        @Override
+        public String code() {
+            return "41";
+        }
+
+        @Override
+        public String name() {
+            return "Resource";
+        }
+    };
 }

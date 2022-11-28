@@ -7,10 +7,6 @@ public class PagerGroupQuery extends CountGroupQuery {
     public PagerGroupQuery() {
     }
 
-    public PagerGroupQuery(CountGroupQuery countGroupQuery) {
-        super(countGroupQuery);
-    }
-
     private PagerQuery pager;
 
     public PagerQuery getPager() {

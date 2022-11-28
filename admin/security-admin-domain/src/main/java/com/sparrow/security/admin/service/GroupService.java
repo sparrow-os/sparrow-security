@@ -22,7 +22,7 @@ public class GroupService {
     private void validateSaveGroup(GroupParam groupParam) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY, GroupSuffix.GROUP_NAME);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupType()), SecurityAdminError.GROUP_TYPE_IS_EMPTY);
-        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_NAME_ICON_EMPTY, GroupSuffix.GROUP_ICON);
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_ICON_EMPTY, GroupSuffix.GROUP_ICON);
     }
 
     public Long saveGroup(GroupParam groupParam) throws BusinessException {
