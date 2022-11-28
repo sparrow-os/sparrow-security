@@ -19,8 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("resource")
 public class ResourceController {
+
     @Inject
     private ResourceService resourceService;
+
     @Inject
     private ResourceAssemble resourceControllerAssemble;
 
