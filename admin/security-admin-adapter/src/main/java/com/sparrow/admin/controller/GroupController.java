@@ -66,7 +66,7 @@ public class GroupController {
             return ModelAndViewUtils.redirect("/group/manage");
         } catch (Exception e) {
             //失败回显
-            this.servletContainer.getRequest().setAttribute("group", this.groupControllerAssemble.param2Vo(groupParam));
+            this.servletContainer.getRequest().setAttribute("group", this.groupControllerAssemble.paramAssembleVO(groupParam));
             throw e;
         }
     }

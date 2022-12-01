@@ -1,10 +1,11 @@
 package com.sparrow.security.dao.admin.query;
 
 import com.sparrow.protocol.POJO;
+import com.sparrow.protocol.enums.StatusRecord;
 
 public class ResourceDBQuery implements POJO {
     private Long appId;
-    private String status;
+    private StatusRecord status;
 
     public Long getAppId() {
         return appId;
@@ -14,11 +15,11 @@ public class ResourceDBQuery implements POJO {
         this.appId = appId;
     }
 
-    public String getStatus() {
+    public StatusRecord getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusRecord status) {
         this.status = status;
     }
 }

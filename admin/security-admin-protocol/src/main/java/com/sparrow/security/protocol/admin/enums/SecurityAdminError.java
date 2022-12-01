@@ -15,7 +15,9 @@ public enum SecurityAdminError implements ErrorSupport {
     RESOURCE_ICON_EMPTY(false, SecurityModule.Resource, "03", "resource icon is null"),
     RESOURCE_PARENT_ID_IS_EMPTY(false, SecurityModule.Resource, "04", "resource parent id is null"),
     RESOURCE_ID_IS_EMPTY(false, SecurityModule.Resource, "05", "resource id is null"),
-    
+    RESOURCE_SORT_TARGET_IS_EMPTY(false, SecurityModule.Resource, "06", "resource sort target is null"),
+
+
     ;
     private boolean system;
     private ModuleSupport module;

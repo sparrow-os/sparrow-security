@@ -9,6 +9,7 @@ import com.sparrow.security.admin.bo.GroupListTotalRecordBO;
 import com.sparrow.security.protocol.admin.param.GroupParam;
 import com.sparrow.security.protocol.admin.query.GroupQuery;
 import com.sparrow.support.assemble.BO2VOAssemble;
+import com.sparrow.support.assemble.Param2VOAssemble;
 import com.sparrow.support.pager.HtmlPagerResult;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
@@ -21,11 +22,12 @@ import java.util.List;
 import javax.inject.Named;
 
 @Named("groupControllerAssemble")
-public class GroupAssemble implements BO2VOAssemble<GroupVO, GroupBO> {
+public class GroupAssemble implements BO2VOAssemble<GroupVO, GroupBO>,
+    Param2VOAssemble<GroupVO,GroupParam> {
 
     private static final int REMARK_MAX_ALLOW_LENGTH=500;
 
-    public GroupVO param2Vo(GroupParam param){
+    public GroupVO paramAssembleVO(GroupParam param){
         GroupVO group = new GroupVO();
         BeanUtility.copyProperties(param, group);
         group.setMaxRemarkLength(StringUtility.getMaxAllowLength(REMARK_MAX_ALLOW_LENGTH,param.getRemark()));

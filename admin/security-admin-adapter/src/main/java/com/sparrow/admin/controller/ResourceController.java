@@ -7,6 +7,7 @@ import com.sparrow.protocol.BusinessException;
 import com.sparrow.security.admin.bo.ResourceBO;
 import com.sparrow.security.admin.service.ResourceService;
 import com.sparrow.security.protocol.admin.param.ResourceParam;
+import com.sparrow.security.protocol.admin.param.ResourceSortParam;
 import com.sparrow.security.protocol.admin.query.ResourceQuery;
 import java.util.List;
 import javax.inject.Inject;
@@ -27,14 +28,16 @@ public class ResourceController {
     private ResourceAssemble resourceControllerAssemble;
 
     @PostMapping("manage")
-    public List<ResourceMenuItemVO> loadAllResources(ResourceQuery resourceQuery) {
+    public List<ResourceVO> loadAllResources(ResourceQuery resourceQuery) {
         List<ResourceBO> resources = this.resourceService.queryResources(resourceQuery);
         return this.resourceControllerAssemble.boListAssembleItemVOList(resources);
     }
 
     @PostMapping("save")
-    public Long saveResource(@RequestBody ResourceParam resourceParam) throws BusinessException {
-        return resourceService.saveResource(resourceParam);
+    public ResourceVO saveResource(ResourceParam resourceParam) throws BusinessException {
+        resourceParam.setSort(1);
+        resourceService.saveResource(resourceParam);
+        return this.resourceControllerAssemble.paramAssembleVO(resourceParam);
     }
 
     @GetMapping("get")
@@ -56,5 +59,10 @@ public class ResourceController {
     @PostMapping("disable")
     public Integer disableGroup(Long resourceId) throws BusinessException {
         return this.resourceService.disableGroup(resourceId);
+    }
+
+    @PostMapping("sort")
+    public Integer sort(ResourceSortParam sortParam) throws BusinessException {
+        return this.resourceService.sort(sortParam);
     }
 }

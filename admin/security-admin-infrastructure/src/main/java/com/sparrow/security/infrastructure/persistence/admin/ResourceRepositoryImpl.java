@@ -9,6 +9,7 @@ import com.sparrow.security.dao.admin.query.ResourceDBQuery;
 import com.sparrow.security.infrastructure.persistence.admin.data.converter.ResourceConverter;
 import com.sparrow.security.po.Resource;
 import com.sparrow.security.protocol.admin.param.ResourceParam;
+import com.sparrow.security.protocol.admin.param.ResourceSortParam;
 import com.sparrow.security.protocol.admin.query.ResourceQuery;
 import java.util.List;
 import javax.inject.Inject;
@@ -24,9 +25,12 @@ public class ResourceRepositoryImpl implements ResourceRepository {
     @Override public Long save(ResourceParam resourceParam) {
         Resource resource = this.resourceConverter.param2po(resourceParam);
         if (resource.getId() == null) {
-            return this.resourceDao.insert(resource);
+            Long resourceId = this.resourceDao.insert(resource);
+            resourceParam.setId(resourceId);
+            return resourceId;
         }
-        return (long) this.resourceDao.update(resource);
+        this.resourceDao.update(resource);
+        return resource.getId();
     }
 
     @Override public int delete(Long resourceId) {
@@ -37,6 +41,10 @@ public class ResourceRepositoryImpl implements ResourceRepository {
     @Override public int disable(Long resourceId) {
         StatusCriteria statusCriteria = new StatusCriteria(resourceId + "", StatusRecord.DISABLE);
         return this.resourceDao.changeStatus(statusCriteria);
+    }
+
+    @Override public int sort(ResourceSortParam sortParam) {
+        return this.resourceDao.sort(sortParam.getId(), sortParam.getTarget());
     }
 
     @Override public int enable(Long resourceId) {
@@ -53,5 +61,13 @@ public class ResourceRepositoryImpl implements ResourceRepository {
         ResourceDBQuery resourceDBQuery = this.resourceConverter.toDBQuery(resourceQuery);
         List<Resource> resources = this.resourceDao.queryResources(resourceDBQuery);
         return this.resourceConverter.poList2BoList(resources);
+    }
+
+    @Override public Integer resort(Long parentResourceId, Integer currentSort) {
+        return this.resourceDao.resort(parentResourceId, currentSort);
+    }
+
+    @Override public Integer maxSort(Long parentResourceId) {
+        return this.resourceDao.maxSort(parentResourceId);
     }
 }

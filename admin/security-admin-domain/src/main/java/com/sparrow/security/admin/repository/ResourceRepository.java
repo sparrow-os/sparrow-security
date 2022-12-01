@@ -2,6 +2,7 @@ package com.sparrow.security.admin.repository;
 
 import com.sparrow.security.admin.bo.ResourceBO;
 import com.sparrow.security.protocol.admin.param.ResourceParam;
+import com.sparrow.security.protocol.admin.param.ResourceSortParam;
 import com.sparrow.security.protocol.admin.query.ResourceQuery;
 import java.util.List;
 
@@ -12,9 +13,16 @@ public interface ResourceRepository {
 
      int disable(Long resourceId);
 
+     int sort(ResourceSortParam sortParam);
+
      int enable(Long groupIds);
 
      ResourceBO getResource(Long groupId);
 
      List<ResourceBO> queryResources(ResourceQuery resourceQuery);
+
+     Integer resort(Long parentResourceId, Integer currentSort);
+
+
+     Integer maxSort(Long parentResourceId);
 }
