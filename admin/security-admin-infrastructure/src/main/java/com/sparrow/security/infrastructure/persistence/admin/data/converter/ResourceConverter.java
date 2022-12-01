@@ -1,6 +1,7 @@
 package com.sparrow.security.infrastructure.persistence.admin.data.converter;
 
 import com.sparrow.protocol.LoginUser;
+import com.sparrow.protocol.ThreadContext;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.ResourceBO;
 import com.sparrow.security.dao.admin.query.ResourceDBQuery;
@@ -18,7 +19,7 @@ import javax.inject.Named;
 
 @Named
 public class ResourceConverter implements Param2POConverter<ResourceParam, Resource>, PO2BOConverter<ResourceBO, Resource> {
-    
+
     public ResourceDBQuery toDBQuery(ResourceQuery query) {
         ResourceDBQuery dbQuery = new ResourceDBQuery();
         BeanUtility.copyProperties(query, dbQuery);
@@ -46,8 +47,7 @@ public class ResourceConverter implements Param2POConverter<ResourceParam, Resou
         Resource resource = new Resource();
         BeanUtility.copyProperties(resourceParam, resource);
         resource.setStatus(StatusRecord.ENABLE);
-        LoginUser loginUser = new LoginUser();
-        loginUser.setUserId(1L);
+        LoginUser loginUser = ThreadContext.getLoginToken();
         resource.setCreateUserId(loginUser.getUserId());
         resource.setUpdateUserId(loginUser.getUserId());
         resource.setCreateTime(System.currentTimeMillis());

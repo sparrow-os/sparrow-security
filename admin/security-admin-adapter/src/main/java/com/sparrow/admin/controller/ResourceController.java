@@ -35,7 +35,6 @@ public class ResourceController {
 
     @PostMapping("save")
     public ResourceVO saveResource(ResourceParam resourceParam) throws BusinessException {
-        resourceParam.setSort(1);
         resourceService.saveResource(resourceParam);
         return this.resourceControllerAssemble.paramAssembleVO(resourceParam);
     }

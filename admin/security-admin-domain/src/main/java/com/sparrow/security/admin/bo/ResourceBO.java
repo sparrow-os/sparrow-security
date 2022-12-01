@@ -14,6 +14,7 @@ public class ResourceBO implements BO {
     private String method;
     private String icoUrl;
     private Integer sort;
+    private String remark;
 
     public Long getId() {
         return id;
@@ -101,5 +102,13 @@ public class ResourceBO implements BO {
 
     public void setSort(Integer sort) {
         this.sort = sort;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

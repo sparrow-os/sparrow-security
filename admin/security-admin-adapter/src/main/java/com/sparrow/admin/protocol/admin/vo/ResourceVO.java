@@ -14,6 +14,7 @@ public class ResourceVO implements VO {
     private String method;
     private String icoUrl;
     private Integer sort;
+    private String remark;
 
     public Long getId() {
         return id;
@@ -101,5 +102,13 @@ public class ResourceVO implements VO {
 
     public void setSort(Integer sort) {
         this.sort = sort;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

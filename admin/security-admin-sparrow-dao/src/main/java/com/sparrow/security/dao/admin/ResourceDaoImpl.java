@@ -3,6 +3,7 @@ package com.sparrow.security.dao.admin;
 import com.sparrow.exception.Asserts;
 import com.sparrow.orm.query.BooleanCriteria;
 import com.sparrow.orm.query.Criteria;
+import com.sparrow.orm.query.OrderCriteria;
 import com.sparrow.orm.query.SearchCriteria;
 import com.sparrow.orm.query.UpdateCriteria;
 import com.sparrow.orm.query.UpdateSetClausePair;
@@ -77,6 +78,8 @@ public class ResourceDaoImpl extends ORMStrategy<Resource, Long> implements Reso
             Criteria.field("resource.appId").equal(resourceQuery.getAppId()))
             .and(Criteria.field("resource.status").equal(resourceQuery.getStatus())
             );
+        searchCriteria.addOrderCriteria(OrderCriteria.asc("resource.parentId"));
+        searchCriteria.addOrderCriteria(OrderCriteria.asc("resource.sort"));
         searchCriteria.setWhere(booleanCriteria);
         return this.getList(searchCriteria);
     }
