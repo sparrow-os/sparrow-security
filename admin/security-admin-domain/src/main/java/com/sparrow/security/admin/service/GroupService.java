@@ -2,13 +2,13 @@ package com.sparrow.security.admin.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.BusinessException;
+import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.security.admin.bo.GroupBO;
-import com.sparrow.security.admin.bo.GroupListTotalRecordBO;
 import com.sparrow.security.admin.repository.GroupRepository;
 import com.sparrow.security.admin.support.suffix.GroupSuffix;
-import com.sparrow.security.protocol.admin.enums.SecurityAdminError;
-import com.sparrow.security.protocol.admin.param.GroupParam;
-import com.sparrow.security.protocol.admin.query.GroupQuery;
+import com.sparrow.security.admin.protocol.enums.SecurityAdminError;
+import com.sparrow.security.admin.protocol.param.GroupParam;
+import com.sparrow.security.admin.protocol.query.GroupQuery;
 import com.sparrow.utility.StringUtility;
 import java.util.List;
 import javax.inject.Inject;
@@ -45,17 +45,17 @@ public class GroupService {
         return this.groupRepository.disable(groupIds);
     }
 
-    public GroupListTotalRecordBO queryAllGroup() {
+    public ListRecordTotalBO<GroupBO> queryAllGroup() {
         return queryGroup(null);
     }
 
-    public GroupListTotalRecordBO queryGroup(GroupQuery groupQuery) {
+    public ListRecordTotalBO<GroupBO> queryGroup(GroupQuery groupQuery) {
         Long totalRecord = this.groupRepository.getGroupCount(groupQuery);
         List<GroupBO> groupBoList = null;
         if (totalRecord > 0) {
             groupBoList = this.groupRepository.queryGroups(groupQuery);
         }
-        return new GroupListTotalRecordBO(groupBoList, totalRecord);
+        return new ListRecordTotalBO<>(groupBoList, totalRecord);
     }
 
     public GroupBO getGroup(Long groupId) throws BusinessException {

@@ -1,9 +1,8 @@
 package com.sparrow.security;
 
+import com.alibaba.fastjson.JSON;
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.security.dao.admin.ForumDAO;
-import com.sparrow.security.dao.admin.RoleDAO;
-import com.sparrow.security.po.Forum;
+import com.sparrow.security.admin.dao.RoleDAO;
 import com.sparrow.security.po.Role;
 import org.junit.Test;
 
@@ -30,6 +29,7 @@ public class RoleDaoTest extends BaseTest {
         role.setUpdateTime(0L);
         role.setRemark("remarks");
         role.setStatus(StatusRecord.DISABLE);
+        System.out.println(JSON.toJSONString(role));
         roleDao.insert(role);
     }
 }

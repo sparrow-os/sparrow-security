@@ -1,9 +1,9 @@
 package com.sparrow.security.admin.repository;
 
 import com.sparrow.security.admin.bo.ResourceBO;
-import com.sparrow.security.protocol.admin.param.ResourceParam;
-import com.sparrow.security.protocol.admin.param.ResourceSortParam;
-import com.sparrow.security.protocol.admin.query.ResourceQuery;
+import com.sparrow.security.admin.protocol.param.ResourceParam;
+import com.sparrow.security.admin.protocol.param.ResourceSortParam;
+import com.sparrow.security.admin.protocol.query.ResourceQuery;
 import java.util.List;
 
 public interface ResourceRepository {

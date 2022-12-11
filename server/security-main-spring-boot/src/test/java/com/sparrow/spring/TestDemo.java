@@ -1,6 +1,6 @@
 package com.sparrow.spring;
 
-import com.sparrow.security.boot.Application;
+import com.sparrow.security.admin.boot.Application;
 import com.sparrow.security.dao.admin.GroupDAO;
 import com.sparrow.spring.container.SparrowTestExecutionListener;
 import org.junit.Test;

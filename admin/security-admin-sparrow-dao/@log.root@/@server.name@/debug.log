@@ -119,3 +119,53 @@
 2022-11-24 22:09:43.233 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
 2022-11-24 22:09:43.234 TRACE_ID DEBUG main JDBCTemplate SQL:select `id`,`code`,`name`,`sort`,`logo`,`status`,`create_user_id`,`create_time`,`update_user_id`,`update_time`,`remark` from `app` where id=1
 2022-11-24 22:09:43.241 TRACE_ID DEBUG main ProxyConnection release-->connection pool size:10used pool size:0
+2022-12-01 23:47:18.180 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:47:18.181 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:47:18.181 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Integer not exist
+2022-12-01 23:47:18.182 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class com.sparrow.protocol.enums.StatusRecord not exist
+2022-12-01 23:47:18.182 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:47:18.182 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:47:18.182 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:47:18.182 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:47:18.183 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:47:18.184 TRACE_ID DEBUG main JDBCTemplate SQL:insert into `role`(`code`,`name`,`sort`,`status`,`create_user_id`,`create_time`,`update_user_id`,`update_time`,`remark`)values(role code,role name,0,DISABLE,0,0,0,0,remarks)
+2022-12-01 23:47:18.242 TRACE_ID DEBUG main ProxyConnection release-->connection pool size:10used pool size:0
+2022-12-01 23:48:20.685 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:48:20.687 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:48:20.687 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Integer not exist
+2022-12-01 23:48:20.687 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class com.sparrow.protocol.enums.StatusRecord not exist
+2022-12-01 23:48:20.688 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:48:20.689 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:48:20.689 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:48:20.689 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:48:20.689 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:48:20.691 TRACE_ID DEBUG main JDBCTemplate SQL:insert into `role`(`code`,`name`,`sort`,`status`,`create_user_id`,`create_time`,`update_user_id`,`update_time`,`remark`)values(role code,role name,0,DISABLE,0,0,0,0,remarks)
+2022-12-01 23:50:24.029 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:50:24.032 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:50:24.032 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Integer not exist
+2022-12-01 23:50:24.032 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class com.sparrow.protocol.enums.StatusRecord not exist
+2022-12-01 23:50:24.032 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:50:24.032 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:50:24.033 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:50:24.033 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-01 23:50:24.033 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-01 23:50:24.036 TRACE_ID DEBUG main JDBCTemplate SQL:insert into `role`(`code`,`name`,`sort`,`status`,`create_user_id`,`create_time`,`update_user_id`,`update_time`,`remark`)values(role code,role name,0,DISABLE,0,0,0,0,remarks)
+2022-12-01 23:50:24.063 TRACE_ID DEBUG main ProxyConnection release-->connection pool size:10used pool size:0
+2022-12-02 23:19:48.500 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-02 23:19:48.504 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.505 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.505 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.506 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.506 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.506 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.507 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.507 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.507 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Integer not exist
+2022-12-02 23:19:48.507 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class com.sparrow.protocol.enums.StatusRecord not exist
+2022-12-02 23:19:48.507 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-02 23:19:48.507 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-02 23:19:48.508 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-02 23:19:48.508 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.Long not exist
+2022-12-02 23:19:48.508 TRACE_ID DEBUG main JDBCTemplate JDBCTemplate set SQLParameter error sqlType class java.lang.String not exist
+2022-12-02 23:19:48.511 TRACE_ID DEBUG main JDBCTemplate SQL:insert into `forum`(`resource_id`,`forum_name`,`list_url`,`detail_url`,`placeholder_url`,`new_url`,`manager`,`upload_key`,`cover`,`max_record_count`,`status`,`create_user_id`,`create_time`,`update_user_id`,`update_time`,`remark`)values(0,,list url,details url,placeholder url,new url,manager,upload key,cover,0,DISABLE,0,1669994364456,0,0,remarks)
+2022-12-02 23:19:48.566 TRACE_ID DEBUG main ProxyConnection release-->connection pool size:10used pool size:0

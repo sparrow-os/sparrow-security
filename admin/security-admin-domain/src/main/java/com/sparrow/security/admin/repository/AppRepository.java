@@ -1,7 +1,7 @@
 package com.sparrow.security.admin.repository;
 
 import com.sparrow.security.admin.bo.AppBO;
-import com.sparrow.security.protocol.admin.param.AppParam;
+import com.sparrow.security.admin.protocol.param.AppParam;
 
 public interface AppRepository {
     Long save(AppParam appParam);

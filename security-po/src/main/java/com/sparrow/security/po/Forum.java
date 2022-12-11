@@ -11,6 +11,11 @@ import javax.persistence.Table;
 @Table(name = "forum")
 public class Forum extends PO {
     private Long forumId;
+
+    /**
+     * 版块名称
+     */
+    private String forumName;
     /**
      * 资源 ID
      */
@@ -60,6 +65,16 @@ public class Forum extends PO {
 
     public void setForumId(Long forumId) {
         this.forumId = forumId;
+    }
+
+    @MethodOrder(order = 2)
+    @Column(name = "forum_name", columnDefinition = "varchar(64)  DEFAULT 0 COMMENT 'forum name'", nullable = false)
+    public String getForumName() {
+        return forumName;
+    }
+
+    public void setForumName(String forumName) {
+        this.forumName = forumName;
     }
 
     @MethodOrder(order = 2)

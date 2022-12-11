@@ -3,7 +3,7 @@ package com.sparrow.security.admin.service;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.security.admin.bo.AppBO;
 import com.sparrow.security.admin.repository.AppRepository;
-import com.sparrow.security.protocol.admin.param.AppParam;
+import com.sparrow.security.admin.protocol.param.AppParam;
 import javax.inject.Inject;
 import javax.inject.Named;
 

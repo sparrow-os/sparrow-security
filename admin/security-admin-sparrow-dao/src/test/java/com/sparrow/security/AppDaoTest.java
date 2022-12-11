@@ -1,7 +1,7 @@
 package com.sparrow.security;
 
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.security.dao.admin.AppDAO;
+import com.sparrow.security.admin.dao.AppDAO;
 import com.sparrow.security.po.App;
 import org.junit.Test;
 

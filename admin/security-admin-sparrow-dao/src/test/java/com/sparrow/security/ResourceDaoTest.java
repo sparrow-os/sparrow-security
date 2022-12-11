@@ -2,7 +2,7 @@ package com.sparrow.security;
 
 import com.alibaba.fastjson.JSON;
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.security.dao.admin.ResourceDAO;
+import com.sparrow.security.admin.dao.ResourceDAO;
 import com.sparrow.security.po.Resource;
 import org.junit.Test;
 

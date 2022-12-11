@@ -1,9 +1,9 @@
 package com.sparrow.security;
 
+import com.alibaba.fastjson.JSON;
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.security.dao.admin.ForumDAO;
+import com.sparrow.security.admin.dao.ForumDAO;
 import com.sparrow.security.po.Forum;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class ForumDaoTest extends BaseTest {
@@ -36,6 +36,7 @@ public class ForumDaoTest extends BaseTest {
         forum.setUpdateTime(0L);
         forum.setRemark("remarks");
         forum.setStatus(StatusRecord.DISABLE);
+        System.out.println(JSON.toJSONString(forum));
         forumDao.insert(forum);
     }
 }

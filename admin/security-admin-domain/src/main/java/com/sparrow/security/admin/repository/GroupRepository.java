@@ -1,8 +1,8 @@
 package com.sparrow.security.admin.repository;
 
 import com.sparrow.security.admin.bo.GroupBO;
-import com.sparrow.security.protocol.admin.param.GroupParam;
-import com.sparrow.security.protocol.admin.query.GroupQuery;
+import com.sparrow.security.admin.protocol.param.GroupParam;
+import com.sparrow.security.admin.protocol.query.GroupQuery;
 import java.util.List;
 
 public interface GroupRepository {

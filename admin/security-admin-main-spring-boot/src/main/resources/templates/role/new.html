@@ -1,0 +1,108 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>角色新增</title>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <link rel="shortcut icon" th:href="@{/favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/sparrow.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/pure-css/pure.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css"
+          th:href="@{${resource}+'/styles/layouts-backend.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/modal.css?v='+${resource_version}}"/>
+    <script language="javascript" type="text/javascript"
+            th:src="@{${resource}+'/scripts/require.js?v='+${resource_version}}"></script>
+    <script language="javascript" type="text/javascript"
+            th:src="@{${resource}+'/ext/scripts/system/language/zh_cn/role.js?v='+${resource_version}}"></script>
+
+    <script language="javascript" type="text/javascript">
+        requirejs.config({
+            baseUrl: "[[${resource}]]/scripts",
+            paths: {
+                role: '[[${resource}]]/ext/scripts/system/role/new'
+            }
+        });
+        require(['sparrow', 'domReady!', 'role'], function ($, dom, roleController) {
+            $.file.isShowProgress = true;
+            $.url.upload = '[[${upload}]]';
+            roleController.load();
+        });
+    </script>
+    <style type="text/css">
+        .inline-block label {
+            width: 7em !important;
+        }
+
+        .status label {
+            width: 3em !important;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <form method="post" class="pure-form pure-form-aligned">
+        <fieldset>
+            <legend>注: <span class="highlight">*</span>为必添项</legend>
+
+            <input type="hidden" id="hdnRoleId" name="id" th:value="${role?.id}">
+            <div class="pure-control-group">
+                <label>角色名</label>
+                <input type="text" id="txtRoleName" th:value="${role?.name}" name="name"
+                       onfocus='$.v.showMessage(roleInfo,this);' onblur='$.v.isNull(roleInfo,this);'/>
+                <span class="prompt" id="errorRoleName"></span>
+            </div>
+
+            <div class="pure-control-group">
+                <label>APP</label>
+                <input type="text" id="txtAppName" th:value="${role?.appId}" name="appId"
+                       onfocus='$.v.showMessage(roleInfo,this);' onblur='$.v.isNull(roleInfo,this);'/>
+                <span class="prompt" id="errorAppName"></span>
+            </div>
+            <div class="pure-control-group">
+                <label>角色编码</label>
+                <input type="text" id="txtRoleCode" th:value="${role?.code}" name="code"
+                       onfocus='$.v.showMessage(roleInfo,this);' onblur='$.v.isNull(roleInfo,this);'/>
+                <span class="prompt" id="errorRoleCode"></span>
+            </div>
+            <div class="pure-control-group">
+                <label>排序号</label>
+                <input type="text" id="txtSort" th:value="${role?.sort}" name="sort"
+                       onfocus='$.v.showMessage(roleInfo,this);' onblur='$.v.isNull(roleInfo,this);'/>
+                <span class="prompt" id="errorSort"></span>
+            </div>
+
+
+            <div class="pure-control-group">
+                <label>状态</label>
+                <div class="inline-block status">
+                    <input type="radio" id="rdbRoleStatus00" name="status" value="DISABLE"
+                           th:attr="checked=${role?.status=='DISABLE'}">
+                    <label for="rdbRoleStatus00">禁用</label>
+                    <input type="radio" id="rdbRoleStatus01" name="status" value="ENABLE"
+                           th:attr="checked=${role?.status=='ENABLE'}">
+                    <label for="rdbRoleStatus01">正常</label>
+                </div>
+                <span class="prompt" id="errorState"></span>
+            </div>
+            <div class="pure-control-group">
+                <label>备注</label>
+                <textarea th:text="${role?.remark}" id="txtRemark" cols='20' rows='5' name="remark"
+                          onfocus="$.v.showMessage(roleInfo,this);" onblur="$.v.ok(roleInfo,this);"
+                          onkeyup="$.v.updateTxtCount(this,roleInfo.txtRemark.spanTxtCount,500);"></textarea>
+                <span class="prompt" id="errorRemark"></span>
+            </div>
+            <div class="pure-controls">
+                您还可以输入：<span id="spanTxtCount" th:text="${role?.maxRemarkLength}"></span>
+                个字符/500
+            </div>
+            <div class="pure-controls">
+                <input id="btnSave" type="button" class="pure-button pure-button-primary"
+                       value="提交"/>
+                <input id="btnReturn" type="button" class="pure-button"
+                       value="返回"/>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
