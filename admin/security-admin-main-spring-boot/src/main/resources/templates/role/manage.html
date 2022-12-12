@@ -30,7 +30,7 @@
     <form method="post" class="pure-form">
         <fieldset>
             <input type="hidden" id="currentPageIndex" th:value="${query?.currentPageIndex}" name="currentPageIndex"/>
-            <input type="hidden" id="hdnGridResult" name="roleIds" gridViewId="grvRoleList"
+            <input type="hidden" id="hdnGridResult" name="ids" gridViewId="grvRoleList"
                    keyType="int"/>
             <input type="text" id="txtRoleName" th:value="${query?.roleName}" name="roleName" value="" placeholder="角色名称"/>
             <input type="button" class="pure-button pure-button-primary" id="btnSearch"

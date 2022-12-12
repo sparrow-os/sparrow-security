@@ -1,15 +1,15 @@
 package com.sparrow.security.admin.controller;
 
-import com.sparrow.security.admin.assemble.RoleAssemble;
-import com.sparrow.security.admin.protocol.vo.RoleVO;
+import com.sparrow.protocol.BatchOperationQuery;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.protocol.pager.SimplePager;
+import com.sparrow.security.admin.assemble.RoleAssemble;
 import com.sparrow.security.admin.bo.RoleBO;
-import com.sparrow.security.admin.service.RoleService;
 import com.sparrow.security.admin.protocol.param.RoleParam;
-import com.sparrow.security.admin.protocol.query.RoleBatchOperationQuery;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
+import com.sparrow.security.admin.protocol.vo.RoleVO;
+import com.sparrow.security.admin.service.RoleService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
@@ -32,9 +32,9 @@ public class RoleController {
 
     @GetMapping("manage")
     public ModelAndView loadAllRole() {
-        RoleBatchOperationQuery batchOperationQuery = (RoleBatchOperationQuery) ModelAndViewUtils.flash("query");
+        BatchOperationQuery<RoleQuery> batchOperationQuery = (BatchOperationQuery<RoleQuery>) ModelAndViewUtils.flash("query");
         if (batchOperationQuery != null) {
-            return this.queryRoles(batchOperationQuery);
+            return this.queryRoles(batchOperationQuery.getQuery());
         }
         SimplePager simplePager = new SimplePager();
         ListRecordTotalBO<RoleBO> roleListRecordTotal = this.roleService.queryAllRole();
@@ -84,23 +84,23 @@ public class RoleController {
     }
 
     @PostMapping("delete")
-    public ModelAndView delRole(RoleBatchOperationQuery roleBatchOperationQuery) throws BusinessException {
+    public ModelAndView delRole(BatchOperationQuery<RoleQuery> roleBatchOperationQuery) throws BusinessException {
         this.servletContainer.getRequest().setAttribute("query", roleBatchOperationQuery);
-        roleService.deleteRole(roleBatchOperationQuery.getRoleIds());
+        roleService.deleteRole(roleBatchOperationQuery.getIds());
         return ModelAndViewUtils.redirect("/role/manage");
     }
 
     @PostMapping("enable")
-    public ModelAndView enableRole(RoleBatchOperationQuery roleBatchOperationQuery) throws BusinessException {
+    public ModelAndView enableRole(BatchOperationQuery<RoleQuery> roleBatchOperationQuery) throws BusinessException {
         this.servletContainer.getRequest().setAttribute("query", roleBatchOperationQuery);
-        roleService.enableRole(roleBatchOperationQuery.getRoleIds());
+        roleService.enableRole(roleBatchOperationQuery.getIds());
         return ModelAndViewUtils.redirect("/role/manage");
     }
 
     @PostMapping("disable")
-    public ModelAndView disableGroup(RoleBatchOperationQuery roleBatchOperationQuery) throws BusinessException {
+    public ModelAndView disableGroup(BatchOperationQuery<RoleQuery> roleBatchOperationQuery) throws BusinessException {
         this.servletContainer.getRequest().setAttribute("query", roleBatchOperationQuery);
-        roleService.disableRole(roleBatchOperationQuery.getRoleIds());
+        roleService.disableRole(roleBatchOperationQuery.getIds());
         return ModelAndViewUtils.redirect("/role/manage");
     }
 }

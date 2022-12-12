@@ -1,9 +1,10 @@
 package com.sparrow.security.admin.protocol.query;
 
+import com.sparrow.protocol.Query;
 import com.sparrow.protocol.pager.SimplePager;
 import java.util.Date;
 
-public class GroupQuery extends SimplePager {
+public class GroupQuery extends SimplePager implements Query {
     private String groupName;
     private Date beginDate;
     private Date endDate;

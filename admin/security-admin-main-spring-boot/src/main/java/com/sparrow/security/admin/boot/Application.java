@@ -40,7 +40,6 @@ public class Application {
             }
         });
         springApplication.addListeners(new ApplicationListener<ContextClosedEvent>() {
-
             @Override
             public void onApplicationEvent(ContextClosedEvent contextClosedEvent) {
                 log.info("application closed at at {}", contextClosedEvent.getTimestamp());

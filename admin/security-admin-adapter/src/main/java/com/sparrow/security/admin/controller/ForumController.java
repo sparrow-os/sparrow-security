@@ -1,12 +1,12 @@
 package com.sparrow.security.admin.controller;
 
+import com.sparrow.protocol.BatchOperationQuery;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.protocol.pager.SimplePager;
 import com.sparrow.security.admin.assemble.ForumAssemble;
 import com.sparrow.security.admin.bo.ForumBO;
 import com.sparrow.security.admin.protocol.param.ForumParam;
-import com.sparrow.security.admin.protocol.query.ForumBatchOperationQuery;
 import com.sparrow.security.admin.protocol.query.ForumQuery;
 import com.sparrow.security.admin.protocol.vo.ForumVO;
 import com.sparrow.security.admin.service.ForumService;
@@ -34,9 +34,9 @@ public class ForumController {
 
     @GetMapping("manage")
     public ModelAndView loadAllForums() {
-        ForumBatchOperationQuery batchOperationQuery = (ForumBatchOperationQuery) ModelAndViewUtils.flash("query");
+        BatchOperationQuery<ForumQuery> batchOperationQuery = (BatchOperationQuery<ForumQuery>) ModelAndViewUtils.flash("query");
         if (batchOperationQuery != null) {
-            return this.queryForums(batchOperationQuery);
+            return this.queryForums(batchOperationQuery.getQuery());
         }
         SimplePager simplePager = new SimplePager();
         ListRecordTotalBO<ForumBO> forumListTotalRecord = this.forumService.queryAllForum();
