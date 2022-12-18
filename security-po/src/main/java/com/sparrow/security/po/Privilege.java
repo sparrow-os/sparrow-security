@@ -37,12 +37,12 @@ public class Privilege implements POJO {
     }
 
     @MethodOrder(order = 3)
-    @Column(name = "resource_id", columnDefinition = "varchar(128)  DEFAULT '' COMMENT 'resource id'", nullable = false)
+    @Column(name = "resource_id", columnDefinition = "int(11)  DEFAULT 0 COMMENT 'resource id'", nullable = false)
     public Long getResourceId() {
         return resourceId;
     }
 
-    public void setResourceId(Long resource) {
+    public void setResourceId(Long resourceId) {
         this.resourceId = resourceId;
     }
 }

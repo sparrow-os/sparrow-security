@@ -28,7 +28,7 @@ public class ResourceController {
     @PostMapping("manage")
     public List<ResourceVO> loadAllResources(ResourceQuery resourceQuery) {
         List<ResourceBO> resources = this.resourceService.queryResources(resourceQuery);
-        return this.resourceControllerAssemble.boListAssembleItemVOList(resources);
+        return this.resourceControllerAssemble.boListAssembleVoList(resources);
     }
 
     @PostMapping("save")

@@ -8,6 +8,7 @@ public class ResourceMenuItemVO implements VO {
     private String permission;
     private String name;
     private Integer resourceType;
+    private String url;
 
     public Long getId() {
         return id;
@@ -47,5 +48,13 @@ public class ResourceMenuItemVO implements VO {
 
     public void setResourceType(Integer resourceType) {
         this.resourceType = resourceType;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

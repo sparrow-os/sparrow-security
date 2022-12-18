@@ -33,13 +33,7 @@ public class ResourceAssemble implements BO2VOAssemble<ResourceVO, ResourceBO>,
         throw new RuntimeException("not support method");
     }
 
-    public ResourceMenuItemVO boAssembleItemVO(ResourceBO bo) {
-        ResourceMenuItemVO itemVO = new ResourceMenuItemVO();
-        BeanUtility.copyProperties(bo, itemVO);
-        return itemVO;
-    }
-
-    public List<ResourceVO> boListAssembleItemVOList(List<ResourceBO> list) {
+    public List<ResourceVO> boListAssembleVoList(List<ResourceBO> list) {
         if (CollectionsUtility.isNullOrEmpty(list)) {
             return Collections.emptyList();
         }

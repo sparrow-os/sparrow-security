@@ -10,6 +10,7 @@ import com.sparrow.orm.query.UpdateSetClausePair;
 import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.protocol.dao.AggregateCriteria;
 import com.sparrow.protocol.dao.enums.Aggregate;
+import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.dao.ResourceDAO;
 import com.sparrow.security.admin.dao.query.ResourceDBQuery;
 import com.sparrow.security.po.Resource;
@@ -81,6 +82,14 @@ public class ResourceDaoImpl extends ORMStrategy<Resource, Long> implements Reso
         searchCriteria.addOrderCriteria(OrderCriteria.asc("resource.parentId"));
         searchCriteria.addOrderCriteria(OrderCriteria.asc("resource.sort"));
         searchCriteria.setWhere(booleanCriteria);
+        return this.getList(searchCriteria);
+    }
+
+    @Override public List<Resource> queryAllEnableResources() {
+        SearchCriteria searchCriteria = new SearchCriteria();
+        searchCriteria.setWhere(Criteria.field("resource.status").equal(StatusRecord.ENABLE));
+        searchCriteria.addOrderCriteria(OrderCriteria.asc("resource.parentId"));
+        searchCriteria.addOrderCriteria(OrderCriteria.asc("resource.sort"));
         return this.getList(searchCriteria);
     }
 }

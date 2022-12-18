@@ -66,6 +66,10 @@ public class ResourceService {
         return this.resourceRepository.queryResources(resourceQuery);
     }
 
+    public List<ResourceBO> queryAllEnableResources() {
+        return this.resourceRepository.queryAllEnableResources();
+    }
+
     public ResourceBO getResource(Long resourceId) throws BusinessException {
         Asserts.isTrue(resourceId == null, SecurityAdminError.RESOURCE_ID_IS_EMPTY);
         return this.resourceRepository.getResource(resourceId);

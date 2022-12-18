@@ -8,6 +8,10 @@ public class AppVO implements VO {
     private String name;
     private String logo;
     private Integer sort;
+    private String status;
+    private String remark;
+
+    private Integer maxRemarkLength;
 
     public Long getId() {
         return id;
@@ -47,5 +51,29 @@ public class AppVO implements VO {
 
     public void setSort(Integer sort) {
         this.sort = sort;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public Integer getMaxRemarkLength() {
+        return maxRemarkLength;
+    }
+
+    public void setMaxRemarkLength(Integer maxRemarkLength) {
+        this.maxRemarkLength = maxRemarkLength;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -6,12 +6,6 @@ public class CountGroupQuery {
     public CountGroupQuery() {
     }
 
-    public CountGroupQuery(CountGroupQuery countGroupQuery) {
-        this.groupName = countGroupQuery.groupName;
-        this.beginDate = countGroupQuery.beginDate;
-        this.endDate = countGroupQuery.endDate;
-    }
-
     private String groupName;
     private Date beginDate;
     private Date endDate;

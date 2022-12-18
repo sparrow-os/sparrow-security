@@ -11,6 +11,7 @@ public class RoleVO implements VO {
     private String remark;
     private String status;
     private Integer maxRemarkLength;
+    private String appName;
 
     public Long getId() {
         return id;
@@ -74,5 +75,13 @@ public class RoleVO implements VO {
 
     public void setAppId(Long appId) {
         this.appId = appId;
+    }
+
+    public String getAppName() {
+        return appName;
+    }
+
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 }

@@ -50,4 +50,16 @@ public class SecurityModule {
             return "Forum";
         }
     };
+
+    public static final ModuleSupport Privilege = new ModuleSupport() {
+        @Override
+        public String code() {
+            return "71";
+        }
+
+        @Override
+        public String name() {
+            return "Privilege";
+        }
+    };
 }

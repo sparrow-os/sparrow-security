@@ -34,8 +34,7 @@ public class ResourceRepositoryImpl implements ResourceRepository {
     }
 
     @Override public int delete(Long resourceId) {
-        StatusCriteria statusCriteria = new StatusCriteria(resourceId + "", StatusRecord.DESTROYED);
-        return this.resourceDao.changeStatus(statusCriteria);
+        return this.resourceDao.delete(resourceId);
     }
 
     @Override public int disable(Long resourceId) {
@@ -60,6 +59,11 @@ public class ResourceRepositoryImpl implements ResourceRepository {
     @Override public List<ResourceBO> queryResources(ResourceQuery resourceQuery) {
         ResourceDBQuery resourceDBQuery = this.resourceConverter.toDBQuery(resourceQuery);
         List<Resource> resources = this.resourceDao.queryResources(resourceDBQuery);
+        return this.resourceConverter.poList2BoList(resources);
+    }
+
+    @Override public List<ResourceBO> queryAllEnableResources() {
+        List<Resource> resources = this.resourceDao.queryAllEnableResources();
         return this.resourceConverter.poList2BoList(resources);
     }
 

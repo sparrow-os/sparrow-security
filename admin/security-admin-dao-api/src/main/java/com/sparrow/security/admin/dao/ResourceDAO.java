@@ -10,8 +10,10 @@ public interface ResourceDAO extends DaoSupport<Resource, Long> {
 
     Integer resort(Long parentResourceId, Integer currentSort);
 
-
     Integer maxSort(Long parentResourceId);
 
     List<Resource> queryResources(ResourceDBQuery resourceQuery);
+
+    List<Resource> queryAllEnableResources();
+
 }

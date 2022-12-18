@@ -1,6 +1,7 @@
 package com.sparrow.security.admin.repository;
 
 import com.sparrow.security.admin.bo.RoleBO;
+import com.sparrow.security.admin.protocol.param.PrivilegeParam;
 import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
 import java.util.List;
@@ -19,5 +20,9 @@ public interface RoleRepository {
     List<RoleBO> queryRoles(RoleQuery groupQuery);
 
     Long getRoleCount(RoleQuery groupQuery);
+
+    List<Long> queryAllAccessibleResources(Long roleId);
+
+    void resetPrivilege(PrivilegeParam privilegeParam);
 
 }

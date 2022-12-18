@@ -3,18 +3,12 @@ package com.sparrow.security.admin.protocol.query;
 import com.sparrow.protocol.pager.SimplePager;
 import java.util.Date;
 
-public class GroupQuery extends SimplePager{
-    private String groupName;
+public class AppQuery extends SimplePager {
+
+    private String name;
+    private String status;
     private Date beginDate;
     private Date endDate;
-
-    public String getGroupName() {
-        return groupName;
-    }
-
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
 
     public Date getBeginDate() {
         return beginDate;
@@ -30,5 +24,21 @@ public class GroupQuery extends SimplePager{
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

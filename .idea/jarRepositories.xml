@@ -2,24 +2,24 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="center" />
+      <option name="name" value="center Repository" />
+      <option name="url" value="https://s01.oss.sonatype.org/content/repositories/snapshots" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="sparrowzoo" />
       <option name="name" value="sparrowzoo" />
       <option name="url" value="https://maven.pkg.github.com/sparrowzoo/sparrow-shell" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="central" />
-      <option name="name" value="central" />
-      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="tedu-public" />
-      <option name="name" value="Tedu Public Repository" />
-      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -30,16 +30,6 @@
       <option name="id" value="sparrowzoo" />
       <option name="name" value="sparrowzoo" />
       <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="tedu-snapshots" />
-      <option name="name" value="Tedu Snapshot Repository" />
-      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="jboss.community" />
-      <option name="name" value="JBoss Community repository" />
-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="github" />
@@ -60,6 +50,41 @@
       <option name="id" value="tedu-releases" />
       <option name="name" value="Tedu Nexus Release Repository" />
       <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tedu-snapshots" />
+      <option name="name" value="Tedu Snapshot Repository" />
+      <option name="url" value="https://nexus.tctm.life/repository/tedu-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tedu-public" />
+      <option name="name" value="Tedu Public Repository" />
+      <option name="url" value="https://nexus.tctm.life/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tedu-public" />
+      <option name="name" value="Tedu Public Repository" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tedu-snapshots" />
+      <option name="name" value="Tedu Snapshot Repository" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tedu-releases" />
+      <option name="name" value="Tedu Nexus Release Repository" />
+      <option name="url" value="https://nexus.tctm.life/repository/tedu-releases/" />
     </remote-repository>
   </component>
 </project>

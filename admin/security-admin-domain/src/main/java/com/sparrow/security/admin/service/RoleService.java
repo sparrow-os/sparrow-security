@@ -4,10 +4,12 @@ import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.security.admin.bo.RoleBO;
+import com.sparrow.security.admin.protocol.param.PrivilegeParam;
 import com.sparrow.security.admin.repository.RoleRepository;
 import com.sparrow.security.admin.protocol.enums.SecurityAdminError;
 import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
+import com.sparrow.utility.CollectionsUtility;
 import com.sparrow.utility.StringUtility;
 import java.util.List;
 import javax.inject.Inject;
@@ -59,5 +61,16 @@ public class RoleService {
     public RoleBO getRole(Long roleId) throws BusinessException {
         Asserts.isTrue(roleId == null, SecurityAdminError.ROLE_ID_IS_EMPTY);
         return this.roleRepository.getRole(roleId);
+    }
+
+    public List<Long> queryAllAccessibleResources(Long roleId) throws BusinessException {
+        Asserts.isTrue(roleId == null, SecurityAdminError.ROLE_ID_IS_EMPTY);
+        return this.roleRepository.queryAllAccessibleResources(roleId);
+    }
+
+    public void resetPrivilege(PrivilegeParam privilegeParam) throws BusinessException {
+        Asserts.isTrue(privilegeParam.getRoleId() == null, SecurityAdminError.ROLE_ID_IS_EMPTY);
+        Asserts.isTrue(CollectionsUtility.isNullOrEmpty(privilegeParam.getResourceIds()), SecurityAdminError.PRIVILEGE_IS_EMPTY);
+        this.roleRepository.resetPrivilege(privilegeParam);
     }
 }

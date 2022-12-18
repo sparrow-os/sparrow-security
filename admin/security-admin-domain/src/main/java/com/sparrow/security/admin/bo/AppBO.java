@@ -1,6 +1,7 @@
 package com.sparrow.security.admin.bo;
 
 import com.sparrow.protocol.BO;
+import com.sparrow.protocol.enums.StatusRecord;
 
 public class AppBO implements BO {
     private Long id;
@@ -8,6 +9,8 @@ public class AppBO implements BO {
     private String name;
     private String logo;
     private Integer sort;
+    private StatusRecord status;
+    private String remark;
 
     public Long getId() {
         return id;
@@ -47,5 +50,21 @@ public class AppBO implements BO {
 
     public void setSort(Integer sort) {
         this.sort = sort;
+    }
+
+    public StatusRecord getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusRecord status) {
+        this.status = status;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

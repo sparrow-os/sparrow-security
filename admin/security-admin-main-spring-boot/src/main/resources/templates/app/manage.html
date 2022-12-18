@@ -1,6 +1,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>组管理</title>
+    <title>APP管理</title>
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
@@ -12,18 +12,16 @@
     <script language="javascript" type="text/javascript"
             th:src="@{${resource}+'/scripts/require.js?v='+${resource_version}}"></script>
     <script language="javascript" type="text/javascript"
-            th:src="@{${resource}+'/ext/scripts/system/language/zh_cn/role.js?v='+${resource_version}}"></script>
+            th:src="@{${resource}+'/ext/scripts/system/language/zh_cn/app.js?v='+${resource_version}}"></script>
     <script language="javascript" type="text/javascript">
         requirejs.config({
             baseUrl: "[[${resource}]]/scripts",
             paths: {
-                role: '[[${resource}]]/ext/scripts/system/role/manage'
+                app: '[[${resource}]]/ext/scripts/system/app/manage'
             }
         });
-        var globalRoleController = null;
-        require(['sparrow', 'domReady!', 'role'], function ($, dom, roleController) {
-            roleController.load();
-            globalRoleController = roleController;
+        require(['sparrow', 'domReady!', 'app'], function ($, dom, appController) {
+            appController.load();
         });
     </script>
 </head>
@@ -32,10 +30,9 @@
     <form method="post" class="pure-form">
         <fieldset>
             <input type="hidden" id="currentPageIndex" th:value="${query?.currentPageIndex}" name="currentPageIndex"/>
-            <input type="hidden" id="hdnGridResult" name="ids" gridViewId="grvRoleList"
+            <input type="hidden" id="hdnGridResult" name="ids" gridViewId="grvAppList"
                    keyType="int"/>
-            <input type="text" id="txtRoleName" th:value="${query?.roleName}" name="roleName" value=""
-                   placeholder="角色名称"/>
+            <input type="text" id="txtGroupName" th:value="${query?.name}" name="name" value="" placeholder="APP名称"/>
             <input type="button" class="pure-button pure-button-primary" id="btnSearch"
                    value="查询"/>
         </fieldset>
@@ -54,38 +51,39 @@
     </form>
     <div class="pure-form pure-form-aligned">
         <fieldset>
-            <legend>共<span id="spanRecordCount" name="recordCount" class="highlight">[[${totalCount}]]</span>条记录
+            <legend>共<span id="spanRecordCount" name="recordCount" class="highlight">[[${pager?.recordCount}]]</span>条记录
             </legend>
-            <table class='pure-table' id="grvGroupList">
+            <table class='pure-table' id="grvAppList">
                 <thead>
                 <tr>
                     <th style="text-align:center;">
-                        <input id="grvRoleListCheckAll"
+                        <input id="grvAppListCheckAll"
                                onclick="$.gridView.allCheckClick(this);" type="checkbox"/>
                     </th>
-                    <th style="text-align:center;">角色名称</th>
-                    <th style="text-align:center;">角色编码</th>
+                    <th style="text-align:center;">名称</th>
+                    <th style="text-align:center;">图标</th>
+                    <th style="text-align:center;">编码</th>
+                    <th style="text-align:center;">序号</th>
                     <th style="text-align:center;">状态</th>
-                    <th style="text-align:center;">设置权限</th>
                     <th style="text-align:center;">编辑修改</th>
                 </tr>
                 </thead>
                 <tbody>
                 <!--https://zhuanlan.zhihu.com/p/183699043-->
-                <tr th:class="${indexStat.odd}?'pure-table-odd'" th:each="role,indexStat : ${pager.list}">
+                <tr th:class="${indexStat.odd}?'pure-table-odd'" th:each="app,indexStat : ${pager?.list}">
                     <td width="20px" align="center">
-                        <input th:id="${role.id}"
-                               onclick="$.gridView.recordCheckClick(this,'grvRoleListCheckAll');"
-                               type="checkbox" name="grvRoleList"/></td>
-                    <td width="120px" align="center">[[${role.name}]]</td>
-
-                    <td width="80px" align="center" th:text="${role.code}"></td>
-                    <td width="30px" align="center" th:utext="${role.status}"></td>
+                        <input th:id="${app.id}"
+                               onclick="$.gridView.recordCheckClick(this,'grvAppListCheckAll');"
+                               type="checkbox" name="grvAppList"/></td>
+                    <td width="120px" align="center">[[${app.name}]]</td>
+                    <td width="60px" align="left">
+                        <img th:src="@{${app?.logo}}" style="width:30px;height:30px" title="图标"/>
+                    </td>
+                    <td width="80px" align="center" th:text="${app?.code}"></td>
+                    <td width="80px" align="center" th:text="${app?.sort}"></td>
+                    <td width="30px" align="center" th:utext="${app?.status}"></td>
                     <td width="80px" align="center">
-                        <input type="button" th:onclick="globalRoleController.showPrivilege('[[${role?.id}]]')"
-                               title="设置" value="设置" class="pure-button"/></td>
-                    <td width="80px" align="center">
-                        <input type="button" th:onclick="window.location.href='new?roleId=[[${role?.id}]]';"
+                        <input type="button" th:onclick="window.location.href='new?appId=[[${app.id}]]';"
                                title="编辑"
                                value="编辑" class="pure-button"/></td>
                 </tr>

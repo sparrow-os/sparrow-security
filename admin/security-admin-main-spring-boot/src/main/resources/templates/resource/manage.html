@@ -24,11 +24,13 @@
             }
         });
         var resourceTree;
+        var appTooltipTree;
         require(['sparrow', 'domReady!', 'resource'], function ($, dom, resourceController) {
             $.file.isShowProgress = true;
             $.url.upload = 'http://upload.sparrowzoo.com';
             resourceController.load();
             resourceTree = resourceController.resourceTree;
+            appTooltipTree=resourceController.appTooltipTree;
         });
     </script>
 </head>
@@ -94,14 +96,14 @@
 
                     <div class="pure-control-group">
                         <label>所属应用</label>
-                        <input name="appId"
+                        <input name="appName"
                                onfocus="$.v.showMessage(resourceInfo,this);"
-                               onblur="$.v.ok(resourceInfo,this);"
-                               onclick="" type="text"
+                               onblur="$.v.ok(resourceInfo,this);" type="text"
                                id="txtAppName"/>
-                        <!--                        <input name="appId" value="1" type="hidden"-->
-                        <!--                               id="hdnAppId"/>-->
+                        <input name="appId" type="hidden"
+                                                       id="hdnAppId"/>
                         <span id="errorAppName" class="prompt"></span>
+                        <div id="divAppTooltip"></div>
                     </div>
 
                     <div class="pure-control-group">

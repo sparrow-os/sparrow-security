@@ -1,12 +1,12 @@
 package com.sparrow.security.admin.controller;
 
-import com.sparrow.protocol.BatchOperationQuery;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.protocol.pager.SimplePager;
 import com.sparrow.security.admin.assemble.GroupAssemble;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.protocol.param.GroupParam;
+import com.sparrow.security.admin.protocol.param.batch.GroupBatchOperateParam;
 import com.sparrow.security.admin.protocol.query.GroupQuery;
 import com.sparrow.security.admin.protocol.vo.GroupVO;
 import com.sparrow.security.admin.service.GroupService;
@@ -32,9 +32,9 @@ public class GroupController {
 
     @GetMapping("manage")
     public ModelAndView loadAllGroups() {
-        BatchOperationQuery<GroupQuery> batchOperationQuery = (BatchOperationQuery<GroupQuery>) ModelAndViewUtils.flash("query");
-        if (batchOperationQuery != null) {
-            return this.queryGroups(batchOperationQuery.getQuery());
+        GroupBatchOperateParam groupBatchOperateParam = (GroupBatchOperateParam) ModelAndViewUtils.flash("query");
+        if (groupBatchOperateParam != null) {
+            return this.queryGroups(groupBatchOperateParam);
         }
         SimplePager simplePager = new SimplePager();
         ListRecordTotalBO<GroupBO> groupListTotalRecord = this.groupService.queryAllGroup();
@@ -84,23 +84,23 @@ public class GroupController {
     }
 
     @PostMapping("delete")
-    public ModelAndView delGroup(BatchOperationQuery<GroupQuery> batchOperationQuery) throws BusinessException {
-        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
-        groupService.deleteGroup(batchOperationQuery.getIds());
+    public ModelAndView delGroup(GroupBatchOperateParam batchOperateParam) throws BusinessException {
+        this.servletContainer.getRequest().setAttribute("query", batchOperateParam);
+        groupService.deleteGroup(batchOperateParam.getIds());
         return ModelAndViewUtils.redirect("/group/manage");
     }
 
     @PostMapping("enable")
-    public ModelAndView enableGroup(BatchOperationQuery<GroupQuery> batchOperationQuery) throws BusinessException {
-        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
-        groupService.enableGroup(batchOperationQuery.getIds());
+    public ModelAndView enableGroup(GroupBatchOperateParam batchOperateParam) throws BusinessException {
+        this.servletContainer.getRequest().setAttribute("query", batchOperateParam);
+        groupService.enableGroup(batchOperateParam.getIds());
         return ModelAndViewUtils.redirect("/group/manage");
     }
 
     @PostMapping("disable")
-    public ModelAndView disableGroup(BatchOperationQuery<GroupQuery> batchOperationQuery) throws BusinessException {
-        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
-        groupService.disableGroup(batchOperationQuery.getIds());
+    public ModelAndView disableGroup(GroupBatchOperateParam batchOperateParam) throws BusinessException {
+        this.servletContainer.getRequest().setAttribute("query", batchOperateParam);
+        groupService.disableGroup(batchOperateParam.getIds());
         return ModelAndViewUtils.redirect("/group/manage");
     }
 }

@@ -21,8 +21,9 @@ public interface ResourceRepository {
 
      List<ResourceBO> queryResources(ResourceQuery resourceQuery);
 
-     Integer resort(Long parentResourceId, Integer currentSort);
+     List<ResourceBO> queryAllEnableResources();
 
+     Integer resort(Long parentResourceId, Integer currentSort);
 
      Integer maxSort(Long parentResourceId);
 }

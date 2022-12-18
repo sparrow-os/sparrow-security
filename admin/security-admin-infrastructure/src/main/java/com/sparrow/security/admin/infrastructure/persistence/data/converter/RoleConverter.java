@@ -7,6 +7,7 @@ import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.RoleBO;
 import com.sparrow.security.admin.dao.query.role.CountRoleQuery;
 import com.sparrow.security.admin.dao.query.role.PagerRoleQuery;
+import com.sparrow.security.po.Privilege;
 import com.sparrow.security.po.Role;
 import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
@@ -36,8 +37,8 @@ public class RoleConverter implements Param2POConverter<RoleParam, Role>, PO2BOC
         if (roleQuery == null) {
             return;
         }
-        BeanUtility.copyProperties(roleQuery,countRoleQuery);
-        if(roleQuery.getStatus()!=null) {
+        BeanUtility.copyProperties(roleQuery, countRoleQuery);
+        if (roleQuery.getStatus() != null) {
             countRoleQuery.setStatus(StatusRecord.valueOf(roleQuery.getStatus()));
         }
     }
@@ -64,7 +65,7 @@ public class RoleConverter implements Param2POConverter<RoleParam, Role>, PO2BOC
     }
 
     @Override public RoleBO po2bo(Role role) {
-        if(role==null){
+        if (role == null) {
             return null;
         }
         RoleBO roleBo = new RoleBO();
@@ -78,5 +79,13 @@ public class RoleConverter implements Param2POConverter<RoleParam, Role>, PO2BOC
             roleBos.add(this.po2bo(role));
         }
         return roleBos;
+    }
+
+    public List<Long> privilegeList2ResourceIds(List<Privilege> privileges) {
+        List<Long> resourceIds = new ArrayList<>(privileges.size());
+        for (Privilege privilege : privileges) {
+            resourceIds.add(privilege.getResourceId());
+        }
+        return resourceIds;
     }
 }

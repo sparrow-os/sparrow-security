@@ -23,7 +23,10 @@ public enum SecurityAdminError implements ErrorSupport {
 
     FORUM_ID_IS_EMPTY(false, SecurityModule.Forum, "01", "forum id is empty"),
     FORUM_NAME_IS_EMPTY(false, SecurityModule.Forum, "02", "forum name is empty"),
-    FORUM_CODE_IS_EMPTY(false, SecurityModule.Forum, "03", "forum code is empty");;
+    FORUM_CODE_IS_EMPTY(false, SecurityModule.Forum, "03", "forum code is empty"),
+
+
+    PRIVILEGE_IS_EMPTY(false, SecurityModule.Privilege, "01", "permission ids is empty");
 
     private boolean system;
     private ModuleSupport module;
