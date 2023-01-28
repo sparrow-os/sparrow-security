@@ -5,7 +5,7 @@ source /etc/profile
 [ -z "$SPARROW_CODER_HOME" ] && echo "please config environment variable SPARROW_CODER_HOME" && exit 0
 
 # 生成ddl
-# sh coder.sh -ct com.sparrow.security.po.Forum
+# sh coder.sh -ct com.sparrow.security.po.MicroService
 #
 
 

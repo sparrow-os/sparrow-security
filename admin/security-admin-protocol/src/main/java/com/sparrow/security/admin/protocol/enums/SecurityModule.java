@@ -62,4 +62,16 @@ public class SecurityModule {
             return "Privilege";
         }
     };
+
+    public static final ModuleSupport MICRO_SERVICE = new ModuleSupport() {
+        @Override
+        public String code() {
+            return "81";
+        }
+
+        @Override
+        public String name() {
+            return "micro service";
+        }
+    };
 }

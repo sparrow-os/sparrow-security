@@ -25,7 +25,7 @@ public class ResourceController {
     @Inject
     private ResourceAssemble resourceControllerAssemble;
 
-    @PostMapping("manage")
+    @PostMapping("load-all.json")
     public List<ResourceVO> loadAllResources(ResourceQuery resourceQuery) {
         List<ResourceBO> resources = this.resourceService.queryResources(resourceQuery);
         return this.resourceControllerAssemble.boListAssembleVoList(resources);
@@ -33,6 +33,7 @@ public class ResourceController {
 
     @PostMapping("save")
     public ResourceVO saveResource(ResourceParam resourceParam) throws BusinessException {
+        int i=1/0;
         resourceService.saveResource(resourceParam);
         return this.resourceControllerAssemble.paramAssembleVO(resourceParam);
     }

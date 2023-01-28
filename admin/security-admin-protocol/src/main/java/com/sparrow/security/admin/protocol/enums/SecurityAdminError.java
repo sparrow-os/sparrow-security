@@ -26,7 +26,11 @@ public enum SecurityAdminError implements ErrorSupport {
     FORUM_CODE_IS_EMPTY(false, SecurityModule.Forum, "03", "forum code is empty"),
 
 
-    PRIVILEGE_IS_EMPTY(false, SecurityModule.Privilege, "01", "permission ids is empty");
+    PRIVILEGE_IS_EMPTY(false, SecurityModule.Privilege, "01", "permission ids is empty"),
+
+
+    MICRO_SERVICE_ID_IS_EMPTY(false, SecurityModule.MICRO_SERVICE, "01", "micro service id is empty"),
+    MICRO_SERVICE_NAME_IS_EMPTY(false, SecurityModule.MICRO_SERVICE, "02", "micro service name is empty");
 
     private boolean system;
     private ModuleSupport module;

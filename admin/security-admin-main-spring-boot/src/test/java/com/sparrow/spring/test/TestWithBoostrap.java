@@ -20,7 +20,6 @@ public class TestWithBoostrap {
 
     @Test
     public void testSpring() {
-
         System.out.println(groupDAO);
     }
 }
