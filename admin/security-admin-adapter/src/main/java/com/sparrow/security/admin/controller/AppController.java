@@ -10,12 +10,14 @@ import com.sparrow.security.admin.protocol.param.AppParam;
 import com.sparrow.security.admin.protocol.param.batch.AppBatchOperateParam;
 import com.sparrow.security.admin.protocol.query.AppQuery;
 import com.sparrow.security.admin.protocol.vo.AppVO;
+import com.sparrow.security.admin.repository.AppRepository;
 import com.sparrow.security.admin.service.AppService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
 import java.util.List;
 import javax.inject.Inject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +39,7 @@ public class AppController {
 
     @GetMapping("manage")
     public ModelAndView loadAllApps() {
+
         AppBatchOperateParam batchOperationQuery = (AppBatchOperateParam) ModelAndViewUtils.flash("query");
         if (batchOperationQuery != null) {
             return this.queryApps(batchOperationQuery);
