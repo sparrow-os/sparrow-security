@@ -16,6 +16,7 @@ public class MicroService extends PO {
     private String name;
     private String logo;
     private Integer sort;
+    private String remark;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -77,5 +78,13 @@ public class MicroService extends PO {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

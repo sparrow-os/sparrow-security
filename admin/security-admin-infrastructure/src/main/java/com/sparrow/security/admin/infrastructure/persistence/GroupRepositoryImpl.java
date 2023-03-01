@@ -2,13 +2,13 @@ package com.sparrow.security.admin.infrastructure.persistence;
 
 import com.sparrow.protocol.dao.StatusCriteria;
 import com.sparrow.protocol.enums.StatusRecord;
+import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.dao.GroupDAO;
 import com.sparrow.security.admin.infrastructure.persistence.data.converter.GroupConverter;
-import com.sparrow.security.po.Group;
-import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.protocol.param.GroupParam;
-import com.sparrow.security.admin.repository.GroupRepository;
 import com.sparrow.security.admin.protocol.query.GroupQuery;
+import com.sparrow.security.admin.repository.GroupRepository;
+import com.sparrow.security.po.Group;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -31,8 +31,7 @@ public class GroupRepositoryImpl implements GroupRepository {
     }
 
     @Override public int delete(String groupIds) {
-        StatusCriteria statusCriteria = new StatusCriteria(groupIds, StatusRecord.DESTROYED);
-        return this.groupDao.changeStatus(statusCriteria);
+        return this.groupDao.batchDelete(groupIds);
     }
 
     @Override public int disable(String groupIds) {

@@ -33,7 +33,7 @@ public class ResourceController {
 
     @PostMapping("save")
     public ResourceVO saveResource(ResourceParam resourceParam) throws BusinessException {
-        int i=1/0;
+//        int i=1/0;
         resourceService.saveResource(resourceParam);
         return this.resourceControllerAssemble.paramAssembleVO(resourceParam);
     }

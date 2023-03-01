@@ -55,9 +55,9 @@ public class GroupConverter implements Param2POConverter<GroupParam, Group>, PO2
         BeanUtility.copyProperties(param, group);
         LoginUser loginToken = ThreadContext.getLoginToken();
         group.setCreateUserId(loginToken.getUserId());
-        group.setUpdateUserId(loginToken.getUserId());
-        group.setCreateTime(System.currentTimeMillis());
-        group.setUpdateTime(group.getCreateTime());
+        group.setModifiedUserId(loginToken.getUserId());
+        group.setGmtCreate(System.currentTimeMillis());
+        group.setGmtModified(group.getGmtCreate());
         group.setStatus(StatusRecord.ENABLE);
         return group;
     }

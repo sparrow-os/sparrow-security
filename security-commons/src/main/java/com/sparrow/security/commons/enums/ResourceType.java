@@ -28,7 +28,7 @@ public enum ResourceType {
      */
     MENU,
     /**
-     * 系统菜单(后台管理的页面)
+     * 系统页面(后台管理的页面)
      */
     PAGE,
     /**

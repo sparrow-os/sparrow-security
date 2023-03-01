@@ -57,9 +57,9 @@ public class RoleConverter implements Param2POConverter<RoleParam, Role>, PO2BOC
         BeanUtility.copyProperties(param, role);
         LoginUser loginToken = ThreadContext.getLoginToken();
         role.setCreateUserId(loginToken.getUserId());
-        role.setUpdateUserId(loginToken.getUserId());
-        role.setCreateTime(System.currentTimeMillis());
-        role.setUpdateTime(role.getCreateTime());
+        role.setModifiedUserId(loginToken.getUserId());
+        role.setGmtCreate(System.currentTimeMillis());
+        role.setGmtModified(role.getGmtModified());
         role.setStatus(StatusRecord.ENABLE);
         return role;
     }

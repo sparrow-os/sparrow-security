@@ -8,9 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * ALTER TABLE `sparrow`.`resource` ADD UNIQUE INDEX `u_ix_code` (`code` ASC);
- */
 @Table(name = "resource")
 public class Resource extends PO {
     public Resource() {
@@ -18,6 +15,7 @@ public class Resource extends PO {
 
     private Long id;
     private Long appId;
+    private Long microServiceId;
     private String permission;
     private String name;
     private Long parentId;
@@ -162,5 +160,15 @@ public class Resource extends PO {
 
     public void setMethod(String method) {
         this.method = method;
+    }
+
+    public Long getMicroServiceId() {
+        return microServiceId;
+    }
+
+    @MethodOrder(order = 12)
+    @Column(name = "micro_service_id", columnDefinition = "int(10) UNSIGNED  DEFAULT 0 COMMENT '微服务ID'", nullable = false)
+    public void setMicroServiceId(Long microServiceId) {
+        this.microServiceId = microServiceId;
     }
 }

@@ -61,10 +61,10 @@ public class AppConverter implements Param2POConverter<AppParam, App>, PO2BOConv
     @Override public App param2po(AppParam param) {
         App app = new App();
         BeanUtility.copyProperties(param, app);
-        app.setCreateTime(System.currentTimeMillis());
-        app.setUpdateTime(app.getCreateTime());
+        app.setGmtCreate(System.currentTimeMillis());
+        app.setGmtModified(app.getGmtCreate());
         app.setCreateUserId(0L);
-        app.setUpdateUserId(0L);
+        app.setModifiedUserId(0L);
         app.setStatus(StatusRecord.ENABLE);
         if (app.getRemark() == null) {
             app.setRemark("");

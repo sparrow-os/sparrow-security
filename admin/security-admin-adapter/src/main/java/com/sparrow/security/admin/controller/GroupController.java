@@ -32,6 +32,7 @@ public class GroupController {
 
     @GetMapping("manage")
     public ModelAndView loadAllGroups() {
+
         GroupBatchOperateParam groupBatchOperateParam = (GroupBatchOperateParam) ModelAndViewUtils.flash("query");
         if (groupBatchOperateParam != null) {
             return this.queryGroups(groupBatchOperateParam);

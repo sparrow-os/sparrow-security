@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @Autowired
     private SparrowConfig sparrowConfig;
+
     @RequestMapping("/hello")
-    public String hello(){
-        int i=1/0;
+    public String hello() {
+        int i = 1 / 0;
         return this.sparrowConfig.getDriverClassName();
+    }
+
+    @RequestMapping("/integer")
+    public Integer integer() {
+        return 1;
     }
 }

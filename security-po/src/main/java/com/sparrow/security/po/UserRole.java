@@ -19,9 +19,11 @@ public class UserRole implements POJO {
 
     private Long roleId;
 
+    private Long gmtCreate;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",columnDefinition = "int(11) UNSIGNED AUTO_INCREMENT")
+    @Column(name = "id", columnDefinition = "int(11) UNSIGNED AUTO_INCREMENT")
     @MethodOrder(order = 1)
     public Long getId() {
         return id;
@@ -49,5 +51,11 @@ public class UserRole implements POJO {
 
     public void setRoleId(Long roleId) {
         this.roleId = roleId;
+    }
+
+    @MethodOrder(order = 4)
+    @Column(name = "gmt_create", columnDefinition = "bigint(11)  DEFAULT 0 COMMENT '创建时间'", nullable = false, updatable = false)
+    public Long getGmtCreate() {
+        return this.gmtCreate;
     }
 }

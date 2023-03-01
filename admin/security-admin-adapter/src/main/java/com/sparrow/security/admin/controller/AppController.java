@@ -10,14 +10,12 @@ import com.sparrow.security.admin.protocol.param.AppParam;
 import com.sparrow.security.admin.protocol.param.batch.AppBatchOperateParam;
 import com.sparrow.security.admin.protocol.query.AppQuery;
 import com.sparrow.security.admin.protocol.vo.AppVO;
-import com.sparrow.security.admin.repository.AppRepository;
 import com.sparrow.security.admin.service.AppService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
 import java.util.List;
 import javax.inject.Inject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,8 +37,7 @@ public class AppController {
 
     @GetMapping("manage")
     public ModelAndView loadAllApps() {
-
-        AppBatchOperateParam batchOperationQuery = (AppBatchOperateParam) ModelAndViewUtils.flash("query");
+        AppBatchOperateParam batchOperationQuery = ModelAndViewUtils.query();
         if (batchOperationQuery != null) {
             return this.queryApps(batchOperationQuery);
         }
@@ -83,7 +80,7 @@ public class AppController {
         }
     }
 
-    @GetMapping("new")
+    @GetMapping("edit")
     public ModelAndView getApp(Long appId) throws BusinessException {
         ModelAndView mv = new ModelAndView("/app/new");
         if (appId == null) {
@@ -97,22 +94,19 @@ public class AppController {
 
     @PostMapping("delete")
     public ModelAndView delApp(AppBatchOperateParam batchOperationQuery) throws BusinessException {
-        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
         this.appService.delApp(batchOperationQuery.getIds());
-        return ModelAndViewUtils.redirect("/app/manage");
+        return ModelAndViewUtils.redirect("/app/manage", batchOperationQuery);
     }
 
     @PostMapping("enable")
     public ModelAndView enableApp(AppBatchOperateParam batchOperationQuery) throws BusinessException {
-        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
         this.appService.enableApp(batchOperationQuery.getIds());
-        return ModelAndViewUtils.redirect("/app/manage");
+        return ModelAndViewUtils.redirect("/app/manage", batchOperationQuery);
     }
 
     @PostMapping("disable")
     public ModelAndView disableApp(AppBatchOperateParam batchOperationQuery) throws BusinessException {
-        this.servletContainer.getRequest().setAttribute("query", batchOperationQuery);
         this.appService.disableApp(batchOperationQuery.getIds());
-        return ModelAndViewUtils.redirect("/app/manage");
+        return ModelAndViewUtils.redirect("/app/manage", batchOperationQuery);
     }
 }

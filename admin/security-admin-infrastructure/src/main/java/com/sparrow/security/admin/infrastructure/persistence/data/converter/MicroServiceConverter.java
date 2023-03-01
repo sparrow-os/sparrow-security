@@ -55,10 +55,10 @@ public class MicroServiceConverter implements Param2POConverter<MicroServicePara
     @Override public MicroService param2po(MicroServiceParam param) {
         MicroService microService = new MicroService();
         BeanUtility.copyProperties(param, microService);
-        microService.setCreateTime(System.currentTimeMillis());
-        microService.setUpdateTime(microService.getCreateTime());
+        microService.setGmtCreate(System.currentTimeMillis());
+        microService.setGmtModified(microService.getGmtCreate());
         microService.setCreateUserId(0L);
-        microService.setUpdateUserId(0L);
+        microService.setGmtModified(0L);
         microService.setStatus(StatusRecord.ENABLE);
         if (microService.getRemark() == null) {
             microService.setRemark("");

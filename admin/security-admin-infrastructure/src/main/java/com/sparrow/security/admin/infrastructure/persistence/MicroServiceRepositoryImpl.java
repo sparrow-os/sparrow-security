@@ -31,8 +31,7 @@ public class MicroServiceRepositoryImpl implements MicroServiceRepository {
     }
 
     @Override public int delete(String microServiceIds) {
-        StatusCriteria statusCriteria = new StatusCriteria(microServiceIds, StatusRecord.DESTROYED);
-        return this.microServiceDao.changeStatus(statusCriteria);
+        return this.microServiceDao.batchDelete(microServiceIds);
     }
 
     @Override public int disable(String microServiceIds) {

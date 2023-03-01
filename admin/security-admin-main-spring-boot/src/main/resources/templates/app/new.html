@@ -4,11 +4,9 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
-    <link rel="shortcut icon" th:href="@{/static/favicon.ico}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/sparrow.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/pure-css/pure.css?v='+${resource_version}}"/>
-    <link rel="stylesheet" type="text/css"
-          th:href="@{${resource}+'/styles/layouts-backend.css?v='+${resource_version}}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/layouts-backend.css?v='+${resource_version}}"/>
     <link rel="stylesheet" type="text/css" th:href="@{${resource}+'/styles/modal.css?v='+${resource_version}}"/>
     <script language="javascript" type="text/javascript"
             th:src="@{${resource}+'/scripts/require.js?v='+${resource_version}}"></script>
@@ -43,6 +41,8 @@
     <form method="post" class="pure-form pure-form-aligned">
         <fieldset>
             <legend>注: <span class="highlight">*</span>为必添项</legend>
+
+
             <div class="pure-control-group">
                 <label>APP图标</label>
                 <iframe frameborder="0" id="null.app" class="file-frame"></iframe>
@@ -50,7 +50,6 @@
                 <input type="hidden" id="hdnAppLogo" name="logo" th:value="${app?.logo}"/>
 <!--                <span class="prompt" th:text="${app_icon}" id="errorAppLogo"></span>-->
             </div>
-
             <div id="divAppLogo" class="pure-controls">
                 <img th:src="@{${app?.logo}}">
             </div>

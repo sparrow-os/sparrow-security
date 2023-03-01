@@ -49,9 +49,9 @@ public class ResourceConverter implements Param2POConverter<ResourceParam, Resou
         resource.setStatus(StatusRecord.ENABLE);
         LoginUser loginUser = ThreadContext.getLoginToken();
         resource.setCreateUserId(loginUser.getUserId());
-        resource.setUpdateUserId(loginUser.getUserId());
-        resource.setCreateTime(System.currentTimeMillis());
-        resource.setUpdateTime(resource.getCreateTime());
+        resource.setModifiedUserId(loginUser.getUserId());
+        resource.setGmtCreate(System.currentTimeMillis());
+        resource.setGmtModified(resource.getGmtCreate());
 
         return resource;
     }
