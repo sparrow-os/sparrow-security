@@ -27,11 +27,10 @@ public class ResourceDaoTest extends BaseTest {
         resource.setIcoUrl("ico url");
         resource.setOpenType("open type");
         resource.setParentId(0L);
-        resource.setCreateTime(System.currentTimeMillis());
-        resource.setUpdateTime(System.currentTimeMillis());
+        resource.setGmtCreate(System.currentTimeMillis());
+        resource.setGmtModified(System.currentTimeMillis());
         resource.setCreateUserId(1L);
-        resource.setUpdateUserId(1L);
-        resource.setRemark("remark");
+        resource.setCreateUserId(1L);
         resource.setName("name");
         resource.setStatus(StatusRecord.ENABLE);
         resource.setSort(1);

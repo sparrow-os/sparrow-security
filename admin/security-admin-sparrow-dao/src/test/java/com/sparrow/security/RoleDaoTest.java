@@ -24,10 +24,9 @@ public class RoleDaoTest extends BaseTest {
         role.setName("role name");
         role.setSort(0);
         role.setCreateUserId(0L);
-        role.setUpdateUserId(0L);
-        role.setCreateTime(0L);
-        role.setUpdateTime(0L);
-        role.setRemark("remarks");
+        role.setModifiedUserId(0L);
+        role.setGmtCreate(0L);
+        role.setModifiedUserId(0L);
         role.setStatus(StatusRecord.DISABLE);
         System.out.println(JSON.toJSONString(role));
         roleDao.insert(role);
