@@ -4,6 +4,11 @@
     <remote-repository>
       <option name="id" value="center" />
       <option name="name" value="center Repository" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="center" />
+      <option name="name" value="center Repository" />
       <option name="url" value="https://s01.oss.sonatype.org/content/repositories/snapshots" />
     </remote-repository>
     <remote-repository>

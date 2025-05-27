@@ -37,7 +37,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="admin" target="8" />
       <module name="passport-adapter" target="1.8" />
       <module name="passport-api" target="1.8" />
       <module name="passport-application" target="1.8" />
@@ -50,39 +49,18 @@
       <module name="passport-mybatis-plus" target="1.8" />
       <module name="passport-protocol" target="1.8" />
       <module name="passport-sparrow-dao" target="1.8" />
-      <module name="security-adapter" target="1.8" />
       <module name="security-adapter (1) (com.sparrow.security)" target="1.8" />
-      <module name="security-admin-adapter" target="1.8" />
-      <module name="security-admin-dao-api" target="1.8" />
-      <module name="security-admin-domain" target="1.8" />
-      <module name="security-admin-infrastructure" target="1.8" />
-      <module name="security-admin-main-spring-boot" target="1.8" />
-      <module name="security-admin-mybatis" target="1.8" />
-      <module name="security-admin-protocol" target="1.8" />
-      <module name="security-admin-sparrow-dao" target="1.8" />
-      <module name="security-api" target="1.8" />
-      <module name="security-commons" target="1.8" />
-      <module name="security-dao-api" target="1.8" />
       <module name="security-dao-api (1) (com.sparrow.security)" target="1.8" />
-      <module name="security-domain" target="1.8" />
       <module name="security-domain (1) (com.sparrow.security)" target="1.8" />
-      <module name="security-infrastructure" target="1.8" />
       <module name="security-infrastructure (1) (com.sparrow.security)" target="1.8" />
-      <module name="security-main-spring-boot" target="1.8" />
       <module name="security-main-spring-boot (1)" target="1.8" />
       <module name="security-main-spring-boot (1) (com.sparrow.security)" target="1.8" />
       <module name="security-main-spring-boot (1) (com.sparrow.security.admin)" target="1.8" />
       <module name="security-main-spring-boot (2) (com.sparrow.security)" target="1.8" />
-      <module name="security-mybatis" target="1.8" />
       <module name="security-mybatis (1) (com.sparrow.security)" target="1.8" />
-      <module name="security-po" target="1.8" />
-      <module name="security-protocol" target="1.8" />
       <module name="security-protocol (1) (com.sparrow.security)" target="1.8" />
-      <module name="security-sparrow-dao" target="1.8" />
       <module name="security-sparrow-dao (1) (com.sparrow.security)" target="1.8" />
-      <module name="server" target="8" />
       <module name="sparrow-passport-ddd" target="1.5" />
-      <module name="sparrow-security" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

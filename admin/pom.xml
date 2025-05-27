@@ -5,7 +5,7 @@
     <parent>
         <artifactId>sparrow-security</artifactId>
         <groupId>com.sparrowzoo</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.4-SNAPSHOT</version>
     </parent>
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
