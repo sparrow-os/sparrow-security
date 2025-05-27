@@ -1,20 +1,20 @@
 package com.sparrow.security.admin.infrastructure.persistence.data.converter;
 
+import com.sparrow.protocol.dao.DatabasePagerQuery;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.MicroServiceBO;
 import com.sparrow.security.admin.dao.query.micro.service.CountMicroServiceQuery;
 import com.sparrow.security.admin.dao.query.micro.service.PagerMicroServiceQuery;
-import com.sparrow.security.po.MicroService;
 import com.sparrow.security.admin.protocol.param.MicroServiceParam;
 import com.sparrow.security.admin.protocol.query.MicroServiceQuery;
-import com.sparrow.protocol.dao.PagerQuery;
-
+import com.sparrow.security.po.MicroService;
 import com.sparrow.support.converter.PO2BOConverter;
 import com.sparrow.support.converter.Param2POConverter;
 import com.sparrow.utility.BeanUtility;
+
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Named;
 
 @Named
 public class MicroServiceConverter implements Param2POConverter<MicroServiceParam, MicroService>, PO2BOConverter<MicroServiceBO, MicroService> {
@@ -22,11 +22,9 @@ public class MicroServiceConverter implements Param2POConverter<MicroServicePara
    
     public PagerMicroServiceQuery toDbPagerQuery(MicroServiceQuery microServiceQuery) {
            if (microServiceQuery == null) {
-               PagerMicroServiceQuery pagerMicroServiceQuery = new PagerMicroServiceQuery();
-               pagerMicroServiceQuery.setPager(new PagerQuery());
-               return pagerMicroServiceQuery;
+               return new PagerMicroServiceQuery();
            }
-           PagerQuery pagerQuery = new PagerQuery(microServiceQuery.getPageSize(), microServiceQuery.getCurrentPageIndex());
+           DatabasePagerQuery pagerQuery = new DatabasePagerQuery(microServiceQuery.getPageSize(), microServiceQuery.getPageNo());
            PagerMicroServiceQuery pagerMicroServiceQuery = new PagerMicroServiceQuery();
            this.fullProperties(microServiceQuery, pagerMicroServiceQuery);
            pagerMicroServiceQuery.setPager(pagerQuery);

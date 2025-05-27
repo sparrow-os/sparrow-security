@@ -1,6 +1,6 @@
 package com.sparrow.security.admin.infrastructure.persistence.data.converter;
 
-import com.sparrow.protocol.dao.PagerQuery;
+import com.sparrow.protocol.dao.DatabasePagerQuery;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.AppBO;
 import com.sparrow.security.admin.dao.query.app.CountAppQuery;
@@ -20,11 +20,9 @@ public class AppConverter implements Param2POConverter<AppParam, App>, PO2BOConv
 
     public PagerAppQuery toDbPagerQuery(AppQuery appQuery) {
         if (appQuery == null) {
-            PagerAppQuery pagerAppQuery = new PagerAppQuery();
-            pagerAppQuery.setPager(new PagerQuery());
-            return pagerAppQuery;
+            return new PagerAppQuery();
         }
-        PagerQuery pagerQuery = new PagerQuery(appQuery.getPageSize(), appQuery.getCurrentPageIndex());
+        DatabasePagerQuery pagerQuery = new DatabasePagerQuery(appQuery.getPageSize(), appQuery.getPageNo());
         PagerAppQuery pagerGroupQuery = new PagerAppQuery();
         this.fullProperties(appQuery, pagerGroupQuery);
         pagerGroupQuery.setPager(pagerQuery);

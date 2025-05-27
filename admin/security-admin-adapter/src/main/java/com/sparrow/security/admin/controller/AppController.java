@@ -3,7 +3,6 @@ package com.sparrow.security.admin.controller;
 import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.protocol.TreeItem;
-import com.sparrow.protocol.pager.SimplePager;
 import com.sparrow.security.admin.assemble.AppAssemble;
 import com.sparrow.security.admin.bo.AppBO;
 import com.sparrow.security.admin.protocol.param.AppParam;
@@ -14,14 +13,14 @@ import com.sparrow.security.admin.service.AppService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
-import java.util.List;
-import javax.inject.Inject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.inject.Inject;
+import java.util.List;
 
 @RestController
 @RequestMapping("app")

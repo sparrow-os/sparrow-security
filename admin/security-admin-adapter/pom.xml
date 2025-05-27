@@ -5,9 +5,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>sparrow-bom</artifactId>
         <groupId>com.sparrowzoo</groupId>
-        <artifactId>sparrow-zoo-bom</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.5-SNAPSHOT</version>
         <relativePath/>
     </parent>
     <groupId>com.sparrowzoo.security.admin</groupId>
@@ -17,10 +17,16 @@
         <dependency>
             <groupId>com.sparrowzoo.security.admin</groupId>
             <artifactId>security-admin-domain</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.sparrowzoo</groupId>
             <artifactId>sparrow-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

@@ -1,8 +1,11 @@
 package com.sparrow.security.admin.dao.query.app;
 
 import com.sparrow.protocol.enums.StatusRecord;
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class CountAppQuery {
     public CountAppQuery() {
     }
@@ -18,36 +21,4 @@ public class CountAppQuery {
     private StatusRecord status;
     private Date beginDate;
     private Date endDate;
-
-    public Date getBeginDate() {
-        return beginDate;
-    }
-
-    public void setBeginDate(Date beginDate) {
-        this.beginDate = beginDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public StatusRecord getStatus() {
-        return status;
-    }
-
-    public void setStatus(StatusRecord status) {
-        this.status = status;
-    }
 }

@@ -2,7 +2,7 @@ package com.sparrow.security.admin.infrastructure.persistence.data.converter;
 
 import com.sparrow.protocol.LoginUser;
 import com.sparrow.protocol.ThreadContext;
-import com.sparrow.protocol.dao.PagerQuery;
+import com.sparrow.protocol.dao.DatabasePagerQuery;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.dao.query.group.CountGroupQuery;
@@ -21,11 +21,9 @@ import javax.inject.Named;
 public class GroupConverter implements Param2POConverter<GroupParam, Group>, PO2BOConverter<GroupBO, Group> {
     public PagerGroupQuery toDbPagerQuery(GroupQuery groupQuery) {
         if (groupQuery == null) {
-            PagerGroupQuery pagerGroupQuery = new PagerGroupQuery();
-            pagerGroupQuery.setPager(new PagerQuery());
-            return pagerGroupQuery;
+            return new PagerGroupQuery();
         }
-        PagerQuery pagerQuery = new PagerQuery(groupQuery.getPageSize(), groupQuery.getCurrentPageIndex());
+        DatabasePagerQuery pagerQuery = new DatabasePagerQuery(groupQuery.getPageSize(), groupQuery.getPageNo());
         PagerGroupQuery pagerGroupQuery = new PagerGroupQuery();
         this.fullProperties(groupQuery, pagerGroupQuery);
         pagerGroupQuery.setPager(pagerQuery);

@@ -2,31 +2,30 @@ package com.sparrow.security.admin.infrastructure.persistence.data.converter;
 
 import com.sparrow.protocol.LoginUser;
 import com.sparrow.protocol.ThreadContext;
-import com.sparrow.protocol.dao.PagerQuery;
+import com.sparrow.protocol.dao.DatabasePagerQuery;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.bo.RoleBO;
 import com.sparrow.security.admin.dao.query.role.CountRoleQuery;
 import com.sparrow.security.admin.dao.query.role.PagerRoleQuery;
-import com.sparrow.security.po.Privilege;
-import com.sparrow.security.po.Role;
 import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
+import com.sparrow.security.po.Privilege;
+import com.sparrow.security.po.Role;
 import com.sparrow.support.converter.PO2BOConverter;
 import com.sparrow.support.converter.Param2POConverter;
 import com.sparrow.utility.BeanUtility;
+
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Named;
 
 @Named
 public class RoleConverter implements Param2POConverter<RoleParam, Role>, PO2BOConverter<RoleBO, Role> {
     public PagerRoleQuery toDbPagerQuery(RoleQuery roleQuery) {
         if (roleQuery == null) {
-            PagerRoleQuery pagerRoleQuery = new PagerRoleQuery();
-            pagerRoleQuery.setPager(new PagerQuery());
-            return pagerRoleQuery;
+           return new PagerRoleQuery();
         }
-        PagerQuery pagerQuery = new PagerQuery(roleQuery.getPageSize(), roleQuery.getCurrentPageIndex());
+        DatabasePagerQuery pagerQuery = new DatabasePagerQuery(roleQuery.getPageSize(), roleQuery.getPageNo());
         PagerRoleQuery pagerRoleQuery = new PagerRoleQuery();
         this.fullProperties(roleQuery, pagerRoleQuery);
         pagerRoleQuery.setPager(pagerQuery);

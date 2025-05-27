@@ -1,15 +1,13 @@
 package com.sparrow.security.admin.dao.query.micro.service;
 
-import com.sparrow.protocol.dao.PagerQuery;
+import com.sparrow.protocol.dao.DatabasePagerQuery;
+import lombok.Data;
 
+@Data
 public class PagerMicroServiceQuery extends CountMicroServiceQuery {
-    private PagerQuery pager;
+    private DatabasePagerQuery pager;
 
-    public PagerQuery getPager() {
-        return pager;
-    }
-
-    public void setPager(PagerQuery pager) {
-        this.pager = pager;
+    public PagerMicroServiceQuery() {
+        this.pager = new DatabasePagerQuery();
     }
 }

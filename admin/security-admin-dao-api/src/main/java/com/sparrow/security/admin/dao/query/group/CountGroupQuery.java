@@ -1,7 +1,10 @@
 package com.sparrow.security.admin.dao.query.group;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class CountGroupQuery {
     public CountGroupQuery() {
     }
@@ -9,28 +12,4 @@ public class CountGroupQuery {
     private String groupName;
     private Date beginDate;
     private Date endDate;
-
-    public String getGroupName() {
-        return groupName;
-    }
-
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
-
-    public Date getBeginDate() {
-        return beginDate;
-    }
-
-    public void setBeginDate(Date beginDate) {
-        this.beginDate = beginDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
 }

@@ -11,12 +11,10 @@
       <module fileurl="file://$PROJECT_DIR$/security-mybatis/passport-mybatis.iml" filepath="$PROJECT_DIR$/security-mybatis/passport-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-protocol/passport-protocol.iml" filepath="$PROJECT_DIR$/security-protocol/passport-protocol.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin/security-admin-sparrow-dao/passport-sparrow-dao.iml" filepath="$PROJECT_DIR$/admin/security-admin-sparrow-dao/passport-sparrow-dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/security-adapter/security-adapter.iml" filepath="$PROJECT_DIR$/server/security-adapter/security-adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin/security-admin-adapter/security-admin-adapter.iml" filepath="$PROJECT_DIR$/admin/security-admin-adapter/security-admin-adapter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/admin/security-admin-main-spring-boot/security-admin-main-spring-boot.iml" filepath="$PROJECT_DIR$/admin/security-admin-main-spring-boot/security-admin-main-spring-boot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/admin/security-admin-mybatis/security-admin-mybatis.iml" filepath="$PROJECT_DIR$/admin/security-admin-mybatis/security-admin-mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/security-main-spring-boot/security-main-spring-boot.iml" filepath="$PROJECT_DIR$/server/security-main-spring-boot/security-main-spring-boot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/security-mybatis/security-mybatis.iml" filepath="$PROJECT_DIR$/server/security-mybatis/security-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/security-admin-dao-api/security-admin-dao-api.iml" filepath="$PROJECT_DIR$/admin/security-admin-dao-api/security-admin-dao-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/security-admin-domain/security-admin-domain.iml" filepath="$PROJECT_DIR$/admin/security-admin-domain/security-admin-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/security-admin-infrastructure/security-admin-infrastructure.iml" filepath="$PROJECT_DIR$/admin/security-admin-infrastructure/security-admin-infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/sparrow-passport-ddd.iml" filepath="$PROJECT_DIR$/sparrow-passport-ddd.iml" />
     </modules>
   </component>

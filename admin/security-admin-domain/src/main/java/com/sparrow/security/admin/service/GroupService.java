@@ -5,7 +5,6 @@ import com.sparrow.protocol.BusinessException;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.security.admin.bo.GroupBO;
 import com.sparrow.security.admin.repository.GroupRepository;
-import com.sparrow.security.admin.support.suffix.GroupSuffix;
 import com.sparrow.security.admin.protocol.enums.SecurityAdminError;
 import com.sparrow.security.admin.protocol.param.GroupParam;
 import com.sparrow.security.admin.protocol.query.GroupQuery;
@@ -19,9 +18,9 @@ public class GroupService {
     @Inject
     private GroupRepository groupRepository;
     private void validateSaveGroup(GroupParam groupParam) throws BusinessException {
-        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY, GroupSuffix.GROUP_NAME);
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupType()), SecurityAdminError.GROUP_TYPE_IS_EMPTY);
-        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_ICON_EMPTY, GroupSuffix.GROUP_ICON);
+        Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupIco()), SecurityAdminError.GROUP_ICON_EMPTY);
     }
 
     public Long saveGroup(GroupParam groupParam) throws BusinessException {
