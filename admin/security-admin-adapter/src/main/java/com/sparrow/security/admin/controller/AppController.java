@@ -18,6 +18,7 @@ import java.util.List;
 import javax.inject.Inject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -37,16 +38,16 @@ public class AppController {
 
     @GetMapping("manage")
     public ModelAndView loadAllApps() {
-        AppBatchOperateParam batchOperationQuery = ModelAndViewUtils.query();
-        if (batchOperationQuery != null) {
-            return this.queryApps(batchOperationQuery);
-        }
-        SimplePager simplePager = new SimplePager();
-        ListRecordTotalBO<AppBO> groupListTotalRecord = this.appService.queryAllApp();
-        HtmlPagerResult<AppVO> pager = this.appAssemble.assembleHtmlPager(groupListTotalRecord, simplePager);
-        ModelAndView mv = new ModelAndView("/app/manage");
-        mv.addObject("pager", pager);
-        return mv;
+//        AppBatchOperateParam batchOperationQuery = ModelAndViewUtils.query();
+//        if (batchOperationQuery != null) {
+//            return this.queryApps(batchOperationQuery);
+//        }
+//        SimplePager simplePager = new SimplePager();
+//        ListRecordTotalBO<AppBO> groupListTotalRecord = this.appService.queryAllApp();
+//        HtmlPagerResult<AppVO> pager = this.appAssemble.assembleHtmlPager(groupListTotalRecord, simplePager);
+//        ModelAndView mv = new ModelAndView("/app/manage");
+//        mv.addObject("pager", pager);
+        return null;
     }
 
     private ModelAndView queryApps(AppQuery appQuery) {
@@ -54,7 +55,6 @@ public class AppController {
         HtmlPagerResult<AppVO> pager = this.appAssemble.assembleHtmlPager(groupListTotalRecord, appQuery);
         ModelAndView mv = new ModelAndView("/app/manage");
         mv.addObject("pager", pager);
-        mv.addObject("query", appQuery);
         return mv;
     }
 
@@ -71,13 +71,8 @@ public class AppController {
 
     @PostMapping("save")
     public ModelAndView saveApp(AppParam appParam) throws BusinessException {
-        try {
-            this.appService.saveApp(appParam);
-            return ModelAndViewUtils.redirect("/app/manage");
-        } catch (Exception e) {
-            this.servletContainer.getRequest().setAttribute("app", this.appAssemble.paramAssembleVO(appParam));
-            throw e;
-        }
+        this.appService.saveApp(appParam);
+        return ModelAndViewUtils.redirect("/app/manage");
     }
 
     @GetMapping("edit")
@@ -95,13 +90,13 @@ public class AppController {
     @PostMapping("delete")
     public ModelAndView delApp(AppBatchOperateParam batchOperationQuery) throws BusinessException {
         this.appService.delApp(batchOperationQuery.getIds());
-        return ModelAndViewUtils.redirect("/app/manage", batchOperationQuery);
+        return ModelAndViewUtils.redirect("/app/manage");
     }
 
     @PostMapping("enable")
     public ModelAndView enableApp(AppBatchOperateParam batchOperationQuery) throws BusinessException {
         this.appService.enableApp(batchOperationQuery.getIds());
-        return ModelAndViewUtils.redirect("/app/manage", batchOperationQuery);
+        return ModelAndViewUtils.redirect("/app/manage");
     }
 
     @PostMapping("disable")

@@ -18,7 +18,6 @@ import javax.inject.Named;
 public class GroupService {
     @Inject
     private GroupRepository groupRepository;
-
     private void validateSaveGroup(GroupParam groupParam) throws BusinessException {
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupName()), SecurityAdminError.GROUP_NAME_IS_EMPTY, GroupSuffix.GROUP_NAME);
         Asserts.isTrue(StringUtility.isNullOrEmpty(groupParam.getGroupType()), SecurityAdminError.GROUP_TYPE_IS_EMPTY);

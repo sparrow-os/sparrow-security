@@ -24,9 +24,9 @@ public class AppDaoTest extends BaseTest {
         app.setSort(0);
         app.setLogo("logo");
         app.setCreateUserId(0L);
-        app.setUpdateUserId(0L);
-        app.setCreateTime(0L);
-        app.setUpdateTime(0L);
+        app.setModifiedUserId(0L);
+        app.setCreateUserId(0L);
+        app.setGmtModified(0L);
         app.setRemark("remark");
         app.setStatus(StatusRecord.DISABLE);
         appDao.insert(app);

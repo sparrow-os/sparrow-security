@@ -4,7 +4,6 @@ import com.sparrow.protocol.pager.SimplePager;
 import java.util.Date;
 
 public class AppQuery extends SimplePager {
-
     private String name;
     private String status;
     private Date beginDate;

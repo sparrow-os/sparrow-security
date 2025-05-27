@@ -63,15 +63,16 @@ public class MicroServiceController {
     }
 
     @PostMapping("save")
-    public ModelAndView saveMicroService(MicroServiceParam microServiceParam) throws BusinessException {
-        try {
-            microServiceService.saveMicroService(microServiceParam);
-            return ModelAndViewUtils.redirect("/micro-service/manage");
-        } catch (Exception e) {
-            //失败回显
-            this.servletContainer.getRequest().setAttribute("microService", this.microServiceAssemble.paramAssembleVO(microServiceParam));
-            throw e;
-        }
+    public ModelAndView saveMicroService(@RequestBody MicroServiceParam microServiceParam) throws BusinessException {
+        return null;
+        //        try {
+//            microServiceService.saveMicroService(microServiceParam);
+//            return ModelAndViewUtils.redirect("/micro-service/manage");
+//        } catch (Exception e) {
+//            //失败回显
+//            this.servletContainer.getRequest().setAttribute("microService", this.microServiceAssemble.paramAssembleVO(microServiceParam));
+//            throw e;
+//        }
     }
 
     @GetMapping("new")
