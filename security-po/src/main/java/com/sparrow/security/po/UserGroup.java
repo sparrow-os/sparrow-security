@@ -5,7 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "user_group")
+@Table(name = "t_user_group")
 @Data
 public class UserGroup implements POJO {
     @Id

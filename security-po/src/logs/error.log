@@ -1,0 +1,52 @@
+2025-05-28 10:40:13.684 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:13.685 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:13.685 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:13.686 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:14.109 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:14.111 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:14.112 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:14.112 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:14.561 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:14.562 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:14.562 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:14.563 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:15.075 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:15.078 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:15.078 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:15.079 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:15.523 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:15.525 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:15.525 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:15.525 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:15.950 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:15.951 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:15.951 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:15.951 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:16.497 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:16.499 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:16.499 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:16.499 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:16.938 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:16.939 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:16.939 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:16.939 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:17.377 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:17.379 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:17.379 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:17.379 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:17.798 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:17.800 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:17.800 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:17.801 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:18.214 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:18.216 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:18.216 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:18.216 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:40:18.674 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:18.675 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:40:18.675 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:40:18.676 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default
+2025-05-28 10:47:21.461 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:47:21.463 TRACE_ID ERROR main AbstractContainer instance error java.lang.reflect.InvocationTargetException, class name com.sparrow.datasource.DataSourceFactoryImpl
+2025-05-28 10:47:21.463 TRACE_ID ERROR main AbstractContainer beanName sparrow_default ,refName dataSourceFactory is null
+2025-05-28 10:47:21.463 TRACE_ID ERROR main SparrowContainer init bean error,bean-name sparrow_default

@@ -12,7 +12,6 @@ import com.sparrow.support.assemble.Param2VOAssemble;
 import com.sparrow.support.pager.HtmlPagerResult;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
-import com.sparrow.utility.EnumUtility;
 import com.sparrow.utility.StringUtility;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,8 +46,7 @@ public class ForumAssemble implements BO2VOAssemble<ForumVO, ForumBO>,
         for (ForumBO forumBo : list) {
             ForumVO forumVo = new ForumVO();
             BeanUtility.copyProperties(forumBo, forumVo);
-            String statusName = EnumUtility.getValue(forumBo.getStatus());
-            forumVo.setStatus(statusName);
+            forumVo.setStatus(forumBo.getStatus().name());
             forumVOList.add(forumVo);
         }
         return forumVOList;
@@ -59,7 +57,7 @@ public class ForumAssemble implements BO2VOAssemble<ForumVO, ForumBO>,
         List<ForumVO> forumVOList = this.boListAssembleVOList(forumListTotalRecord.getList());
         PagerResult<ForumVO> pagerResult = new PagerResult<>(forumQuery);
         pagerResult.setList(forumVOList);
-        pagerResult.setRecordCount(forumListTotalRecord.getTotal());
+        pagerResult.setRecordTotal(forumListTotalRecord.getTotal());
         return new HtmlPagerResult<>(pagerResult);
     }
 }

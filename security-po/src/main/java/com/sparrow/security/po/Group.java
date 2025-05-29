@@ -6,7 +6,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "group")
+@Table(name = "t_group")
 @Data
 public class Group extends PO {
 

@@ -17,7 +17,6 @@ import javax.inject.Named;
 
 @Named
 public class AppConverter implements Param2POConverter<AppParam, App>, PO2BOConverter<AppBO, App> {
-
     public PagerAppQuery toDbPagerQuery(AppQuery appQuery) {
         if (appQuery == null) {
             return new PagerAppQuery();
@@ -29,15 +28,13 @@ public class AppConverter implements Param2POConverter<AppParam, App>, PO2BOConv
         return pagerGroupQuery;
     }
 
-    private void fullProperties(AppQuery appQuery, CountAppQuery countAppQuery) {
+    private void fullProperties(AppQuery appQuery, CountAppQuery dbQuery) {
         if (appQuery == null) {
             return;
         }
-        countAppQuery.setName(appQuery.getName());
-        countAppQuery.setBeginDate(appQuery.getBeginDate());
-        countAppQuery.setEndDate(appQuery.getEndDate());
+        BeanUtility.copyProperties(appQuery,dbQuery);
         if (appQuery.getStatus() != null) {
-            countAppQuery.setStatus(StatusRecord.valueOf(appQuery.getStatus()));
+            dbQuery.setStatus(StatusRecord.valueOf(appQuery.getStatus()));
         }
     }
 

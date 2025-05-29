@@ -4,9 +4,10 @@ import com.sparrow.security.admin.bo.ResourceBO;
 import com.sparrow.security.admin.protocol.vo.PrivilegeWrapVO;
 import com.sparrow.security.admin.protocol.vo.ResourceMenuItemVO;
 import com.sparrow.utility.BeanUtility;
+
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Named;
 
 @Named
 public class PrivilegeAssemble {

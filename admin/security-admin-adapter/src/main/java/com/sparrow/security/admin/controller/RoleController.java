@@ -13,7 +13,9 @@ import com.sparrow.security.admin.service.RoleService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
+
 import javax.inject.Inject;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,15 +35,7 @@ public class RoleController {
     @GetMapping("manage")
     public ModelAndView loadAllRole() {
         RoleBatchOperateParam batchOperationQuery = (RoleBatchOperateParam) ModelAndViewUtils.flash("query");
-        if (batchOperationQuery != null) {
-            return this.queryRoles(batchOperationQuery);
-        }
-        SimplePager simplePager = new SimplePager();
-        ListRecordTotalBO<RoleBO> roleListRecordTotal = this.roleService.queryAllRole();
-        HtmlPagerResult<RoleVO> pager = this.roleAssemble.assembleHtmlPager(roleListRecordTotal, simplePager);
-        ModelAndView mv = new ModelAndView("/role/manage");
-        mv.addObject("pager", pager);
-        return mv;
+        return this.queryRoles(batchOperationQuery);
     }
 
     private ModelAndView queryRoles(RoleQuery roleQuery) {
@@ -49,7 +43,6 @@ public class RoleController {
         HtmlPagerResult<RoleVO> pager = this.roleAssemble.assembleHtmlPager(roleListTotalRecord, roleQuery);
         ModelAndView mv = new ModelAndView("/role/manage");
         mv.addObject("pager", pager);
-        mv.addObject("query", roleQuery);
         return mv;
     }
 

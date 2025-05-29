@@ -5,7 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "group_role")
+@Table(name = "t_group_role")
 @Data
 public class GroupRole extends PO {
     @Id

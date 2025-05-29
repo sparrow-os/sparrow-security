@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Table(name = "micro_service")
+@Table(name = "t_micro_service")
 public class MicroService extends PO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

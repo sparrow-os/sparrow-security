@@ -4,7 +4,7 @@ import com.sparrow.protocol.POJO;
 
 import javax.persistence.*;
 
-@Table(name = "strategy")
+@Table(name = "t_rule_strategy")
 public class RoleStrategy implements POJO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

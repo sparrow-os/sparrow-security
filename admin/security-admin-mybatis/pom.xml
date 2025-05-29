@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>admin</artifactId>
-        <groupId>com.sparrowzoo</groupId>
+        <artifactId>security-bom</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.sparrowzoo.security</groupId>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sparrowzoo.security.admin</groupId>
@@ -25,6 +25,8 @@
         <dependency>
             <groupId>com.sparrowzoo.security.admin</groupId>
             <artifactId>security-admin-dao-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

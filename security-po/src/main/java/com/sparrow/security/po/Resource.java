@@ -6,7 +6,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "resource")
+@Table(name = "t_resource")
 @Data
 public class Resource extends PO {
     public Resource() {

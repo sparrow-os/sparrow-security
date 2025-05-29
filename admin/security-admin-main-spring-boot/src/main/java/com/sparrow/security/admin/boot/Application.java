@@ -3,6 +3,7 @@ package com.sparrow.security.admin.boot;
 import com.sparrow.container.Container;
 import com.sparrow.container.ContainerBuilder;
 import com.sparrow.core.spi.ApplicationContext;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -14,10 +15,9 @@ import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 @SpringBootApplication(scanBasePackages = "com.sparrow.*")
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
+@Slf4j
 public class Application {
-    private static Logger log = LoggerFactory.getLogger(Application.class);
-
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(Application.class);
         /**
@@ -26,15 +26,16 @@ public class Application {
          * 因为orm template 初始化时需要method accessor 提速s
          */
         springApplication.addListeners(new ApplicationListener<ApplicationStartingEvent>() {
-            @Override public void onApplicationEvent(ApplicationStartingEvent event) {
+            @Override
+            public void onApplicationEvent(ApplicationStartingEvent event) {
                 Container container = ApplicationContext.getContainer();
                 //只提供proxy 代码类加速反射
                 ContainerBuilder builder = new ContainerBuilder()
-                    //只扫描com.sparrow下的类
-                    .scanBasePackage("com.sparrow")
-                    .initController(false)
-                    .initSingletonBean(false)
-                    .initInterceptor(false);
+                        //只扫描com.sparrow下的类
+                        .scanBasePackage("com.sparrow")
+                        .initController(false)
+                        .initSingletonBean(false)
+                        .initInterceptor(false);
                 container.init(builder);
             }
         });

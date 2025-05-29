@@ -30,13 +30,13 @@ public class GroupConverter implements Param2POConverter<GroupParam, Group>, PO2
         return pagerGroupQuery;
     }
 
-    private void fullProperties(GroupQuery groupQuery, CountGroupQuery countGroupQuery) {
+    private void fullProperties(GroupQuery groupQuery, CountGroupQuery dbQuery) {
         if (groupQuery == null) {
             return;
         }
-        countGroupQuery.setGroupName(groupQuery.getGroupName());
-        countGroupQuery.setBeginDate(groupQuery.getBeginDate());
-        countGroupQuery.setEndDate(groupQuery.getEndDate());
+        dbQuery.setGroupName(groupQuery.getGroupName());
+        dbQuery.setBeginDate(groupQuery.getBeginDate());
+        dbQuery.setEndDate(groupQuery.getEndDate());
     }
 
     public CountGroupQuery toDbCountQuery(GroupQuery groupQuery) {

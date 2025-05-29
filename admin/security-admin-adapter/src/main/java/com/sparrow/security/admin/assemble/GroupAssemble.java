@@ -11,7 +11,6 @@ import com.sparrow.support.assemble.Param2VOAssemble;
 import com.sparrow.support.pager.HtmlPagerResult;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
-import com.sparrow.utility.EnumUtility;
 import com.sparrow.utility.StringUtility;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,8 +46,7 @@ public class GroupAssemble implements BO2VOAssemble<GroupVO, GroupBO>,
         for (GroupBO groupBo : list) {
             GroupVO groupVo = new GroupVO();
             BeanUtility.copyProperties(groupBo, groupVo);
-            String statusName = EnumUtility.getValue(groupBo.getStatus());
-            groupVo.setStatus(statusName);
+            groupVo.setStatus(groupBo.getStatus().name());
             groupVOList.add(groupVo);
         }
         return groupVOList;
@@ -59,7 +57,7 @@ public class GroupAssemble implements BO2VOAssemble<GroupVO, GroupBO>,
         List<GroupVO> groupVOList = this.boListAssembleVOList(groupListTotalRecord.getList());
         PagerResult<GroupVO> pagerResult = new PagerResult<>(groupQuery);
         pagerResult.setList(groupVOList);
-        pagerResult.setRecordCount(groupListTotalRecord.getTotal());
+        pagerResult.setRecordTotal(groupListTotalRecord.getTotal());
         return new HtmlPagerResult<>(pagerResult);
     }
 }

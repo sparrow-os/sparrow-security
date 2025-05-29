@@ -1,17 +1,17 @@
 package com.sparrow.security.admin.assemble;
 
-import com.sparrow.security.admin.protocol.vo.ResourceMenuItemVO;
-import com.sparrow.security.admin.protocol.vo.ResourceVO;
 import com.sparrow.security.admin.bo.ResourceBO;
 import com.sparrow.security.admin.protocol.param.ResourceParam;
+import com.sparrow.security.admin.protocol.vo.ResourceVO;
 import com.sparrow.support.assemble.BO2VOAssemble;
 import com.sparrow.support.assemble.Param2VOAssemble;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
+
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.inject.Named;
 
 @Named
 public class ResourceAssemble implements BO2VOAssemble<ResourceVO, ResourceBO>,

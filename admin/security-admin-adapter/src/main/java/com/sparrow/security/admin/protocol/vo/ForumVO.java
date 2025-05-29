@@ -1,7 +1,9 @@
 package com.sparrow.security.admin.protocol.vo;
 
 import com.sparrow.protocol.VO;
+import lombok.Data;
 
+@Data
 public class ForumVO implements VO {
 
     /**
@@ -45,100 +47,4 @@ public class ForumVO implements VO {
     private String status;
     private String remark;
     private Integer maxRemarkLength;
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public Integer getMaxRemarkLength() {
-        return maxRemarkLength;
-    }
-
-    public void setMaxRemarkLength(Integer maxRemarkLength) {
-        this.maxRemarkLength = maxRemarkLength;
-    }
-
-    public Long getResourceId() {
-        return resourceId;
-    }
-
-    public void setResourceId(Long resourceId) {
-        this.resourceId = resourceId;
-    }
-
-    public String getListUrl() {
-        return listUrl;
-    }
-
-    public void setListUrl(String listUrl) {
-        this.listUrl = listUrl;
-    }
-
-    public String getNewUrl() {
-        return newUrl;
-    }
-
-    public void setNewUrl(String newUrl) {
-        this.newUrl = newUrl;
-    }
-
-    public String getDetailUrl() {
-        return detailUrl;
-    }
-
-    public void setDetailUrl(String detailUrl) {
-        this.detailUrl = detailUrl;
-    }
-
-    public String getPlaceholderUrl() {
-        return placeholderUrl;
-    }
-
-    public void setPlaceholderUrl(String placeholderUrl) {
-        this.placeholderUrl = placeholderUrl;
-    }
-
-    public String getUploadKey() {
-        return uploadKey;
-    }
-
-    public void setUploadKey(String uploadKey) {
-        this.uploadKey = uploadKey;
-    }
-
-    public String getCover() {
-        return cover;
-    }
-
-    public void setCover(String cover) {
-        this.cover = cover;
-    }
-
-    public String getManager() {
-        return manager;
-    }
-
-    public void setManager(String manager) {
-        this.manager = manager;
-    }
-
-    public Integer getMaxRecordCount() {
-        return maxRecordCount;
-    }
-
-    public void setMaxRecordCount(Integer maxRecordCount) {
-        this.maxRecordCount = maxRecordCount;
-    }
 }

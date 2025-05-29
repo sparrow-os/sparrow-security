@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Table(name = "privilege")
+@Table(name = "t_privilege")
 public class Privilege implements POJO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

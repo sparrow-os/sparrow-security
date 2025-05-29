@@ -9,7 +9,6 @@ public enum SecurityAdminError implements ErrorSupport {
     GROUP_TYPE_IS_EMPTY(false, SecurityModule.Group, "02", "group type is null"),
     GROUP_ICON_EMPTY(false, SecurityModule.Group, "03", "group icon is null"),
     GROUP_ID_IS_EMPTY(false, SecurityModule.Group, "05", "group id is null"),
-
     RESOURCE_NAME_IS_EMPTY(false, SecurityModule.Resource, "01", "resource name is null"),
     RESOURCE_TYPE_IS_EMPTY(false, SecurityModule.Resource, "02", "resource type is null"),
     RESOURCE_ICON_EMPTY(false, SecurityModule.Resource, "03", "resource icon is null"),

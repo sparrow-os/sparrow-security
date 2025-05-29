@@ -3,27 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sparrow-bom</artifactId>
-        <groupId>com.sparrowzoo</groupId>
-        <version>1.0.5-SNAPSHOT</version>
-        <relativePath/>
+        <artifactId>security-bom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.sparrowzoo.security</groupId>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>security-admin-main-spring-boot</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <groupId>com.sparrowzoo.security.admin</groupId>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <java.version>1.8</java.version>
-        <fastjson.version>1.2.58</fastjson.version>
-        <mybatis-spring.version>1.2.2</mybatis-spring.version>
-        <mybatis.version>3.2.8</mybatis.version>
-        <druid.version>1.1.10</druid.version>
-    </properties>
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -59,7 +48,7 @@
 
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -88,6 +77,25 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.sparrowzoo</groupId>
+            <artifactId>sparrow-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparrowzoo</groupId>
+            <artifactId>file-gateway</artifactId>
+        </dependency>
+
         <!--        -->
         <!--classloader 不同导致
         Cannot cast 'GroupParam'
@@ -99,6 +107,28 @@
         <!--        </dependency>-->
     </dependencies>
     <build>
+        <filters>
+            <filter>src/main/configs/${env}.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*.xml</include>
+                    <include>*.properties</include>
+                </includes>
+                <filtering>true</filtering>
+                <targetPath>${project.build.directory}/classes/</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.html</include>
+                </includes>
+                <filtering>false</filtering>
+                <targetPath>${project.build.directory}/classes/</targetPath>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

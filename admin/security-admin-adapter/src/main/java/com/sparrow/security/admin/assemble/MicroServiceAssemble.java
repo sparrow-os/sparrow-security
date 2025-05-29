@@ -1,23 +1,23 @@
 package com.sparrow.security.admin.assemble;
 
-import com.sparrow.protocol.constant.Constant;
-import com.sparrow.security.admin.protocol.vo.MicroServiceVO;
 import com.sparrow.protocol.ListRecordTotalBO;
+import com.sparrow.protocol.constant.Constant;
 import com.sparrow.protocol.pager.PagerResult;
 import com.sparrow.protocol.pager.SimplePager;
 import com.sparrow.security.admin.bo.MicroServiceBO;
 import com.sparrow.security.admin.protocol.param.MicroServiceParam;
+import com.sparrow.security.admin.protocol.vo.MicroServiceVO;
 import com.sparrow.support.assemble.BO2VOAssemble;
 import com.sparrow.support.assemble.Param2VOAssemble;
 import com.sparrow.support.pager.HtmlPagerResult;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
-import com.sparrow.utility.EnumUtility;
 import com.sparrow.utility.StringUtility;
+
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.inject.Named;
 
 @Named("microServiceControllerAssemble")
 public class MicroServiceAssemble implements BO2VOAssemble<MicroServiceVO, MicroServiceBO>,
@@ -47,8 +47,7 @@ public class MicroServiceAssemble implements BO2VOAssemble<MicroServiceVO, Micro
         for (MicroServiceBO microServiceBo : list) {
             MicroServiceVO microServiceVo = new MicroServiceVO();
             BeanUtility.copyProperties(microServiceBo, microServiceVo);
-            String statusName = EnumUtility.getValue(microServiceBo.getStatus());
-            microServiceVo.setStatus(statusName);
+            microServiceVo.setStatus(microServiceBo.getStatus().name());
             microServiceVOList.add(microServiceVo);
         }
         return microServiceVOList;
@@ -59,7 +58,7 @@ public class MicroServiceAssemble implements BO2VOAssemble<MicroServiceVO, Micro
         List<MicroServiceVO> microServiceVOList = this.boListAssembleVOList(microServiceListTotalRecord.getList());
         PagerResult<MicroServiceVO> pagerResult = new PagerResult<>(microServiceQuery);
         pagerResult.setList(microServiceVOList);
-        pagerResult.setRecordCount(microServiceListTotalRecord.getTotal());
+        pagerResult.setRecordTotal(microServiceListTotalRecord.getTotal());
         return new HtmlPagerResult<>(pagerResult);
     }
 }

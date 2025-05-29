@@ -13,7 +13,9 @@ import com.sparrow.security.admin.service.GroupService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
+
 import javax.inject.Inject;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,17 +34,8 @@ public class GroupController {
 
     @GetMapping("manage")
     public ModelAndView loadAllGroups() {
-
         GroupBatchOperateParam groupBatchOperateParam = (GroupBatchOperateParam) ModelAndViewUtils.flash("query");
-        if (groupBatchOperateParam != null) {
-            return this.queryGroups(groupBatchOperateParam);
-        }
-        SimplePager simplePager = new SimplePager();
-        ListRecordTotalBO<GroupBO> groupListTotalRecord = this.groupService.queryAllGroup();
-        HtmlPagerResult<GroupVO> pager = this.groupControllerAssemble.assembleHtmlPager(groupListTotalRecord, simplePager);
-        ModelAndView mv = new ModelAndView("/group/manage");
-        mv.addObject("pager", pager);
-        return mv;
+        return this.queryGroups(groupBatchOperateParam);
     }
 
     private ModelAndView queryGroups(GroupQuery groupQuery) {
@@ -50,7 +43,6 @@ public class GroupController {
         HtmlPagerResult<GroupVO> pager = this.groupControllerAssemble.assembleHtmlPager(groupListTotalRecord, groupQuery);
         ModelAndView mv = new ModelAndView("/group/manage");
         mv.addObject("pager", pager);
-        mv.addObject("query", groupQuery);
         return mv;
     }
 

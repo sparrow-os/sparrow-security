@@ -18,7 +18,6 @@ public class PrivilegeController {
     private ResourceService resourceService;
     @Inject
     private RoleService roleService;
-
     @Inject
     private PrivilegeAssemble privilegeAssemble;
 

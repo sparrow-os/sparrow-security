@@ -6,7 +6,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "department")
+@Table(name = "t_department")
 @Data
 public class Department extends PO {
 

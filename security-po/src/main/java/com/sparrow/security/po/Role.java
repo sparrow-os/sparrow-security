@@ -7,7 +7,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Table(name = "role")
+@Table(name = "t_role")
 public class Role extends PO {
 
     @Id

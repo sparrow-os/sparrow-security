@@ -10,6 +10,8 @@ import com.sparrow.security.admin.protocol.param.ResourceSortParam;
 import com.sparrow.security.admin.protocol.query.ResourceQuery;
 import java.util.List;
 import javax.inject.Inject;
+
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("resource")
+@Api(value = "Resource", tags = "Resource")
+
 public class ResourceController {
 
     @Inject
@@ -33,7 +37,6 @@ public class ResourceController {
 
     @PostMapping("save")
     public ResourceVO saveResource(ResourceParam resourceParam) throws BusinessException {
-//        int i=1/0;
         resourceService.saveResource(resourceParam);
         return this.resourceControllerAssemble.paramAssembleVO(resourceParam);
     }

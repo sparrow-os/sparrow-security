@@ -5,22 +5,19 @@ import com.sparrow.protocol.TreeItem;
 import com.sparrow.protocol.constant.Constant;
 import com.sparrow.protocol.pager.PagerResult;
 import com.sparrow.protocol.pager.SimplePager;
-import com.sparrow.security.admin.bo.GroupBO;
-import com.sparrow.security.admin.protocol.param.AppParam;
-import com.sparrow.security.admin.protocol.param.GroupParam;
-import com.sparrow.security.admin.protocol.vo.AppVO;
 import com.sparrow.security.admin.bo.AppBO;
-import com.sparrow.security.admin.protocol.vo.GroupVO;
+import com.sparrow.security.admin.protocol.param.AppParam;
+import com.sparrow.security.admin.protocol.vo.AppVO;
 import com.sparrow.support.assemble.BO2VOAssemble;
 import com.sparrow.support.pager.HtmlPagerResult;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
-import com.sparrow.utility.EnumUtility;
 import com.sparrow.utility.StringUtility;
+
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.inject.Named;
 
 @Named
 public class AppAssemble implements BO2VOAssemble<AppVO, AppBO> {
@@ -64,8 +61,7 @@ public class AppAssemble implements BO2VOAssemble<AppVO, AppBO> {
         for (AppBO appBO : list) {
             AppVO appVo = new AppVO();
             BeanUtility.copyProperties(appBO, appVo);
-            String statusName = EnumUtility.getValue(appBO.getStatus());
-            appVo.setStatus(statusName);
+            appVo.setStatus(appBO.getStatus().name());
             appVoList.add(appVo);
         }
         return appVoList;
@@ -76,7 +72,7 @@ public class AppAssemble implements BO2VOAssemble<AppVO, AppBO> {
         List<AppVO> appVOList = this.boListAssembleVOList(appListTotalRecord.getList());
         PagerResult<AppVO> pagerResult = new PagerResult<>(groupQuery);
         pagerResult.setList(appVOList);
-        pagerResult.setRecordCount(appListTotalRecord.getTotal());
+        pagerResult.setRecordTotal(appListTotalRecord.getTotal());
         return new HtmlPagerResult<>(pagerResult);
     }
 }

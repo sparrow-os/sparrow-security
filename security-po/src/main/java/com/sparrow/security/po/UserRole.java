@@ -4,7 +4,7 @@ import com.sparrow.protocol.POJO;
 
 import javax.persistence.*;
 
-@Table(name = "user_role")
+@Table(name = "t_user_role")
 public class UserRole implements POJO {
 
     private static final long serialVersionUID = 1L;

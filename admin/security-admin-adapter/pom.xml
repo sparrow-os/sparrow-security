@@ -5,10 +5,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>sparrow-bom</artifactId>
-        <groupId>com.sparrowzoo</groupId>
-        <version>1.0.5-SNAPSHOT</version>
-        <relativePath/>
+        <artifactId>security-bom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.sparrowzoo.security</groupId>
     </parent>
     <groupId>com.sparrowzoo.security.admin</groupId>
     <artifactId>security-admin-adapter</artifactId>
@@ -26,6 +25,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
             <optional>true</optional>
         </dependency>
     </dependencies>

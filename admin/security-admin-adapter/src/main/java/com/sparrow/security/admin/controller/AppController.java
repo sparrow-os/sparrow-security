@@ -13,6 +13,7 @@ import com.sparrow.security.admin.service.AppService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,16 +38,8 @@ public class AppController {
 
     @GetMapping("manage")
     public ModelAndView loadAllApps() {
-//        AppBatchOperateParam batchOperationQuery = ModelAndViewUtils.query();
-//        if (batchOperationQuery != null) {
-//            return this.queryApps(batchOperationQuery);
-//        }
-//        SimplePager simplePager = new SimplePager();
-//        ListRecordTotalBO<AppBO> groupListTotalRecord = this.appService.queryAllApp();
-//        HtmlPagerResult<AppVO> pager = this.appAssemble.assembleHtmlPager(groupListTotalRecord, simplePager);
-//        ModelAndView mv = new ModelAndView("/app/manage");
-//        mv.addObject("pager", pager);
-        return null;
+        AppBatchOperateParam batchOperationQuery = ModelAndViewUtils.query();
+        return this.queryApps(batchOperationQuery);
     }
 
     private ModelAndView queryApps(AppQuery appQuery) {
@@ -101,6 +94,6 @@ public class AppController {
     @PostMapping("disable")
     public ModelAndView disableApp(AppBatchOperateParam batchOperationQuery) throws BusinessException {
         this.appService.disableApp(batchOperationQuery.getIds());
-        return ModelAndViewUtils.redirect("/app/manage", batchOperationQuery);
+        return ModelAndViewUtils.redirect("/app/manage");
     }
 }

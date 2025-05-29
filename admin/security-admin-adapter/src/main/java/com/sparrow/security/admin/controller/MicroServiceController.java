@@ -13,7 +13,9 @@ import com.sparrow.security.admin.service.MicroServiceService;
 import com.sparrow.servlet.ServletContainer;
 import com.sparrow.spring.starter.ModelAndViewUtils;
 import com.sparrow.support.pager.HtmlPagerResult;
+
 import javax.inject.Inject;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,15 +39,7 @@ public class MicroServiceController {
     @GetMapping("manage")
     public ModelAndView loadAllMicroServices() {
         MicroServiceBatchOperateParam batchOperateParam = (MicroServiceBatchOperateParam) ModelAndViewUtils.flash("query");
-        if (batchOperateParam != null) {
-            return this.queryMicroServices(batchOperateParam);
-        }
-        SimplePager simplePager = new SimplePager();
-        ListRecordTotalBO<MicroServiceBO> microServiceListTotalRecord = this.microServiceService.queryAllMicroService();
-        HtmlPagerResult<MicroServiceVO> pager = this.microServiceAssemble.assembleHtmlPager(microServiceListTotalRecord, simplePager);
-        ModelAndView mv = new ModelAndView("/micro/service/manage");
-        mv.addObject("pager", pager);
-        return mv;
+        return this.queryMicroServices(batchOperateParam);
     }
 
     private ModelAndView queryMicroServices(MicroServiceQuery microServiceQuery) {
@@ -53,7 +47,6 @@ public class MicroServiceController {
         HtmlPagerResult<MicroServiceVO> pager = this.microServiceAssemble.assembleHtmlPager(microServiceListTotalRecord, microServiceQuery);
         ModelAndView mv = new ModelAndView("/micro-service/manage");
         mv.addObject("pager", pager);
-        mv.addObject("query", microServiceQuery);
         return mv;
     }
 
@@ -64,15 +57,14 @@ public class MicroServiceController {
 
     @PostMapping("save")
     public ModelAndView saveMicroService(@RequestBody MicroServiceParam microServiceParam) throws BusinessException {
-        return null;
-        //        try {
-//            microServiceService.saveMicroService(microServiceParam);
-//            return ModelAndViewUtils.redirect("/micro-service/manage");
-//        } catch (Exception e) {
-//            //失败回显
-//            this.servletContainer.getRequest().setAttribute("microService", this.microServiceAssemble.paramAssembleVO(microServiceParam));
-//            throw e;
-//        }
+        try {
+            microServiceService.saveMicroService(microServiceParam);
+            return ModelAndViewUtils.redirect("/micro-service/manage");
+        } catch (Exception e) {
+            //失败回显
+            this.servletContainer.getRequest().setAttribute("microService", this.microServiceAssemble.paramAssembleVO(microServiceParam));
+            throw e;
+        }
     }
 
     @GetMapping("new")

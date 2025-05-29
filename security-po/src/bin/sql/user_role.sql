@@ -1,7 +1,0 @@
-DROP TABLE IF EXISTS `user_role`;
-CREATE TABLE `user_role` (
-`id` int(11) UNSIGNED AUTO_INCREMENT NOT NULL AUTO_INCREMENT,
-`user_id` int(11)  DEFAULT 0 COMMENT 'user id'  NOT NULL,
-`role_id` int(11)  DEFAULT 0 COMMENT 'role id'  NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='user_role';

@@ -7,7 +7,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Table(name = "app")
+@Table(name = "t_app")
 public class App extends PO {
     private static final long serialVersionUID = 1L;
     @Id
@@ -28,5 +28,4 @@ public class App extends PO {
             columnDefinition = "tinyint(3) UNSIGNED DEFAULT 0 COMMENT 'STATUS'",
             nullable = false)
     private StatusRecord status;
-
 }

@@ -1,29 +1,29 @@
 package com.sparrow.security.admin.assemble;
 
 import com.sparrow.protocol.BusinessException;
-import com.sparrow.security.admin.bo.AppBO;
-import com.sparrow.security.admin.protocol.vo.RoleVO;
 import com.sparrow.protocol.ListRecordTotalBO;
 import com.sparrow.protocol.constant.Constant;
 import com.sparrow.protocol.pager.PagerResult;
 import com.sparrow.protocol.pager.SimplePager;
+import com.sparrow.security.admin.bo.AppBO;
 import com.sparrow.security.admin.bo.RoleBO;
 import com.sparrow.security.admin.protocol.param.RoleParam;
+import com.sparrow.security.admin.protocol.vo.RoleVO;
 import com.sparrow.security.admin.service.AppService;
 import com.sparrow.support.assemble.BO2VOAssemble;
 import com.sparrow.support.assemble.Param2VOAssemble;
 import com.sparrow.support.pager.HtmlPagerResult;
 import com.sparrow.utility.BeanUtility;
 import com.sparrow.utility.CollectionsUtility;
-import com.sparrow.utility.EnumUtility;
 import com.sparrow.utility.StringUtility;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.inject.Inject;
-import javax.inject.Named;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Named("roleControllerAssemble")
 public class RoleAssemble implements BO2VOAssemble<RoleVO, RoleBO>,
@@ -66,8 +66,7 @@ public class RoleAssemble implements BO2VOAssemble<RoleVO, RoleBO>,
         for (RoleBO roleBo : list) {
             RoleVO roleVo = new RoleVO();
             BeanUtility.copyProperties(roleBo, roleVo);
-            String statusName = EnumUtility.getValue(roleBo.getStatus());
-            roleVo.setStatus(statusName);
+            roleVo.setStatus(roleBo.getStatus().name());
             roleVOList.add(roleVo);
         }
         return roleVOList;
@@ -78,7 +77,7 @@ public class RoleAssemble implements BO2VOAssemble<RoleVO, RoleBO>,
         List<RoleVO> roleVOList = this.boListAssembleVOList(roleListTotalRecord.getList());
         PagerResult<RoleVO> pagerResult = new PagerResult<>(roleQuery);
         pagerResult.setList(roleVOList);
-        pagerResult.setRecordCount(roleListTotalRecord.getTotal());
+        pagerResult.setRecordTotal(roleListTotalRecord.getTotal());
         return new HtmlPagerResult<>(pagerResult);
     }
 }

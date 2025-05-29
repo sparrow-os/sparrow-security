@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "role_app")
+@Table(name = "t_role_app")
 @Data
 public class RoleApp {
     @Id
