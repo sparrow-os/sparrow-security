@@ -1,0 +1,176 @@
+2025-05-30 21:38:25.281 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:25.284 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:25.301 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:25.302 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:25.345 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:25.348 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:25.349 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:25.350 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:25.821 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:25.823 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:25.834 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:25.835 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:25.862 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:25.865 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:25.866 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:25.866 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:26.338 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:26.340 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:26.352 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:26.354 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:26.385 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:26.388 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:26.388 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:26.389 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:26.872 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:26.876 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:26.886 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:26.887 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:26.920 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:26.924 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:26.924 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:26.927 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:27.500 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:27.503 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:27.515 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:27.516 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:27.549 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:27.555 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:27.555 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:27.560 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:28.039 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:28.042 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:28.055 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:28.057 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:28.090 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:28.094 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:28.094 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:28.095 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:28.510 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:28.513 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:28.527 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:28.528 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:28.560 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:28.566 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:28.566 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:28.571 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:29.060 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:29.062 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:29.077 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:29.078 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:29.109 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:29.112 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:29.113 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:29.113 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:29.584 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:29.587 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:29.599 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:29.600 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:29.631 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:29.635 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:29.635 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:29.636 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:30.187 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:30.192 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:30.205 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:30.206 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:30.241 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:30.245 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:30.246 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:30.246 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-30 21:38:31.005 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-30 21:38:31.007 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-30 21:38:31.022 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-30 21:38:31.023 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-30 21:38:31.061 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:31.067 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-30 21:38:31.070 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-30 21:38:31.080 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:07.078 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:07.082 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:07.097 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:07.097 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:07.133 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:07.137 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:07.137 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:07.138 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:07.651 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:07.653 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:07.667 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:07.668 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:07.699 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:07.702 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:07.703 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:07.703 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:08.201 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:08.206 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:08.218 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:08.219 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:08.254 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:08.257 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:08.257 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:08.259 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:08.759 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:08.762 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:08.777 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:08.778 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:08.809 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:08.813 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:08.814 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:08.816 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:09.347 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:09.350 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:09.364 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:09.366 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:09.402 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:09.405 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:09.406 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:09.408 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:09.919 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:09.922 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:09.937 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:09.938 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:09.973 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:09.977 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:09.978 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:09.979 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:10.477 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:10.482 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:10.498 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:10.500 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:10.536 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:10.541 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:10.592 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:10.597 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:11.184 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:11.186 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:11.200 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:11.201 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:11.233 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:11.236 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:11.236 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:11.238 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:11.970 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:11.973 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:11.984 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:11.985 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:12.018 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:12.023 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:12.024 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:12.025 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:12.551 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:12.553 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:12.567 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:12.568 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:12.605 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:12.611 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:12.611 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:12.613 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------
+2025-05-31 17:45:13.158 TRACE_ID INFO  main SparrowContainer ----------------- container init ....-------------------
+2025-05-31 17:45:13.161 TRACE_ID INFO  main SparrowContainer -------------system config file init ...-------------------
+2025-05-31 17:45:13.183 TRACE_ID INFO  main ConfigUtility ==========system config init============
+2025-05-31 17:45:13.184 TRACE_ID INFO  main SparrowContainer -------------init bean ...---------------------------
+2025-05-31 17:45:13.215 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:13.219 TRACE_ID INFO  main DataSourceFactoryImpl password_key mysql_sparrow_password,password 11111111
+2025-05-31 17:45:13.219 TRACE_ID INFO  main SparrowContainer -------------init initializer ...--------------------------
+2025-05-31 17:45:13.220 TRACE_ID INFO  main SparrowContainer -----------------Ioc container init success...-------------------

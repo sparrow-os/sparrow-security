@@ -1,10 +1,12 @@
 package com.sparrow.security.po;
 
 import com.sparrow.protocol.POJO;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Table(name = "t_user_role")
+@Data
 public class UserRole implements POJO {
 
     private static final long serialVersionUID = 1L;

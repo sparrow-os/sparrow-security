@@ -1,16 +1,18 @@
-<?xml version="1.0"?>
-<project
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <groupId>com.sparrowzoo</groupId>
-    <version>1.0.0-SNAPSHOT</version>
-    <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>sparrow-security</artifactId>
+    <groupId>com.sparrowzoo.security</groupId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>admin</module>
-        <module>server</module>
-        <module>security-commons</module>
-        <module>security-po</module>
     </modules>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
 </project>

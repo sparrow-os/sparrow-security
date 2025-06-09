@@ -27,24 +27,24 @@ public class ResourceController {
     private ResourceService resourceService;
 
     @Inject
-    private ResourceAssemble resourceControllerAssemble;
+    private ResourceAssemble resourceAssemble;
 
     @PostMapping("load-all.json")
     public List<ResourceVO> loadAllResources(ResourceQuery resourceQuery) {
         List<ResourceBO> resources = this.resourceService.queryResources(resourceQuery);
-        return this.resourceControllerAssemble.boListAssembleVoList(resources);
+        return this.resourceAssemble.boListAssembleVoList(resources);
     }
 
     @PostMapping("save")
     public ResourceVO saveResource(ResourceParam resourceParam) throws BusinessException {
         resourceService.saveResource(resourceParam);
-        return this.resourceControllerAssemble.paramAssembleVO(resourceParam);
+        return this.resourceAssemble.paramAssembleVO(resourceParam);
     }
 
     @GetMapping("get")
     public ResourceVO getResource(Long resourceId) throws BusinessException {
         ResourceBO resourceBo = resourceService.getResource(resourceId);
-        return this.resourceControllerAssemble.boAssembleVO(resourceBo);
+        return this.resourceAssemble.boAssembleVO(resourceBo);
     }
 
     @PostMapping("delete")

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparrow.security.admin.dao.SparrowExampleDAO">
+<resultMap id="SparrowExampleMap" type="com.sparrow.security.po.SparrowExample">
+<id column="id" property="id" />
+ <result column="avatar" property="avatar"/>
+ <result column="user_name" property="userName"/>
+ <result column="password" property="password"/>
+ <result column="age" property="age"/>
+ <result column="confirm_password" property="confirmPassword"/>
+ <result column="email" property="email"/>
+ <result column="id_card" property="idCard"/>
+ <result column="mobile" property="mobile"/>
+ <result column="tel" property="tel"/>
+ <result column="name" property="name"/>
+ <result column="status" property="status"/>
+ <result column="create_user_id" property="createUserId"/>
+ <result column="gmt_create" property="gmtCreate"/>
+ <result column="modified_user_id" property="modifiedUserId"/>
+ <result column="gmt_modified" property="gmtModified"/>
+ <result column="create_user_name" property="createUserName"/>
+ <result column="modified_user_name" property="modifiedUserName"/>
+</resultMap>
+<sql id="fields">
+`id`,
+`avatar`,
+`user_name`,
+`password`,
+`age`,
+`confirm_password`,
+`email`,
+`id_card`,
+`mobile`,
+`tel`,
+`name`,
+`status`,
+`create_user_id`,
+`gmt_create`,
+`modified_user_id`,
+`gmt_modified`,
+`create_user_name`,
+`modified_user_name`
+</sql>
+<insert id="insert" parameterType="com.sparrow.security.po.SparrowExample"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+insert into `sparrow_security`(
+`avatar`,
+`user_name`,
+`password`,
+`age`,
+`confirm_password`,
+`email`,
+`id_card`,
+`mobile`,
+`tel`,
+`name`,
+`status`,
+`create_user_id`,
+`gmt_create`,
+`modified_user_id`,
+`gmt_modified`,
+`create_user_name`,
+`modified_user_name`)values(
+#{avatar},
+#{userName},
+#{password},
+#{age},
+#{confirmPassword},
+#{email},
+#{idCard},
+#{mobile},
+#{tel},
+#{name},
+#{status},
+#{createUserId},
+#{gmtCreate},
+#{modifiedUserId},
+#{gmtModified},
+#{createUserName},
+#{modifiedUserName})</insert> 
+<update id="update" parameterType="com.sparrow.security.po.SparrowExample">
+update `sparrow_security` set 
+`status`=#{status},
+`modified_user_id`=#{modifiedUserId},
+`gmt_modified`=#{gmtModified},
+`create_user_name`=#{createUserName},
+`modified_user_name`=#{modifiedUserName} where id=#{id}
+</update>
+<delete id="delete" parameterType="java.lang.Long">
+delete from `sparrow_security` where id=#{id}
+</delete>
+<select id="getEntity" resultMap="SparrowExampleMap" parameterType="java.lang.Long">
+ SELECT 
+<include refid="fields"/>
+ FROM 
+sparrow_security
+WHERE id= #{id}
+</select>
+<update id="changeStatus" parameterType="com.sparrow.protocol.dao.StatusCriteria">
+update `sparrow_security` set `status`=#{status},
+`modified_user_name`=#{modifiedUserName},
+ `modified_user_id`=#{modifiedUserId},
+ `gmt_modified`=#{gmtModified} WHERE id IN
+<foreach collection="idArray" item="id" index="index" open="(" close=")" separator=",">
+#{id}</foreach>
+</update></mapper>

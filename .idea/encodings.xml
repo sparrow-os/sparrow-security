@@ -5,6 +5,10 @@
     <file url="file://$PROJECT_DIR$/admin/security-admin-adapter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/security-admin-dao-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/security-admin-dao-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-dao-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-dao-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-dao-sparrow/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/security-admin-dao-sparrow/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/security-admin-domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/security-admin-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin/security-admin-infrastructure/src/main/java" charset="UTF-8" />

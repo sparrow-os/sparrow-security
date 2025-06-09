@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/security-protocol/passport-protocol.iml" filepath="$PROJECT_DIR$/security-protocol/passport-protocol.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin/security-admin-sparrow-dao/passport-sparrow-dao.iml" filepath="$PROJECT_DIR$/admin/security-admin-sparrow-dao/passport-sparrow-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/admin/security-admin-adapter/security-admin-adapter.iml" filepath="$PROJECT_DIR$/admin/security-admin-adapter/security-admin-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/security-admin-main-spring-boot/security-admin-main-spring-boot.iml" filepath="$PROJECT_DIR$/admin/security-admin-main-spring-boot/security-admin-main-spring-boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/sparrow-passport-ddd.iml" filepath="$PROJECT_DIR$/sparrow-passport-ddd.iml" />
     </modules>
   </component>
