@@ -1,0 +1,305 @@
+2022-12-05 10:23:23.365 TRACE_ID DEBUG main TestDemo Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2022-12-05 10:24:09.465 TRACE_ID DEBUG main TestDemo Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2022-12-05 11:25:46.467 TRACE_ID DEBUG main TestWithBoostrap Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2022-12-05 11:27:19.750 TRACE_ID DEBUG main TestWithBoostrap Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2025-05-28 16:34:30.559 TRACE_ID DEBUG main SparrowCorsFilter Filter 'sparrowCorsFilter' configured for use
+2025-05-28 16:34:30.560 TRACE_ID DEBUG main FlashFilter Filter 'flashFilter' configured for use
+2025-05-28 16:34:38.533 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:34:38.533 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:34:38.533 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:34:38.533 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:34:38.533 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value AB27E4D4EF5D146316D758AAA0D67317
+2025-05-28 16:34:38.610 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.684 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.689 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.692 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.695 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.700 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.703 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.707 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:34:38.740 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:34:38.980 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:34:38.980 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:34:38.980 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:34:38.980 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:34:38.981 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 74C841FFF7898EFD1828119537456BF6
+2025-05-28 16:34:56.296 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2025-05-28 16:34:56.299 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:34:56.299 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie sidebar_state value true
+2025-05-28 16:34:56.299 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:34:56.299 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie JSESSIONID value 74C841FFF7898EFD1828119537456BF6
+2025-05-28 16:36:39.007 TRACE_ID DEBUG Druid-ConnectionPool-Create-1450520511 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:36:39.034 TRACE_ID DEBUG Druid-ConnectionPool-Create-1450520511 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:36:39.034 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:36:39.104 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2025-05-28 16:36:39.105 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:36:39.105 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie sidebar_state value true
+2025-05-28 16:36:39.105 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:36:39.105 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie JSESSIONID value 74C841FFF7898EFD1828119537456BF6
+2025-05-28 16:37:08.241 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2025-05-28 16:37:08.241 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:37:08.241 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie sidebar_state value true
+2025-05-28 16:37:08.241 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:37:08.241 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie JSESSIONID value 74C841FFF7898EFD1828119537456BF6
+2025-05-28 16:38:13.883 TRACE_ID DEBUG Druid-ConnectionPool-Create-1450520511 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:38:13.891 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:38:13.989 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:38:13.989 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:38:13.989 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:38:13.989 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:38:13.989 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 74C841FFF7898EFD1828119537456BF6
+2025-05-28 16:41:55.622 TRACE_ID DEBUG main SparrowCorsFilter Filter 'sparrowCorsFilter' configured for use
+2025-05-28 16:41:55.622 TRACE_ID DEBUG main FlashFilter Filter 'flashFilter' configured for use
+2025-05-28 16:42:03.233 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:42:03.233 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:42:03.233 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:42:03.233 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:42:03.233 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 74C841FFF7898EFD1828119537456BF6
+2025-05-28 16:42:03.512 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.701 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.712 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.725 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.738 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.750 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.791 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.814 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:03.829 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:42:04.069 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:42:04.069 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:42:04.069 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:42:04.069 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:42:04.069 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 1FDFE9D35A0F6A51F476301B85B276CD
+2025-05-28 16:42:07.066 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2025-05-28 16:42:07.066 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:42:07.066 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie sidebar_state value true
+2025-05-28 16:42:07.066 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:42:07.066 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie JSESSIONID value 1FDFE9D35A0F6A51F476301B85B276CD
+2025-05-28 16:42:07.079 TRACE_ID DEBUG Druid-ConnectionPool-Create-1599278395 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:07.083 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:42:07.099 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2025-05-28 16:42:07.099 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:42:07.099 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie sidebar_state value true
+2025-05-28 16:42:07.099 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:42:07.099 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie JSESSIONID value 1FDFE9D35A0F6A51F476301B85B276CD
+2025-05-28 16:42:23.079 TRACE_ID DEBUG main SparrowCorsFilter Filter 'sparrowCorsFilter' configured for use
+2025-05-28 16:42:23.079 TRACE_ID DEBUG main FlashFilter Filter 'flashFilter' configured for use
+2025-05-28 16:42:37.805 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:42:37.805 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:42:37.805 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:42:37.805 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:42:37.805 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 1FDFE9D35A0F6A51F476301B85B276CD
+2025-05-28 16:42:37.893 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.961 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.965 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.968 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.973 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.977 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.981 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.985 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:42:37.996 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:42:38.233 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:42:38.233 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:42:38.233 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:42:38.233 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:42:38.233 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:13.562 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2025-05-28 16:46:13.563 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:13.563 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:13.563 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:13.563 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:13.603 TRACE_ID DEBUG Druid-ConnectionPool-Create-1089820081 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:46:13.619 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:13.679 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2025-05-28 16:46:13.680 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:13.680 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:13.680 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:13.680 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:14.688 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2025-05-28 16:46:14.688 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:14.688 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:14.688 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:14.688 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:14.690 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:14.710 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2025-05-28 16:46:14.710 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:14.711 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:14.711 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:14.711 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:16.235 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2025-05-28 16:46:16.235 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:16.235 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:16.235 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:16.235 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:16.239 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:16.269 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility get cookie Authorization
+2025-05-28 16:46:16.269 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:16.269 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:16.269 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:16.269 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:16.832 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:46:16.832 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:16.832 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:16.832 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:16.832 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:16.834 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:16.853 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2025-05-28 16:46:16.853 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:16.853 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:16.853 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:16.853 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:17.003 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2025-05-28 16:46:17.003 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:17.003 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:17.003 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:17.003 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:17.005 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:17.029 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2025-05-28 16:46:17.029 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:17.029 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:17.029 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:17.029 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:17.164 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2025-05-28 16:46:17.165 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:17.165 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:17.165 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:17.165 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:17.167 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:17.179 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2025-05-28 16:46:17.179 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:17.179 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:17.180 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:17.180 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:17.341 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2025-05-28 16:46:17.341 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:17.341 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:17.341 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:17.341 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:17.342 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:17.359 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility get cookie Authorization
+2025-05-28 16:46:17.359 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:17.359 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:17.359 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:17.359 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:20.761 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:46:20.762 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:20.762 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:20.762 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:20.762 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:20.771 TRACE_ID DEBUG Druid-ConnectionPool-Create-1089820081 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:46:20.785 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:20.814 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:46:20.814 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:20.814 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:20.815 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:20.815 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:44.469 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2025-05-28 16:46:44.469 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:44.469 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:44.469 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:44.469 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:46:44.473 TRACE_ID DEBUG Druid-ConnectionPool-Create-1089820081 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:46:44.490 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:46:44.522 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2025-05-28 16:46:44.522 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:46:44.522 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie sidebar_state value true
+2025-05-28 16:46:44.522 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:46:44.522 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:09.164 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2025-05-28 16:48:09.167 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:09.167 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:09.167 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:09.167 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:09.176 TRACE_ID DEBUG Druid-ConnectionPool-Create-1089820081 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:09.189 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:09.226 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility get cookie Authorization
+2025-05-28 16:48:09.226 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:09.226 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:09.226 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:09.226 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.017 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.017 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.017 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.017 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.017 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.036 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:10.109 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.110 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.110 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.110 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.110 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.179 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.179 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.180 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.180 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.180 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.181 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:10.251 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.251 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.251 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.251 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.251 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.354 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.354 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.354 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.354 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.354 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.374 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:10.394 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.394 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.394 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.394 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.394 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.499 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.499 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.499 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.499 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.499 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.499 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:10.524 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.526 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.526 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.526 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.526 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.672 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.672 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.672 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.672 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.672 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.674 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:10.691 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.691 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.691 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.691 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.691 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.845 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.845 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.845 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.845 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.845 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:10.846 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:10.859 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:48:10.859 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:10.859 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:10.859 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:10.859 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:33.736 TRACE_ID DEBUG main SparrowCorsFilter Filter 'sparrowCorsFilter' configured for use
+2025-05-28 16:48:33.736 TRACE_ID DEBUG main FlashFilter Filter 'flashFilter' configured for use
+2025-05-28 16:48:43.517 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2025-05-28 16:48:43.518 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:43.518 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:43.518 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:43.518 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility cookie JSESSIONID value 32E2BD295027AAE00A9B1CD9D7C23DD5
+2025-05-28 16:48:43.592 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.667 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.673 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.678 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.685 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.689 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.694 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.699 TRACE_ID DEBUG http-nio-8888-exec-1 DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2025-05-28 16:48:43.708 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_app`
+2025-05-28 16:48:43.923 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2025-05-28 16:48:43.924 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie Idea-1e384a74 value 44cd9e90-01d6-4809-9fb6-2d8722ef93d1
+2025-05-28 16:48:43.924 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie sidebar_state value true
+2025-05-28 16:48:43.924 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie NEXT_LOCALE value zh
+2025-05-28 16:48:43.924 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility cookie JSESSIONID value 1E787C0360414C1F4AE90949649C43AE
