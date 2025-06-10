@@ -1,7 +1,5 @@
 package com.sparrow.security.admin.boot.config;
 
-import com.sparrow.file.servlet.FileDownLoad;
-import com.sparrow.file.servlet.FileUpload;
 import com.sparrow.mq.DefaultQueueHandlerMappingContainer;
 import com.sparrow.mq.EventHandlerMappingContainer;
 import com.sparrow.spring.starter.config.SparrowConfig;
@@ -15,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -41,15 +38,6 @@ public class ContactMvcConfigurerAdapter implements WebMvcConfigurer {
     }
 
 
-    @Bean
-    public ServletRegistrationBean fileUpload() {
-        return new ServletRegistrationBean(new FileUpload(), "/file-upload");
-    }
-
-    @Bean
-    public ServletRegistrationBean fileDownload() {
-        return new ServletRegistrationBean(new FileDownLoad(), "/file-download");
-    }
 
     @Bean
     Authenticator authenticator() {

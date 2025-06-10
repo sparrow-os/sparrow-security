@@ -12,21 +12,12 @@
     <version>1.0.0-SNAPSHOT</version>
     <groupId>com.sparrowzoo.security</groupId>
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <druid.version>1.2.8</druid.version>
-        <fastjson.version>1.2.58</fastjson.version>
-        <mybatis-spring.version>1.2.2</mybatis-spring.version>
-        <mybatis.version>3.2.8</mybatis.version>
         <file_version>1.0.0-SNAPSHOT</file_version>
         <passport_version>1.0.0-SNAPSHOT</passport_version>
         <security_version>1.0.0-SNAPSHOT</security_version>
     </properties>
-
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <version>${security_version}</version>
                 <groupId>com.sparrowzoo.security.admin</groupId>
@@ -41,7 +32,7 @@
             <dependency>
                 <version>${security_version}</version>
                 <groupId>com.sparrowzoo.security.admin</groupId>
-                <artifactId>security-admin-sparrow-dao</artifactId>
+                <artifactId>security-admin-dao-sparrow</artifactId>
             </dependency>
 
             <dependency>
@@ -137,17 +128,6 @@
                 <groupId>com.sparrowzoo.passport</groupId>
                 <artifactId>passport-api</artifactId>
             </dependency>
-
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>2.0.9</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>4.1.36.Final</version>
-            </dependency>
             <dependency>
                 <groupId>com.sparrowzoo.passport</groupId>
                 <artifactId>passport-adapter</artifactId>
@@ -169,16 +149,11 @@
                 <version>${passport_version}</version>
 
             </dependency>
+
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>file-gateway</artifactId>
                 <version>${file_version}</version>
-
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
