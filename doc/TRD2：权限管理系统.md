@@ -173,14 +173,16 @@ NIST RBAC 标准定义的模型实体，建模为 `operation × object` 二元�
 
 ### 通用字段
 
-```XML
-`create_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
- `gmt_create` bigint(11) UNSIGNED DEFAULT 0 COMMENT '创建时间'  NOT NULL,
- `modified_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '更新人ID'  NOT NULL,
- `gmt_modified` bigint(11) UNSIGNED DEFAULT 0 COMMENT '更新时间'  NOT NULL,
- `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL,
- `modified_user_name` varchar(64)  DEFAULT '' COMMENT '更新人'  NOT NULL,
- 
+```SQL
+`create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+ `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+ `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+ `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+ `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+ `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+ `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
+ `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用'
+
 ```
 
 
@@ -189,22 +191,25 @@ NIST RBAC 标准定义的模型实体，建模为 `operation × object` 二元�
 
 ```SQL
 CREATE TABLE `t_app` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `code` varchar(32) NOT NULL DEFAULT '' COMMENT 'code',
-  `name` varchar(32) NOT NULL DEFAULT '' COMMENT 'name',
-  `sort` int NOT NULL DEFAULT '0' COMMENT 'sort',
-  `logo` varchar(256) NOT NULL DEFAULT '' COMMENT 'sort',
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'STATUS',
-  `create_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
-  `gmt_create` bigint(11) UNSIGNED DEFAULT 0 COMMENT '创建时间'  NOT NULL,
-  `modified_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '更新人ID'  NOT NULL,
-  `gmt_modified` bigint(11) UNSIGNED DEFAULT 0 COMMENT '更新时间'  NOT NULL,
-  `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL,
-  `modified_user_name` varchar(64)  DEFAULT '' COMMENT '更新人'  NOT NULL,
-  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT 'remark',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COMMENT='app'
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `code` varchar(32) NOT NULL DEFAULT '' COMMENT '应用编码',
+  `name` varchar(32) NOT NULL DEFAULT '' COMMENT '应用名称',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `logo` varchar(256) NOT NULL DEFAULT '' COMMENT '应用logo',
+  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_tenant_code` (`tenant_id`, `code`),
+  KEY `idx_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='应用表'
 
 ```
 
@@ -217,29 +222,33 @@ CREATE TABLE `t_app` (
 2. Path route admin.tedu.life/goods/goods-manage
             网关path /goods/goods-manage
             微服务path /goods-manage 不同 权限中存微服务path goods-manage
-            
+
             给前端返回 goods-manage 前端无法路由跳转，需要添加对应微服务的path拼接
-            
+
 CREATE TABLE `t_micro_service` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `name` varchar(32) NOT NULL DEFAULT '' COMMENT 'name',
-  `sort` int NOT NULL DEFAULT '0' COMMENT 'sort',
-  `logo` varchar(256) NOT NULL DEFAULT '' COMMENT 'sort',
-  `app_id` bigint NOT NULL DEFAULT '0' COMMENT 'app id',
-  `url` varchar(256) NOT NULL DEFAULT '0' COMMENT 'url',
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'STATUS',
-  `create_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
-  `gmt_create` bigint(11) UNSIGNED DEFAULT 0 COMMENT '创建时间'  NOT NULL,
-  `modified_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '更新人ID'  NOT NULL,
-  `gmt_modified` bigint(11) UNSIGNED DEFAULT 0 COMMENT '更新时间'  NOT NULL,
-  `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL,
-  `modified_user_name` varchar(64)  DEFAULT '' COMMENT '更新人'  NOT NULL,
-  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT 'remark',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='micro_service'
-#如果是域名路由 url就是域名
-#如果是path路由 url就是域名/path固定
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `app_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属应用ID',
+  `code` varchar(32) NOT NULL DEFAULT '' COMMENT '微服务编码',
+  `name` varchar(32) NOT NULL DEFAULT '' COMMENT '微服务名称',
+  `url` varchar(256) NOT NULL DEFAULT '' COMMENT '微服务地址，域名路由为域名，path路由为域名/path',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `logo` varchar(256) NOT NULL DEFAULT '' COMMENT '微服务logo',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_app_code` (`app_id`, `tenant_id`, `code`),
+  KEY `idx_app_id` (`app_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='微服务表'
+# 如果是域名路由 url 就是域名
+# 如果是path路由 url 就是域名/path固定
 
 ```
 
@@ -252,31 +261,36 @@ CREATE TABLE `t_micro_service` (
 
 
 ```SQL
-
 CREATE TABLE `t_permission` (
-  `id`              bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
   `permission_code` varchar(128) NOT NULL COMMENT '权限编码，如 menu:order:view 或 order:create',
-  `permission_name` varchar(64)  NOT NULL COMMENT '权限/菜单名称',
-  `permission_type` tinyint      NOT NULL DEFAULT 1 COMMENT '1菜单 2页面 3按钮 4API 5事件',
-  `micro_service_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属微服务',
-  `parent_id`       bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '父节点ID，菜单树用',
-  `operation`       varchar(64)  NOT NULL DEFAULT '' COMMENT '操作，view/create/update/delete/export…',
-  `object`          varchar(64)  NOT NULL DEFAULT '' COMMENT '对象/资源域，order/user/report…',
-  `url`             varchar(256) NOT NULL DEFAULT '' COMMENT '菜单/页面跳转地址',
-  `method`          varchar(8)   NOT NULL DEFAULT '' COMMENT 'HTTP方法，API用',
-  `icon`            varchar(256) NOT NULL DEFAULT '' COMMENT '菜单图标',
-  `open_type`       varchar(16)  NOT NULL DEFAULT '' COMMENT '打开方式 _blank/_self',
-  `sort`            int          NOT NULL DEFAULT 0 COMMENT '排序',
-  `status`          tinyint      NOT NULL DEFAULT 1 COMMENT '1启用 0禁用',
-  `gmt_create`      datetime(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-  `gmt_modified`    datetime(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  `permission_name` varchar(64) NOT NULL COMMENT '权限/菜单名称',
+  `permission_type` tinyint NOT NULL DEFAULT 1 COMMENT '类型：1菜单 2页面 3按钮 4API 5事件',
+  `micro_service_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属微服务ID',
+  `parent_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '父节点ID，菜单树用，0=根',
+  `operation` varchar(64) NOT NULL DEFAULT '' COMMENT '操作，view/create/update/delete/export…',
+  `object` varchar(64) NOT NULL DEFAULT '' COMMENT '对象/资源域，order/user/report…',
+  `url` varchar(256) NOT NULL DEFAULT '' COMMENT '菜单/页面跳转地址',
+  `method` varchar(8) NOT NULL DEFAULT '' COMMENT 'HTTP方法，API用',
+  `icon` varchar(256) NOT NULL DEFAULT '' COMMENT '菜单图标',
+  `open_type` varchar(16) NOT NULL DEFAULT '' COMMENT '打开方式 _blank/_self',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
   PRIMARY KEY (`id`),
-  UNIQUE KEY uk_tenant_ms_code (tenant_id, micro_service_id, permission_code)
+  UNIQUE KEY `uk_tenant_ms_code` (`tenant_id`, `micro_service_id`, `permission_code`),
   KEY `idx_ms_type_status` (`micro_service_id`, `permission_type`, `status`),
   KEY `idx_parent` (`parent_id`),
   KEY `idx_object` (`object`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='权限/菜单/资源表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='权限/菜单/资源表'
+
 ```
 
 ### 6\.1\.4 角色
@@ -289,28 +303,37 @@ CREATE TABLE `t_permission` (
 普通员工：可见范围 = 本人
 用户 A 实际可见范围 = ? → 按角色优先级取最高的角色配置
 
-KEY相同时，取最大，KEY不同时，取并集 
+1. 收集用户所有角色的策略
+2. KEY 不同 → 取并集
+3. KEY 相同 → 按 option.priority 取最大
+4. option.priority 相同 → 按 role.priority 取最大
+5. 都没有 → 用 defaultValue
 ```
 
 ```SQL
-//加优先级
+-- 角色优先级：当用户拥有多个角色，且不同角色对同一策略配置了不同值时，需要优先级决定哪个生效
+-- KEY相同时，取最大，KEY不同时，取并集
 DROP TABLE IF EXISTS `t_role`;
 CREATE TABLE `t_role` (
- `id` int(11) UNSIGNED AUTO_INCREMENT NOT NULL AUTO_INCREMENT,
- `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
- `app_id` bigint(11)  DEFAULT 0 COMMENT 'app id'  NOT NULL,
- `code` varchar(32)  DEFAULT '' COMMENT 'code'  NOT NULL,
- `name` varchar(32)  DEFAULT '' COMMENT 'name'  NOT NULL,
- `priority`          int NOT NULL DEFAULT 0 COMMENT '角色优先级，越大越优先',
- `status` tinyint(3) UNSIGNED DEFAULT 0 COMMENT 'status'  NOT NULL,
- `create_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
- `gmt_create` bigint(11) UNSIGNED DEFAULT 0 COMMENT '创建时间'  NOT NULL,
- `modified_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '更新人ID'  NOT NULL,
- `gmt_modified` bigint(11) UNSIGNED DEFAULT 0 COMMENT '更新时间'  NOT NULL,
- `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL,
- `modified_user_name` varchar(64)  DEFAULT '' COMMENT '更新人'  NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='role';
+ `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+ `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+ `app_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属应用ID',
+ `code` varchar(32) NOT NULL DEFAULT '' COMMENT '角色编码',
+ `name` varchar(32) NOT NULL DEFAULT '' COMMENT '角色名称',
+ `priority` int NOT NULL DEFAULT 0 COMMENT '角色优先级，越大越优先',
+ `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+ `remark` varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
+ `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+ `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+ `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+ `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+ `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+ `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+ `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `uk_tenant_app_code` (`tenant_id`, `app_id`, `code`),
+ KEY `idx_app_id` (`app_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色表'
 
 ```
 
@@ -319,30 +342,34 @@ PRIMARY KEY (`id`)
 ```SQL
 DROP TABLE IF EXISTS `t_user_role`;
 CREATE TABLE `t_user_role` (
- `id` int(11) UNSIGNED AUTO_INCREMENT NOT NULL AUTO_INCREMENT,
- `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
- `user_id` int(11)  DEFAULT 0 COMMENT 'Passport用户Id'  NOT NULL,
- `role_id` int(11)  DEFAULT 0 COMMENT '角色Id'  NOT NULL,
- `create_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
- `gmt_create` bigint(11) UNSIGNED DEFAULT 0 COMMENT '创建时间'  NOT NULL,
- `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='user_role';
+ `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+ `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+ `user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Passport用户ID',
+ `role_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '角色ID',
+ `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+ `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+ `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `uk_tenant_user_role` (`tenant_id`, `user_id`, `role_id`),
+ KEY `idx_role_id` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户-角色关联表'
+
 ```
 
 ```SQL
 CREATE TABLE `t_user_group_role` (
-  `id`            bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id`     bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `group_id`      bigint UNSIGNED NOT NULL COMMENT '用户组ID',
-  `role_id`       bigint UNSIGNED NOT NULL COMMENT '角色ID',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `group_id` bigint UNSIGNED NOT NULL COMMENT '用户组ID',
+  `role_id` bigint UNSIGNED NOT NULL COMMENT '角色ID',
   `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
-  `gmt_create`    datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
   `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_tenant_group_role` (`tenant_id`, `group_id`, `role_id`),
-  KEY `idx_role` (`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组-角色关联表';
+  KEY `idx_role_id` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组-角色关联表'
+
 ```
 
 ### 6\.1\.6 Permission Assignments 表
@@ -352,20 +379,100 @@ CREATE TABLE `t_user_group_role` (
 ```SQL
 DROP TABLE IF EXISTS `t_permission_assignments`;
 CREATE TABLE `t_permission_assignments` (
- `id` int(11) UNSIGNED AUTO_INCREMENT NOT NULL AUTO_INCREMENT,
- `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
- `role_id` int(11) unsigned default 0 comment '角色ID'  NOT NULL,
- `permission_id` int(11)  DEFAULT 0 COMMENT '授权项'  NOT NULL,
- `create_user_id` bigint(11) UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
- `gmt_create` bigint(11) UNSIGNED DEFAULT 0 COMMENT '创建时间'  NOT NULL,
- `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色-权限关联表（NIST PA）';
+ `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+ `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+ `role_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '角色ID',
+ `permission_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '权限ID',
+ `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+ `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+ `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `uk_tenant_role_permission` (`tenant_id`, `role_id`, `permission_id`),
+ KEY `idx_permission_id` (`permission_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色-权限关联表（NIST PA）'
+
 ```
 
 ### 6\.1\.7 策略表
 
-#### 策略硬编码
+#### 设计原则
+
+> 策略分为两层：
+> 
+> - 配置层：授权服务提供 `t_strategy`、`t_strategy_option`，供后台管理界面配置。
+> 
+> - 执行层：业务应用保留 `StrategyEnum`，按策略 code 识别，自行实现执行逻辑。
+> 
+> 授权服务只提供配置和查询，不实现策略执行。
+> 业务应用读取策略配置，自行实现执行逻辑。
+> 
+> 
+
+|原则|说明|
+|---|---|
+|策略配置化|策略定义放数据库，不放代码|
+|授权服务只配置|只提供配置和查询，不实现执行|
+|业务自行执行|业务读取策略配置，自行实现逻辑|
+|多租户支持|全局 \+ 租户私有，覆盖式|
+|分层清晰|策略配置、策略选项、角色策略，三层分离|
+
+三层关系
+
+```mermaid
+flowchart TB
+    subgraph L1["第一层：策略配置"]
+        S["t_strategy 策略配置表"]
+        S1["strategy_code 策略编码"]
+        S2["strategy_name 策略名称"]
+        S3["input_type 输入类型"]
+        S4["default_value 默认值"]
+        S5["regex 校验规则"]
+        S6["tenant_id 租户ID"]
+        S --> S1
+        S --> S2
+        S --> S3
+        S --> S4
+        S --> S5
+        S --> S6
+    end
+
+    subgraph L2["第二层：策略选项"]
+        O["t_strategy_option 策略选项表"]
+        O1["strategy_id 所属策略"]
+        O2["option_key 选项key"]
+        O3["option_label 选项展示名"]
+        O4["priority 选项优先级"]
+        O --> O1
+        O --> O2
+        O --> O3
+        O --> O4
+    end
+
+    subgraph L3["第三层：角色策略配置"]
+        R["t_role_strategy 角色策略配置表"]
+        R1["role_id 角色ID"]
+        R2["strategy JSON 策略值"]
+        R --> R1
+        R --> R2
+    end
+
+    subgraph L4["使用方：业务应用"]
+        B["业务应用读取策略，自行执行"]
+    end
+
+    S -->|1:N| O
+    O -->|被引用| R
+    R -->|JSON: visibility=dept, export_limit=1000| B
+
+    style L1 fill:#e8f0fe,stroke:#4285f4
+    style L2 fill:#e6f4ea,stroke:#34a853
+    style L3 fill:#fef7e0,stroke:#fbbc04
+    style L4 fill:#fce8e6,stroke:#ea4335
+```
+
+#### 执行层
+
+##### 策略执行
 
 策略是系统能力的一部分，与代码逻辑强绑定，**必须硬编码在代码中**，不只是租户或数据库自由定义。
 
@@ -374,17 +481,11 @@ CREATE TABLE `t_permission_assignments` (
 |特征|说明|
 |---|---|
 |策略由代码逻辑实现|如“可见范围=本部门”需要代码过滤数据，配了不等于生效|
-|策略选项由代码定义|选项变化，代码逻辑同步变化|
-|策略不能由租户随意新增|新增代码不认识的策略，系统无法执行|
+|策略选项不能由代码定义|多租户模式下 不能每加一个策略，改一次代码|
+|策略可以由租户随意新增|具体执行由业务决定 |
 |策略与版本绑定|新版本加策略，旧版本不认，必须代码同步|
 
-因此：
-
-> 策略定义、选项、UI 元信息全部放在代码 enum 中；数据库只存角色的选择结果。
-> 
-> 
-
-#### 策略枚举设计
+##### 策略枚举设计
 
 策略定义放在代码 enum 中，包含：
 
@@ -438,18 +539,147 @@ public enum StrategyEnum {
 }
 ```
 
-#### 设计优点
+##### 业务怎么用
 
-|优点|说明|
+```Plain Text
+1. 调授权服务：GET /api/strategy/user?userId=xxx&appId=xxx
+2. 返回用户最终策略：
+   {"visibility":"dept","export_limit":"1000"}
+3. 业务自行解析：
+   - visibility=dept → 过滤本部门数据
+   - export_limit=1000 → 限制导出条数
+```
+
+
+
+**业务知道策略含义，授权服务不知道。**
+
+
+
+#### 配置层
+
+##### 授权服务职责
+
+|做|不做|
 |---|---|
-|策略定义统一|在代码 enum，版本管理、评审、测试都方便|
-|数据库不冗余|只存角色选择结果|
-|不会数据不一致|数据库不会出现代码里没有的策略|
-|新增策略简单|加 enum 值，不改表、不插数据|
-|后台界面自动适配|前端按 `inputType` 渲染|
-|校验统一|写入时按 enum 校验，防脏数据|
-|JSON 灵活|新增策略不改表结构|
-|优先级预留|`t_role.priority` 支持未来多角色冲突|
+|策略配置 CRUD|不实现策略执行逻辑|
+|策略选项 CRUD|不关心业务怎么用|
+|角色策略配置|不关心策略值的业务含义|
+|策略查询 API|不强制策略格式|
+|校验 key 和 value|不校验业务语义|
+
+##### 表结构
+
+##### `t_strategy` 策略配置表
+
+定义策略有哪些、怎么输入、怎么校验。
+
+```SQL
+CREATE TABLE `t_strategy` (
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `app_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属应用ID',
+  `strategy_code` varchar(64) NOT NULL COMMENT '策略编码，如 visibility',
+  `strategy_name` varchar(64) NOT NULL COMMENT '策略名称，如 可见范围',
+  `input_type` tinyint NOT NULL DEFAULT 1 COMMENT '输入类型：1=SELECT 2=INPUT',
+  `default_value` varchar(128) NOT NULL DEFAULT '' COMMENT '默认值',
+  `placeholder` varchar(128) NOT NULL DEFAULT '' COMMENT '文本框提示（INPUT 用）',
+  `regex` varchar(256) NOT NULL DEFAULT '' COMMENT '校验规则（INPUT 用）',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
+  -- 通用字段
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_tenant_app_code` (`tenant_id`, `app_id`, `strategy_code`),
+  KEY `idx_app_id` (`app_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='策略配置表';
+```
+
+##### `t_strategy_option` 策略选项表
+
+定义 SELECT 类型策略的可选项。
+
+```SQL
+CREATE TABLE `t_strategy_option` (
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `strategy_id` bigint UNSIGNED NOT NULL COMMENT '策略ID',
+  `option_key` varchar(64) NOT NULL COMMENT '选项key',
+  `option_label` varchar(64) NOT NULL COMMENT '选项展示名',
+  `priority` int NOT NULL DEFAULT 0 COMMENT '选项优先级，越大越优先',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
+  -- 通用字段
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_strategy_option` (`strategy_id`, `option_key`,`tenant_id`),
+  KEY `idx_strategy_id` (`strategy_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='策略选项表';
+```
+
+##### 
+
+##### 后台界面渲染
+
+调 `GET /api/strategy/config?appId=xxx` 返回：
+
+```JSON
+[
+  {
+    "code": "visibility",
+    "name": "可见范围",
+    "inputType": "SELECT",
+    "defaultValue": "self",
+    "options": [
+      { "key": "all",  "label": "全部",   "priority": 10 },
+      { "key": "dept", "label": "本部门", "priority": 5 },
+      { "key": "self", "label": "本人",   "priority": 1 }
+    ]
+  },
+  {
+    "code": "export_limit",
+    "name": "导出上限",
+    "inputType": "INPUT",
+    "defaultValue": "1000",
+    "placeholder": "请输入导出条数上限",
+    "regex": "^\\d+$"
+  }
+]
+```
+
+
+
+前端按 `inputType` 渲染：
+
+- `SELECT` → 下拉列表。
+
+- `INPUT` → 文本框，带 placeholder 和 regex 校验。
+
+---
+
+#### 多租户覆盖逻辑
+
+|tenant\_id|含义|查询|
+|---|---|---|
+|0|平台预置|所有租户可见|
+|\> 0|租户自定义|仅该租户可见|
+
+
+
+---
+
+#### 设计合理性
+
+|维度|评价|
+|---|---|
+|策略配置化|多租户可自定义|
+|授权服务只配置|职责纯粹|
+|业务自行执行|灵活|
+|全局 \+ 租户覆盖|`tenant_id=0` 全局|
+|分层清晰|配置、选项、角色策略三层|
+|校验统一|基于数据库配置|
+|扩展性好|新增策略不改代码|
+|多租户支持|租户可自定义选项|
 
 ---
 
@@ -459,15 +689,21 @@ public enum StrategyEnum {
 
 ```SQL
 CREATE TABLE `t_role_strategy` (
-  `id`           bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `tenant_id`    bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `role_id`      bigint UNSIGNED NOT NULL COMMENT '角色ID',
-  `strategy`     json NOT NULL COMMENT '策略配置，如 {"visibility":"dept","export_limit":"1000"}',
-  `gmt_create`   datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-  `gmt_modified` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `role_id` bigint UNSIGNED NOT NULL COMMENT '角色ID',
+  `strategy` json NOT NULL COMMENT '策略配置，如 {"visibility":"dept","export_limit":"1000"}',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uk_role` (`role_id`,`tenant_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色策略配置表';
+  UNIQUE KEY `uk_role` (`tenant_id`, `role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色策略配置表'
+
 ```
 
 
@@ -476,38 +712,52 @@ CREATE TABLE `t_role_strategy` (
 
 ```SQL
 CREATE TABLE `t_organization` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-   `tenant_id` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `level` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '部门级别,顶级0',
-  `parent_id` int unsigned NOT NULL DEFAULT '0' COMMENT '自关联',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `parent_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '父部门ID，自关联，0=顶级',
+  `level` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '部门级别，顶级0',
   `code` varchar(16) NOT NULL DEFAULT '' COMMENT '部门编码',
   `name` varchar(16) NOT NULL DEFAULT '' COMMENT '部门名称',
   `manager` varchar(16) NOT NULL DEFAULT '' COMMENT '负责人',
   `telephone` varchar(16) NOT NULL DEFAULT '' COMMENT '部门电话',
-  `sort` int(11)  DEFAULT 0 COMMENT 'sort'  NOT NULL
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT COMMENT='部门表'
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_tenant_code` (`tenant_id`, `code`),
+  KEY `idx_parent` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='部门表'
+
 ```
 
 ```SQL
 CREATE TABLE `t_position` (
-  `id`              bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id`       bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
   `organization_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属部门ID',
-  `code`            varchar(64)  NOT NULL DEFAULT '' COMMENT '岗位编码',
-  `name`            varchar(64)  NOT NULL DEFAULT '' COMMENT '岗位名称',
-  `sort`            int          NOT NULL DEFAULT 0 COMMENT '排序',
-  `status`          tinyint      NOT NULL DEFAULT 1 COMMENT '1启用 0禁用',
-  `create_user_id`  bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
-  `gmt_create`      datetime(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+  `code` varchar(64) NOT NULL DEFAULT '' COMMENT '岗位编码',
+  `name` varchar(64) NOT NULL DEFAULT '' COMMENT '岗位名称',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
   `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
-  `gmt_modified`    datetime(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3) COMMENT '更新时间',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
   `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
   `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_tenant_org_code` (`tenant_id`, `organization_id`, `code`),
   KEY `idx_org` (`organization_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='岗位表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='岗位表'
+
 ```
 
 ### 6\.1\.10 ADMIN\_USER
@@ -520,68 +770,80 @@ Passport 用户状态变更时，通过 MQ 通知 RBAC 服务同步更新 `t_adm
 
 ```SQL
 CREATE TABLE `t_admin_user` (
-  `id`               bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id`        bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `user_id`          bigint UNSIGNED NOT NULL COMMENT 'Passport用户ID',
-  `organization_id`  bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属部门ID',
-  `position_id`      bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '全职岗位ID',
-  `status`           tinyint NOT NULL DEFAULT 1 COMMENT '1启用 0禁用',
-  `gmt_create`       datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
-  `gmt_modified`     datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3) COMMENT '更新时间',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `user_id` bigint UNSIGNED NOT NULL COMMENT 'Passport用户ID',
+  `organization_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '所属部门ID',
+  `position_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '全职岗位ID',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_tenant_user` (`tenant_id`, `user_id`),
   KEY `idx_org` (`organization_id`),
   KEY `idx_position` (`position_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='后台用户表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='后台用户表'
+
 ```
 
 ```SQL
 CREATE TABLE `t_admin_user_position` (
-  `id`            bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id`     bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID',
-  `user_id`       bigint UNSIGNED NOT NULL COMMENT 'Passport用户ID',
-  `position_id`   bigint UNSIGNED NOT NULL COMMENT '兼职岗位ID',
-  `gmt_create`    datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `user_id` bigint UNSIGNED NOT NULL COMMENT 'Passport用户ID',
+  `position_id` bigint UNSIGNED NOT NULL COMMENT '兼职岗位ID',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_tenant_user_position` (`tenant_id`, `user_id`, `position_id`),
   KEY `idx_position` (`position_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='后台用户-岗位关联表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='后台用户-岗位关联表'
+
 ```
 
 ```SQL
 CREATE TABLE `t_user_group` (
-  `id`              bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id`       bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `code`            varchar(64)  NOT NULL DEFAULT '' COMMENT '用户组编码',
-  `name`            varchar(64)  NOT NULL DEFAULT '' COMMENT '用户组名称',
-  `sort`            int          NOT NULL DEFAULT 0 COMMENT '排序',
-  `status`          tinyint      NOT NULL DEFAULT 1 COMMENT '1启用 0禁用',
-  `remark`          varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
-  `create_user_id`  bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
-  `gmt_create`      datetime(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `code` varchar(64) NOT NULL DEFAULT '' COMMENT '用户组编码',
+  `name` varchar(64) NOT NULL DEFAULT '' COMMENT '用户组名称',
+  `sort` int NOT NULL DEFAULT 0 COMMENT '排序',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1=启用 0=禁用',
+  `remark` varchar(512) NOT NULL DEFAULT '' COMMENT '备注',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
   `modified_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新人ID',
-  `gmt_modified`    datetime(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3) COMMENT '更新时间',
+  `gmt_modified` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '更新时间',
   `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
   `modified_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '更新人',
+  `deleted` tinyint(1) NOT NULL DEFAULT 0 COMMENT '逻辑删除：0=未删除 1=已删除',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_tenant_code` (`tenant_id`, `code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组表'
+
 ```
 
 ```SQL
 CREATE TABLE `t_user_group_member` (
-  `id`             bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `tenant_id`      bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `group_id`       bigint UNSIGNED NOT NULL COMMENT '用户组ID',
-  `member_type`    tinyint NOT NULL COMMENT '成员类型：1用户 2部门 3岗位',
-  `member_id`      bigint UNSIGNED NOT NULL COMMENT '成员ID：用户ID/部门ID/岗位ID',
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `group_id` bigint UNSIGNED NOT NULL COMMENT '用户组ID',
+  `member_type` tinyint NOT NULL COMMENT '成员类型：1用户 2部门 3岗位',
+  `member_id` bigint UNSIGNED NOT NULL COMMENT '成员ID：用户ID/部门ID/岗位ID',
   `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
-  `gmt_create`     datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
   `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_tenant_group_member` (`tenant_id`, `group_id`, `member_type`, `member_id`),
   KEY `idx_member` (`member_type`, `member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组-成员关联表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组-成员关联表'
+
 ```
 
 ### 6\.1\.11 角色互斥表
@@ -592,12 +854,18 @@ CREATE TABLE `t_user_group_member` (
 
 ```SQL
 CREATE TABLE `t_role_reject` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `tenant_id`      bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
-  `role_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '角色id',
-  `reject_role_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '互斥角色id'
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT COMMENT='角色互斥表'
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有',
+  `role_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '角色ID',
+  `reject_role_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '互斥角色ID',
+  `create_user_id` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建人ID',
+  `gmt_create` bigint UNSIGNED NOT NULL DEFAULT 0 COMMENT '创建时间',
+  `create_user_name` varchar(64) NOT NULL DEFAULT '' COMMENT '创建人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_tenant_role_reject` (`tenant_id`, `role_id`, `reject_role_id`),
+  KEY `idx_reject_role` (`reject_role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色互斥表'
+
 ```
 
 # 七 特性设计 
@@ -606,13 +874,11 @@ CREATE TABLE `t_role_reject` (
 
 ## 7\.2 安全性 
 
-⽆
+- **增加策略预览接口**：在后台管理界面提供“模拟用户策略”功能，输入 user\_id \+ app\_id，返回最终合并后的策略 JSON 及来源角色，便于运维排查。
 
 ## 7\.3 可靠性 
 
 ## 7\.4 监控与报警列表 
-
-- **增加策略预览接口**：在后台管理界面提供“模拟用户策略”功能，输入 user\_id \+ app\_id，返回最终合并后的策略 JSON 及来源角色，便于运维排查。
 
 - **审计日志记录合并过程**：当策略因多角色合并生效时，审计日志应记录 `{userId, finalValue, sourceRoleId, overriddenRoleId}`，满足合规追溯需求。
 
@@ -682,3 +948,4 @@ https://www\.ruoyi\.vip
 
 https://sa\-token\.cc
 
+> （注：部分内容由豆包工作 AI 生成）
