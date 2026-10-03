@@ -247,6 +247,8 @@ CREATE TABLE `t_micro_service` (
 
 该表设计与菜单表一起维护，统一管理，方便维护。
 
+菜单变更仅刷新前端路由缓存，不触发后端鉴权缓存失效。
+
 
 
 ```SQL
@@ -286,6 +288,8 @@ CREATE TABLE `t_permission` (
 管理员：可见范围 = 全部
 普通员工：可见范围 = 本人
 用户 A 实际可见范围 = ? → 按角色优先级取最高的角色配置
+
+KEY相同时，取最大，KEY不同时，取并集 
 ```
 
 ```SQL
@@ -389,8 +393,8 @@ CREATE TABLE `t_permission_assignments` (
 |`code`|策略唯一编码，存数据库||
 |`name`|策略展示名称||
 |`inputType`|输入类型：SELECT / INPUT|SELECT 存 option\.key，INPUT 存输入值，未配置走默认值，无效 key 拒绝|
-|`options`|下拉选项（SELECT 时用）||
-|`defaultValue`|默认值||
+|`options`|下拉选项（SELECT 时用）|\{\}|
+|`defaultValue`|默认值|读取策略时增加兜底逻辑：若值不在当前 Enum options 中，自动回退到 defaultValue，并记录告警日志。|
 |`placeholder`|文本框提示（INPUT 时用）||
 |`regex`|校验规则（INPUT 时用）||
 
@@ -429,6 +433,7 @@ public enum StrategyEnum {
     public static class Option {
         private final String key;
         private final String label;
+        private final int priority; 角色相同 KEY 相同时，按priority 取最大。
     }
 }
 ```
@@ -508,6 +513,8 @@ CREATE TABLE `t_position` (
 ### 6\.1\.10 ADMIN\_USER
 
 为和C端认证用户区分，该表核心职责为后台权限分配，来自C端用户表。
+
+Passport 用户状态变更时，通过 MQ 通知 RBAC 服务同步更新 `t_admin_user.status`。
 
 为什么 RBAC 基于 admin\_user 而不是 Passport 用户
 
@@ -604,6 +611,10 @@ CREATE TABLE `t_role_reject` (
 ## 7\.3 可靠性 
 
 ## 7\.4 监控与报警列表 
+
+- **增加策略预览接口**：在后台管理界面提供“模拟用户策略”功能，输入 user\_id \+ app\_id，返回最终合并后的策略 JSON 及来源角色，便于运维排查。
+
+- **审计日志记录合并过程**：当策略因多角色合并生效时，审计日志应记录 `{userId, finalValue, sourceRoleId, overriddenRoleId}`，满足合规追溯需求。
 
 # ⼋、部署⽅案 
 
