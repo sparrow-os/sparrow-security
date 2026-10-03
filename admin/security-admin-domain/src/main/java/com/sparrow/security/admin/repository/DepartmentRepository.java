@@ -15,16 +15,29 @@
  * limitations under the License.
  */
 
-package com.sparrow.security.admin.dao;
+package com.sparrow.security.admin.repository;
 
-import com.sparrow.protocol.dao.DaoSupport;
-import com.sparrow.security.admin.dao.query.DepartmentDBPagerQuery;
-import com.sparrow.security.po.Department;
+import com.sparrow.security.admin.domain.bo.DepartmentBO;
+import com.sparrow.security.admin.protocol.param.DepartmentParam;
+import com.sparrow.security.admin.protocol.query.DepartmentQuery;
 
 import java.util.List;
+import java.util.Set;
 
-public interface DepartmentDAO extends DaoSupport<Department, Long> {
-    List<Department> queryDepartments(DepartmentDBPagerQuery departmentPagerQuery);
 
-    Long countDepartment(DepartmentDBPagerQuery departmentPagerQuery);
+public interface DepartmentRepository {
+    Long save(DepartmentParam departmentParam);
+
+    Integer delete(Set<Long> departmentIds);
+
+    Integer disable(Set<Long> departmentIds);
+
+    Integer enable(Set<Long> departmentIds);
+
+    DepartmentBO getDepartment(Long departmentId);
+
+    List<DepartmentBO> queryDepartments(DepartmentQuery departmentQuery);
+
+    Long getDepartmentCount(DepartmentQuery departmentQuery);
+
 }

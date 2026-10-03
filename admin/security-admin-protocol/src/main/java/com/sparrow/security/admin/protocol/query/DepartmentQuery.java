@@ -15,16 +15,12 @@
  * limitations under the License.
  */
 
-package com.sparrow.security.admin.dao;
+package com.sparrow.security.admin.protocol.query;
 
-import com.sparrow.protocol.dao.DaoSupport;
-import com.sparrow.security.admin.dao.query.DepartmentDBPagerQuery;
-import com.sparrow.security.po.Department;
+import com.sparrow.protocol.pager.SimplePager;
+import lombok.Data;
 
-import java.util.List;
-
-public interface DepartmentDAO extends DaoSupport<Department, Long> {
-    List<Department> queryDepartments(DepartmentDBPagerQuery departmentPagerQuery);
-
-    Long countDepartment(DepartmentDBPagerQuery departmentPagerQuery);
+@Data
+public class DepartmentQuery extends SimplePager {
+    private Integer status;
 }

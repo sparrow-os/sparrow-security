@@ -14,38 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sparrow.security.admin.protocol.query;
 
-import com.sparrow.protocol.pager.SimplePager;
-import java.util.Date;
+package com.sparrow.security.admin.dao.query;
 
+import com.sparrow.protocol.dao.DatabasePagerQuery;
+import lombok.Data;
 
-public class SparrowExampleQuery extends SimplePager {
-    private String name;
-    private Date beginDate;
-    private Date endDate;
+@Data
 
-    public String getName() {
-        return name;
-    }
+public class DepartmentDBPagerQuery extends DatabasePagerQuery {
+    private Integer status;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getBeginDate() {
-        return beginDate;
-    }
-
-    public void setBeginDate(Date beginDate) {
-        this.beginDate = beginDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
+    public DepartmentDBPagerQuery() {
     }
 }

@@ -14,18 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sparrow.security.admin.protocol.param.batch;
 
-import com.sparrow.security.admin.protocol.query.SparrowExampleQuery;
+package com.sparrow.security.admin.protocol.param;
 
-public class SparrowExampleBatchOperateParam extends SparrowExampleQuery {
-    private String ids;
+import com.sparrow.protocol.Param;
+import lombok.Data;
 
-    public String getIds() {
-        return ids;
-    }
 
-    public void setIds(String ids) {
-        this.ids = ids;
-    }
+@Data
+public class DepartmentParam implements Param {
+    private Long id;
+    private String pinyin;
+    private String code;
+    private String name;
+    private String parentId;
+    private String manager;
+    private String telephone;
+    private String type;
+    private Integer sort;
+
 }

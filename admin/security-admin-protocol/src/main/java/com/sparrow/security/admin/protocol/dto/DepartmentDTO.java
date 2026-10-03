@@ -15,16 +15,28 @@
  * limitations under the License.
  */
 
-package com.sparrow.security.admin.dao;
+package com.sparrow.security.admin.protocol.dto;
 
-import com.sparrow.protocol.dao.DaoSupport;
-import com.sparrow.security.admin.dao.query.DepartmentDBPagerQuery;
-import com.sparrow.security.po.Department;
+import com.sparrow.protocol.DTO;
+import lombok.Data;
 
-import java.util.List;
-
-public interface DepartmentDAO extends DaoSupport<Department, Long> {
-    List<Department> queryDepartments(DepartmentDBPagerQuery departmentPagerQuery);
-
-    Long countDepartment(DepartmentDBPagerQuery departmentPagerQuery);
+@Data
+public class DepartmentDTO implements DTO {
+    private Long id;
+    private String pinyin;
+    private String code;
+    private String name;
+    private String parentId;
+    private String manager;
+    private String telephone;
+    private String type;
+    private Integer sort;
+    private Integer status;
+    private String createUserName;
+    private Long createUserId;
+    private Long modifiedUserId;
+    private String modifiedUserName;
+    private Long gmtCreate;
+    private Long gmtModified;
+    private Boolean deleted;
 }
