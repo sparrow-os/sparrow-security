@@ -1,0 +1,230 @@
+2026-10-03 09:09:57.010 TRACE_ID DEBUG main Application Running with Spring Boot v3.5.0, Spring v6.2.7
+2026-10-03 09:09:58.187 TRACE_ID DEBUG main SparrowCorsFilter Filter 'corsFilter' configured for use
+2026-10-03 09:09:58.187 TRACE_ID DEBUG main FlashFilter Filter 'flashFilter' configured for use
+2026-10-03 09:10:02.082 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.181 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.185 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.187 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.191 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.196 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.198 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:02.202 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:10:06.591 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:10:11.469 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:insert into `t_table_config`(
+`project_id`,
+`primary_key`,
+`table_name`,
+`class_name`,
+`description`,
+`locked`,
+`checkable`,
+`row_menu`,
+`column_filter`,
+`status_command`,
+`column_configs`,
+`source`,
+`source_code`,
+`page_size`,
+`only_access_self`,
+`create_user_name`,
+`create_user_id`,
+`modified_user_id`,
+`modified_user_name`,
+`gmt_create`,
+`gmt_modified`,
+`deleted`,
+`status`)values(
+1,
+id,
+t_department,
+com.sparrow.security.po.Department,
+,
+false,
+0,
+998,
+999,
+true,
+[{"allowNull":true,"cellType":1,"chineseName":"","columnType":1,"controlType":4,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.Long","number":true,"placeholder":"","propertyName":"id","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":0},{"allowNull":false,"cellType":1,"chineseName":"pinyin","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"pinyin","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":1,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"code","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"code","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":2,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"name","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"name","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":3,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"parent id","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"parentId","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":4,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"负责人","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"manager","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":5,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"负责人电话","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"telephone","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":6,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"部门类型","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"type","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":7,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"部门排序号","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.Integer","number":true,"placeholder":"","propertyName":"sort","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":8,"validateType":"digital"}],
+1,
+,
+10,
+true,
+mock-user,
+1,
+1,
+mock-user,
+1790989811456,
+1790989811456,
+false,
+ENABLE)
+2026-10-03 09:10:11.521 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2026-10-03 09:10:11.526 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:10:11.528 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:10:11.533 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:10:15.762 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2026-10-03 09:10:15.767 TRACE_ID DEBUG http-nio-8888-exec-6 JDBCTemplate SQL:insert into `t_table_config`(
+`project_id`,
+`primary_key`,
+`table_name`,
+`class_name`,
+`description`,
+`locked`,
+`checkable`,
+`row_menu`,
+`column_filter`,
+`status_command`,
+`column_configs`,
+`source`,
+`source_code`,
+`page_size`,
+`only_access_self`,
+`create_user_name`,
+`create_user_id`,
+`modified_user_id`,
+`modified_user_name`,
+`gmt_create`,
+`gmt_modified`,
+`deleted`,
+`status`)values(
+1,
+id,
+t_department,
+com.sparrow.security.po.Department,
+,
+false,
+0,
+998,
+999,
+true,
+[{"allowNull":true,"cellType":1,"chineseName":"","columnType":1,"controlType":4,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.Long","number":true,"placeholder":"","propertyName":"id","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":0},{"allowNull":false,"cellType":1,"chineseName":"pinyin","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"pinyin","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":1,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"code","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"code","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":2,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"name","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"name","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":3,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"parent id","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"parentId","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":4,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"负责人","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"manager","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":5,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"负责人电话","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"telephone","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":6,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"部门类型","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.String","number":false,"placeholder":"","propertyName":"type","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":7,"validateType":"string"},{"allowNull":false,"cellType":1,"chineseName":"部门排序号","columnType":1,"controlType":1,"datasourceParams":"","datasourceType":1,"defaultHidden":false,"defaultValue":"","enableHidden":true,"headerType":1,"javaType":"java.lang.Integer","number":true,"placeholder":"","propertyName":"sort","searchType":1,"showInEdit":true,"showInList":true,"showInSearch":false,"sort":8,"validateType":"digital"}],
+1,
+,
+10,
+true,
+mock-user,
+1,
+1,
+mock-user,
+1790989815765,
+1790989815765,
+false,
+ENABLE)
+2026-10-03 09:10:15.785 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2026-10-03 09:10:15.787 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:10:15.788 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:10:15.790 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:10:22.713 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2026-10-03 09:10:22.725 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:DELETE FROM `t_table_config` where id  =40
+2026-10-03 09:10:26.432 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2026-10-03 09:10:26.434 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_table_config` where ( create_user_id = 1 )
+2026-10-03 09:10:26.436 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select * from `t_table_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:10:26.439 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:11:08.701 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility get cookie Authorization
+2026-10-03 09:11:08.703 TRACE_ID DEBUG http-nio-8888-exec-3 JDBCTemplate SQL:select count(*) from `t_table_config` where ( create_user_id = 1 )
+2026-10-03 09:11:08.704 TRACE_ID DEBUG http-nio-8888-exec-3 JDBCTemplate SQL:select * from `t_table_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:11:08.706 TRACE_ID DEBUG http-nio-8888-exec-3 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:11:24.712 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2026-10-03 09:14:33.772 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_table_config` where ( create_user_id = 1 )
+2026-10-03 09:14:33.777 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2026-10-03 09:14:33.777 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2026-10-03 09:14:33.778 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_table_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:14:33.781 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:14:33.805 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select count(*) from `t_project_config` where ( create_user_id = 1 )
+2026-10-03 09:14:33.806 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_project_config` where ( create_user_id = 1 )
+2026-10-03 09:14:33.807 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1 ) order by id DESC limit 0,10
+2026-10-03 09:14:33.807 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1 ) order by id DESC limit 0,10
+2026-10-03 09:14:43.071 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2026-10-03 09:14:43.081 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select count(*) from `t_project_config` where ( name = 磊  AND create_user_id = 1 )
+2026-10-03 09:14:50.309 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:14:50.316 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select count(*) from `t_project_config` where ( frontend_name = 基  AND create_user_id = 1 )
+2026-10-03 09:14:53.034 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2026-10-03 09:14:53.045 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select count(*) from `t_project_config` where ( create_user_id = 1 )
+2026-10-03 09:14:53.047 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:17:00.978 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:17:00.989 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select count(*) from `t_project_config` where ( name = 大  AND create_user_id = 1 )
+2026-10-03 09:17:10.443 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2026-10-03 09:17:10.453 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select count(*) from `t_project_config` where ( name = 大  AND create_user_id = 1 )
+2026-10-03 09:17:19.419 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2026-10-03 09:17:19.429 TRACE_ID DEBUG http-nio-8888-exec-6 JDBCTemplate SQL:select count(*) from `t_project_config` where ( create_user_id = 1 )
+2026-10-03 09:17:19.430 TRACE_ID DEBUG http-nio-8888-exec-6 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:17:25.973 TRACE_ID DEBUG http-nio-8888-exec-9 CookieUtility get cookie Authorization
+2026-10-03 09:17:25.973 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2026-10-03 09:17:25.982 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:17:25.986 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:17:25.988 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:17:26.014 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:17:26.015 TRACE_ID DEBUG http-nio-8888-exec-9 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:17:26.021 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:18:17.456 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:18:17.461 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select count(*) from `t_table_config` where ( create_user_id = 1 )
+2026-10-03 09:18:17.463 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_table_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:18:17.466 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:18:49.541 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2026-10-03 09:18:49.543 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_table_config` where ( create_user_id = 1 )
+2026-10-03 09:18:49.545 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_table_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:18:49.547 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:19:00.328 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2026-10-03 09:19:00.334 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_table_config` where ( table_name = 林  AND create_user_id = 1 )
+2026-10-03 09:19:00.335 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:19:11.723 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2026-10-03 09:19:11.728 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select count(*) from `t_table_config` where ( create_user_id = 1 )
+2026-10-03 09:19:11.729 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select * from `t_table_config` where ( create_user_id = 1 ) order by id DESC
+2026-10-03 09:19:11.731 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:24:44.404 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:24:44.420 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:24:44.422 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:24:44.425 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:24:50.349 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2026-10-03 09:24:50.349 TRACE_ID DEBUG http-nio-8888-exec-6 CookieUtility get cookie Authorization
+2026-10-03 09:24:50.351 TRACE_ID DEBUG http-nio-8888-exec-6 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:24:50.351 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:24:50.352 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:24:50.352 TRACE_ID DEBUG http-nio-8888-exec-6 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:24:50.353 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:24:50.353 TRACE_ID DEBUG http-nio-8888-exec-6 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:24:56.559 TRACE_ID DEBUG http-nio-8888-exec-7 CookieUtility get cookie Authorization
+2026-10-03 09:24:56.561 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:24:56.562 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:24:56.563 TRACE_ID DEBUG http-nio-8888-exec-7 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:01.238 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2026-10-03 09:25:01.241 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select count(*) from `t_table_config` where ( class_name = 工  AND project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:25:01.243 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:05.942 TRACE_ID DEBUG http-nio-8888-exec-3 CookieUtility get cookie Authorization
+2026-10-03 09:25:05.945 TRACE_ID DEBUG http-nio-8888-exec-3 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1  AND status = DISABLE )
+2026-10-03 09:25:05.949 TRACE_ID DEBUG http-nio-8888-exec-3 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:08.378 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:25:08.388 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:25:08.394 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:25:08.396 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:14.113 TRACE_ID DEBUG http-nio-8888-exec-10 CookieUtility get cookie Authorization
+2026-10-03 09:25:14.115 TRACE_ID DEBUG http-nio-8888-exec-10 JDBCTemplate SQL:select count(*) from `t_table_config` where ( table_name = com  AND project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:25:14.116 TRACE_ID DEBUG http-nio-8888-exec-10 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:18.451 TRACE_ID DEBUG http-nio-8888-exec-5 CookieUtility get cookie Authorization
+2026-10-03 09:25:18.452 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:25:18.454 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:25:18.456 TRACE_ID DEBUG http-nio-8888-exec-5 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:23.021 TRACE_ID DEBUG http-nio-8888-exec-1 CookieUtility get cookie Authorization
+2026-10-03 09:25:23.023 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select count(*) from `t_table_config` where ( table_name = t_department  AND project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:25:23.024 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select * from `t_table_config` where ( table_name = t_department  AND project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:25:23.025 TRACE_ID DEBUG http-nio-8888-exec-1 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC
+2026-10-03 09:25:28.045 TRACE_ID DEBUG http-nio-8888-exec-8 CookieUtility get cookie Authorization
+2026-10-03 09:25:28.053 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select `id`,`name`,`full_base_package_name`,`frontend_name`,`chinese_name`,`i18n`,`description`,`module_prefix`,`architectures`,`config`,`wrap_with_parent`,`scaffold`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status` from `t_project_config` where id=1
+2026-10-03 09:25:28.057 TRACE_ID DEBUG http-nio-8888-exec-8 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1  AND status = ENABLE ) order by id DESC limit 0,10
+2026-10-03 09:27:31.647 TRACE_ID DEBUG main Application Running with Spring Boot v3.5.0, Spring v6.2.7
+2026-10-03 09:27:32.795 TRACE_ID DEBUG main SparrowCorsFilter Filter 'corsFilter' configured for use
+2026-10-03 09:27:32.796 TRACE_ID DEBUG main FlashFilter Filter 'flashFilter' configured for use
+2026-10-03 09:27:33.144 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.263 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.267 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.273 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.278 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.281 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.284 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:33.287 TRACE_ID DEBUG main DruidCustomPasswordCallback DruidCustomPasswordCallback setProperties, passwordKey:mysql_sparrow_password, password:11111111
+2026-10-03 09:27:41.813 TRACE_ID DEBUG http-nio-8888-exec-2 CookieUtility get cookie Authorization
+2026-10-03 09:27:41.926 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select `id`,`name`,`full_base_package_name`,`frontend_name`,`chinese_name`,`i18n`,`description`,`module_prefix`,`architectures`,`config`,`wrap_with_parent`,`scaffold`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status` from `t_project_config` where id=1
+2026-10-03 09:27:41.935 TRACE_ID DEBUG http-nio-8888-exec-2 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1  AND status = ENABLE ) order by id DESC limit 0,10
+2026-10-03 09:27:43.071 TRACE_ID DEBUG http-nio-8888-exec-4 CookieUtility get cookie Authorization
+2026-10-03 09:27:43.076 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select count(*) from `t_table_config` where ( project_id = 1  AND create_user_id = 1 )
+2026-10-03 09:27:43.078 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select * from `t_table_config` where ( project_id = 1  AND create_user_id = 1 ) order by id DESC
+2026-10-03 09:27:43.080 TRACE_ID DEBUG http-nio-8888-exec-4 JDBCTemplate SQL:select * from `t_project_config` where ( create_user_id = 1  AND status = ENABLE ) order by id DESC

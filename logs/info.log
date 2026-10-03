@@ -1,0 +1,534 @@
+2026-10-02 23:15:53.890 TRACE_ID INFO  main Application Starting Application using Java 18.0.2.1 with PID 55202 (/Users/zhanglizhi/workspace/sparrow/sparrow-security/admin/security-admin-main-spring-boot/target/classes started by zhanglizhi in /Users/zhanglizhi/workspace/sparrow/sparrow-security)
+2026-10-02 23:15:53.891 TRACE_ID INFO  main Application The following 1 profile is active: "null"
+2026-10-02 23:15:54.884 TRACE_ID INFO  main MonolithicFilterAutoConfiguration Initializing MonolithicFilterAutoConfiguration
+2026-10-02 23:17:01.537 TRACE_ID INFO  main Application Starting Application using Java 18.0.2.1 with PID 55488 (/Users/zhanglizhi/workspace/sparrow/sparrow-security/admin/security-admin-main-spring-boot/target/classes started by zhanglizhi in /Users/zhanglizhi/workspace/sparrow/sparrow-security)
+2026-10-02 23:17:01.538 TRACE_ID INFO  main Application The following 1 profile is active: "null"
+2026-10-02 23:17:02.473 TRACE_ID INFO  main MonolithicFilterAutoConfiguration Initializing MonolithicFilterAutoConfiguration
+2026-10-02 23:17:02.476 TRACE_ID INFO  main SparrowAutoConfiguration Sparrow Auto Configuration INIT
+2026-10-02 23:17:02.478 TRACE_ID INFO  main SparrowAutoConfiguration SpringContextAutoConfiguration INIT
+2026-10-02 23:17:02.478 TRACE_ID INFO  main SpringContext SpringContext init
+2026-10-02 23:17:02.478 TRACE_ID INFO  main SparrowConfig SparrowConfig init
+2026-10-02 23:17:02.479 TRACE_ID INFO  main SparrowConfig data source config init
+2026-10-02 23:17:02.485 TRACE_ID INFO  main AuthcAutoConfiguration Initializing AuthcAutoConfiguration
+2026-10-02 23:17:02.493 TRACE_ID INFO  main AuthcAutoConfiguration$RedisSessionDaoConfig Initializing RedisSessionDaoConfig
+2026-10-02 23:17:02.493 TRACE_ID INFO  main RedisAutoConfiguration RedisAutoConfiguration init
+2026-10-02 23:17:02.703 TRACE_ID INFO  main CaptchaAutoConfiguration CaptchaAutoConfiguration init
+2026-10-02 23:17:02.705 TRACE_ID INFO  main FilterAutoConfiguration FilterAutoConfiguration INIT
+2026-10-02 23:17:02.716 TRACE_ID INFO  main FilterAutoConfiguration allowedOrigin: *
+2026-10-02 23:17:02.762 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:17:02.764 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:17:02.765 TRACE_ID INFO  main SpringUserLoginController SpringUserLoginController
+2026-10-02 23:17:02.770 TRACE_ID INFO  main SparrowAutoConfiguration final password Z3Q82yAaahuXJyV2
+2026-10-02 23:17:02.772 TRACE_ID INFO  main UserProfileService UserProfileService init
+2026-10-02 23:17:02.773 TRACE_ID INFO  main AttachServiceImpl init AttachService
+2026-10-02 23:17:02.781 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:17:02.782 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:17:02.782 TRACE_ID INFO  main DefaultEnvConfig env config impl
+2026-10-02 23:17:02.788 TRACE_ID INFO  main CoderDomainRegistry CoderDomainRegistry init
+2026-10-02 23:17:02.791 TRACE_ID INFO  main EnumsAutoConfiguration EnumsAutoConfiguration init
+2026-10-02 23:17:02.803 TRACE_ID INFO  main CoderAutoConfiguration CoderAutoConfiguration init
+2026-10-02 23:17:02.825 TRACE_ID INFO  main TemplateEngineAutoConfiguration TemplateEngineAutoConfiguration init
+2026-10-02 23:17:03.045 TRACE_ID INFO  main DruidDataSourceAutoConfiguration DruidDataSourceAutoConfiguration init
+2026-10-02 23:17:03.350 TRACE_ID INFO  main OtherReleaserAutoConfiguration DefaultConnectionReleaserBuilder
+2026-10-02 23:17:03.384 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:17:03.388 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:17:03.388 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:17:03.389 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:17:03.497 TRACE_ID INFO  main Application application startup at 1790954223489
+2026-10-02 23:17:03.499 TRACE_ID INFO  main Application Started Application in 2.338 seconds (process running for 2.879)
+2026-10-02 23:17:34.883 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-02 23:17:34.904 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:34.906 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter exclude url /
+2026-10-02 23:17:35.016 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-02 23:17:35.016 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:35.016 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter exclude url /favicon.ico
+2026-10-02 23:17:44.847 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-02 23:17:44.847 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-5 MonolithicBearerFilter exclude url /swagger-ui/swagger-ui-bundle.js
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter exclude url /swagger-ui/swagger-ui.css
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-6 MonolithicBearerFilter exclude url /swagger-ui/swagger-initializer.js
+2026-10-02 23:17:44.848 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:44.849 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter exclude url /swagger-ui/swagger-ui-standalone-preset.js
+2026-10-02 23:17:44.958 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-02 23:17:44.959 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:44.959 TRACE_ID INFO  http-nio-8888-exec-7 MonolithicBearerFilter exclude url /v3/api-docs/swagger-config
+2026-10-02 23:17:44.997 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-02 23:17:44.997 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:44.997 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter exclude url /v3/api-docs/passport
+2026-10-02 23:17:48.759 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-02 23:17:48.759 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:48.760 TRACE_ID INFO  http-nio-8888-exec-9 MonolithicBearerFilter exclude url /v3/api-docs/file
+2026-10-02 23:17:50.754 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-02 23:17:50.755 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:17:50.755 TRACE_ID INFO  http-nio-8888-exec-10 MonolithicBearerFilter exclude url /v3/api-docs/coder
+2026-10-02 23:30:20.138 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-02 23:30:20.140 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:20.176 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-02 23:30:20.177 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:20.179 TRACE_ID INFO  http-nio-8888-exec-5 MonolithicBearerFilter exclude url /captcha
+2026-10-02 23:30:20.311 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-02 23:30:20.311 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:20.311 TRACE_ID INFO  http-nio-8888-exec-7 MonolithicBearerFilter exclude url /captcha
+2026-10-02 23:30:35.115 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-02 23:30:35.116 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-02 23:30:35.116 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:35.116 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:35.133 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-02 23:30:35.133 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:35.137 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-02 23:30:35.137 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:30:35.162 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214235138,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:30:35.162 TRACE_ID INFO  http-nio-8888-exec-10 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214235138,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:30:35.395 TRACE_ID INFO  http-nio-8888-exec-1 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:30:35.395 TRACE_ID INFO  http-nio-8888-exec-10 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:34:33.879 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-02 23:34:33.880 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:34:33.883 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-02 23:34:33.883 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:34:33.887 TRACE_ID INFO  http-nio-8888-exec-5 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214473885,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:34:33.962 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-02 23:34:33.962 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:34:33.964 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-02 23:34:33.964 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:34:33.964 TRACE_ID INFO  http-nio-8888-exec-9 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214473964,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:34:33.978 TRACE_ID INFO  http-nio-8888-exec-9 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:35:12.271 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-02 23:35:12.271 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:12.272 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-02 23:35:12.272 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:12.273 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214512273,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:35:12.292 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-02 23:35:12.292 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:12.293 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-02 23:35:12.293 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:12.294 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214512294,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:35:12.297 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:35:19.631 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-02 23:35:19.631 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-02 23:35:19.631 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:19.631 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:19.633 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-02 23:35:19.633 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-02 23:35:19.633 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:19.633 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:35:19.634 TRACE_ID INFO  http-nio-8888-exec-6 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214519634,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:35:19.634 TRACE_ID INFO  http-nio-8888-exec-5 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214519634,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:35:19.638 TRACE_ID INFO  http-nio-8888-exec-5 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:35:19.638 TRACE_ID INFO  http-nio-8888-exec-6 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:38:08.710 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-02 23:38:08.711 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:38:08.714 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-02 23:38:08.714 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:38:08.715 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214688715,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:40:58.037 TRACE_ID INFO  SpringApplicationShutdownHook Application application closed at at 1790955658036
+2026-10-02 23:41:00.871 TRACE_ID INFO  main Application Starting Application using Java 18.0.2.1 with PID 62153 (/Users/zhanglizhi/workspace/sparrow/sparrow-security/admin/security-admin-main-spring-boot/target/classes started by zhanglizhi in /Users/zhanglizhi/workspace/sparrow/sparrow-security)
+2026-10-02 23:41:00.875 TRACE_ID INFO  main Application The following 1 profile is active: "null"
+2026-10-02 23:41:02.027 TRACE_ID INFO  main MonolithicFilterAutoConfiguration Initializing MonolithicFilterAutoConfiguration
+2026-10-02 23:41:02.031 TRACE_ID INFO  main SparrowAutoConfiguration Sparrow Auto Configuration INIT
+2026-10-02 23:41:02.032 TRACE_ID INFO  main SparrowAutoConfiguration SpringContextAutoConfiguration INIT
+2026-10-02 23:41:02.033 TRACE_ID INFO  main SpringContext SpringContext init
+2026-10-02 23:41:02.033 TRACE_ID INFO  main SparrowConfig SparrowConfig init
+2026-10-02 23:41:02.034 TRACE_ID INFO  main SparrowConfig data source config init
+2026-10-02 23:41:02.039 TRACE_ID INFO  main AuthcAutoConfiguration Initializing AuthcAutoConfiguration
+2026-10-02 23:41:02.046 TRACE_ID INFO  main AuthcAutoConfiguration$RedisSessionDaoConfig Initializing RedisSessionDaoConfig
+2026-10-02 23:41:02.049 TRACE_ID INFO  main RedisAutoConfiguration RedisAutoConfiguration init
+2026-10-02 23:41:02.232 TRACE_ID INFO  main CaptchaAutoConfiguration CaptchaAutoConfiguration init
+2026-10-02 23:41:02.234 TRACE_ID INFO  main FilterAutoConfiguration FilterAutoConfiguration INIT
+2026-10-02 23:41:02.243 TRACE_ID INFO  main FilterAutoConfiguration allowedOrigin: *
+2026-10-02 23:41:02.291 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:41:02.293 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:41:02.294 TRACE_ID INFO  main SpringUserLoginController SpringUserLoginController
+2026-10-02 23:41:02.299 TRACE_ID INFO  main SparrowAutoConfiguration final password Z3Q82yAaahuXJyV2
+2026-10-02 23:41:02.301 TRACE_ID INFO  main UserProfileService UserProfileService init
+2026-10-02 23:41:02.302 TRACE_ID INFO  main AttachServiceImpl init AttachService
+2026-10-02 23:41:02.309 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:41:02.311 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-02 23:41:02.311 TRACE_ID INFO  main DefaultEnvConfig env config impl
+2026-10-02 23:41:02.316 TRACE_ID INFO  main CoderDomainRegistry CoderDomainRegistry init
+2026-10-02 23:41:02.319 TRACE_ID INFO  main EnumsAutoConfiguration EnumsAutoConfiguration init
+2026-10-02 23:41:02.330 TRACE_ID INFO  main CoderAutoConfiguration CoderAutoConfiguration init
+2026-10-02 23:41:02.352 TRACE_ID INFO  main TemplateEngineAutoConfiguration TemplateEngineAutoConfiguration init
+2026-10-02 23:41:02.576 TRACE_ID INFO  main DruidDataSourceAutoConfiguration DruidDataSourceAutoConfiguration init
+2026-10-02 23:41:02.806 TRACE_ID INFO  main OtherReleaserAutoConfiguration DefaultConnectionReleaserBuilder
+2026-10-02 23:41:02.838 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:41:02.841 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:41:02.842 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:41:02.843 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-02 23:41:02.952 TRACE_ID INFO  main Application application startup at 1790955662944
+2026-10-02 23:41:02.953 TRACE_ID INFO  main Application Started Application in 2.506 seconds (process running for 3.171)
+2026-10-02 23:41:19.447 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-02 23:41:19.458 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:19.472 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-02 23:41:19.473 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:19.520 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214879474,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:41:29.886 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-02 23:41:29.888 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:29.892 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-02 23:41:29.892 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:29.895 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214889893,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:41:29.957 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-02 23:41:39.089 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-02 23:41:39.090 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-02 23:41:39.090 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:39.090 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:39.094 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-02 23:41:39.094 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-02 23:41:39.094 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:39.096 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214899095,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:41:39.097 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:41:39.103 TRACE_ID INFO  http-nio-8888-exec-7 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214899102,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:41:39.134 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-02 23:41:39.135 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-02 23:41:39.137 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-02 23:41:39.137 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-02 23:42:09.352 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-02 23:42:09.352 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-02 23:42:09.353 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:09.353 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:09.358 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-02 23:42:09.359 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-02 23:42:09.359 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:09.359 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:09.360 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214929360,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:42:09.360 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214929360,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:42:09.385 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-02 23:42:09.389 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-02 23:42:09.390 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-02 23:42:09.393 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-02 23:42:35.800 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-02 23:42:35.800 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:35.806 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-02 23:42:35.806 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:35.807 TRACE_ID INFO  http-nio-8888-exec-5 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214955807,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:42:35.827 TRACE_ID INFO  http-nio-8888-exec-5 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-02 23:42:42.743 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-02 23:42:42.743 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:42.744 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-02 23:42:42.745 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-02 23:42:42.745 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791214962745,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-02 23:42:42.751 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:53:28.170 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-03 08:53:28.170 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 08:53:28.171 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:53:28.171 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:53:28.178 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 08:53:28.178 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 08:53:28.178 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:53:28.178 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:53:28.180 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248008179,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:53:28.180 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248008179,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:53:28.286 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:53:28.287 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:53:28.291 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:53:28.291 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:20.433 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 08:54:20.434 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:20.433 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-03 08:54:20.435 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:20.438 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-03 08:54:20.438 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-03 08:54:20.439 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:20.439 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:20.440 TRACE_ID INFO  http-nio-8888-exec-6 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248060439,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:20.440 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248060440,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:20.455 TRACE_ID INFO  http-nio-8888-exec-6 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-03 08:54:20.455 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-03 08:54:28.995 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-03 08:54:28.995 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-03 08:54:28.995 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:28.995 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:28.997 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 08:54:28.997 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-03 08:54:28.997 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:28.997 TRACE_ID INFO  http-nio-8888-exec-9 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248068997,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:28.997 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:28.998 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248068998,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:29.003 TRACE_ID INFO  http-nio-8888-exec-9 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:29.003 TRACE_ID INFO  http-nio-8888-exec-1 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:29.006 TRACE_ID INFO  http-nio-8888-exec-9 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:29.009 TRACE_ID INFO  http-nio-8888-exec-1 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:33.725 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 08:54:33.725 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 08:54:33.725 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:33.725 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:33.726 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248073726,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:33.726 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248073726,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:33.731 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:33.731 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:33.732 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:33.733 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:36.382 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 08:54:36.382 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-03 08:54:36.382 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:36.382 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:36.385 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-03 08:54:36.385 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-03 08:54:36.385 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:36.385 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:36.386 TRACE_ID INFO  http-nio-8888-exec-6 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248076386,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:36.386 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248076386,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:36.389 TRACE_ID INFO  http-nio-8888-exec-6 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-03 08:54:36.389 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-03 08:54:40.847 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-03 08:54:40.847 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-03 08:54:40.847 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:40.847 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:40.849 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-03 08:54:40.849 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:40.849 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 08:54:40.849 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:40.850 TRACE_ID INFO  http-nio-8888-exec-9 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248080849,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:40.850 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248080850,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:40.853 TRACE_ID INFO  http-nio-8888-exec-1 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:40.853 TRACE_ID INFO  http-nio-8888-exec-9 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:40.855 TRACE_ID INFO  http-nio-8888-exec-1 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:40.855 TRACE_ID INFO  http-nio-8888-exec-9 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:58.784 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 08:54:58.784 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 08:54:58.787 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:58.787 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:58.793 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-03 08:54:58.793 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 08:54:58.793 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:58.793 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:54:58.795 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248098795,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:58.795 TRACE_ID INFO  http-nio-8888-exec-5 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248098795,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:54:58.819 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:58.820 TRACE_ID INFO  http-nio-8888-exec-5 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:54:58.843 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:54:58.843 TRACE_ID INFO  http-nio-8888-exec-5 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:55:45.347 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-03 08:55:45.347 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-03 08:55:45.350 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:55:45.350 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:55:45.355 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-03 08:55:45.355 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:55:45.356 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-03 08:55:45.356 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:55:45.357 TRACE_ID INFO  http-nio-8888-exec-7 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248145356,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:55:45.357 TRACE_ID INFO  http-nio-8888-exec-10 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248145356,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:56:09.460 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:56:09.468 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:57:32.928 TRACE_ID INFO  http-nio-8888-exec-10 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:57:32.949 TRACE_ID INFO  http-nio-8888-exec-10 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 08:57:41.518 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 08:57:41.518 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-03 08:57:41.520 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:57:41.520 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:57:41.530 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 08:57:41.530 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:57:41.530 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 08:57:41.531 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 08:57:41.532 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248261532,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:57:41.532 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248261532,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 08:58:04.165 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_table_config` where ( create_user_id = ? ) order by id DESC
+2026-10-03 08:58:12.717 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:00:31.653 TRACE_ID INFO  SpringApplicationShutdownHook Application application closed at at 1790989231653
+2026-10-03 09:00:40.117 TRACE_ID INFO  main Application Starting Application using Java 18.0.2.1 with PID 73405 (/Users/zhanglizhi/workspace/sparrow/sparrow-security/admin/security-admin-main-spring-boot/target/classes started by zhanglizhi in /Users/zhanglizhi/workspace/sparrow/sparrow-security)
+2026-10-03 09:00:40.118 TRACE_ID INFO  main Application The following 1 profile is active: "null"
+2026-10-03 09:00:40.997 TRACE_ID INFO  main MonolithicFilterAutoConfiguration Initializing MonolithicFilterAutoConfiguration
+2026-10-03 09:00:41.000 TRACE_ID INFO  main SparrowAutoConfiguration Sparrow Auto Configuration INIT
+2026-10-03 09:00:41.001 TRACE_ID INFO  main SparrowAutoConfiguration SpringContextAutoConfiguration INIT
+2026-10-03 09:00:41.002 TRACE_ID INFO  main SpringContext SpringContext init
+2026-10-03 09:00:41.002 TRACE_ID INFO  main SparrowConfig SparrowConfig init
+2026-10-03 09:00:41.004 TRACE_ID INFO  main SparrowConfig data source config init
+2026-10-03 09:00:41.009 TRACE_ID INFO  main AuthcAutoConfiguration Initializing AuthcAutoConfiguration
+2026-10-03 09:00:41.017 TRACE_ID INFO  main AuthcAutoConfiguration$RedisSessionDaoConfig Initializing RedisSessionDaoConfig
+2026-10-03 09:00:41.017 TRACE_ID INFO  main RedisAutoConfiguration RedisAutoConfiguration init
+2026-10-03 09:00:41.200 TRACE_ID INFO  main CaptchaAutoConfiguration CaptchaAutoConfiguration init
+2026-10-03 09:00:41.202 TRACE_ID INFO  main FilterAutoConfiguration FilterAutoConfiguration INIT
+2026-10-03 09:00:41.210 TRACE_ID INFO  main FilterAutoConfiguration allowedOrigin: *
+2026-10-03 09:00:41.258 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:00:41.260 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:00:41.260 TRACE_ID INFO  main SpringUserLoginController SpringUserLoginController
+2026-10-03 09:00:41.266 TRACE_ID INFO  main SparrowAutoConfiguration final password Z3Q82yAaahuXJyV2
+2026-10-03 09:00:41.268 TRACE_ID INFO  main UserProfileService UserProfileService init
+2026-10-03 09:00:41.269 TRACE_ID INFO  main AttachServiceImpl init AttachService
+2026-10-03 09:00:41.277 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:00:41.279 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:00:41.279 TRACE_ID INFO  main DefaultEnvConfig env config impl
+2026-10-03 09:00:41.285 TRACE_ID INFO  main CoderDomainRegistry CoderDomainRegistry init
+2026-10-03 09:00:41.288 TRACE_ID INFO  main EnumsAutoConfiguration EnumsAutoConfiguration init
+2026-10-03 09:00:41.302 TRACE_ID INFO  main CoderAutoConfiguration CoderAutoConfiguration init
+2026-10-03 09:00:41.327 TRACE_ID INFO  main TemplateEngineAutoConfiguration TemplateEngineAutoConfiguration init
+2026-10-03 09:00:41.544 TRACE_ID INFO  main DruidDataSourceAutoConfiguration DruidDataSourceAutoConfiguration init
+2026-10-03 09:00:41.775 TRACE_ID INFO  main OtherReleaserAutoConfiguration DefaultConnectionReleaserBuilder
+2026-10-03 09:00:41.808 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:00:41.811 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:00:41.811 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:00:41.812 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:00:41.934 TRACE_ID INFO  main Application application startup at 1790989241926
+2026-10-03 09:00:41.935 TRACE_ID INFO  main Application Started Application in 2.207 seconds (process running for 2.723)
+2026-10-03 09:00:52.434 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 09:00:52.434 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 09:00:52.471 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:00:52.472 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:00:52.506 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 09:00:52.506 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 09:00:52.506 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:00:52.506 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:00:52.564 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248452508,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:00:52.564 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248452508,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:00:56.772 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:01:18.837 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:01:18.875 TRACE_ID INFO  SpringApplicationShutdownHook Application application closed at at 1790989278874
+2026-10-03 09:01:38.933 TRACE_ID INFO  main Application Starting Application using Java 18.0.2.1 with PID 73633 (/Users/zhanglizhi/workspace/sparrow/sparrow-security/admin/security-admin-main-spring-boot/target/classes started by zhanglizhi in /Users/zhanglizhi/workspace/sparrow/sparrow-security)
+2026-10-03 09:01:38.935 TRACE_ID INFO  main Application The following 1 profile is active: "null"
+2026-10-03 09:01:39.916 TRACE_ID INFO  main MonolithicFilterAutoConfiguration Initializing MonolithicFilterAutoConfiguration
+2026-10-03 09:01:39.919 TRACE_ID INFO  main SparrowAutoConfiguration Sparrow Auto Configuration INIT
+2026-10-03 09:01:39.920 TRACE_ID INFO  main SparrowAutoConfiguration SpringContextAutoConfiguration INIT
+2026-10-03 09:01:39.920 TRACE_ID INFO  main SpringContext SpringContext init
+2026-10-03 09:01:39.921 TRACE_ID INFO  main SparrowConfig SparrowConfig init
+2026-10-03 09:01:39.922 TRACE_ID INFO  main SparrowConfig data source config init
+2026-10-03 09:01:39.926 TRACE_ID INFO  main AuthcAutoConfiguration Initializing AuthcAutoConfiguration
+2026-10-03 09:01:39.932 TRACE_ID INFO  main AuthcAutoConfiguration$RedisSessionDaoConfig Initializing RedisSessionDaoConfig
+2026-10-03 09:01:39.932 TRACE_ID INFO  main RedisAutoConfiguration RedisAutoConfiguration init
+2026-10-03 09:01:40.138 TRACE_ID INFO  main CaptchaAutoConfiguration CaptchaAutoConfiguration init
+2026-10-03 09:01:40.139 TRACE_ID INFO  main FilterAutoConfiguration FilterAutoConfiguration INIT
+2026-10-03 09:01:40.149 TRACE_ID INFO  main FilterAutoConfiguration allowedOrigin: *
+2026-10-03 09:01:40.199 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:01:40.200 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:01:40.201 TRACE_ID INFO  main SpringUserLoginController SpringUserLoginController
+2026-10-03 09:01:40.209 TRACE_ID INFO  main SparrowAutoConfiguration final password Z3Q82yAaahuXJyV2
+2026-10-03 09:01:40.213 TRACE_ID INFO  main UserProfileService UserProfileService init
+2026-10-03 09:01:40.214 TRACE_ID INFO  main AttachServiceImpl init AttachService
+2026-10-03 09:01:40.224 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:01:40.226 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:01:40.227 TRACE_ID INFO  main DefaultEnvConfig env config impl
+2026-10-03 09:01:40.232 TRACE_ID INFO  main CoderDomainRegistry CoderDomainRegistry init
+2026-10-03 09:01:40.235 TRACE_ID INFO  main EnumsAutoConfiguration EnumsAutoConfiguration init
+2026-10-03 09:01:40.249 TRACE_ID INFO  main CoderAutoConfiguration CoderAutoConfiguration init
+2026-10-03 09:01:40.271 TRACE_ID INFO  main TemplateEngineAutoConfiguration TemplateEngineAutoConfiguration init
+2026-10-03 09:01:40.516 TRACE_ID INFO  main DruidDataSourceAutoConfiguration DruidDataSourceAutoConfiguration init
+2026-10-03 09:01:40.738 TRACE_ID INFO  main OtherReleaserAutoConfiguration DefaultConnectionReleaserBuilder
+2026-10-03 09:01:40.776 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:01:40.779 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:01:40.779 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:01:40.780 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:01:40.899 TRACE_ID INFO  main Application application startup at 1790989300891
+2026-10-03 09:01:40.900 TRACE_ID INFO  main Application Started Application in 2.357 seconds (process running for 2.906)
+2026-10-03 09:01:48.421 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 09:01:48.421 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 09:01:48.439 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:01:48.439 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:01:48.473 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 09:01:48.473 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 09:01:48.473 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:01:48.473 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:01:48.531 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248508475,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:01:48.531 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248508475,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:02:07.735 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:02:25.775 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:02:39.602 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-03 09:02:39.602 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-03 09:02:39.603 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:39.603 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:39.606 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-03 09:02:39.607 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:39.607 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-03 09:02:39.607 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:39.608 TRACE_ID INFO  http-nio-8888-exec-7 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248559608,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:02:39.608 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248559608,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:02:43.161 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_table_config` where ( project_id = ?  AND create_user_id = ? ) order by id DESC
+2026-10-03 09:02:43.161 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_table_config` where ( project_id = ?  AND create_user_id = ? ) order by id DESC
+2026-10-03 09:02:43.171 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:02:43.171 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:02:59.105 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-03 09:02:59.105 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-03 09:02:59.107 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:59.107 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:59.111 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 09:02:59.111 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 09:02:59.111 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:59.111 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:02:59.112 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248579112,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:02:59.112 TRACE_ID INFO  http-nio-8888-exec-1 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248579112,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:02:59.124 TRACE_ID INFO  http-nio-8888-exec-2 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:02:59.124 TRACE_ID INFO  http-nio-8888-exec-1 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:03:19.811 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 09:03:19.812 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:03:19.813 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 09:03:19.814 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:03:19.814 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248599814,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:03:44.960 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-03 09:03:44.962 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:03:44.968 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-03 09:03:44.968 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:03:44.969 TRACE_ID INFO  http-nio-8888-exec-6 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248624969,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:04:59.212 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter client ip 0
+2026-10-03 09:04:59.215 TRACE_ID INFO  http-nio-8888-exec-9 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:04:59.219 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter client ip 0
+2026-10-03 09:04:59.219 TRACE_ID INFO  http-nio-8888-exec-10 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:04:59.221 TRACE_ID INFO  http-nio-8888-exec-10 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248699220,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:09:06.511 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 09:09:06.513 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:09:06.526 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 09:09:06.526 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:09:06.529 TRACE_ID INFO  http-nio-8888-exec-2 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791248946527,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:09:06.629 TRACE_ID INFO  SpringApplicationShutdownHook Application application closed at at 1790989746628
+2026-10-03 09:38:01.495 TRACE_ID INFO  main Application Starting Application using Java 18.0.2.1 with PID 82530 (/Users/zhanglizhi/workspace/sparrow/sparrow-security/admin/security-admin-main-spring-boot/target/classes started by zhanglizhi in /Users/zhanglizhi/workspace/sparrow/sparrow-security)
+2026-10-03 09:38:01.496 TRACE_ID INFO  main Application The following 1 profile is active: "null"
+2026-10-03 09:38:02.464 TRACE_ID INFO  main MonolithicFilterAutoConfiguration Initializing MonolithicFilterAutoConfiguration
+2026-10-03 09:38:02.467 TRACE_ID INFO  main SparrowAutoConfiguration Sparrow Auto Configuration INIT
+2026-10-03 09:38:02.468 TRACE_ID INFO  main SparrowAutoConfiguration SpringContextAutoConfiguration INIT
+2026-10-03 09:38:02.468 TRACE_ID INFO  main SpringContext SpringContext init
+2026-10-03 09:38:02.469 TRACE_ID INFO  main SparrowConfig SparrowConfig init
+2026-10-03 09:38:02.470 TRACE_ID INFO  main SparrowConfig data source config init
+2026-10-03 09:38:02.474 TRACE_ID INFO  main AuthcAutoConfiguration Initializing AuthcAutoConfiguration
+2026-10-03 09:38:02.481 TRACE_ID INFO  main AuthcAutoConfiguration$RedisSessionDaoConfig Initializing RedisSessionDaoConfig
+2026-10-03 09:38:02.481 TRACE_ID INFO  main RedisAutoConfiguration RedisAutoConfiguration init
+2026-10-03 09:38:02.692 TRACE_ID INFO  main CaptchaAutoConfiguration CaptchaAutoConfiguration init
+2026-10-03 09:38:02.693 TRACE_ID INFO  main FilterAutoConfiguration FilterAutoConfiguration INIT
+2026-10-03 09:38:02.703 TRACE_ID INFO  main FilterAutoConfiguration allowedOrigin: *
+2026-10-03 09:38:02.752 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:38:02.760 TRACE_ID INFO  main EnumsAutoConfiguration EnumsAutoConfiguration init
+2026-10-03 09:38:02.761 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:38:02.761 TRACE_ID INFO  main SpringUserLoginController SpringUserLoginController
+2026-10-03 09:38:02.764 TRACE_ID INFO  main SparrowAutoConfiguration final password Z3Q82yAaahuXJyV2
+2026-10-03 09:38:02.766 TRACE_ID INFO  main UserProfileService UserProfileService init
+2026-10-03 09:38:02.767 TRACE_ID INFO  main AttachServiceImpl init AttachService
+2026-10-03 09:38:02.775 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:38:02.777 TRACE_ID INFO  main ControllerReturnAdvice ControllerReturnAdvice INIT
+2026-10-03 09:38:02.778 TRACE_ID INFO  main DefaultEnvConfig env config impl
+2026-10-03 09:38:02.782 TRACE_ID INFO  main CoderDomainRegistry CoderDomainRegistry init
+2026-10-03 09:38:02.802 TRACE_ID INFO  main CoderAutoConfiguration CoderAutoConfiguration init
+2026-10-03 09:38:02.824 TRACE_ID INFO  main TemplateEngineAutoConfiguration TemplateEngineAutoConfiguration init
+2026-10-03 09:38:03.045 TRACE_ID INFO  main DruidDataSourceAutoConfiguration DruidDataSourceAutoConfiguration init
+2026-10-03 09:38:03.262 TRACE_ID INFO  main OtherReleaserAutoConfiguration DefaultConnectionReleaserBuilder
+2026-10-03 09:38:03.293 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:38:03.296 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:38:03.297 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:38:03.298 TRACE_ID INFO  main OpenApiAutoConfiguration init open api bean
+2026-10-03 09:38:03.416 TRACE_ID INFO  main Application application startup at 1790991483408
+2026-10-03 09:38:03.418 TRACE_ID INFO  main Application Started Application in 2.324 seconds (process running for 3.063)
+2026-10-03 09:38:29.466 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter client ip 0
+2026-10-03 09:38:29.466 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter client ip 0
+2026-10-03 09:38:29.476 TRACE_ID INFO  http-nio-8888-exec-2 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:29.476 TRACE_ID INFO  http-nio-8888-exec-1 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:29.500 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter client ip 0
+2026-10-03 09:38:29.500 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter client ip 0
+2026-10-03 09:38:29.500 TRACE_ID INFO  http-nio-8888-exec-4 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:29.500 TRACE_ID INFO  http-nio-8888-exec-3 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:29.560 TRACE_ID INFO  http-nio-8888-exec-3 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791250709502,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:38:29.560 TRACE_ID INFO  http-nio-8888-exec-4 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791250709502,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:38:29.672 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_table_config` where ( project_id = ?  AND create_user_id = ? ) order by id DESC
+2026-10-03 09:38:29.672 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_table_config` where ( project_id = ?  AND create_user_id = ? ) order by id DESC
+2026-10-03 09:38:29.680 TRACE_ID INFO  http-nio-8888-exec-3 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:38:29.680 TRACE_ID INFO  http-nio-8888-exec-4 OrmMetadataAccessor select * from `t_project_config` where ( create_user_id = ?  AND status = ? ) order by id DESC
+2026-10-03 09:38:42.419 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter client ip 0
+2026-10-03 09:38:42.419 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter client ip 0
+2026-10-03 09:38:42.420 TRACE_ID INFO  http-nio-8888-exec-5 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:42.420 TRACE_ID INFO  http-nio-8888-exec-6 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:42.424 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter client ip 0
+2026-10-03 09:38:42.424 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter client ip 0
+2026-10-03 09:38:42.424 TRACE_ID INFO  http-nio-8888-exec-8 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:42.424 TRACE_ID INFO  http-nio-8888-exec-7 ClientInformationFilter device type COMPUTER,browser type WEB_BROWSER
+2026-10-03 09:38:42.426 TRACE_ID INFO  http-nio-8888-exec-8 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791250722425,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:38:42.426 TRACE_ID INFO  http-nio-8888-exec-7 MonolithicBearerFilter login success bind success, user:{"avatar":"header","category":1,"days":3.0,"deviceType":1,"expireAt":1791250722425,"extensions":{},"host":"device id","nickName":"mock-nick-name","tenantId":"","userId":1,"userName":"mock-user","visitor":false}
+2026-10-03 09:38:42.477 TRACE_ID INFO  http-nio-8888-exec-8 OrmMetadataAccessor select * from `t_department` where ( create_user_id = ? ) order by id DESC limit 0,10
+2026-10-03 09:38:42.477 TRACE_ID INFO  http-nio-8888-exec-7 OrmMetadataAccessor select * from `t_department` where ( create_user_id = ? ) order by id DESC limit 0,10

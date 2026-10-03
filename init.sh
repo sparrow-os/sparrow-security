@@ -15,6 +15,12 @@ rm -rf admin/security-admin-dao-mybatis/src/main/resources/mapper/Sparrow*
 rm -rf admin/security-admin-domain/target
 rm -rf admin/security-admin-infrastructure/target
 rm -rf admin/security-admin-protocol/target
-rm -rf admin/security-admin-main-spring-boot/src/main/resources/templates/sparrow*
+rm -rf admin/security-admin-main-spring-boot/src/main/resources
 rm -rf */*.iml
+rm -rf */bin
+rm -rf */target
+rm -rf */*/target
+
+
+
 

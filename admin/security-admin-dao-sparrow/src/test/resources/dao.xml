@@ -17,7 +17,7 @@
   -->
 
 <!DOCTYPE beans PUBLIC "-//sparrow Framework//DTD ioc Configuration//EN"
-    "beans.dtd">
+        "beans.dtd">
 <beans>
     <component-scan>com.sparrow</component-scan>
     <bean name="dataSourceFactory" class="com.sparrow.datasource.DataSourceFactoryImpl">
