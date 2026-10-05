@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparrow.security.admin.dao.MicroServiceDAO">
+<resultMap id="MicroServiceMap" type="com.sparrow.security.po.MicroService">
+<id column="id" property="id" />
+ <result column="tenant_id" property="tenantId"/>
+ <result column="name" property="name"/>
+ <result column="sort" property="sort"/>
+ <result column="logo" property="logo"/>
+ <result column="app_id" property="appId"/>
+ <result column="url" property="url"/>
+ <result column="remark" property="remark"/>
+ <result column="create_user_name" property="createUserName"/>
+ <result column="create_user_id" property="createUserId"/>
+ <result column="modified_user_id" property="modifiedUserId"/>
+ <result column="modified_user_name" property="modifiedUserName"/>
+ <result column="gmt_create" property="gmtCreate"/>
+ <result column="gmt_modified" property="gmtModified"/>
+ <result column="deleted" property="deleted"/>
+ <result column="status" property="status"/>
+</resultMap>
+<sql id="fields">
+`id`,`tenant_id`,`name`,`sort`,`logo`,`app_id`,`url`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status`
+</sql>
+<insert id="insert" parameterType="com.sparrow.security.po.MicroService"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+insert into `t_micro_service`(
+`tenant_id`,
+`name`,
+`sort`,
+`logo`,
+`app_id`,
+`url`,
+`remark`,
+`create_user_name`,
+`create_user_id`,
+`modified_user_id`,
+`modified_user_name`,
+`gmt_create`,
+`gmt_modified`,
+`deleted`,
+`status`)values(
+#{tenantId},
+#{name},
+#{sort},
+#{logo},
+#{appId},
+#{url},
+#{remark},
+#{createUserName},
+#{createUserId},
+#{modifiedUserId},
+#{modifiedUserName},
+#{gmtCreate},
+#{gmtModified},
+#{deleted},
+#{status})</insert> 
+<update id="update" parameterType="com.sparrow.security.po.MicroService">
+update `t_micro_service` set 
+`tenant_id`=#{tenantId},
+`name`=#{name},
+`sort`=#{sort},
+`logo`=#{logo},
+`app_id`=#{appId},
+`url`=#{url},
+`remark`=#{remark},
+`modified_user_id`=#{modifiedUserId},
+`modified_user_name`=#{modifiedUserName},
+`gmt_modified`=#{gmtModified},
+`deleted`=#{deleted} where id=#{id}
+</update>
+<delete id="delete" parameterType="java.lang.Long">
+delete from `t_micro_service` where id=#{id}
+</delete>
+<select id="getEntity" resultMap="MicroServiceMap" parameterType="java.lang.Long">
+ SELECT 
+<include refid="fields"/>
+ FROM 
+t_micro_service
+WHERE id= #{id}
+</select>
+<update id="changeStatus" parameterType="com.sparrow.protocol.dao.StatusCriteria">
+update `t_micro_service` set `status`=#{status},
+`modified_user_name`=#{modifiedUserName},
+ `modified_user_id`=#{modifiedUserId},
+ `gmt_modified`=#{gmtModified} WHERE id IN
+<foreach collection="idArray" item="id" index="index" open="(" close=")" separator=",">
+#{id}</foreach>
+</update></mapper>

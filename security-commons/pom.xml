@@ -15,5 +15,9 @@
             <groupId>com.sparrowzoo</groupId>
             <artifactId>sparrow</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sparrowzoo</groupId>
+            <artifactId>sparrow-protocol</artifactId>
+        </dependency>
     </dependencies>
 </project>

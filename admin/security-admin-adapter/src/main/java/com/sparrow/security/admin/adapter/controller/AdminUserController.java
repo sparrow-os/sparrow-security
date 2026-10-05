@@ -1,0 +1,105 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.sparrow.security.admin.adapter.controller;
+
+import com.sparrow.protocol.*;
+import java.util.*;
+import com.sparrow.protocol.pager.PagerResult;
+import com.sparrow.security.admin.adapter.assemble.AdminUserAssemble;
+import com.sparrow.security.admin.domain.bo.AdminUserBO;
+import com.sparrow.security.admin.protocol.param.AdminUserParam;
+import com.sparrow.security.admin.protocol.query.AdminUserQuery;
+import com.sparrow.security.admin.protocol.dto.AdminUserDTO;
+import com.sparrow.security.admin.domain.service.AdminUserService;
+import com.sparrow.spring.container.EnumsContainer;
+import io.swagger.v3.oas.annotations.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.inject.Inject;
+import org.springframework.web.bind.annotation.*;
+import com.sparrow.security.admin.domain.service.OrganizationService;
+
+import com.sparrow.security.admin.domain.service.PositionService;
+
+
+
+
+@RestController
+@RequestMapping("admin/user")
+@Tag(name = "AdminUser")
+public class AdminUserController {
+
+    @Inject
+    private AdminUserService adminUserService;
+
+    @Inject
+    private AdminUserAssemble adminUserAssemble;
+
+    @Inject
+private EnumsContainer coderEnumsContainer;
+ @Inject
+ private OrganizationService organizationService;
+ @Inject
+ private PositionService positionService;
+
+    @PostMapping("search.json")
+    @Operation(method="搜索")
+    public PagerResult<AdminUserDTO> search(@RequestBody AdminUserQuery adminUserQuery) {
+        ListRecordTotalBO<AdminUserBO> adminUserListTotalRecord = this.adminUserService.queryAdminUser(adminUserQuery);
+        PagerResult<AdminUserDTO> pagerResult =this.adminUserAssemble.assemblePager(adminUserListTotalRecord, adminUserQuery);
+        pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));
+pagerResult.putDictionary("organizationId",this.organizationService.getOrganizationKvs());
+
+pagerResult.putDictionary("positionId",this.positionService.getPositionKvs());
+
+        return pagerResult;
+    }
+
+    @PostMapping("save.json")
+            @Operation(method="保存")
+
+    public Long saveAdminUser(@RequestBody AdminUserParam adminUserParam) throws BusinessException {
+       return  this.adminUserService.saveAdminUser(adminUserParam);
+    }
+
+    @GetMapping("detail.json")
+            @Operation(method="详情页")
+    public AdminUserDTO getAdminUser(Long adminUserId) throws BusinessException {
+        AdminUserBO adminUserBo = adminUserService.getAdminUser(adminUserId);
+        return this.adminUserAssemble.boAssembleDTO(adminUserBo);
+    }
+
+    @PostMapping("delete.json")
+            @Operation(method="删除")
+
+    public Integer deleteAdminUser(@RequestBody Set<Long> ids) throws BusinessException {
+       return this.adminUserService.deleteAdminUser(ids);
+    }
+
+    @PostMapping("enable.json")
+            @Operation(method="启用")
+
+    public Integer enableAdminUser(@RequestBody Set<Long> ids) throws BusinessException {
+        return  this.adminUserService.enableAdminUser(ids);
+    }
+
+    @PostMapping("disable.json")
+    @Operation(method="禁用")
+    public Integer disableAdminUser(@RequestBody Set<Long> ids) throws BusinessException {
+       return  this.adminUserService.disableAdminUser(ids);
+    }
+}

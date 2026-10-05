@@ -3,20 +3,6 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>sparrow-security</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sparrowzoo</groupId>
-            <artifactId>sparrow-protocol-dao</artifactId>
-            <version>1.0.5-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
     <groupId>com.sparrowzoo.security</groupId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>

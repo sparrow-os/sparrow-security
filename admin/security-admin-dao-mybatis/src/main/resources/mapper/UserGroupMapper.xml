@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparrow.security.admin.dao.UserGroupDAO">
+<resultMap id="UserGroupMap" type="com.sparrow.security.po.UserGroup">
+<id column="id" property="id" />
+ <result column="tenant_id" property="tenantId"/>
+ <result column="code" property="code"/>
+ <result column="name" property="name"/>
+ <result column="sort" property="sort"/>
+ <result column="remark" property="remark"/>
+ <result column="create_user_name" property="createUserName"/>
+ <result column="create_user_id" property="createUserId"/>
+ <result column="modified_user_id" property="modifiedUserId"/>
+ <result column="modified_user_name" property="modifiedUserName"/>
+ <result column="gmt_create" property="gmtCreate"/>
+ <result column="gmt_modified" property="gmtModified"/>
+ <result column="deleted" property="deleted"/>
+ <result column="status" property="status"/>
+</resultMap>
+<sql id="fields">
+`id`,`tenant_id`,`code`,`name`,`sort`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status`
+</sql>
+<insert id="insert" parameterType="com.sparrow.security.po.UserGroup"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+insert into `t_user_group`(
+`tenant_id`,
+`code`,
+`name`,
+`sort`,
+`remark`,
+`create_user_name`,
+`create_user_id`,
+`modified_user_id`,
+`modified_user_name`,
+`gmt_create`,
+`gmt_modified`,
+`deleted`,
+`status`)values(
+#{tenantId},
+#{code},
+#{name},
+#{sort},
+#{remark},
+#{createUserName},
+#{createUserId},
+#{modifiedUserId},
+#{modifiedUserName},
+#{gmtCreate},
+#{gmtModified},
+#{deleted},
+#{status})</insert> 
+<update id="update" parameterType="com.sparrow.security.po.UserGroup">
+update `t_user_group` set 
+`tenant_id`=#{tenantId},
+`code`=#{code},
+`name`=#{name},
+`sort`=#{sort},
+`remark`=#{remark},
+`modified_user_id`=#{modifiedUserId},
+`modified_user_name`=#{modifiedUserName},
+`gmt_modified`=#{gmtModified},
+`deleted`=#{deleted} where id=#{id}
+</update>
+<delete id="delete" parameterType="java.lang.Long">
+delete from `t_user_group` where id=#{id}
+</delete>
+<select id="getEntity" resultMap="UserGroupMap" parameterType="java.lang.Long">
+ SELECT 
+<include refid="fields"/>
+ FROM 
+t_user_group
+WHERE id= #{id}
+</select>
+<update id="changeStatus" parameterType="com.sparrow.protocol.dao.StatusCriteria">
+update `t_user_group` set `status`=#{status},
+`modified_user_name`=#{modifiedUserName},
+ `modified_user_id`=#{modifiedUserId},
+ `gmt_modified`=#{gmtModified} WHERE id IN
+<foreach collection="idArray" item="id" index="index" open="(" close=")" separator=",">
+#{id}</foreach>
+</update></mapper>

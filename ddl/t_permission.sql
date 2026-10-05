@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS `t_permission`;
+CREATE TABLE `t_permission` (
+ `id` int UNSIGNED AUTO_INCREMENT NOT NULL AUTO_INCREMENT,
+ `tenant_id` int UNSIGNED DEFAULT 0 COMMENT '租户ID'  NOT NULL,
+ `permission_code` varchar(128) COMMENT '权限编码，如 order:create'  NOT NULL,
+ `permission_name` varchar(64) COMMENT '权限/菜单名称'  NOT NULL,
+ `permission_type` tinyint DEFAULT 1 COMMENT '1菜单 2页面 3事件'  NOT NULL,
+ `app_id` int UNSIGNED DEFAULT 0 COMMENT 'APP ID'  NOT NULL,
+ `micro_service_id` int UNSIGNED DEFAULT 0 COMMENT '所属微服务ID'  NOT NULL,
+ `parent_id` int UNSIGNED DEFAULT 0 COMMENT '父节点ID'  NOT NULL,
+ `operation` varchar(64) DEFAULT '' COMMENT '操作：view/create/update/delete/export'  NOT NULL,
+ `object` varchar(64) DEFAULT '' COMMENT '对象/资源域：order/user/report'  NOT NULL,
+ `url` varchar(256) DEFAULT '' COMMENT '菜单/页面跳转地址'  NOT NULL,
+ `method` varchar(8) DEFAULT '' COMMENT 'HTTP方法，API用'  NOT NULL,
+ `icon` varchar(256) DEFAULT '' COMMENT '菜单图标'  NOT NULL,
+ `target` varchar(16) DEFAULT '' COMMENT 'Target'  NOT NULL,
+ `sort` int DEFAULT 0 COMMENT '排序'  NOT NULL,
+ `create_user_name` varchar(64)  DEFAULT '' COMMENT '创建人'  NOT NULL,
+ `create_user_id` int UNSIGNED  DEFAULT 0 COMMENT '创建人ID'  NOT NULL,
+ `modified_user_id` int unsigned  DEFAULT 0 COMMENT '更新人ID'  NOT NULL,
+ `modified_user_name` varchar(64)  DEFAULT '' COMMENT '更新人'  NOT NULL,
+ `gmt_create` bigint  DEFAULT 0 COMMENT '创建时间'  NOT NULL,
+ `gmt_modified` bigint  DEFAULT 0 COMMENT '更新时间'  NOT NULL,
+ `deleted` tinyint(1)  DEFAULT 0 COMMENT '是否删除'  NOT NULL,
+ `status` tinyint(3) UNSIGNED DEFAULT 0 COMMENT '状态'  NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='t_permission';
