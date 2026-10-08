@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.dao.sparrow;
 
 import com.sparrow.orm.query.*;
@@ -22,7 +21,9 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.OrganizationDAO;
 import com.sparrow.security.admin.dao.query.OrganizationDBPagerQuery;
 import com.sparrow.security.po.Organization;
-import java.util.List;
+
+import java.util.*;
+
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -39,12 +40,49 @@ public class OrganizationDaoImpl extends ORMStrategy<Organization, Long> impleme
     }
 
     private BooleanCriteria generateCriteria(OrganizationDBPagerQuery organizationQuery) {
-        BooleanCriteria booleanCriteria= BooleanCriteria.criteria(Criteria.field(Organization::getCreateUserId).equal(SessionContext.getLoginUser().getUserId()));if(organizationQuery.getStatus()!=null&&organizationQuery.getStatus()>=0) {booleanCriteria.and(Criteria.field(Organization::getStatus).equal(StatusRecord.valueOf(organizationQuery.getStatus())));} return booleanCriteria;
+        BooleanCriteria booleanCriteria = BooleanCriteria.criteria(Criteria.field(Organization::getCreateUserId).equal(SessionContext.getLoginUser().getUserId()));
+        if (organizationQuery.getStatus() != null && organizationQuery.getStatus() >= 0) {
+            booleanCriteria.and(Criteria.field(Organization::getStatus).equal(StatusRecord.valueOf(organizationQuery.getStatus())));
+        }
+        booleanCriteria.and(Criteria.field(Organization::getParentId).equal(organizationQuery.getParentId()));
+        return booleanCriteria;
     }
 
-    @Override public Long countOrganization(OrganizationDBPagerQuery organizationPagerQuery) {
+    @Override
+    public Long countOrganization(OrganizationDBPagerQuery organizationPagerQuery) {
         SearchCriteria searchCriteria = new SearchCriteria();
         searchCriteria.setWhere(this.generateCriteria(organizationPagerQuery));
         return this.getCount(searchCriteria);
+    }
+
+    @Override
+    public List<Organization> queryChildren(OrganizationDBPagerQuery organizationPagerQuery) {
+        SearchCriteria searchCriteria = new SearchCriteria();
+        searchCriteria.setWhere(
+            BooleanCriteria.criteria(Criteria.field(Organization::getParentId).equal(organizationPagerQuery.getParentId()))
+                .and(Criteria.field(Organization::getStatus).equal(organizationPagerQuery.getStatus())));
+        searchCriteria.addOrderCriteria(OrderCriteria.asc(Organization::getSort));
+        searchCriteria.addOrderCriteria(OrderCriteria.asc(Organization::getId));
+        return this.getList(searchCriteria);
+    }
+
+    @Override
+    public Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds) {
+        if (parentIds == null || parentIds.isEmpty()) {
+            return Collections.emptySet();
+        }
+        SearchCriteria searchCriteria = new SearchCriteria();
+        CriteriaField parentIdField = Criteria.field(Organization::getParentId).getField();
+        searchCriteria.setFields(parentIdField.getAlias() + "." + parentIdField.getName());
+        searchCriteria.setDistinct(true);
+        searchCriteria.setWhere(
+            BooleanCriteria.criteria(Criteria.field(Organization::getParentId).in(parentIds))
+                .and(Criteria.field(Organization::getStatus).equal(StatusRecord.ENABLE)));
+        Set<Object> rawParentIds = this.firstList(searchCriteria);
+        Set<Long> parentIdsWithChildren = new LinkedHashSet<>(rawParentIds.size());
+        for (Object rawParentId : rawParentIds) {
+            parentIdsWithChildren.add(((Number) rawParentId).longValue());
+        }
+        return parentIdsWithChildren;
     }
 }

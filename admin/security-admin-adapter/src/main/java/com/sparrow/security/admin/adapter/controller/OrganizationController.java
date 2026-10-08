@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.adapter.controller;
 
 import com.sparrow.protocol.BusinessException;
@@ -56,7 +55,6 @@ public class OrganizationController {
         PagerResult<OrganizationDTO> pagerResult = this.organizationAssemble.assemblePager(organizationListTotalRecord, organizationQuery);
         pagerResult.putDictionary("status", coderEnumsContainer.getEnums("status"));
         pagerResult.putDictionary("parentId", this.organizationService.getOrganizationKvs());
-
         return pagerResult;
     }
 

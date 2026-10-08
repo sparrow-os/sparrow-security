@@ -14,16 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.dao.query;
 
-import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.protocol.dao.DatabasePagerQuery;
-import java.util.Date;
 import lombok.Data;
+
 @Data
 
 public class OrganizationDBPagerQuery extends DatabasePagerQuery {
    private Integer status;
+   private Long parentId;
    public OrganizationDBPagerQuery() {}
 }

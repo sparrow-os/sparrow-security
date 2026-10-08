@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
@@ -82,6 +81,7 @@ public class PermissionService {
         permissionQuery.setPageSize(-1);
         List<PermissionBO> permissionBoList = this.permissionRepository.queryPermissions(permissionQuery);
         List<KeyValue<Integer, String>> permissionKvs = new ArrayList<>(permissionBoList.size());
+        permissionKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (PermissionBO permissionBO : permissionBoList) {
             permissionKvs.add(new KeyValue<>(permissionBO.getId().intValue(), permissionBO.getDisplayText()));
         }

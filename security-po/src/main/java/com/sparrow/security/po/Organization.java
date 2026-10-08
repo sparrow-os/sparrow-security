@@ -36,11 +36,11 @@ public class Organization extends PO implements DisplayTextAccessor {
     @Column(name = "tenant_id", columnDefinition = "int UNSIGNED DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有'", nullable = false)
     private Long tenantId;
 
-    @Column(name = "level", columnDefinition = "int(11) UNSIGNED DEFAULT 0 COMMENT '部门级别，顶级为0'", nullable = false)
+    @Column(name = "level", columnDefinition = "int UNSIGNED DEFAULT 0 COMMENT '部门级别，顶级为0'", nullable = false)
     private Integer level;
 
     @InputDatasource(type = DatasourceType.TABLE, params = "t_organization", defaultValue = "-1")
-    @Column(name = "parent_id", columnDefinition = "int UNSIGNED DEFAULT 0 COMMENT '父部门ID'", nullable = false)
+    @Column(name = "parent_id", columnDefinition = "int DEFAULT 0 COMMENT '父部门ID'", nullable = false)
     private Long parentId;
 
     @Column(name = "code", columnDefinition = "varchar(16) DEFAULT '' COMMENT '部门编码'", nullable = false)

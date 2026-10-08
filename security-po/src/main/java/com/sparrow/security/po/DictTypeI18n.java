@@ -16,7 +16,9 @@
  */
 package com.sparrow.security.po;
 
+import com.sparrow.protocol.dao.InputDatasource;
 import com.sparrow.protocol.dao.PO;
+import com.sparrow.protocol.dao.enums.DatasourceType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -31,9 +33,11 @@ public class DictTypeI18n extends PO {
     @Column(name = "id", columnDefinition = "bigint UNSIGNED AUTO_INCREMENT")
     private Long id;
 
+    @InputDatasource(type = DatasourceType.TABLE, params = "t_dict_type")
     @Column(name = "dict_type_id", columnDefinition = "bigint UNSIGNED DEFAULT 0 COMMENT '关联 t_dict_type.id（不可变）'", nullable = false, updatable = false)
     private Long dictTypeId;
 
+    @InputDatasource(type = DatasourceType.ENUM, params = "I18nLocale")
     @Column(name = "locale", columnDefinition = "varchar(10) DEFAULT '' COMMENT '语言标识（zh-CN/en-US/ja-JP等）'", nullable = false)
     private String locale;
 

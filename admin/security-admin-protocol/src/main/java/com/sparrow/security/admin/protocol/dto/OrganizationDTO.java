@@ -14,31 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.protocol.dto;
+
+import com.sparrow.protocol.DTO;
+import com.sparrow.protocol.DisplayTextAccessor;
+import com.sparrow.protocol.TreeItemAccessor;
 import lombok.Data;
-import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.protocol.*;
-import java.time.*;
 
 @Data
 public class OrganizationDTO implements DTO
-    ,DisplayTextAccessor{private Long id; 
-private Long tenantId; 
-private Integer level; 
-private Long parentId; 
-private String code; 
-private String name; 
-private String manager; 
-private String telephone; 
-private Integer sort; 
-private String createUserName; 
-private Long createUserId; 
-private Long modifiedUserId; 
-private String modifiedUserName; 
-private Long gmtCreate; 
-private Long gmtModified; 
-private Boolean deleted; 
-private Integer status; 
-private String displayText; 
+        , DisplayTextAccessor, TreeItemAccessor {
+    private Long id;
+    private Long tenantId;
+    private Integer level;
+    private Long parentId;
+    private String code;
+    private String name;
+    private String manager;
+    private String telephone;
+    private Integer sort;
+    private String createUserName;
+    private Long createUserId;
+    private Long modifiedUserId;
+    private String modifiedUserName;
+    private Long gmtCreate;
+    private Long gmtModified;
+    private Boolean deleted;
+    private Integer status;
+    private String displayText;
+    private Boolean hasChildren;
 }

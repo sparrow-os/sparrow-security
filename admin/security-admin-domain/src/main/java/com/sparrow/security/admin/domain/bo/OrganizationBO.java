@@ -14,31 +14,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.domain.bo;
 
+import com.sparrow.protocol.BO;
+import com.sparrow.protocol.DisplayTextAccessor;
+import com.sparrow.protocol.TreeItemAccessor;
 import com.sparrow.protocol.enums.StatusRecord;
-import com.sparrow.protocol.*;
-import java.time.*;
 import lombok.Data;
+
 @Data
 public class OrganizationBO implements BO
-    ,DisplayTextAccessor{private Long id; 
-private Long tenantId; 
-private Integer level; 
-private Long parentId; 
-private String code; 
-private String name; 
-private String manager; 
-private String telephone; 
-private Integer sort; 
-private String createUserName; 
-private Long createUserId; 
-private Long modifiedUserId; 
-private String modifiedUserName; 
-private Long gmtCreate; 
-private Long gmtModified; 
-private Boolean deleted; 
-private StatusRecord status; 
-private String displayText; 
+        , DisplayTextAccessor, TreeItemAccessor {
+    private Long id;
+    private Long tenantId;
+    private Integer level;
+    private Long parentId;
+    private String code;
+    private String name;
+    private String manager;
+    private String telephone;
+    private Integer sort;
+    private String createUserName;
+    private Long createUserId;
+    private Long modifiedUserId;
+    private String modifiedUserName;
+    private Long gmtCreate;
+    private Long gmtModified;
+    private Boolean deleted;
+    private StatusRecord status;
+    private String displayText;
+    private Boolean hasChildren;
 }

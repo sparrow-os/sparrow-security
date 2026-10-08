@@ -2,8 +2,8 @@ DROP TABLE IF EXISTS `t_organization`;
 CREATE TABLE `t_organization` (
  `id` int UNSIGNED AUTO_INCREMENT NOT NULL AUTO_INCREMENT,
  `tenant_id` int UNSIGNED DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有'  NOT NULL,
- `level` int(11) UNSIGNED DEFAULT 0 COMMENT '部门级别，顶级为0'  NOT NULL,
- `parent_id` int UNSIGNED DEFAULT 0 COMMENT '父部门ID'  NOT NULL,
+ `level` int UNSIGNED DEFAULT 0 COMMENT '部门级别，顶级为0'  NOT NULL,
+ `parent_id` int DEFAULT 0 COMMENT '父部门ID'  NOT NULL,
  `code` varchar(16) DEFAULT '' COMMENT '部门编码'  NOT NULL,
  `name` varchar(16) DEFAULT '' COMMENT '部门名称'  NOT NULL,
  `manager` varchar(16) DEFAULT '' COMMENT '负责人'  NOT NULL,

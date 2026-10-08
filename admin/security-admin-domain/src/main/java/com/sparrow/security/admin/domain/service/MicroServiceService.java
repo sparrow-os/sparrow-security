@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
@@ -82,6 +81,7 @@ public class MicroServiceService {
         microServiceQuery.setPageSize(-1);
         List<MicroServiceBO> microServiceBoList = this.microServiceRepository.queryMicroServices(microServiceQuery);
         List<KeyValue<Integer, String>> microServiceKvs = new ArrayList<>(microServiceBoList.size());
+        microServiceKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (MicroServiceBO microServiceBO : microServiceBoList) {
             microServiceKvs.add(new KeyValue<>(microServiceBO.getId().intValue(), microServiceBO.getDisplayText()));
         }

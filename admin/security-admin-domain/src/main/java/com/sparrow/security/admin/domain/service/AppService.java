@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
@@ -82,6 +81,7 @@ public class AppService {
         appQuery.setPageSize(-1);
         List<AppBO> appBoList = this.appRepository.queryApps(appQuery);
         List<KeyValue<Integer, String>> appKvs = new ArrayList<>(appBoList.size());
+        appKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (AppBO appBO : appBoList) {
             appKvs.add(new KeyValue<>(appBO.getId().intValue(), appBO.getDisplayText()));
         }

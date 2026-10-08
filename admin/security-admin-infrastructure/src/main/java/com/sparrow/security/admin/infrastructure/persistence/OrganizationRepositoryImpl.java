@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.infrastructure.persistence;
 
 import com.sparrow.protocol.dao.StatusCriteria;
@@ -27,8 +26,11 @@ import com.sparrow.security.admin.protocol.param.OrganizationParam;
 import com.sparrow.security.admin.repository.OrganizationRepository;
 import com.sparrow.security.admin.protocol.query.OrganizationQuery;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+
 import jakarta.inject.*;
 
 @Named
@@ -77,5 +79,19 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
 
     @Override public Long getOrganizationCount(OrganizationQuery organizationQuery) {
         return this.organizationDao.countOrganization(this.organizationConverter.toDbPagerQuery(organizationQuery));
+    }
+
+    @Override public List<OrganizationBO> queryChildren(OrganizationQuery organizationQuery) {
+        List<Organization> children = this.organizationDao.queryChildren(this.organizationConverter.toDbPagerQuery(organizationQuery));
+        if (children.isEmpty()) {
+            return Collections.emptyList();
+        }
+        Set<Long> childIds = children.stream().map(Organization::getId).collect(Collectors.toSet());
+        Set<Long> parentIdsWithChildren = this.organizationDao.getParentIdsHavingChildren(childIds);
+        return children.stream().map(organization -> {
+            OrganizationBO organizationBO = this.organizationConverter.po2bo(organization);
+            organizationBO.setHasChildren(parentIdsWithChildren.contains(organization.getId()));
+            return organizationBO;
+        }).collect(Collectors.toList());
     }
 }

@@ -16,13 +16,16 @@
  */
 package com.sparrow.security.po;
 
+import com.sparrow.protocol.DisplayTextAccessor;
+import com.sparrow.protocol.dao.InputDatasource;
 import com.sparrow.protocol.dao.PO;
+import com.sparrow.protocol.dao.enums.DatasourceType;
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Table(name = "t_dict_item")
-public class DictItem extends PO {
+public class DictItem extends PO implements DisplayTextAccessor {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,6 +37,11 @@ public class DictItem extends PO {
     @Column(name = "tenant_id", columnDefinition = "int UNSIGNED DEFAULT 0 COMMENT '租户ID，0=全局，>0=租户私有'", nullable = false)
     private Long tenantId;
 
+    @InputDatasource(type = DatasourceType.TABLE, params = "t_dict_item",defaultValue = "-1")
+    @Column(name = "parent_id", columnDefinition = "int DEFAULT 0 COMMENT '父ID'", nullable = false)
+    private Long parentId;
+
+    @InputDatasource(type = DatasourceType.TABLE, params = "t_dict_type")
     @Column(name = "dict_type_id", columnDefinition = "bigint UNSIGNED DEFAULT 0 COMMENT '关联 t_dict_type.id'", nullable = false)
     private Long dictTypeId;
 
@@ -48,4 +56,9 @@ public class DictItem extends PO {
 
     @Column(name = "remark", columnDefinition = "varchar(500) DEFAULT '' COMMENT '备注'")
     private String remark;
+
+    @Override
+    public String getDisplayText() {
+        return this.itemCode + "【" + this.itemValue + "】";
+    }
 }

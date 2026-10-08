@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
@@ -82,6 +81,7 @@ public class PositionService {
         positionQuery.setPageSize(-1);
         List<PositionBO> positionBoList = this.positionRepository.queryPositions(positionQuery);
         List<KeyValue<Integer, String>> positionKvs = new ArrayList<>(positionBoList.size());
+        positionKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (PositionBO positionBO : positionBoList) {
             positionKvs.add(new KeyValue<>(positionBO.getId().intValue(), positionBO.getDisplayText()));
         }

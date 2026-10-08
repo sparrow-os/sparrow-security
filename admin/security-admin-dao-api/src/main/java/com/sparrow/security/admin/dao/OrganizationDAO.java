@@ -14,16 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.dao;
 
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.Organization;
 import com.sparrow.security.admin.dao.query.OrganizationDBPagerQuery;
+
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 public interface OrganizationDAO extends DaoSupport<Organization, Long> {
     List<Organization> queryOrganizations(OrganizationDBPagerQuery organizationPagerQuery);
 
     Long countOrganization(OrganizationDBPagerQuery organizationPagerQuery);
+
+    List<Organization> queryChildren(OrganizationDBPagerQuery organizationPagerQuery);
+
+    Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds);
 }

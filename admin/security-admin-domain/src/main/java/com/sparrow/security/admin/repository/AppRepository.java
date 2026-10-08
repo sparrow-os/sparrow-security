@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.AppBO;
 import com.sparrow.security.admin.protocol.param.AppParam;

@@ -16,13 +16,14 @@
  */
 package com.sparrow.security.po;
 
+import com.sparrow.protocol.DisplayTextAccessor;
 import com.sparrow.protocol.dao.PO;
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Table(name = "t_dict_type")
-public class DictType extends PO {
+public class DictType extends PO implements DisplayTextAccessor {
 
     private static final long serialVersionUID = 1L;
 
@@ -42,4 +43,13 @@ public class DictType extends PO {
 
     @Column(name = "remark", columnDefinition = "varchar(500) DEFAULT '' COMMENT '备注'")
     private String remark;
+
+    @Override
+    public String getDisplayText() {
+        String text = this.typeCode;
+        if (this.remark != null && !this.remark.isEmpty()) {
+            text += "【" + this.remark + "】";
+        }
+        return text;
+    }
 }
