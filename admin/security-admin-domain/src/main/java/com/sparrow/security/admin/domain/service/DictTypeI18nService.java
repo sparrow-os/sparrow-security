@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.DictTypeI18nBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.DictTypeI18nRepository;
 import com.sparrow.security.admin.protocol.param.DictTypeI18nParam;
 import com.sparrow.security.admin.protocol.query.DictTypeI18nQuery;
@@ -62,14 +63,21 @@ public class DictTypeI18nService {
         return queryDictTypeI18n(null);
     }
 
-    public ListRecordTotalBO<DictTypeI18nBO> queryDictTypeI18n(DictTypeI18nQuery dictTypeI18nQuery) {
-        Long totalRecord = this.dictTypeI18nRepository.getDictTypeI18nCount(dictTypeI18nQuery);
-        List<DictTypeI18nBO> dictTypeI18nBoList = null;
-        if (totalRecord > 0) {
-            dictTypeI18nBoList = this.dictTypeI18nRepository.queryDictTypeI18ns(dictTypeI18nQuery);
+    
+    
+        public ListRecordTotalBO<DictTypeI18nBO> queryDictTypeI18n(DictTypeI18nQuery dictTypeI18nQuery) {
+            Long totalRecord = this.dictTypeI18nRepository.getDictTypeI18nCount(dictTypeI18nQuery);
+            List<DictTypeI18nBO> dictTypeI18nBoList = null;
+            if (totalRecord > 0) {
+                dictTypeI18nBoList = this.dictTypeI18nRepository.queryDictTypeI18ns(dictTypeI18nQuery);
+            }
+            return new ListRecordTotalBO<>(dictTypeI18nBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(dictTypeI18nBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public DictTypeI18nBO getDictTypeI18n(Long dictTypeI18nId) throws BusinessException {
          Asserts.isTrue(dictTypeI18nId==null, SparrowError.GLOBAL_PARAMETER_NULL);

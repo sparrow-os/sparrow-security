@@ -22,7 +22,10 @@ import java.time.*;
 
 @Data
 public class PositionDTO implements DTO
-    ,DisplayTextAccessor{private Long id; 
+ , DisplayTextAccessor
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private Long organizationId; 
 private String code; 
@@ -36,5 +39,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private Integer status; 
-private String displayText; 
+
+  private String displayText;
+  
 }

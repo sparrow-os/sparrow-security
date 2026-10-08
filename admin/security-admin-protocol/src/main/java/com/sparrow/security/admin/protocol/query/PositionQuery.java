@@ -22,4 +22,6 @@ import lombok.Data;
 @Data
 public class PositionQuery extends SimplePager {
    private Integer status;
+
+ 
 }

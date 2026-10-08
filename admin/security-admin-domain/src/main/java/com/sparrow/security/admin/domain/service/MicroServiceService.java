@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.MicroServiceBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.MicroServiceRepository;
 import com.sparrow.security.admin.protocol.param.MicroServiceParam;
 import com.sparrow.security.admin.protocol.query.MicroServiceQuery;
@@ -62,14 +63,21 @@ public class MicroServiceService {
         return queryMicroService(null);
     }
 
-    public ListRecordTotalBO<MicroServiceBO> queryMicroService(MicroServiceQuery microServiceQuery) {
-        Long totalRecord = this.microServiceRepository.getMicroServiceCount(microServiceQuery);
-        List<MicroServiceBO> microServiceBoList = null;
-        if (totalRecord > 0) {
-            microServiceBoList = this.microServiceRepository.queryMicroServices(microServiceQuery);
+    
+    
+        public ListRecordTotalBO<MicroServiceBO> queryMicroService(MicroServiceQuery microServiceQuery) {
+            Long totalRecord = this.microServiceRepository.getMicroServiceCount(microServiceQuery);
+            List<MicroServiceBO> microServiceBoList = null;
+            if (totalRecord > 0) {
+                microServiceBoList = this.microServiceRepository.queryMicroServices(microServiceQuery);
+            }
+            return new ListRecordTotalBO<>(microServiceBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(microServiceBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public MicroServiceBO getMicroService(Long microServiceId) throws BusinessException {
          Asserts.isTrue(microServiceId==null, SparrowError.GLOBAL_PARAMETER_NULL);
@@ -81,7 +89,6 @@ public class MicroServiceService {
         microServiceQuery.setPageSize(-1);
         List<MicroServiceBO> microServiceBoList = this.microServiceRepository.queryMicroServices(microServiceQuery);
         List<KeyValue<Integer, String>> microServiceKvs = new ArrayList<>(microServiceBoList.size());
-        microServiceKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (MicroServiceBO microServiceBO : microServiceBoList) {
             microServiceKvs.add(new KeyValue<>(microServiceBO.getId().intValue(), microServiceBO.getDisplayText()));
         }

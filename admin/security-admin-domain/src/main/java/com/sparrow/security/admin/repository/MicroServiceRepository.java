@@ -38,5 +38,6 @@ public interface MicroServiceRepository {
     List<MicroServiceBO> queryMicroServices(MicroServiceQuery microServiceQuery);
 
     Long getMicroServiceCount(MicroServiceQuery microServiceQuery);
+    
 
 }

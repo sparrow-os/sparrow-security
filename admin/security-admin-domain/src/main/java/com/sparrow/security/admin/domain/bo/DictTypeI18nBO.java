@@ -22,7 +22,10 @@ import java.time.*;
 import lombok.Data;
 @Data
 public class DictTypeI18nBO implements BO
-    {private Long id; 
+ 
+ 
+{
+  private Long id; 
 private Long dictTypeId; 
 private String locale; 
 private String typeName; 
@@ -34,4 +37,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private StatusRecord status; 
+
+  
+  
 }

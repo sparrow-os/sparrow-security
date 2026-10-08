@@ -21,7 +21,7 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.PermissionDAO;
 import com.sparrow.security.admin.dao.query.PermissionDBPagerQuery;
 import com.sparrow.security.po.Permission;
-import java.util.List;
+import java.util.*;
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -46,4 +46,7 @@ public class PermissionDaoImpl extends ORMStrategy<Permission, Long> implements 
         searchCriteria.setWhere(this.generateCriteria(permissionPagerQuery));
         return this.getCount(searchCriteria);
     }
+
+
+     
 }

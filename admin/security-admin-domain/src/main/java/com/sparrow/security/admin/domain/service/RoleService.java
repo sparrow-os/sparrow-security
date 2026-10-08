@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.RoleBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.RoleRepository;
 import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
@@ -62,14 +63,21 @@ public class RoleService {
         return queryRole(null);
     }
 
-    public ListRecordTotalBO<RoleBO> queryRole(RoleQuery roleQuery) {
-        Long totalRecord = this.roleRepository.getRoleCount(roleQuery);
-        List<RoleBO> roleBoList = null;
-        if (totalRecord > 0) {
-            roleBoList = this.roleRepository.queryRoles(roleQuery);
+    
+    
+        public ListRecordTotalBO<RoleBO> queryRole(RoleQuery roleQuery) {
+            Long totalRecord = this.roleRepository.getRoleCount(roleQuery);
+            List<RoleBO> roleBoList = null;
+            if (totalRecord > 0) {
+                roleBoList = this.roleRepository.queryRoles(roleQuery);
+            }
+            return new ListRecordTotalBO<>(roleBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(roleBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public RoleBO getRole(Long roleId) throws BusinessException {
          Asserts.isTrue(roleId==null, SparrowError.GLOBAL_PARAMETER_NULL);

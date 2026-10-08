@@ -38,5 +38,6 @@ public interface AppRepository {
     List<AppBO> queryApps(AppQuery appQuery);
 
     Long getAppCount(AppQuery appQuery);
+    
 
 }

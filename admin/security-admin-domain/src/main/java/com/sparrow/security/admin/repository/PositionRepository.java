@@ -38,5 +38,6 @@ public interface PositionRepository {
     List<PositionBO> queryPositions(PositionQuery positionQuery);
 
     Long getPositionCount(PositionQuery positionQuery);
+    
 
 }

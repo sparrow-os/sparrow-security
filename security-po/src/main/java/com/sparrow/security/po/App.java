@@ -27,7 +27,6 @@ import lombok.Data;
 @Table(name = "t_app")
 public class App extends PO implements DisplayTextAccessor {
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", columnDefinition = "int UNSIGNED AUTO_INCREMENT")

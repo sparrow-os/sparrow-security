@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.AdminUser;
 import com.sparrow.security.admin.dao.query.AdminUserDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface AdminUserDAO extends DaoSupport<AdminUser, Long> {
     List<AdminUser> queryAdminUsers(AdminUserDBPagerQuery adminUserPagerQuery);
 
     Long countAdminUser(AdminUserDBPagerQuery adminUserPagerQuery);
+    
+
 }

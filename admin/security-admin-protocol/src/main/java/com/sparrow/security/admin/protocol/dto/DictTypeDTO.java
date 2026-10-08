@@ -22,10 +22,13 @@ import java.time.*;
 
 @Data
 public class DictTypeDTO implements DTO
-    ,DisplayTextAccessor{private Long id; 
+ , DisplayTextAccessor
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private String typeCode; 
-private Integer sortOrder; 
+private Integer sort; 
 private String remark; 
 private String createUserName; 
 private Long createUserId; 
@@ -35,5 +38,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private Integer status; 
-private String displayText; 
+
+  private String displayText;
+  
 }

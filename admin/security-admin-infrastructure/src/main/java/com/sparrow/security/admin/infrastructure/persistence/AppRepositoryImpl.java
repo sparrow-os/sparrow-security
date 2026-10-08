@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.AppParam;
 import com.sparrow.security.admin.repository.AppRepository;
 import com.sparrow.security.admin.protocol.query.AppQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class AppRepositoryImpl implements AppRepository {
     @Override public Long getAppCount(AppQuery appQuery) {
         return this.appDao.countApp(this.appConverter.toDbPagerQuery(appQuery));
     }
+
+    
 }

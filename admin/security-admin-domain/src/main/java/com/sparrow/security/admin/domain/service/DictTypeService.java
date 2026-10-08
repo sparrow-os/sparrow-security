@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.DictTypeBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.DictTypeRepository;
 import com.sparrow.security.admin.protocol.param.DictTypeParam;
 import com.sparrow.security.admin.protocol.query.DictTypeQuery;
@@ -62,14 +63,21 @@ public class DictTypeService {
         return queryDictType(null);
     }
 
-    public ListRecordTotalBO<DictTypeBO> queryDictType(DictTypeQuery dictTypeQuery) {
-        Long totalRecord = this.dictTypeRepository.getDictTypeCount(dictTypeQuery);
-        List<DictTypeBO> dictTypeBoList = null;
-        if (totalRecord > 0) {
-            dictTypeBoList = this.dictTypeRepository.queryDictTypes(dictTypeQuery);
+    
+    
+        public ListRecordTotalBO<DictTypeBO> queryDictType(DictTypeQuery dictTypeQuery) {
+            Long totalRecord = this.dictTypeRepository.getDictTypeCount(dictTypeQuery);
+            List<DictTypeBO> dictTypeBoList = null;
+            if (totalRecord > 0) {
+                dictTypeBoList = this.dictTypeRepository.queryDictTypes(dictTypeQuery);
+            }
+            return new ListRecordTotalBO<>(dictTypeBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(dictTypeBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public DictTypeBO getDictType(Long dictTypeId) throws BusinessException {
          Asserts.isTrue(dictTypeId==null, SparrowError.GLOBAL_PARAMETER_NULL);
@@ -81,7 +89,6 @@ public class DictTypeService {
         dictTypeQuery.setPageSize(-1);
         List<DictTypeBO> dictTypeBoList = this.dictTypeRepository.queryDictTypes(dictTypeQuery);
         List<KeyValue<Integer, String>> dictTypeKvs = new ArrayList<>(dictTypeBoList.size());
-        dictTypeKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (DictTypeBO dictTypeBO : dictTypeBoList) {
             dictTypeKvs.add(new KeyValue<>(dictTypeBO.getId().intValue(), dictTypeBO.getDisplayText()));
         }

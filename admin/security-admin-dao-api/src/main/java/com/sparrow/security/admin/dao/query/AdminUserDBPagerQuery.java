@@ -18,11 +18,13 @@ package com.sparrow.security.admin.dao.query;
 
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.protocol.dao.DatabasePagerQuery;
+
 import java.util.Date;
 import lombok.Data;
 @Data
-
 public class AdminUserDBPagerQuery extends DatabasePagerQuery {
    private Integer status;
+   
+
    public AdminUserDBPagerQuery() {}
 }

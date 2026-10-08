@@ -38,5 +38,6 @@ public interface AdminUserRepository {
     List<AdminUserBO> queryAdminUsers(AdminUserQuery adminUserQuery);
 
     Long getAdminUserCount(AdminUserQuery adminUserQuery);
+    
 
 }

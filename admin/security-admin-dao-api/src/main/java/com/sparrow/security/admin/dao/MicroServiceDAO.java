@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.MicroService;
 import com.sparrow.security.admin.dao.query.MicroServiceDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface MicroServiceDAO extends DaoSupport<MicroService, Long> {
     List<MicroService> queryMicroServices(MicroServiceDBPagerQuery microServicePagerQuery);
 
     Long countMicroService(MicroServiceDBPagerQuery microServicePagerQuery);
+    
+
 }

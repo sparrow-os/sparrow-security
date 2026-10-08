@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.AdminUserParam;
 import com.sparrow.security.admin.repository.AdminUserRepository;
 import com.sparrow.security.admin.protocol.query.AdminUserQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class AdminUserRepositoryImpl implements AdminUserRepository {
     @Override public Long getAdminUserCount(AdminUserQuery adminUserQuery) {
         return this.adminUserDao.countAdminUser(this.adminUserConverter.toDbPagerQuery(adminUserQuery));
     }
+
+    
 }

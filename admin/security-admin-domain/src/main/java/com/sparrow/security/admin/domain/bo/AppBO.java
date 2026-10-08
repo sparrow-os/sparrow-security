@@ -22,7 +22,10 @@ import java.time.*;
 import lombok.Data;
 @Data
 public class AppBO implements BO
-    ,DisplayTextAccessor{private Long id; 
+ , DisplayTextAccessor
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private String code; 
 private String name; 
@@ -37,5 +40,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private StatusRecord status; 
-private String displayText; 
+
+  private String displayText;
+  
 }

@@ -21,7 +21,7 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.MicroServiceDAO;
 import com.sparrow.security.admin.dao.query.MicroServiceDBPagerQuery;
 import com.sparrow.security.po.MicroService;
-import java.util.List;
+import java.util.*;
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -46,4 +46,7 @@ public class MicroServiceDaoImpl extends ORMStrategy<MicroService, Long> impleme
         searchCriteria.setWhere(this.generateCriteria(microServicePagerQuery));
         return this.getCount(searchCriteria);
     }
+
+
+     
 }

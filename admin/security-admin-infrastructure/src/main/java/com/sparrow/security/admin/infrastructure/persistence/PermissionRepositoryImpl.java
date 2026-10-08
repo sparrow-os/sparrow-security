@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.PermissionParam;
 import com.sparrow.security.admin.repository.PermissionRepository;
 import com.sparrow.security.admin.protocol.query.PermissionQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class PermissionRepositoryImpl implements PermissionRepository {
     @Override public Long getPermissionCount(PermissionQuery permissionQuery) {
         return this.permissionDao.countPermission(this.permissionConverter.toDbPagerQuery(permissionQuery));
     }
+
+    
 }

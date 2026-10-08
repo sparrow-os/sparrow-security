@@ -38,5 +38,6 @@ public interface DictTypeRepository {
     List<DictTypeBO> queryDictTypes(DictTypeQuery dictTypeQuery);
 
     Long getDictTypeCount(DictTypeQuery dictTypeQuery);
+    
 
 }

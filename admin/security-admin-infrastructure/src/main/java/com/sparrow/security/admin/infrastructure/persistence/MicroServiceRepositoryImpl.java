@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.MicroServiceParam;
 import com.sparrow.security.admin.repository.MicroServiceRepository;
 import com.sparrow.security.admin.protocol.query.MicroServiceQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class MicroServiceRepositoryImpl implements MicroServiceRepository {
     @Override public Long getMicroServiceCount(MicroServiceQuery microServiceQuery) {
         return this.microServiceDao.countMicroService(this.microServiceConverter.toDbPagerQuery(microServiceQuery));
     }
+
+    
 }

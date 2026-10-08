@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 package com.sparrow.security.admin.repository;
-
 import com.sparrow.security.admin.domain.bo.OrganizationBO;
 import com.sparrow.security.admin.protocol.param.OrganizationParam;
 import com.sparrow.security.admin.protocol.query.OrganizationQuery;
-
 import java.util.List;
 import java.util.Set;
+
+
 
 
 public interface OrganizationRepository {
@@ -38,6 +38,8 @@ public interface OrganizationRepository {
     List<OrganizationBO> queryOrganizations(OrganizationQuery organizationQuery);
 
     Long getOrganizationCount(OrganizationQuery organizationQuery);
-
+    
     List<OrganizationBO> queryChildren(OrganizationQuery organizationQuery);
+    
+
 }

@@ -22,7 +22,10 @@ import java.time.*;
 
 @Data
 public class DictTypeI18nDTO implements DTO
-    {private Long id; 
+ 
+ 
+{
+  private Long id; 
 private Long dictTypeId; 
 private String locale; 
 private String typeName; 
@@ -34,4 +37,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private Integer status; 
+
+  
+  
 }

@@ -18,13 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-
-import com.sparrow.protocol.pager.SimplePager;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.OrganizationBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.OrganizationRepository;
 import com.sparrow.security.admin.protocol.param.OrganizationParam;
 import com.sparrow.security.admin.protocol.query.OrganizationQuery;
@@ -64,10 +63,17 @@ public class OrganizationService {
         return queryOrganization(null);
     }
 
-    public ListRecordTotalBO<OrganizationBO> queryOrganization(OrganizationQuery organizationQuery) {
-        List<OrganizationBO> organizationBoList = this.organizationRepository.queryChildren(organizationQuery);
-        return new ListRecordTotalBO<>(organizationBoList, SimplePager.NO_SPLIT_PAGE);
-    }
+    
+     public ListRecordTotalBO<OrganizationBO> queryOrganization(OrganizationQuery organizationQuery) {
+                List<OrganizationBO> organizationBoList = this.organizationRepository.queryChildren(organizationQuery);
+                return new ListRecordTotalBO<>(organizationBoList, Constant.LONG_ALL);
+        }
+    
+    
+
+
+
+
 
     public OrganizationBO getOrganization(Long organizationId) throws BusinessException {
          Asserts.isTrue(organizationId==null, SparrowError.GLOBAL_PARAMETER_NULL);
@@ -79,7 +85,6 @@ public class OrganizationService {
         organizationQuery.setPageSize(-1);
         List<OrganizationBO> organizationBoList = this.organizationRepository.queryOrganizations(organizationQuery);
         List<KeyValue<Integer, String>> organizationKvs = new ArrayList<>(organizationBoList.size());
-        organizationKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (OrganizationBO organizationBO : organizationBoList) {
             organizationKvs.add(new KeyValue<>(organizationBO.getId().intValue(), organizationBO.getDisplayText()));
         }

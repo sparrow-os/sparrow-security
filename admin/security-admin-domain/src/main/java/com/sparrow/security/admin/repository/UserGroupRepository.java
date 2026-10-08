@@ -38,5 +38,6 @@ public interface UserGroupRepository {
     List<UserGroupBO> queryUserGroups(UserGroupQuery userGroupQuery);
 
     Long getUserGroupCount(UserGroupQuery userGroupQuery);
+    
 
 }

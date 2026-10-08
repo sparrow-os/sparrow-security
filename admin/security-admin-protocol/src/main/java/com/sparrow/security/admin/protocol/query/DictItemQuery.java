@@ -21,5 +21,10 @@ import java.util.Date;
 import lombok.Data;
 @Data
 public class DictItemQuery extends SimplePager {
-   private Integer status;
+   private Long dictTypeId;
+private Integer status;
+
+ 
+   private Long parentId;
+   
 }

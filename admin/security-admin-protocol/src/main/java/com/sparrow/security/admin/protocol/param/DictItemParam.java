@@ -31,7 +31,7 @@ private Long parentId;
 private Long dictTypeId; 
 private String itemCode; 
 private String itemValue; 
-private Integer sortOrder; 
+private Integer sort; 
 private String remark; 
 
 }

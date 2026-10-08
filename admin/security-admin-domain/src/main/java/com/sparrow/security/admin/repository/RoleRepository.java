@@ -38,5 +38,6 @@ public interface RoleRepository {
     List<RoleBO> queryRoles(RoleQuery roleQuery);
 
     Long getRoleCount(RoleQuery roleQuery);
+    
 
 }

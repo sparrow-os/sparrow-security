@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.DictTypeI18nParam;
 import com.sparrow.security.admin.repository.DictTypeI18nRepository;
 import com.sparrow.security.admin.protocol.query.DictTypeI18nQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class DictTypeI18nRepositoryImpl implements DictTypeI18nRepository {
     @Override public Long getDictTypeI18nCount(DictTypeI18nQuery dictTypeI18nQuery) {
         return this.dictTypeI18nDao.countDictTypeI18n(this.dictTypeI18nConverter.toDbPagerQuery(dictTypeI18nQuery));
     }
+
+    
 }

@@ -21,7 +21,7 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.UserGroupDAO;
 import com.sparrow.security.admin.dao.query.UserGroupDBPagerQuery;
 import com.sparrow.security.po.UserGroup;
-import java.util.List;
+import java.util.*;
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -46,4 +46,7 @@ public class UserGroupDaoImpl extends ORMStrategy<UserGroup, Long> implements Us
         searchCriteria.setWhere(this.generateCriteria(userGroupPagerQuery));
         return this.getCount(searchCriteria);
     }
+
+
+     
 }

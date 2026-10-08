@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.AdminUserBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.AdminUserRepository;
 import com.sparrow.security.admin.protocol.param.AdminUserParam;
 import com.sparrow.security.admin.protocol.query.AdminUserQuery;
@@ -62,14 +63,21 @@ public class AdminUserService {
         return queryAdminUser(null);
     }
 
-    public ListRecordTotalBO<AdminUserBO> queryAdminUser(AdminUserQuery adminUserQuery) {
-        Long totalRecord = this.adminUserRepository.getAdminUserCount(adminUserQuery);
-        List<AdminUserBO> adminUserBoList = null;
-        if (totalRecord > 0) {
-            adminUserBoList = this.adminUserRepository.queryAdminUsers(adminUserQuery);
+    
+    
+        public ListRecordTotalBO<AdminUserBO> queryAdminUser(AdminUserQuery adminUserQuery) {
+            Long totalRecord = this.adminUserRepository.getAdminUserCount(adminUserQuery);
+            List<AdminUserBO> adminUserBoList = null;
+            if (totalRecord > 0) {
+                adminUserBoList = this.adminUserRepository.queryAdminUsers(adminUserQuery);
+            }
+            return new ListRecordTotalBO<>(adminUserBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(adminUserBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public AdminUserBO getAdminUser(Long adminUserId) throws BusinessException {
          Asserts.isTrue(adminUserId==null, SparrowError.GLOBAL_PARAMETER_NULL);

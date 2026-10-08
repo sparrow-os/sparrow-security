@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.UserGroup;
 import com.sparrow.security.admin.dao.query.UserGroupDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface UserGroupDAO extends DaoSupport<UserGroup, Long> {
     List<UserGroup> queryUserGroups(UserGroupDBPagerQuery userGroupPagerQuery);
 
     Long countUserGroup(UserGroupDBPagerQuery userGroupPagerQuery);
+    
+
 }

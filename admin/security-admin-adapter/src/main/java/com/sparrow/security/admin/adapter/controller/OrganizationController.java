@@ -16,22 +16,22 @@
  */
 package com.sparrow.security.admin.adapter.controller;
 
-import com.sparrow.protocol.BusinessException;
-import com.sparrow.protocol.ListRecordTotalBO;
+import com.sparrow.protocol.*;
+import java.util.*;
 import com.sparrow.protocol.pager.PagerResult;
 import com.sparrow.security.admin.adapter.assemble.OrganizationAssemble;
 import com.sparrow.security.admin.domain.bo.OrganizationBO;
-import com.sparrow.security.admin.domain.service.OrganizationService;
-import com.sparrow.security.admin.protocol.dto.OrganizationDTO;
 import com.sparrow.security.admin.protocol.param.OrganizationParam;
 import com.sparrow.security.admin.protocol.query.OrganizationQuery;
+import com.sparrow.security.admin.protocol.dto.OrganizationDTO;
+import com.sparrow.security.admin.domain.service.OrganizationService;
 import com.sparrow.spring.container.EnumsContainer;
-import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+
 
 
 @RestController
@@ -46,49 +46,50 @@ public class OrganizationController {
     private OrganizationAssemble organizationAssemble;
 
     @Inject
-    private EnumsContainer coderEnumsContainer;
+private EnumsContainer coderEnumsContainer;
 
     @PostMapping("search.json")
-    @Operation(method = "搜索")
+    @Operation(method="搜索")
     public PagerResult<OrganizationDTO> search(@RequestBody OrganizationQuery organizationQuery) {
         ListRecordTotalBO<OrganizationBO> organizationListTotalRecord = this.organizationService.queryOrganization(organizationQuery);
-        PagerResult<OrganizationDTO> pagerResult = this.organizationAssemble.assemblePager(organizationListTotalRecord, organizationQuery);
-        pagerResult.putDictionary("status", coderEnumsContainer.getEnums("status"));
-        pagerResult.putDictionary("parentId", this.organizationService.getOrganizationKvs());
+        PagerResult<OrganizationDTO> pagerResult =this.organizationAssemble.assemblePager(organizationListTotalRecord, organizationQuery);
+        pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));
+pagerResult.putDictionary("parentId",this.organizationService.getOrganizationKvs());
+
         return pagerResult;
     }
 
     @PostMapping("save.json")
-    @Operation(method = "保存")
+            @Operation(method="保存")
 
     public Long saveOrganization(@RequestBody OrganizationParam organizationParam) throws BusinessException {
-        return this.organizationService.saveOrganization(organizationParam);
+       return  this.organizationService.saveOrganization(organizationParam);
     }
 
     @GetMapping("detail.json")
-    @Operation(method = "详情页")
+            @Operation(method="详情页")
     public OrganizationDTO getOrganization(Long organizationId) throws BusinessException {
         OrganizationBO organizationBo = organizationService.getOrganization(organizationId);
         return this.organizationAssemble.boAssembleDTO(organizationBo);
     }
 
     @PostMapping("delete.json")
-    @Operation(method = "删除")
+            @Operation(method="删除")
 
     public Integer deleteOrganization(@RequestBody Set<Long> ids) throws BusinessException {
-        return this.organizationService.deleteOrganization(ids);
+       return this.organizationService.deleteOrganization(ids);
     }
 
     @PostMapping("enable.json")
-    @Operation(method = "启用")
+            @Operation(method="启用")
 
     public Integer enableOrganization(@RequestBody Set<Long> ids) throws BusinessException {
-        return this.organizationService.enableOrganization(ids);
+        return  this.organizationService.enableOrganization(ids);
     }
 
     @PostMapping("disable.json")
-    @Operation(method = "禁用")
+    @Operation(method="禁用")
     public Integer disableOrganization(@RequestBody Set<Long> ids) throws BusinessException {
-        return this.organizationService.disableOrganization(ids);
+       return  this.organizationService.disableOrganization(ids);
     }
 }

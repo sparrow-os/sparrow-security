@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.UserGroupParam;
 import com.sparrow.security.admin.repository.UserGroupRepository;
 import com.sparrow.security.admin.protocol.query.UserGroupQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class UserGroupRepositoryImpl implements UserGroupRepository {
     @Override public Long getUserGroupCount(UserGroupQuery userGroupQuery) {
         return this.userGroupDao.countUserGroup(this.userGroupConverter.toDbPagerQuery(userGroupQuery));
     }
+
+    
 }

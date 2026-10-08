@@ -22,7 +22,10 @@ import java.time.*;
 import lombok.Data;
 @Data
 public class MicroServiceBO implements BO
-    ,DisplayTextAccessor{private Long id; 
+ , DisplayTextAccessor
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private String name; 
 private Integer sort; 
@@ -38,5 +41,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private StatusRecord status; 
-private String displayText; 
+
+  private String displayText;
+  
 }

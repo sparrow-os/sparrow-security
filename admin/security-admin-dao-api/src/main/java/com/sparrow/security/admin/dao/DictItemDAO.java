@@ -19,10 +19,17 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.DictItem;
 import com.sparrow.security.admin.dao.query.DictItemDBPagerQuery;
-import java.util.List;
+import java.util.*;
+
+import com.sparrow.protocol.enums.StatusRecord;
 
 public interface DictItemDAO extends DaoSupport<DictItem, Long> {
     List<DictItem> queryDictItems(DictItemDBPagerQuery dictItemPagerQuery);
 
     Long countDictItem(DictItemDBPagerQuery dictItemPagerQuery);
+    
+    List<DictItem> queryChildren(DictItemDBPagerQuery dictItemPagerQuery);
+    Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds,StatusRecord statusRecord);
+    
+
 }

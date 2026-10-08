@@ -38,5 +38,6 @@ public interface DictTypeI18nRepository {
     List<DictTypeI18nBO> queryDictTypeI18ns(DictTypeI18nQuery dictTypeI18nQuery);
 
     Long getDictTypeI18nCount(DictTypeI18nQuery dictTypeI18nQuery);
+    
 
 }

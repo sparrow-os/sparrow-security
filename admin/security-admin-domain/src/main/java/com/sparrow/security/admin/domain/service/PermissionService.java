@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.PermissionBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.PermissionRepository;
 import com.sparrow.security.admin.protocol.param.PermissionParam;
 import com.sparrow.security.admin.protocol.query.PermissionQuery;
@@ -62,14 +63,21 @@ public class PermissionService {
         return queryPermission(null);
     }
 
-    public ListRecordTotalBO<PermissionBO> queryPermission(PermissionQuery permissionQuery) {
-        Long totalRecord = this.permissionRepository.getPermissionCount(permissionQuery);
-        List<PermissionBO> permissionBoList = null;
-        if (totalRecord > 0) {
-            permissionBoList = this.permissionRepository.queryPermissions(permissionQuery);
+    
+    
+        public ListRecordTotalBO<PermissionBO> queryPermission(PermissionQuery permissionQuery) {
+            Long totalRecord = this.permissionRepository.getPermissionCount(permissionQuery);
+            List<PermissionBO> permissionBoList = null;
+            if (totalRecord > 0) {
+                permissionBoList = this.permissionRepository.queryPermissions(permissionQuery);
+            }
+            return new ListRecordTotalBO<>(permissionBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(permissionBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public PermissionBO getPermission(Long permissionId) throws BusinessException {
          Asserts.isTrue(permissionId==null, SparrowError.GLOBAL_PARAMETER_NULL);
@@ -81,7 +89,6 @@ public class PermissionService {
         permissionQuery.setPageSize(-1);
         List<PermissionBO> permissionBoList = this.permissionRepository.queryPermissions(permissionQuery);
         List<KeyValue<Integer, String>> permissionKvs = new ArrayList<>(permissionBoList.size());
-        permissionKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (PermissionBO permissionBO : permissionBoList) {
             permissionKvs.add(new KeyValue<>(permissionBO.getId().intValue(), permissionBO.getDisplayText()));
         }

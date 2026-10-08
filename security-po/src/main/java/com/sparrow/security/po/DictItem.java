@@ -51,8 +51,8 @@ public class DictItem extends PO implements DisplayTextAccessor {
     @Column(name = "item_value", columnDefinition = "varchar(500) DEFAULT '' COMMENT '字典项值（存储实际业务值）'")
     private String itemValue;
 
-    @Column(name = "sort_order", columnDefinition = "int DEFAULT 0 COMMENT '排序号'", nullable = false)
-    private Integer sortOrder;
+    @Column(name = "sort", columnDefinition = "int DEFAULT 0 COMMENT '排序号'", nullable = false)
+    private Integer sort;
 
     @Column(name = "remark", columnDefinition = "varchar(500) DEFAULT '' COMMENT '备注'")
     private String remark;

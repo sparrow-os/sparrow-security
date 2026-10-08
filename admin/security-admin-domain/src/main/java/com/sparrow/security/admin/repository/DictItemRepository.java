@@ -38,5 +38,8 @@ public interface DictItemRepository {
     List<DictItemBO> queryDictItems(DictItemQuery dictItemQuery);
 
     Long getDictItemCount(DictItemQuery dictItemQuery);
+    
+    List<DictItemBO> queryChildren(DictItemQuery dictItemQuery);
+    
 
 }

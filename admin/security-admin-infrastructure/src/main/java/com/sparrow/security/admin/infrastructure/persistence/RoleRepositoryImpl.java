@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.repository.RoleRepository;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class RoleRepositoryImpl implements RoleRepository {
     @Override public Long getRoleCount(RoleQuery roleQuery) {
         return this.roleDao.countRole(this.roleConverter.toDbPagerQuery(roleQuery));
     }
+
+    
 }

@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.App;
 import com.sparrow.security.admin.dao.query.AppDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface AppDAO extends DaoSupport<App, Long> {
     List<App> queryApps(AppDBPagerQuery appPagerQuery);
 
     Long countApp(AppDBPagerQuery appPagerQuery);
+    
+
 }

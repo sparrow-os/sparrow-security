@@ -22,7 +22,10 @@ import java.time.*;
 
 @Data
 public class UserGroupDTO implements DTO
-    {private Long id; 
+ 
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private String code; 
 private String name; 
@@ -36,4 +39,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private Integer status; 
+
+  
+  
 }

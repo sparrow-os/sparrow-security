@@ -19,17 +19,17 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.Organization;
 import com.sparrow.security.admin.dao.query.OrganizationDBPagerQuery;
+import java.util.*;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import com.sparrow.protocol.enums.StatusRecord;
 
 public interface OrganizationDAO extends DaoSupport<Organization, Long> {
     List<Organization> queryOrganizations(OrganizationDBPagerQuery organizationPagerQuery);
 
     Long countOrganization(OrganizationDBPagerQuery organizationPagerQuery);
-
+    
     List<Organization> queryChildren(OrganizationDBPagerQuery organizationPagerQuery);
+    Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds,StatusRecord statusRecord);
+    
 
-    Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds);
 }

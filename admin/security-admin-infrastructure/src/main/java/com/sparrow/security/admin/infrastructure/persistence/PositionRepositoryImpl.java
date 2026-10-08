@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.PositionParam;
 import com.sparrow.security.admin.repository.PositionRepository;
 import com.sparrow.security.admin.protocol.query.PositionQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class PositionRepositoryImpl implements PositionRepository {
     @Override public Long getPositionCount(PositionQuery positionQuery) {
         return this.positionDao.countPosition(this.positionConverter.toDbPagerQuery(positionQuery));
     }
+
+    
 }

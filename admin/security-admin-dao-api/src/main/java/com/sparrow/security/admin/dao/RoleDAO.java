@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.Role;
 import com.sparrow.security.admin.dao.query.RoleDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface RoleDAO extends DaoSupport<Role, Long> {
     List<Role> queryRoles(RoleDBPagerQuery rolePagerQuery);
 
     Long countRole(RoleDBPagerQuery rolePagerQuery);
+    
+
 }

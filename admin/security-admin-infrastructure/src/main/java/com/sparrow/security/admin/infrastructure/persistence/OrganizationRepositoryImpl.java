@@ -26,11 +26,8 @@ import com.sparrow.security.admin.protocol.param.OrganizationParam;
 import com.sparrow.security.admin.repository.OrganizationRepository;
 import com.sparrow.security.admin.protocol.query.OrganizationQuery;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
-
 import jakarta.inject.*;
 
 @Named
@@ -81,17 +78,19 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
         return this.organizationDao.countOrganization(this.organizationConverter.toDbPagerQuery(organizationQuery));
     }
 
+    
     @Override public List<OrganizationBO> queryChildren(OrganizationQuery organizationQuery) {
         List<Organization> children = this.organizationDao.queryChildren(this.organizationConverter.toDbPagerQuery(organizationQuery));
         if (children.isEmpty()) {
             return Collections.emptyList();
         }
         Set<Long> childIds = children.stream().map(Organization::getId).collect(Collectors.toSet());
-        Set<Long> parentIdsWithChildren = this.organizationDao.getParentIdsHavingChildren(childIds);
+        Set<Long> parentIdsWithChildren = this.organizationDao.getParentIdsHavingChildren(childIds,StatusRecord.valueOf(organizationQuery.getStatus()));
         return children.stream().map(organization -> {
             OrganizationBO organizationBO = this.organizationConverter.po2bo(organization);
             organizationBO.setHasChildren(parentIdsWithChildren.contains(organization.getId()));
             return organizationBO;
         }).collect(Collectors.toList());
     }
+    
 }

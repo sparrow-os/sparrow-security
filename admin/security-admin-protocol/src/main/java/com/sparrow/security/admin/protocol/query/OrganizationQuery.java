@@ -17,17 +17,13 @@
 package com.sparrow.security.admin.protocol.query;
 
 import com.sparrow.protocol.pager.SimplePager;
+import java.util.Date;
 import lombok.Data;
-
 @Data
 public class OrganizationQuery extends SimplePager {
-    private Integer status;
-    private Long parentId;
+   private Integer status;
 
-    public Long getParentId() {
-        if (parentId == null) {
-            return -1L;
-        }
-        return this.parentId;
-    }
+ 
+   private Long parentId;
+   
 }

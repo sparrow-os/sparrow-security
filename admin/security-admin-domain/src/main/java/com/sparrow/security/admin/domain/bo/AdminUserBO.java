@@ -22,7 +22,10 @@ import java.time.*;
 import lombok.Data;
 @Data
 public class AdminUserBO implements BO
-    {private Long id; 
+ 
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private Long userId; 
 private Long organizationId; 
@@ -35,4 +38,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private StatusRecord status; 
+
+  
+  
 }

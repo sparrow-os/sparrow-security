@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.Position;
 import com.sparrow.security.admin.dao.query.PositionDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface PositionDAO extends DaoSupport<Position, Long> {
     List<Position> queryPositions(PositionDBPagerQuery positionPagerQuery);
 
     Long countPosition(PositionDBPagerQuery positionPagerQuery);
+    
+
 }

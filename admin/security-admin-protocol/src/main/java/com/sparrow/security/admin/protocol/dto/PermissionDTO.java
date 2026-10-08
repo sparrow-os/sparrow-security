@@ -22,7 +22,10 @@ import java.time.*;
 
 @Data
 public class PermissionDTO implements DTO
-    ,DisplayTextAccessor{private Long id; 
+ , DisplayTextAccessor
+ 
+{
+  private Long id; 
 private Long tenantId; 
 private String permissionCode; 
 private String permissionName; 
@@ -45,5 +48,7 @@ private Long gmtCreate;
 private Long gmtModified; 
 private Boolean deleted; 
 private Integer status; 
-private String displayText; 
+
+  private String displayText;
+  
 }

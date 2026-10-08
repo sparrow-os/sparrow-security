@@ -38,5 +38,6 @@ public interface PermissionRepository {
     List<PermissionBO> queryPermissions(PermissionQuery permissionQuery);
 
     Long getPermissionCount(PermissionQuery permissionQuery);
+    
 
 }

@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.Permission;
 import com.sparrow.security.admin.dao.query.PermissionDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface PermissionDAO extends DaoSupport<Permission, Long> {
     List<Permission> queryPermissions(PermissionDBPagerQuery permissionPagerQuery);
 
     Long countPermission(PermissionDBPagerQuery permissionPagerQuery);
+    
+
 }

@@ -38,8 +38,8 @@ public class DictType extends PO implements DisplayTextAccessor {
     @Column(name = "type_code", columnDefinition = "varchar(100) DEFAULT '' COMMENT '字典类型编码（不可变）'", nullable = false, updatable = false)
     private String typeCode;
 
-    @Column(name = "sort_order", columnDefinition = "int DEFAULT 0 COMMENT '排序号'", nullable = false)
-    private Integer sortOrder;
+    @Column(name = "sort", columnDefinition = "int DEFAULT 0 COMMENT '排序号'", nullable = false)
+    private Integer sort;
 
     @Column(name = "remark", columnDefinition = "varchar(500) DEFAULT '' COMMENT '备注'")
     private String remark;

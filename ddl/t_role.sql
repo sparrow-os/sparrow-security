@@ -11,7 +11,6 @@ CREATE TABLE `t_role` (
  `modified_user_name` varchar(64)  DEFAULT '' COMMENT '更新人'  NOT NULL,
  `gmt_create` bigint  DEFAULT 0 COMMENT '创建时间'  NOT NULL,
  `gmt_modified` bigint  DEFAULT 0 COMMENT '更新时间'  NOT NULL,
- `deleted` tinyint(1)  DEFAULT 0 COMMENT '是否删除'  NOT NULL,
  `status` tinyint(3) UNSIGNED DEFAULT 0 COMMENT '状态'  NOT NULL,
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='t_role';

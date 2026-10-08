@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.DictTypeParam;
 import com.sparrow.security.admin.repository.DictTypeRepository;
 import com.sparrow.security.admin.protocol.query.DictTypeQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,6 @@ public class DictTypeRepositoryImpl implements DictTypeRepository {
     @Override public Long getDictTypeCount(DictTypeQuery dictTypeQuery) {
         return this.dictTypeDao.countDictType(this.dictTypeConverter.toDbPagerQuery(dictTypeQuery));
     }
+
+    
 }

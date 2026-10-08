@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.AppBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.AppRepository;
 import com.sparrow.security.admin.protocol.param.AppParam;
 import com.sparrow.security.admin.protocol.query.AppQuery;
@@ -62,14 +63,21 @@ public class AppService {
         return queryApp(null);
     }
 
-    public ListRecordTotalBO<AppBO> queryApp(AppQuery appQuery) {
-        Long totalRecord = this.appRepository.getAppCount(appQuery);
-        List<AppBO> appBoList = null;
-        if (totalRecord > 0) {
-            appBoList = this.appRepository.queryApps(appQuery);
+    
+    
+        public ListRecordTotalBO<AppBO> queryApp(AppQuery appQuery) {
+            Long totalRecord = this.appRepository.getAppCount(appQuery);
+            List<AppBO> appBoList = null;
+            if (totalRecord > 0) {
+                appBoList = this.appRepository.queryApps(appQuery);
+            }
+            return new ListRecordTotalBO<>(appBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(appBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public AppBO getApp(Long appId) throws BusinessException {
          Asserts.isTrue(appId==null, SparrowError.GLOBAL_PARAMETER_NULL);
@@ -81,7 +89,6 @@ public class AppService {
         appQuery.setPageSize(-1);
         List<AppBO> appBoList = this.appRepository.queryApps(appQuery);
         List<KeyValue<Integer, String>> appKvs = new ArrayList<>(appBoList.size());
-        appKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (AppBO appBO : appBoList) {
             appKvs.add(new KeyValue<>(appBO.getId().intValue(), appBO.getDisplayText()));
         }

@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.UserGroupBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.UserGroupRepository;
 import com.sparrow.security.admin.protocol.param.UserGroupParam;
 import com.sparrow.security.admin.protocol.query.UserGroupQuery;
@@ -62,14 +63,21 @@ public class UserGroupService {
         return queryUserGroup(null);
     }
 
-    public ListRecordTotalBO<UserGroupBO> queryUserGroup(UserGroupQuery userGroupQuery) {
-        Long totalRecord = this.userGroupRepository.getUserGroupCount(userGroupQuery);
-        List<UserGroupBO> userGroupBoList = null;
-        if (totalRecord > 0) {
-            userGroupBoList = this.userGroupRepository.queryUserGroups(userGroupQuery);
+    
+    
+        public ListRecordTotalBO<UserGroupBO> queryUserGroup(UserGroupQuery userGroupQuery) {
+            Long totalRecord = this.userGroupRepository.getUserGroupCount(userGroupQuery);
+            List<UserGroupBO> userGroupBoList = null;
+            if (totalRecord > 0) {
+                userGroupBoList = this.userGroupRepository.queryUserGroups(userGroupQuery);
+            }
+            return new ListRecordTotalBO<>(userGroupBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(userGroupBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public UserGroupBO getUserGroup(Long userGroupId) throws BusinessException {
          Asserts.isTrue(userGroupId==null, SparrowError.GLOBAL_PARAMETER_NULL);

@@ -18,11 +18,12 @@ package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.PositionBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.PositionRepository;
 import com.sparrow.security.admin.protocol.param.PositionParam;
 import com.sparrow.security.admin.protocol.query.PositionQuery;
@@ -62,14 +63,21 @@ public class PositionService {
         return queryPosition(null);
     }
 
-    public ListRecordTotalBO<PositionBO> queryPosition(PositionQuery positionQuery) {
-        Long totalRecord = this.positionRepository.getPositionCount(positionQuery);
-        List<PositionBO> positionBoList = null;
-        if (totalRecord > 0) {
-            positionBoList = this.positionRepository.queryPositions(positionQuery);
+    
+    
+        public ListRecordTotalBO<PositionBO> queryPosition(PositionQuery positionQuery) {
+            Long totalRecord = this.positionRepository.getPositionCount(positionQuery);
+            List<PositionBO> positionBoList = null;
+            if (totalRecord > 0) {
+                positionBoList = this.positionRepository.queryPositions(positionQuery);
+            }
+            return new ListRecordTotalBO<>(positionBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(positionBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public PositionBO getPosition(Long positionId) throws BusinessException {
          Asserts.isTrue(positionId==null, SparrowError.GLOBAL_PARAMETER_NULL);
@@ -81,7 +89,6 @@ public class PositionService {
         positionQuery.setPageSize(-1);
         List<PositionBO> positionBoList = this.positionRepository.queryPositions(positionQuery);
         List<KeyValue<Integer, String>> positionKvs = new ArrayList<>(positionBoList.size());
-        positionKvs.add(new KeyValue<>(-1, "请选择[默认不限]"));
         for (PositionBO positionBO : positionBoList) {
             positionKvs.add(new KeyValue<>(positionBO.getId().intValue(), positionBO.getDisplayText()));
         }

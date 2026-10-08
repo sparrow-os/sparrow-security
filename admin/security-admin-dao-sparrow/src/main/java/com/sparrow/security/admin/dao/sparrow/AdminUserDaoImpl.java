@@ -21,7 +21,7 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.AdminUserDAO;
 import com.sparrow.security.admin.dao.query.AdminUserDBPagerQuery;
 import com.sparrow.security.po.AdminUser;
-import java.util.List;
+import java.util.*;
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -46,4 +46,7 @@ public class AdminUserDaoImpl extends ORMStrategy<AdminUser, Long> implements Ad
         searchCriteria.setWhere(this.generateCriteria(adminUserPagerQuery));
         return this.getCount(searchCriteria);
     }
+
+
+     
 }

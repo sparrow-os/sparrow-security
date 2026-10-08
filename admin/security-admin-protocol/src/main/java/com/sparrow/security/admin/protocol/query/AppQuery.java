@@ -24,4 +24,6 @@ public class AppQuery extends SimplePager {
    private String code;
 private String name;
 private Integer status;
+
+ 
 }

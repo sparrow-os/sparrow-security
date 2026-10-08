@@ -26,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.DictItemParam;
 import com.sparrow.security.admin.repository.DictItemRepository;
 import com.sparrow.security.admin.protocol.query.DictItemQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -77,4 +77,20 @@ public class DictItemRepositoryImpl implements DictItemRepository {
     @Override public Long getDictItemCount(DictItemQuery dictItemQuery) {
         return this.dictItemDao.countDictItem(this.dictItemConverter.toDbPagerQuery(dictItemQuery));
     }
+
+    
+    @Override public List<DictItemBO> queryChildren(DictItemQuery dictItemQuery) {
+        List<DictItem> children = this.dictItemDao.queryChildren(this.dictItemConverter.toDbPagerQuery(dictItemQuery));
+        if (children.isEmpty()) {
+            return Collections.emptyList();
+        }
+        Set<Long> childIds = children.stream().map(DictItem::getId).collect(Collectors.toSet());
+        Set<Long> parentIdsWithChildren = this.dictItemDao.getParentIdsHavingChildren(childIds,StatusRecord.valueOf(dictItemQuery.getStatus()));
+        return children.stream().map(dictItem -> {
+            DictItemBO dictItemBO = this.dictItemConverter.po2bo(dictItem);
+            dictItemBO.setHasChildren(parentIdsWithChildren.contains(dictItem.getId()));
+            return dictItemBO;
+        }).collect(Collectors.toList());
+    }
+    
 }

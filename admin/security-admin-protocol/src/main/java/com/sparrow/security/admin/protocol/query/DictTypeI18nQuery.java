@@ -22,4 +22,6 @@ import lombok.Data;
 @Data
 public class DictTypeI18nQuery extends SimplePager {
    private Integer status;
+
+ 
 }

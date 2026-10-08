@@ -21,7 +21,7 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.AppDAO;
 import com.sparrow.security.admin.dao.query.AppDBPagerQuery;
 import com.sparrow.security.po.App;
-import java.util.List;
+import java.util.*;
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -46,4 +46,7 @@ public class AppDaoImpl extends ORMStrategy<App, Long> implements AppDAO {
         searchCriteria.setWhere(this.generateCriteria(appPagerQuery));
         return this.getCount(searchCriteria);
     }
+
+
+     
 }

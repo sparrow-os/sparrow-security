@@ -26,7 +26,6 @@ import lombok.Data;
 @Table(name = "t_user_group_member")
 public class UserGroupMember implements POJO {
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", columnDefinition = "bigint UNSIGNED AUTO_INCREMENT")
@@ -54,12 +53,4 @@ public class UserGroupMember implements POJO {
     @Column(name = "create_user_name", columnDefinition = "varchar(64) DEFAULT '' COMMENT '创建人'", nullable = false, updatable = false)
     private String createUserName;
 
-    @Column(name = "modified_user_id", columnDefinition = "bigint(11) UNSIGNED DEFAULT 0 COMMENT '更新人ID'", nullable = false)
-    private Long modifiedUserId;
-
-    @Column(name = "gmt_modified", columnDefinition = "bigint(11) UNSIGNED DEFAULT 0 COMMENT '更新时间'", nullable = false)
-    private Long gmtModified;
-
-    @Column(name = "modified_user_name", columnDefinition = "varchar(64) DEFAULT '' COMMENT '更新人'", nullable = false)
-    private String modifiedUserName;
 }

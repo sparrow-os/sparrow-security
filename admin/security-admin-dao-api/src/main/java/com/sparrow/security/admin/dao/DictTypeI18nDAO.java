@@ -19,10 +19,12 @@ package com.sparrow.security.admin.dao;
 import com.sparrow.protocol.dao.DaoSupport;
 import com.sparrow.security.po.DictTypeI18n;
 import com.sparrow.security.admin.dao.query.DictTypeI18nDBPagerQuery;
-import java.util.List;
+import java.util.*;
 
 public interface DictTypeI18nDAO extends DaoSupport<DictTypeI18n, Long> {
     List<DictTypeI18n> queryDictTypeI18ns(DictTypeI18nDBPagerQuery dictTypeI18nPagerQuery);
 
     Long countDictTypeI18n(DictTypeI18nDBPagerQuery dictTypeI18nPagerQuery);
+    
+
 }

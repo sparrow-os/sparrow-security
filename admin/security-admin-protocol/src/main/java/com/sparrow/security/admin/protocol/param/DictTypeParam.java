@@ -28,7 +28,7 @@ public class DictTypeParam implements Param {
     private Long id; 
 private Long tenantId; 
 private String typeCode; 
-private Integer sortOrder; 
+private Integer sort; 
 private String remark; 
 
 }
