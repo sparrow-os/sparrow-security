@@ -79,4 +79,18 @@ public class PermissionRepositoryImpl implements PermissionRepository {
     }
 
     
+    @Override public List<PermissionBO> queryChildren(PermissionQuery permissionQuery) {
+        List<Permission> children = this.permissionDao.queryChildren(this.permissionConverter.toDbPagerQuery(permissionQuery));
+        if (children.isEmpty()) {
+            return Collections.emptyList();
+        }
+        Set<Long> childIds = children.stream().map(Permission::getId).collect(Collectors.toSet());
+        Set<Long> parentIdsWithChildren = this.permissionDao.getParentIdsHavingChildren(childIds,StatusRecord.valueOf(permissionQuery.getStatus()));
+        return children.stream().map(permission -> {
+            PermissionBO permissionBO = this.permissionConverter.po2bo(permission);
+            permissionBO.setHasChildren(parentIdsWithChildren.contains(permission.getId()));
+            return permissionBO;
+        }).collect(Collectors.toList());
+    }
+    
 }

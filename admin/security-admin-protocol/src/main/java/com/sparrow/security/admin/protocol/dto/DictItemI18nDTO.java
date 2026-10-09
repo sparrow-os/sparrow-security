@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.protocol.dto;
 import lombok.Data;
 import com.sparrow.protocol.enums.StatusRecord;
@@ -23,7 +22,10 @@ import java.time.*;
 
 @Data
 public class DictItemI18nDTO implements DTO
-    {private Long id; 
+ 
+ 
+{
+  private Long id; 
 private Long dictItemId; 
 private String locale; 
 private String itemLabel; 
@@ -33,6 +35,8 @@ private Long modifiedUserId;
 private String modifiedUserName; 
 private Long gmtCreate; 
 private Long gmtModified; 
-private Boolean deleted; 
 private Integer status; 
+
+  
+  
 }

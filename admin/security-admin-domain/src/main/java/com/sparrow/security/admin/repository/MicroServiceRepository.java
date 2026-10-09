@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.MicroServiceBO;
 import com.sparrow.security.admin.protocol.param.MicroServiceParam;
 import com.sparrow.security.admin.protocol.query.MicroServiceQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

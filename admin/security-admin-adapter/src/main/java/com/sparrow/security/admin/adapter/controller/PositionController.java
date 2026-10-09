@@ -30,6 +30,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
+
 import com.sparrow.security.admin.domain.service.OrganizationService;
 
 
@@ -54,6 +55,7 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<PositionDTO> search(@RequestBody PositionQuery positionQuery) {
+        
         ListRecordTotalBO<PositionBO> positionListTotalRecord = this.positionService.queryPosition(positionQuery);
         PagerResult<PositionDTO> pagerResult =this.positionAssemble.assemblePager(positionListTotalRecord, positionQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

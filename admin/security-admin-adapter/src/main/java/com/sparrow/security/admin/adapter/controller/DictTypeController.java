@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
+
 @RestController
 @RequestMapping("dict/type")
 @Tag(name = "DictType")
@@ -51,6 +52,7 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<DictTypeDTO> search(@RequestBody DictTypeQuery dictTypeQuery) {
+        
         ListRecordTotalBO<DictTypeBO> dictTypeListTotalRecord = this.dictTypeService.queryDictType(dictTypeQuery);
         PagerResult<DictTypeDTO> pagerResult =this.dictTypeAssemble.assemblePager(dictTypeListTotalRecord, dictTypeQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

@@ -16,11 +16,10 @@
  <result column="modified_user_name" property="modifiedUserName"/>
  <result column="gmt_create" property="gmtCreate"/>
  <result column="gmt_modified" property="gmtModified"/>
- <result column="deleted" property="deleted"/>
  <result column="status" property="status"/>
 </resultMap>
 <sql id="fields">
-`id`,`tenant_id`,`parent_id`,`dict_type_id`,`item_code`,`item_value`,`sort`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status`
+`id`,`tenant_id`,`parent_id`,`dict_type_id`,`item_code`,`item_value`,`sort`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`status`
 </sql>
 <insert id="insert" parameterType="com.sparrow.security.po.DictItem"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
 insert into `t_dict_item`(
@@ -37,7 +36,6 @@ insert into `t_dict_item`(
 `modified_user_name`,
 `gmt_create`,
 `gmt_modified`,
-`deleted`,
 `status`)values(
 #{tenantId},
 #{parentId},
@@ -52,7 +50,6 @@ insert into `t_dict_item`(
 #{modifiedUserName},
 #{gmtCreate},
 #{gmtModified},
-#{deleted},
 #{status})</insert> 
 <update id="update" parameterType="com.sparrow.security.po.DictItem">
 update `t_dict_item` set 
@@ -64,8 +61,7 @@ update `t_dict_item` set
 `remark`=#{remark},
 `modified_user_id`=#{modifiedUserId},
 `modified_user_name`=#{modifiedUserName},
-`gmt_modified`=#{gmtModified},
-`deleted`=#{deleted} where id=#{id}
+`gmt_modified`=#{gmtModified} where id=#{id}
 </update>
 <delete id="delete" parameterType="java.lang.Long">
 delete from `t_dict_item` where id=#{id}

@@ -38,7 +38,7 @@ public class PermissionDaoImpl extends ORMStrategy<Permission, Long> implements 
     }
 
     private BooleanCriteria generateCriteria(PermissionDBPagerQuery permissionQuery) {
-        BooleanCriteria booleanCriteria= BooleanCriteria.criteria(Criteria.field(Permission::getCreateUserId).equal(SessionContext.getLoginUser().getUserId()));if(permissionQuery.getStatus()!=null&&permissionQuery.getStatus()>=0) {booleanCriteria.and(Criteria.field(Permission::getStatus).equal(StatusRecord.valueOf(permissionQuery.getStatus())));} return booleanCriteria;
+        BooleanCriteria booleanCriteria= BooleanCriteria.criteria(Criteria.field(Permission::getCreateUserId).equal(SessionContext.getLoginUser().getUserId()));if(permissionQuery.getParentId()!=null&&permissionQuery.getParentId()>=0) {booleanCriteria.and(Criteria.field(Permission::getParentId).equal(permissionQuery.getParentId()));}if(permissionQuery.getStatus()!=null&&permissionQuery.getStatus()>=0) {booleanCriteria.and(Criteria.field(Permission::getStatus).equal(StatusRecord.valueOf(permissionQuery.getStatus())));} return booleanCriteria;
     }
 
     @Override public Long countPermission(PermissionDBPagerQuery permissionPagerQuery) {
@@ -49,4 +49,38 @@ public class PermissionDaoImpl extends ORMStrategy<Permission, Long> implements 
 
 
      
+                @Override
+                public List<Permission> queryChildren(PermissionDBPagerQuery permissionPagerQuery) {
+                    SearchCriteria searchCriteria = new SearchCriteria();
+                    searchCriteria.setWhere(this.generateCriteria(permissionPagerQuery));
+                    searchCriteria.addOrderCriteria(OrderCriteria.asc(Permission::getSort));
+                    searchCriteria.addOrderCriteria(OrderCriteria.asc(Permission::getId));
+                    return this.getList(searchCriteria);
+                }
+
+            @Override
+            public Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds,StatusRecord statusRecord) {
+                if (parentIds == null || parentIds.isEmpty()) {
+                    return Collections.emptySet();
+                }
+                SearchCriteria searchCriteria = new SearchCriteria();
+                CriteriaField parentIdField = Criteria.field(Permission::getParentId).getField();
+                searchCriteria.setFields(parentIdField.getAlias() + "." + parentIdField.getName());
+                searchCriteria.setDistinct(true);
+
+                BooleanCriteria booleanCriteria = BooleanCriteria.criteria(Criteria.field(Permission::getParentId).in(parentIds));
+                        if (statusRecord != null) {
+                            booleanCriteria.and(Criteria.field(Permission::getStatus).equal(statusRecord));
+                        }
+
+                searchCriteria.setWhere(booleanCriteria);
+
+                Set<Object> rawParentIds = this.firstList(searchCriteria);
+                Set<Long> parentIdsWithChildren = new HashSet<>(rawParentIds.size());
+                for (Object rawParentId : rawParentIds) {
+                    parentIdsWithChildren.add(((Number) rawParentId).longValue());
+                }
+                return parentIdsWithChildren;
+            }
+        
 }

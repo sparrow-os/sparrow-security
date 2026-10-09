@@ -30,6 +30,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
+import com.sparrow.protocol.constant.Constant;
 
 
 
@@ -51,6 +52,11 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<OrganizationDTO> search(@RequestBody OrganizationQuery organizationQuery) {
+        
+           if (organizationQuery.getParentId() == null) {
+               organizationQuery.setParentId(Constant.LONG_DEFAULT_OPTION_KEY);
+           }
+        
         ListRecordTotalBO<OrganizationBO> organizationListTotalRecord = this.organizationService.queryOrganization(organizationQuery);
         PagerResult<OrganizationDTO> pagerResult =this.organizationAssemble.assemblePager(organizationListTotalRecord, organizationQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

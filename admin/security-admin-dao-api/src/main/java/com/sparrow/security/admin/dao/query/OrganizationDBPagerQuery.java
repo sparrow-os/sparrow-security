@@ -16,24 +16,16 @@
  */
 package com.sparrow.security.admin.dao.query;
 
-import com.sparrow.protocol.constant.Constant;
 import com.sparrow.protocol.dao.DatabasePagerQuery;
+import com.sparrow.protocol.constant.Constant;
+import java.util.Date;
 import lombok.Data;
-
 @Data
 public class OrganizationDBPagerQuery extends DatabasePagerQuery {
-    private Integer status;
+   private Integer status;
+   
+   private Long parentId;
+   
 
-    private Long parentId;
-
-    public Long getParentId() {
-        if (parentId == null) {
-            return Constant.LONG_DEFAULT_OPTION_KEY;
-        }
-        return this.parentId;
-    }
-
-
-    public OrganizationDBPagerQuery() {
-    }
+   public OrganizationDBPagerQuery() {}
 }

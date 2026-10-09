@@ -15,11 +15,10 @@
  <result column="modified_user_name" property="modifiedUserName"/>
  <result column="gmt_create" property="gmtCreate"/>
  <result column="gmt_modified" property="gmtModified"/>
- <result column="deleted" property="deleted"/>
  <result column="status" property="status"/>
 </resultMap>
 <sql id="fields">
-`id`,`tenant_id`,`code`,`name`,`sort`,`logo`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status`
+`id`,`tenant_id`,`code`,`name`,`sort`,`logo`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`status`
 </sql>
 <insert id="insert" parameterType="com.sparrow.security.po.App"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
 insert into `t_app`(
@@ -35,7 +34,6 @@ insert into `t_app`(
 `modified_user_name`,
 `gmt_create`,
 `gmt_modified`,
-`deleted`,
 `status`)values(
 #{tenantId},
 #{code},
@@ -49,7 +47,6 @@ insert into `t_app`(
 #{modifiedUserName},
 #{gmtCreate},
 #{gmtModified},
-#{deleted},
 #{status})</insert> 
 <update id="update" parameterType="com.sparrow.security.po.App">
 update `t_app` set 
@@ -61,8 +58,7 @@ update `t_app` set
 `remark`=#{remark},
 `modified_user_id`=#{modifiedUserId},
 `modified_user_name`=#{modifiedUserName},
-`gmt_modified`=#{gmtModified},
-`deleted`=#{deleted} where id=#{id}
+`gmt_modified`=#{gmtModified} where id=#{id}
 </update>
 <delete id="delete" parameterType="java.lang.Long">
 delete from `t_app` where id=#{id}

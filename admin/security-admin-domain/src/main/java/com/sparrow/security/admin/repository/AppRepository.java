@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.AppBO;
 import com.sparrow.security.admin.protocol.param.AppParam;
 import com.sparrow.security.admin.protocol.query.AppQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

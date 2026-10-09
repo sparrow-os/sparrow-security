@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.DictTypeI18nBO;
 import com.sparrow.security.admin.protocol.param.DictTypeI18nParam;
 import com.sparrow.security.admin.protocol.query.DictTypeI18nQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

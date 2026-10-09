@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.RoleBO;
 import com.sparrow.security.admin.protocol.param.RoleParam;
 import com.sparrow.security.admin.protocol.query.RoleQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

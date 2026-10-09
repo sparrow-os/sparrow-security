@@ -30,6 +30,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
+import com.sparrow.protocol.constant.Constant;
 import com.sparrow.security.admin.domain.service.AppService;
 
 import com.sparrow.security.admin.domain.service.MicroServiceService;
@@ -60,6 +61,11 @@ private EnumsContainer businessEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<PermissionDTO> search(@RequestBody PermissionQuery permissionQuery) {
+        
+           if (permissionQuery.getParentId() == null) {
+               permissionQuery.setParentId(Constant.LONG_DEFAULT_OPTION_KEY);
+           }
+        
         ListRecordTotalBO<PermissionBO> permissionListTotalRecord = this.permissionService.queryPermission(permissionQuery);
         PagerResult<PermissionDTO> pagerResult =this.permissionAssemble.assemblePager(permissionListTotalRecord, permissionQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

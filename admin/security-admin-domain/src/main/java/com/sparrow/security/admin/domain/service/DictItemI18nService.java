@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.domain.service;
 
 import com.sparrow.exception.Asserts;
 import com.sparrow.protocol.*;
-import java.util.*;
-import jakarta.inject.*;
-import com.sparrow.protocol.constant.SparrowError;
+import com.sparrow.protocol.constant.*;
 import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.security.admin.domain.bo.DictItemI18nBO;
+import com.sparrow.protocol.pager.SimplePager;
+import java.util.*;
+import jakarta.inject.*;
 import com.sparrow.security.admin.repository.DictItemI18nRepository;
 import com.sparrow.security.admin.protocol.param.DictItemI18nParam;
 import com.sparrow.security.admin.protocol.query.DictItemI18nQuery;
@@ -63,14 +63,21 @@ public class DictItemI18nService {
         return queryDictItemI18n(null);
     }
 
-    public ListRecordTotalBO<DictItemI18nBO> queryDictItemI18n(DictItemI18nQuery dictItemI18nQuery) {
-        Long totalRecord = this.dictItemI18nRepository.getDictItemI18nCount(dictItemI18nQuery);
-        List<DictItemI18nBO> dictItemI18nBoList = null;
-        if (totalRecord > 0) {
-            dictItemI18nBoList = this.dictItemI18nRepository.queryDictItemI18ns(dictItemI18nQuery);
+    
+    
+        public ListRecordTotalBO<DictItemI18nBO> queryDictItemI18n(DictItemI18nQuery dictItemI18nQuery) {
+            Long totalRecord = this.dictItemI18nRepository.getDictItemI18nCount(dictItemI18nQuery);
+            List<DictItemI18nBO> dictItemI18nBoList = null;
+            if (totalRecord > 0) {
+                dictItemI18nBoList = this.dictItemI18nRepository.queryDictItemI18ns(dictItemI18nQuery);
+            }
+            return new ListRecordTotalBO<>(dictItemI18nBoList, totalRecord);
         }
-        return new ListRecordTotalBO<>(dictItemI18nBoList, totalRecord);
-    }
+    
+
+
+
+
 
     public DictItemI18nBO getDictItemI18n(Long dictItemI18nId) throws BusinessException {
          Asserts.isTrue(dictItemI18nId==null, SparrowError.GLOBAL_PARAMETER_NULL);

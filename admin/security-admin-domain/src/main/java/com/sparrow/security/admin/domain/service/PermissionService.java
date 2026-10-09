@@ -64,15 +64,11 @@ public class PermissionService {
     }
 
     
-    
-        public ListRecordTotalBO<PermissionBO> queryPermission(PermissionQuery permissionQuery) {
-            Long totalRecord = this.permissionRepository.getPermissionCount(permissionQuery);
-            List<PermissionBO> permissionBoList = null;
-            if (totalRecord > 0) {
-                permissionBoList = this.permissionRepository.queryPermissions(permissionQuery);
-            }
-            return new ListRecordTotalBO<>(permissionBoList, totalRecord);
+     public ListRecordTotalBO<PermissionBO> queryPermission(PermissionQuery permissionQuery) {
+                List<PermissionBO> permissionBoList = this.permissionRepository.queryChildren(permissionQuery);
+                return new ListRecordTotalBO<>(permissionBoList, Constant.LONG_ALL);
         }
+    
     
 
 

@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.dao.sparrow;
 
 import com.sparrow.orm.query.*;
@@ -22,7 +21,7 @@ import com.sparrow.orm.template.impl.ORMStrategy;
 import com.sparrow.security.admin.dao.DictItemI18nDAO;
 import com.sparrow.security.admin.dao.query.DictItemI18nDBPagerQuery;
 import com.sparrow.security.po.DictItemI18n;
-import java.util.List;
+import java.util.*;
 import jakarta.inject.Named;
 import com.sparrow.protocol.*;
 import com.sparrow.context.SessionContext;
@@ -47,4 +46,7 @@ public class DictItemI18nDaoImpl extends ORMStrategy<DictItemI18n, Long> impleme
         searchCriteria.setWhere(this.generateCriteria(dictItemI18nPagerQuery));
         return this.getCount(searchCriteria);
     }
+
+
+     
 }

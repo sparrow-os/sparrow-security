@@ -24,4 +24,6 @@ public class PermissionQuery extends SimplePager {
    private Integer status;
 
  
+   private Long parentId;
+   
 }

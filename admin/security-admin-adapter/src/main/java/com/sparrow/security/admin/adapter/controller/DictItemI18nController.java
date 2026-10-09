@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.adapter.controller;
 
 import com.sparrow.protocol.*;
@@ -31,6 +30,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
+
 import com.sparrow.security.admin.domain.service.DictItemService;
 
 
@@ -57,6 +57,7 @@ private EnumsContainer businessEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<DictItemI18nDTO> search(@RequestBody DictItemI18nQuery dictItemI18nQuery) {
+        
         ListRecordTotalBO<DictItemI18nBO> dictItemI18nListTotalRecord = this.dictItemI18nService.queryDictItemI18n(dictItemI18nQuery);
         PagerResult<DictItemI18nDTO> pagerResult =this.dictItemI18nAssemble.assemblePager(dictItemI18nListTotalRecord, dictItemI18nQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

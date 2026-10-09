@@ -14,14 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.DictItemI18nBO;
 import com.sparrow.security.admin.protocol.param.DictItemI18nParam;
 import com.sparrow.security.admin.protocol.query.DictItemI18nQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 
@@ -39,5 +36,6 @@ public interface DictItemI18nRepository {
     List<DictItemI18nBO> queryDictItemI18ns(DictItemI18nQuery dictItemI18nQuery);
 
     Long getDictItemI18nCount(DictItemI18nQuery dictItemI18nQuery);
+    
 
 }

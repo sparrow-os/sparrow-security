@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.UserGroupBO;
 import com.sparrow.security.admin.protocol.param.UserGroupParam;
 import com.sparrow.security.admin.protocol.query.UserGroupQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

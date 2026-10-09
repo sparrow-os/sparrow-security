@@ -14,11 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.adapter.assemble;
 
 import com.sparrow.protocol.ListRecordTotalBO;
-import com.sparrow.protocol.KeyValue;
 import com.sparrow.protocol.pager.PagerResult;
 import com.sparrow.protocol.pager.SimplePager;
 import com.sparrow.security.admin.protocol.dto.DictItemI18nDTO;

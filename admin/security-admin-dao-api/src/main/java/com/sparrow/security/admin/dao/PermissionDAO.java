@@ -21,10 +21,15 @@ import com.sparrow.security.po.Permission;
 import com.sparrow.security.admin.dao.query.PermissionDBPagerQuery;
 import java.util.*;
 
+import com.sparrow.protocol.enums.StatusRecord;
+
 public interface PermissionDAO extends DaoSupport<Permission, Long> {
     List<Permission> queryPermissions(PermissionDBPagerQuery permissionPagerQuery);
 
     Long countPermission(PermissionDBPagerQuery permissionPagerQuery);
+    
+    List<Permission> queryChildren(PermissionDBPagerQuery permissionPagerQuery);
+    Set<Long> getParentIdsHavingChildren(Collection<Long> parentIds,StatusRecord statusRecord);
     
 
 }

@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.sparrow.security.admin.infrastructure.persistence;
 
 import com.sparrow.protocol.dao.StatusCriteria;
@@ -27,8 +26,8 @@ import com.sparrow.security.admin.protocol.param.DictItemI18nParam;
 import com.sparrow.security.admin.repository.DictItemI18nRepository;
 import com.sparrow.security.admin.protocol.query.DictItemI18nQuery;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 import jakarta.inject.*;
 
 @Named
@@ -78,4 +77,6 @@ public class DictItemI18nRepositoryImpl implements DictItemI18nRepository {
     @Override public Long getDictItemI18nCount(DictItemI18nQuery dictItemI18nQuery) {
         return this.dictItemI18nDao.countDictItemI18n(this.dictItemI18nConverter.toDbPagerQuery(dictItemI18nQuery));
     }
+
+    
 }

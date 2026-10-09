@@ -16,7 +16,6 @@
  */
 package com.sparrow.security.admin.dao.query;
 
-import com.sparrow.protocol.enums.StatusRecord;
 import com.sparrow.protocol.dao.DatabasePagerQuery;
 import com.sparrow.protocol.constant.Constant;
 import java.util.Date;
@@ -27,12 +26,6 @@ public class DictItemDBPagerQuery extends DatabasePagerQuery {
 private Integer status;
    
    private Long parentId;
-   public Long getParentId() {
-                 if (parentId == null) {
-                        return Constant.LONG_DEFAULT_OPTION_KEY;
-                 }
-                 return this.parentId;
-   }
    
 
    public DictItemDBPagerQuery() {}

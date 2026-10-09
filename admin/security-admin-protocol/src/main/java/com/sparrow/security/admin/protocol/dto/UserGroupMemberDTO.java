@@ -14,17 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sparrow.security.admin.dao;
+package com.sparrow.security.admin.protocol.dto;
+import lombok.Data;
+import com.sparrow.protocol.enums.StatusRecord;
+import com.sparrow.protocol.*;
+import java.time.*;
 
-import com.sparrow.protocol.dao.DaoSupport;
-import com.sparrow.security.po.DictItemI18n;
-import com.sparrow.security.admin.dao.query.DictItemI18nDBPagerQuery;
-import java.util.*;
+@Data
+public class UserGroupMemberDTO implements DTO
+ 
+ 
+{
+  private Long id; 
+private Long tenantId; 
+private Long groupId; 
+private Integer memberType; 
+private Long memberId; 
+private Long createUserId; 
+private Long gmtCreate; 
+private String createUserName; 
 
-public interface DictItemI18nDAO extends DaoSupport<DictItemI18n, Long> {
-    List<DictItemI18n> queryDictItemI18ns(DictItemI18nDBPagerQuery dictItemI18nPagerQuery);
-
-    Long countDictItemI18n(DictItemI18nDBPagerQuery dictItemI18nPagerQuery);
-    
-
+  
+  
 }

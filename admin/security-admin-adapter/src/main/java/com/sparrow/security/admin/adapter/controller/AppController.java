@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
+
 @RestController
 @RequestMapping("app")
 @Tag(name = "App")
@@ -51,6 +52,7 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<AppDTO> search(@RequestBody AppQuery appQuery) {
+        
         ListRecordTotalBO<AppBO> appListTotalRecord = this.appService.queryApp(appQuery);
         PagerResult<AppDTO> pagerResult =this.appAssemble.assemblePager(appListTotalRecord, appQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

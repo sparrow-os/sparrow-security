@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
+
 @RestController
 @RequestMapping("role")
 @Tag(name = "Role")
@@ -51,6 +52,7 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<RoleDTO> search(@RequestBody RoleQuery roleQuery) {
+        
         ListRecordTotalBO<RoleBO> roleListTotalRecord = this.roleService.queryRole(roleQuery);
         PagerResult<RoleDTO> pagerResult =this.roleAssemble.assemblePager(roleListTotalRecord, roleQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

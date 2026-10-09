@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.AdminUserBO;
 import com.sparrow.security.admin.protocol.param.AdminUserParam;
 import com.sparrow.security.admin.protocol.query.AdminUserQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

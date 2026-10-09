@@ -30,6 +30,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
+
 import com.sparrow.security.admin.domain.service.AppService;
 
 
@@ -54,6 +55,7 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<MicroServiceDTO> search(@RequestBody MicroServiceQuery microServiceQuery) {
+        
         ListRecordTotalBO<MicroServiceBO> microServiceListTotalRecord = this.microServiceService.queryMicroService(microServiceQuery);
         PagerResult<MicroServiceDTO> pagerResult =this.microServiceAssemble.assemblePager(microServiceListTotalRecord, microServiceQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

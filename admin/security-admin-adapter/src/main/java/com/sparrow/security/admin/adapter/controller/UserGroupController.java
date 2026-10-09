@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
+
 @RestController
 @RequestMapping("user/group")
 @Tag(name = "UserGroup")
@@ -51,6 +52,7 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<UserGroupDTO> search(@RequestBody UserGroupQuery userGroupQuery) {
+        
         ListRecordTotalBO<UserGroupBO> userGroupListTotalRecord = this.userGroupService.queryUserGroup(userGroupQuery);
         PagerResult<UserGroupDTO> pagerResult =this.userGroupAssemble.assemblePager(userGroupListTotalRecord, userGroupQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

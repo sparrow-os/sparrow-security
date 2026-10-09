@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.PermissionBO;
 import com.sparrow.security.admin.protocol.param.PermissionParam;
 import com.sparrow.security.admin.protocol.query.PermissionQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 
@@ -38,6 +36,8 @@ public interface PermissionRepository {
     List<PermissionBO> queryPermissions(PermissionQuery permissionQuery);
 
     Long getPermissionCount(PermissionQuery permissionQuery);
+    
+    List<PermissionBO> queryChildren(PermissionQuery permissionQuery);
     
 
 }

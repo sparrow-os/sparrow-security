@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparrow.security.admin.dao.UserGroupMemberDAO">
+<resultMap id="UserGroupMemberMap" type="com.sparrow.security.po.UserGroupMember">
+<id column="id" property="id" />
+ <result column="tenant_id" property="tenantId"/>
+ <result column="group_id" property="groupId"/>
+ <result column="member_type" property="memberType"/>
+ <result column="member_id" property="memberId"/>
+ <result column="create_user_id" property="createUserId"/>
+ <result column="gmt_create" property="gmtCreate"/>
+ <result column="create_user_name" property="createUserName"/>
+</resultMap>
+<sql id="fields">
+`id`,`tenant_id`,`group_id`,`member_type`,`member_id`,`create_user_id`,`gmt_create`,`create_user_name`
+</sql>
+<insert id="insert" parameterType="com.sparrow.security.po.UserGroupMember"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+insert into `t_user_group_member`(
+`tenant_id`,
+`group_id`,
+`member_type`,
+`member_id`,
+`create_user_id`,
+`gmt_create`,
+`create_user_name`)values(
+#{tenantId},
+#{groupId},
+#{memberType},
+#{memberId},
+#{createUserId},
+#{gmtCreate},
+#{createUserName})</insert> 
+<update id="update" parameterType="com.sparrow.security.po.UserGroupMember">
+update `t_user_group_member` set 
+`tenant_id`=#{tenantId},
+`group_id`=#{groupId},
+`member_type`=#{memberType},
+`member_id`=#{memberId} where id=#{id}
+</update>
+<delete id="delete" parameterType="java.lang.Long">
+delete from `t_user_group_member` where id=#{id}
+</delete>
+<select id="getEntity" resultMap="UserGroupMemberMap" parameterType="java.lang.Long">
+ SELECT 
+<include refid="fields"/>
+ FROM 
+t_user_group_member
+WHERE id= #{id}
+</select>
+</mapper>

@@ -18,9 +18,7 @@ package com.sparrow.security.admin.repository;
 import com.sparrow.security.admin.domain.bo.PositionBO;
 import com.sparrow.security.admin.protocol.param.PositionParam;
 import com.sparrow.security.admin.protocol.query.PositionQuery;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 
 
 

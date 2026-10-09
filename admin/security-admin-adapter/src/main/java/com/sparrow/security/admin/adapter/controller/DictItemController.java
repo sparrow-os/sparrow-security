@@ -30,6 +30,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import org.springframework.web.bind.annotation.*;
+import com.sparrow.protocol.constant.Constant;
 import com.sparrow.security.admin.domain.service.DictTypeService;
 
 
@@ -54,6 +55,11 @@ private EnumsContainer coderEnumsContainer;
     @PostMapping("search.json")
     @Operation(method="搜索")
     public PagerResult<DictItemDTO> search(@RequestBody DictItemQuery dictItemQuery) {
+        
+           if (dictItemQuery.getParentId() == null) {
+               dictItemQuery.setParentId(Constant.LONG_DEFAULT_OPTION_KEY);
+           }
+        
         ListRecordTotalBO<DictItemBO> dictItemListTotalRecord = this.dictItemService.queryDictItem(dictItemQuery);
         PagerResult<DictItemDTO> pagerResult =this.dictItemAssemble.assemblePager(dictItemListTotalRecord, dictItemQuery);
         pagerResult.putDictionary("status",coderEnumsContainer.getEnums("status"));

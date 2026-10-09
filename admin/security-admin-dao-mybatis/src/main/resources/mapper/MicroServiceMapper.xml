@@ -16,11 +16,10 @@
  <result column="modified_user_name" property="modifiedUserName"/>
  <result column="gmt_create" property="gmtCreate"/>
  <result column="gmt_modified" property="gmtModified"/>
- <result column="deleted" property="deleted"/>
  <result column="status" property="status"/>
 </resultMap>
 <sql id="fields">
-`id`,`tenant_id`,`name`,`sort`,`logo`,`app_id`,`url`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`deleted`,`status`
+`id`,`tenant_id`,`name`,`sort`,`logo`,`app_id`,`url`,`remark`,`create_user_name`,`create_user_id`,`modified_user_id`,`modified_user_name`,`gmt_create`,`gmt_modified`,`status`
 </sql>
 <insert id="insert" parameterType="com.sparrow.security.po.MicroService"  useGeneratedKeys="true" keyColumn="id" keyProperty="id">
 insert into `t_micro_service`(
@@ -37,7 +36,6 @@ insert into `t_micro_service`(
 `modified_user_name`,
 `gmt_create`,
 `gmt_modified`,
-`deleted`,
 `status`)values(
 #{tenantId},
 #{name},
@@ -52,7 +50,6 @@ insert into `t_micro_service`(
 #{modifiedUserName},
 #{gmtCreate},
 #{gmtModified},
-#{deleted},
 #{status})</insert> 
 <update id="update" parameterType="com.sparrow.security.po.MicroService">
 update `t_micro_service` set 
@@ -65,8 +62,7 @@ update `t_micro_service` set
 `remark`=#{remark},
 `modified_user_id`=#{modifiedUserId},
 `modified_user_name`=#{modifiedUserName},
-`gmt_modified`=#{gmtModified},
-`deleted`=#{deleted} where id=#{id}
+`gmt_modified`=#{gmtModified} where id=#{id}
 </update>
 <delete id="delete" parameterType="java.lang.Long">
 delete from `t_micro_service` where id=#{id}

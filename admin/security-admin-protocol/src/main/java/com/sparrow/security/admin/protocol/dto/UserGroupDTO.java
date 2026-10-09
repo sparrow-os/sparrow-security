@@ -37,7 +37,6 @@ private Long modifiedUserId;
 private String modifiedUserName; 
 private Long gmtCreate; 
 private Long gmtModified; 
-private Boolean deleted; 
 private Integer status; 
 
   
