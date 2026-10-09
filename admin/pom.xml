@@ -16,6 +16,7 @@
         <module>security-admin-protocol</module>
         <module>security-admin-dao-sparrow</module>
         <module>security-admin-dao-mybatis</module>
+        <module>security-admin-starter</module>
         <!--po-->
     </modules>
 </project>

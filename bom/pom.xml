@@ -65,6 +65,11 @@
                 <version>${security_version}</version>
             </dependency>
             <dependency>
+                <groupId>com.sparrowzoo.security.admin</groupId>
+                <artifactId>security-admin-starter</artifactId>
+                <version>${security_version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.sparrowzoo.security</groupId>
                 <artifactId>security-po</artifactId>
                 <version>${security_version}</version>
